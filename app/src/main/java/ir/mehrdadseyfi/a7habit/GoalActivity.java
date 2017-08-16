@@ -19,8 +19,11 @@ public class GoalActivity extends AppCompatActivity {
 
         setContentView(R.layout.activity_goal);
         GoalDB test=new GoalDB(this,"longdb",null,1);
+       if(test.getGoalID()==null) {
+           test.inserToDB("هدف من", "", "");
+       }
         long_goal=(ImageView)findViewById(R.id.long_goal);
-        Toast.makeText(this,test.getGoalName("5"), Toast.LENGTH_SHORT).show();
+
         short_goal=(ImageView)findViewById(R.id.short_goal);
         long_goal.setImageResource(R.drawable.hadaf_boland);
        short_goal.setImageResource(R.drawable.hadaf_kootah);
