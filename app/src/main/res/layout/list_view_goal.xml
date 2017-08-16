@@ -8,8 +8,9 @@
         android:layout_weight="1"
         android:layout_height="match_parent"
 
-        android:textSize="40sp"
+        android:textSize="30sp"
         android:textColor="@color/colorPrimary"
+        android:id="@+id/date"
        />
     <ImageView
         android:layout_width="0dp"

@@ -16,6 +16,7 @@ public class LongGoalActivity extends AppCompatActivity {
     LongGoalAdapter adapter;
     ListView mylist;
     int[] catPhoto;
+    String[]date;
 
     @Override
     protected void onResume() {
@@ -56,10 +57,12 @@ public class LongGoalActivity extends AppCompatActivity {
  public void listItemAdd() {
      name = new String[Integer.parseInt(test.getGoalID()) + 1];
      catPhoto = new int[Integer.parseInt(test.getGoalID()) + 1];
+     date = new String[Integer.parseInt(test.getGoalID()) + 1];
 
 
      for (int i = 1; i < name.length; i++) {
          name[i] = test.getGoalName(String.valueOf(i));
+         date[i] = test.getGoalDate(String.valueOf(i));
             switch (test.getGoalcat(String.valueOf(i))){
                 case "تفریحی/مسافرتی":
                     catPhoto[i]=R.mipmap.ic_launcher;
@@ -80,7 +83,7 @@ public class LongGoalActivity extends AppCompatActivity {
                     catPhoto[i]=R.mipmap.ic_launcher;
             }
      }
-     adapter = new LongGoalAdapter(name, this, catPhoto);
+     adapter = new LongGoalAdapter(name, this, catPhoto,date);
      mylist = (ListView) findViewById(R.id.list_long_goal);
      mylist.setAdapter(adapter);
 
