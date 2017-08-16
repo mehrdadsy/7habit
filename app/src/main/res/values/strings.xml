@@ -1,3 +1,14 @@
 <resources>
     <string name="app_name">7habit</string>
+    <string name="hint_dialog_goalName">هدف خود را بنویسید</string>
+    <string name="dialog_title">مشخصات هدف خود را بنویسید</string>
+    <string-array name="spinnerItems">
+        <item>تفریحی/مسافرتی</item>
+        <item>ورزشی</item>
+        <item>آموزشی</item>
+        <item>شغلی</item>
+        <item>مالی</item>
+        <item>غیره</item>
+    </string-array>
+
 </resources>
