@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ListView;
 
 import java.util.List;
@@ -86,6 +87,13 @@ public class LongGoalActivity extends AppCompatActivity {
      adapter = new LongGoalAdapter(name, this, catPhoto,date);
      mylist = (ListView) findViewById(R.id.list_long_goal);
      mylist.setAdapter(adapter);
+     mylist.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
+         @Override
+         public boolean onItemLongClick(AdapterView<?> parent, View view, int position, long id) {
+                    test.deleteRow(position);
+             return true;
+         }
+     });
 
 
  }

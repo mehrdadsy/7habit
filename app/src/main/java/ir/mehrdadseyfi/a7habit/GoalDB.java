@@ -11,7 +11,7 @@ import android.database.sqlite.SQLiteOpenHelper;
  */
 
 public class GoalDB extends SQLiteOpenHelper {
-    String db_create_query="" +
+    String db_create_query = "" +
 
             "CREATE TABLE Goal_tbl (" +
 
@@ -74,13 +74,14 @@ public class GoalDB extends SQLiteOpenHelper {
         return test;
 
     }
+
     public String getGoalName(String id) {
 
         String test = "";
 
         SQLiteDatabase db = this.getWritableDatabase();
 
-        Cursor cursor = db.rawQuery("SELECT name from " + "  Goal_tbl"+" "+"Where _id="+id , null);
+        Cursor cursor = db.rawQuery("SELECT name from " + "  Goal_tbl" + " " + "Where _id=" + id, null);
 
         while (cursor.moveToNext()) {
 
@@ -93,13 +94,14 @@ public class GoalDB extends SQLiteOpenHelper {
         return test;
 
     }
+
     public String getGoalcat(String id) {
 
         String test = "";
 
         SQLiteDatabase db = this.getWritableDatabase();
 
-        Cursor cursor = db.rawQuery("SELECT cat from " + "  Goal_tbl"+" "+"Where _id="+id , null);
+        Cursor cursor = db.rawQuery("SELECT cat from " + "  Goal_tbl" + " " + "Where _id=" + id, null);
 
         while (cursor.moveToNext()) {
 
@@ -112,13 +114,14 @@ public class GoalDB extends SQLiteOpenHelper {
         return test;
 
     }
+
     public String getGoalDate(String id) {
 
         String test = "";
 
         SQLiteDatabase db = this.getWritableDatabase();
 
-        Cursor cursor = db.rawQuery("SELECT date from " + "  Goal_tbl"+" "+"Where _id="+id , null);
+        Cursor cursor = db.rawQuery("SELECT date from " + "  Goal_tbl" + " " + "Where _id=" + id, null);
 
         while (cursor.moveToNext()) {
 
@@ -131,4 +134,18 @@ public class GoalDB extends SQLiteOpenHelper {
         return test;
 
     }
+
+    public void  deleteRow(int i) {
+        //Open the database
+        SQLiteDatabase database = this.getWritableDatabase();
+
+        //Execute sql query to remove from database
+        //NOTE: When removing by String in SQL, value must be enclosed with ''
+        database.execSQL("DELETE FROM  Goal_tbl   WHERE _id=" + i );
+
+        //Close the database
+        database.close();
+
+    }
 }
+

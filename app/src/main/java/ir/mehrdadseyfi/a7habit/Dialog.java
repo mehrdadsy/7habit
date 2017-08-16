@@ -5,8 +5,11 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.Spinner;
+import android.widget.Toast;
 
-import ir.hamsaa.persiandatepicker.util.PersianCalendar;
+import ir.mirrajabi.persiancalendar.PersianCalendarView;
+import ir.mirrajabi.persiancalendar.core.interfaces.OnDayClickedListener;
+import ir.mirrajabi.persiancalendar.core.models.PersianDate;
 
 public class Dialog extends AppCompatActivity {
         EditText goalName;
@@ -14,12 +17,13 @@ public class Dialog extends AppCompatActivity {
         EditText goalDate;
       GoalDB longDB;
     String date;
-    PersianCalendar persianDatePicker;
+    PersianCalendarView test;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dialog);
-        persianDatePicker =new PersianCalendar();
+
         goalName = (EditText) findViewById(R.id.dialog_goalName);
 //        goalDate=(EditText)findViewById(R.id.goalDate);
         spinCat = (Spinner) findViewById(R.id.spinGoal);
@@ -37,8 +41,16 @@ public class Dialog extends AppCompatActivity {
 
             }
         });
-        PersianCalendar initDate = new PersianCalendar();
-        initDate.setPersianDate(1370, 3, 13);
+          test= new PersianCalendarView(this);
+        test.setOnDayClickedListener(new OnDayClickedListener() {
+            @Override
+            public void onClick(PersianDate persianDate) {
+        date=String.valueOf(persianDate.getYear())+"/"+String.valueOf(persianDate.getMonth())+"/"+String.valueOf(persianDate.getDayOfMonth());
+                Toast.makeText(Dialog.this,date , Toast.LENGTH_SHORT).show();
+
+            }
+        });
+
 
 
 
