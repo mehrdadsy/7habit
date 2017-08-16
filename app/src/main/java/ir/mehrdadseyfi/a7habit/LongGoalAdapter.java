@@ -5,6 +5,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 /**
@@ -14,10 +15,12 @@ import android.widget.TextView;
 public class LongGoalAdapter extends BaseAdapter {
     String name[];
     Context mContext;
+    int catPhoto[];
 
-    public LongGoalAdapter(String[] name,Context mContext) {
+    public LongGoalAdapter(String[] name,Context mContext,int catPhoto[]) {
         this.name = name;
         this.mContext=mContext;
+        this.catPhoto=catPhoto;
     }
 
     @Override
@@ -40,6 +43,8 @@ public class LongGoalAdapter extends BaseAdapter {
         View rowView = LayoutInflater.from(mContext).inflate(R.layout.list_view_goal, parent, false);
         TextView txt=(TextView)rowView.findViewById(R.id.txt);
         txt.setText(name[position]);
+        ImageView img=(ImageView)rowView.findViewById(R.id.cat_photo);
+        img.setImageResource(catPhoto[position]);
         return rowView;
     }
 }

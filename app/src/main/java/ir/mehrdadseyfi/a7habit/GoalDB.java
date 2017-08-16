@@ -93,4 +93,23 @@ public class GoalDB extends SQLiteOpenHelper {
         return test;
 
     }
+    public String getGoalcat(String id) {
+
+        String test = "";
+
+        SQLiteDatabase db = this.getWritableDatabase();
+
+        Cursor cursor = db.rawQuery("SELECT cat from " + "  Goal_tbl"+" "+"Where _id="+id , null);
+
+        while (cursor.moveToNext()) {
+
+            test = cursor.getString(0);
+
+        }
+
+        db.close();
+
+        return test;
+
+    }
 }

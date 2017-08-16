@@ -1,8 +1,8 @@
 package ir.mehrdadseyfi.a7habit;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.Toast;
@@ -15,18 +15,17 @@ public class GoalActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
-
         setContentView(R.layout.activity_goal);
-        GoalDB test=new GoalDB(this,"longdb",null,1);
-       if(test.getGoalID()==null) {
-           test.inserToDB("هدف من", "", "");
+        databaseGoal =new GoalDB(this,"longdb",null,1);
+       if(databaseGoal.getGoalID()=="") {
+           databaseGoal.inserToDB("هدف من", "", "غیره");
        }
+        Toast.makeText(this, databaseGoal.getGoalID(), Toast.LENGTH_SHORT).show();
         long_goal=(ImageView)findViewById(R.id.long_goal);
 
         short_goal=(ImageView)findViewById(R.id.short_goal);
-        long_goal.setImageResource(R.drawable.hadaf_boland);
-       short_goal.setImageResource(R.drawable.hadaf_kootah);
+//        long_goal.setImageResource(R.drawable.hadaf_boland);
+//       short_goal.setImageResource(R.drawable.hadaf_kootah);
             long_goal.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {

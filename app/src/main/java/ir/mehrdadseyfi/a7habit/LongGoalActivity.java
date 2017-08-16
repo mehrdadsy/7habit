@@ -1,16 +1,11 @@
 package ir.mehrdadseyfi.a7habit;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.ListView;
-import android.widget.TextView;
-import android.widget.Toast;
 
-import java.text.DateFormat;
-import java.text.SimpleDateFormat;
-import java.util.Date;
 import java.util.List;
 
 public class LongGoalActivity extends AppCompatActivity {
@@ -18,16 +13,28 @@ public class LongGoalActivity extends AppCompatActivity {
 
     GoalDB test;
     String[] name;
+    LongGoalAdapter adapter;
+    ListView mylist;
+    int[] catPhoto;
+
+    @Override
+    protected void onResume() {
+        listItemAdd();
+        super.onResume();
+    }
+
+    @Override
+    protected void onStart() {
+        listItemAdd();
+        super.onStart();
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_long_goal);
         test = new GoalDB(this, "longdb", null, 1);
-        name=new String[Integer.parseInt(test.getGoalID())];
-        final LongGoalAdapter adapter = new LongGoalAdapter(name, this);
-        final ListView mylist = (ListView) findViewById(R.id.list_long_goal);
-
+        listItemAdd();
         findViewById(R.id.add_long_goal).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -38,9 +45,6 @@ public class LongGoalActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                for (int i=1;i<name.length;i++){
-                    name[i]= test.getGoalName(String.valueOf(i));
-                }
                 mylist.setAdapter(adapter);
 
             }
@@ -49,6 +53,38 @@ public class LongGoalActivity extends AppCompatActivity {
 
     }
 
+ public void listItemAdd() {
+     name = new String[Integer.parseInt(test.getGoalID()) + 1];
+     catPhoto = new int[Integer.parseInt(test.getGoalID()) + 1];
 
+
+     for (int i = 1; i < name.length; i++) {
+         name[i] = test.getGoalName(String.valueOf(i));
+            switch (test.getGoalcat(String.valueOf(i))){
+                case "تفریحی/مسافرتی":
+                    catPhoto[i]=R.mipmap.ic_launcher;
+                    break ;
+                case "ورزشی":
+                    catPhoto[i]=R.mipmap.ic_launcher;
+                    break ;
+                case "آموزشی":
+                    catPhoto[i]=R.mipmap.ic_launcher;
+                    break ;
+                case "شغلی":
+                    catPhoto[i]=R.mipmap.ic_launcher;
+                    break ;
+                case "مالی":
+                    catPhoto[i]=R.mipmap.ic_launcher;
+                    break ;
+                default:
+                    catPhoto[i]=R.mipmap.ic_launcher;
+            }
+     }
+     adapter = new LongGoalAdapter(name, this, catPhoto);
+     mylist = (ListView) findViewById(R.id.list_long_goal);
+     mylist.setAdapter(adapter);
+
+
+ }
 }
 
