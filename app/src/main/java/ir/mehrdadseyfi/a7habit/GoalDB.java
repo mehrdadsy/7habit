@@ -55,13 +55,32 @@ public class GoalDB extends SQLiteOpenHelper {
 
     }
 
-    public String getGoal() {
+    public String getGoalID() {
 
         String test = "";
 
         SQLiteDatabase db = this.getWritableDatabase();
 
-        Cursor cursor = db.rawQuery("SELECT name from " + "  Goal_tbl", null);
+        Cursor cursor = db.rawQuery("SELECT _id from " + "  Goal_tbl", null);
+
+        while (cursor.moveToNext()) {
+
+            test = cursor.getString(0);
+
+        }
+
+        db.close();
+
+        return test;
+
+    }
+    public String getGoalName(String id) {
+
+        String test = "";
+
+        SQLiteDatabase db = this.getWritableDatabase();
+
+        Cursor cursor = db.rawQuery("SELECT name from " + "  Goal_tbl"+" "+"Where _id="+id , null);
 
         while (cursor.moveToNext()) {
 

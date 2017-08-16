@@ -10,15 +10,16 @@
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:id="@+id/list_long_goal"></ListView>
+
     <Button
+        android:id="@+id/add_long_goal"
         android:layout_width="40dp"
         android:layout_height="40dp"
-        android:id="@+id/add_long_goal"
-        android:text="+"
-        android:background="@drawable/shape"
-        android:textSize="20sp"
         android:layout_alignParentBottom="true"
-        android:layout_alignParentEnd="true" />
+
+        android:background="@drawable/shape"
+        android:text="+"
+        android:textSize="20sp" />
 
 
 </RelativeLayout>

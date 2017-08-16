@@ -23,7 +23,7 @@
         <activity android:name=".LongGoalActivity"></activity>
         <activity android:name=".ShotGoalActivity" />
         <activity android:name=".Dialog"
-            android:theme="@style/Theme.AppCompat.NoActionBar"></activity>
+            android:theme="@style/Theme.MyDialog"></activity>
     </application>
 
 </manifest>

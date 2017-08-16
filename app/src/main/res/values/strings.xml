@@ -2,6 +2,8 @@
     <string name="app_name">7habit</string>
     <string name="hint_dialog_goalName">هدف خود را بنویسید</string>
     <string name="dialog_title">مشخصات هدف خود را بنویسید</string>
+    <string name="dialog_save_btn">ذخیره</string>
+    <string name="dialog_cancel_btn">لغو</string>
     <string-array name="spinnerItems">
         <item>تفریحی/مسافرتی</item>
         <item>ورزشی</item>
