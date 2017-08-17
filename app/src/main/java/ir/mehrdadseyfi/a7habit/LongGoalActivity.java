@@ -1,33 +1,36 @@
 package ir.mehrdadseyfi.a7habit;
 
+import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import java.util.List;
 
 public class LongGoalActivity extends AppCompatActivity {
-    List<LongGoalModule> models;
 
-    GoalDB test;
-    String[] name;
-    LongGoalAdapter adapter;
+
     ListView mylist;
-    int[] catPhoto;
-    String[]date;
+    int postionAlert;
+
+   Context mContext=this;
+    List<GoalSugarDB> books;
 
     @Override
     protected void onResume() {
-        listItemAdd();
+        sugarAddITEM();
         super.onResume();
     }
 
     @Override
     protected void onStart() {
-        listItemAdd();
+        sugarAddITEM();
         super.onStart();
     }
 
@@ -35,8 +38,9 @@ public class LongGoalActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_long_goal);
-        test = new GoalDB(this, "longdb", null, 1);
-        listItemAdd();
+
+        sugarAddITEM();
+        mylist = (ListView) findViewById(R.id.list_long_goal);
         findViewById(R.id.add_long_goal).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -47,55 +51,81 @@ public class LongGoalActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                mylist.setAdapter(adapter);
+                sugarAddITEM();
+            }
+        });
+        mylist.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
+            @Override
+            public boolean onItemLongClick(AdapterView<?> parent, View view, int position, long id) {
+        postionAlert=position;
+                AlertPopup();
 
+                return true;
             }
         });
 
 
     }
 
- public void listItemAdd() {
-     name = new String[Integer.parseInt(test.getGoalID()) + 1];
-     catPhoto = new int[Integer.parseInt(test.getGoalID()) + 1];
-     date = new String[Integer.parseInt(test.getGoalID()) + 1];
+    public void sugarAddITEM() {
+
+        books = GoalSugarDB.listAll(GoalSugarDB.class);
+        LongGoalSugarAdapter adapterSugar = new LongGoalSugarAdapter(books, this);
+        try {
+            mylist.setAdapter(adapterSugar);
+
+        } catch (Exception e) {
+
+        }
+    }
+    public void AlertPopup()
+    {
+        AlertDialog alertDialog = new AlertDialog.Builder(mContext).create();
+
+//tiltle
+        alertDialog.setTitle("هشدار");
+
+//maten dialog
+        alertDialog.setMessage("آیا از حذف هدف خود مطمن هستید؟");
+
+//dokme ---mitoni ino hey copy koni va  BUTTON_NEUTRAL ino avaz koni dokme jadid biari va ye cari behesh nesbat bedi
+        alertDialog.setButton(AlertDialog.BUTTON_POSITIVE, "OK",
+
+                new DialogInterface.OnClickListener() {
+
+                    public void onClick(DialogInterface dialog, int which) {
+
+                        GoalSugarDB book = GoalSugarDB.findById(GoalSugarDB.class, books.get(postionAlert).getId());
+                        book.delete();
+                        Toast.makeText(LongGoalActivity.this, "حذف هدف انجام شد", Toast.LENGTH_SHORT).show();
+                        sugarAddITEM();
+
+                    }
+
+                });
+        alertDialog.setButton(AlertDialog.BUTTON_NEGATIVE, "No",
+        new DialogInterface.OnClickListener() {
+
+                    public void onClick(DialogInterface dialog, int which) {
+
+                        dialog.dismiss();
+
+                    }
+
+                });
 
 
-     for (int i = 1; i < name.length; i++) {
-         name[i] = test.getGoalName(String.valueOf(i));
-         date[i] = test.getGoalDate(String.valueOf(i));
-            switch (test.getGoalcat(String.valueOf(i))){
-                case "تفریحی/مسافرتی":
-                    catPhoto[i]=R.mipmap.ic_launcher;
-                    break ;
-                case "ورزشی":
-                    catPhoto[i]=R.mipmap.ic_launcher;
-                    break ;
-                case "آموزشی":
-                    catPhoto[i]=R.mipmap.ic_launcher;
-                    break ;
-                case "شغلی":
-                    catPhoto[i]=R.mipmap.ic_launcher;
-                    break ;
-                case "مالی":
-                    catPhoto[i]=R.mipmap.ic_launcher;
-                    break ;
-                default:
-                    catPhoto[i]=R.mipmap.ic_launcher;
-            }
-     }
-     adapter = new LongGoalAdapter(name, this, catPhoto,date);
-     mylist = (ListView) findViewById(R.id.list_long_goal);
-     mylist.setAdapter(adapter);
-     mylist.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
-         @Override
-         public boolean onItemLongClick(AdapterView<?> parent, View view, int position, long id) {
-                    test.deleteRow(position);
-             return true;
-         }
-     });
+
+        alertDialog.show();
 
 
- }
-}
+
+    }
+
+    }
+
+
+
+
+
 

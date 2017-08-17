@@ -5,22 +5,20 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.ImageView;
-import android.widget.Toast;
 
 public class GoalActivity extends AppCompatActivity {
     ImageView long_goal;
     ImageView short_goal;
-    GoalDB databaseGoal;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_goal);
-        databaseGoal =new GoalDB(this,"longdb",null,1);
-       if(databaseGoal.getGoalID()=="") {
-           databaseGoal.inserToDB("هدف من", "", "غیره");
-       }
-        Toast.makeText(this, databaseGoal.getGoalID(), Toast.LENGTH_SHORT).show();
+
+
+
+
         long_goal=(ImageView)findViewById(R.id.long_goal);
 
         short_goal=(ImageView)findViewById(R.id.short_goal);

@@ -19,11 +19,11 @@ public class LongGoalAdapter extends BaseAdapter {
     int catPhoto[];
 
 
-    public LongGoalAdapter(String[] name,Context mContext,int catPhoto[],String Date[]) {
+    public LongGoalAdapter(String[] name, Context mContext, int catPhoto[], String Date[]) {
         this.name = name;
-        this.mContext=mContext;
-        this.catPhoto=catPhoto;
-        this.Date=Date;
+        this.mContext = mContext;
+        this.catPhoto = catPhoto;
+        this.Date = Date;
     }
 
     @Override
@@ -44,12 +44,22 @@ public class LongGoalAdapter extends BaseAdapter {
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
         View rowView = LayoutInflater.from(mContext).inflate(R.layout.list_view_goal, parent, false);
-        TextView txt=(TextView)rowView.findViewById(R.id.txt);
-        txt.setText(name[position]);
-        TextView date=(TextView)rowView.findViewById(R.id.date);
-        date.setText(Date[position]);
-        ImageView img=(ImageView)rowView.findViewById(R.id.cat_photo);
-        img.setImageResource(catPhoto[position]);
-        return rowView;
+
+        TextView txt = (TextView) rowView.findViewById(R.id.txt);
+
+        TextView date = (TextView) rowView.findViewById(R.id.date);
+        ImageView img = (ImageView) rowView.findViewById(R.id.cat_photo);
+
+
+
+
+            txt.setText(name[position]);
+            date.setText(Date[position]);
+
+            img.setImageResource(catPhoto[position]);
+            return rowView;
+
+
+
     }
 }

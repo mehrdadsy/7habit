@@ -12,12 +12,14 @@ import ir.mirrajabi.persiancalendar.core.interfaces.OnDayClickedListener;
 import ir.mirrajabi.persiancalendar.core.models.PersianDate;
 
 public class Dialog extends AppCompatActivity {
-        EditText goalName;
-        Spinner  spinCat;
-        EditText goalDate;
-      GoalDB longDB;
+    EditText goalName;
+    Spinner spinCat;
+    EditText goalDate;
+
     String date;
     PersianCalendarView test;
+    PersianCalendarView calendarView;
+    GoalSugarDB sugarLonGoal;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,43 +27,32 @@ public class Dialog extends AppCompatActivity {
         setContentView(R.layout.activity_dialog);
 
         goalName = (EditText) findViewById(R.id.dialog_goalName);
-//        goalDate=(EditText)findViewById(R.id.goalDate);
         spinCat = (Spinner) findViewById(R.id.spinGoal);
-        longDB = new GoalDB(this, "longdb", null, 1);
         findViewById(R.id.save).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 String goalname = goalName.getText().toString();
                 String goaldate = date;
                 String spincat = spinCat.getSelectedItem().toString();
-                longDB.inserToDB(goalname, goaldate, spincat);
+                 sugarLonGoal = new GoalSugarDB(goalname, goaldate, spincat);
+                sugarLonGoal.save();
                 goalName.setText("");
 
 
-
             }
         });
-          test= new PersianCalendarView(this);
+        test = new PersianCalendarView(this);
         test.setOnDayClickedListener(new OnDayClickedListener() {
             @Override
             public void onClick(PersianDate persianDate) {
-        date=String.valueOf(persianDate.getYear())+"/"+String.valueOf(persianDate.getMonth())+"/"+String.valueOf(persianDate.getDayOfMonth());
-                Toast.makeText(Dialog.this,date , Toast.LENGTH_SHORT).show();
+                date = String.valueOf(persianDate.getYear()) + "/" + String.valueOf(persianDate.getMonth()) + "/" + String.valueOf(persianDate.getDayOfMonth());
+                Toast.makeText(Dialog.this, date, Toast.LENGTH_SHORT).show();
 
             }
         });
 
 
-
-
-
-
-
-
-
-
     }
-
 
 
 }
