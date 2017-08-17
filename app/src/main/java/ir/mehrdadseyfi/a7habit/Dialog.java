@@ -46,7 +46,8 @@ public class Dialog extends AppCompatActivity {
         });
         test = new PersianCalendarView(this);
         date1 = PersianCalendarHandler.getInstance(this);
-        date1.setDaysFontSize(30f);
+        date1.setDaysFontSize(60F);
+        date1.setHeadersFontSize(50F);
         date1.setHeadersTypeface(Typeface.DEFAULT);
         date1.setColorBackground(-65536);
         test.setOnDayClickedListener(new OnDayClickedListener() {
