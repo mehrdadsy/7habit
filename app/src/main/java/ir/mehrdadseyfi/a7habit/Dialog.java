@@ -42,6 +42,7 @@ public class Dialog extends AppCompatActivity {
             }
         });
         test = new PersianCalendarView(this);
+
         test.setOnDayClickedListener(new OnDayClickedListener() {
             @Override
             public void onClick(PersianDate persianDate) {

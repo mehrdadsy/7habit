@@ -8,7 +8,7 @@
         android:layout_weight="1"
         android:layout_height="match_parent"
 
-        android:textSize="30sp"
+        android:textSize="20sp"
         android:textColor="@color/colorPrimary"
         android:id="@+id/date"
        />
@@ -23,7 +23,7 @@
         android:layout_weight="1"
         android:layout_height="match_parent"
 
-        android:textSize="40sp"
+        android:textSize="20sp"
         android:textColor="@color/colorPrimary"
         android:id="@+id/txt"/>
 

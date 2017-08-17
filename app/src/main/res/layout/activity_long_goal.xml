@@ -20,13 +20,7 @@
         android:background="@drawable/shape"
         android:text="+"
         android:textSize="20sp" />
-    <Button
-    android:id="@+id/add_long_goal_R"
-    android:layout_width="40dp"
-    android:layout_height="40dp"
-    android:background="@drawable/shape"
-    android:text="R"
-    android:textSize="20sp" />
+
 
 
 </RelativeLayout>
