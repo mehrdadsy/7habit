@@ -47,13 +47,7 @@ public class LongGoalActivity extends AppCompatActivity {
                 startActivity(new Intent(LongGoalActivity.this, Dialog.class));
             }
         });
-        findViewById(R.id.add_long_goal_R).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
 
-                sugarAddITEM();
-            }
-        });
         mylist.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
             @Override
             public boolean onItemLongClick(AdapterView<?> parent, View view, int position, long id) {

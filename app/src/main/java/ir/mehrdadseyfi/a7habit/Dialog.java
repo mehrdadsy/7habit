@@ -1,5 +1,6 @@
 package ir.mehrdadseyfi.a7habit;
 
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -8,6 +9,7 @@ import android.widget.Spinner;
 import android.widget.Toast;
 
 import ir.mirrajabi.persiancalendar.PersianCalendarView;
+import ir.mirrajabi.persiancalendar.core.PersianCalendarHandler;
 import ir.mirrajabi.persiancalendar.core.interfaces.OnDayClickedListener;
 import ir.mirrajabi.persiancalendar.core.models.PersianDate;
 
@@ -15,6 +17,7 @@ public class Dialog extends AppCompatActivity {
     EditText goalName;
     Spinner spinCat;
     EditText goalDate;
+    PersianCalendarHandler date1;
 
     String date;
     PersianCalendarView test;
@@ -34,7 +37,7 @@ public class Dialog extends AppCompatActivity {
                 String goalname = goalName.getText().toString();
                 String goaldate = date;
                 String spincat = spinCat.getSelectedItem().toString();
-                 sugarLonGoal = new GoalSugarDB(goalname, goaldate, spincat);
+                sugarLonGoal = new GoalSugarDB(goalname, goaldate, spincat);
                 sugarLonGoal.save();
                 goalName.setText("");
 
@@ -42,12 +45,17 @@ public class Dialog extends AppCompatActivity {
             }
         });
         test = new PersianCalendarView(this);
-
+        date1 = PersianCalendarHandler.getInstance(this);
+        date1.setDaysFontSize(30f);
+        date1.setHeadersTypeface(Typeface.DEFAULT);
+        date1.setColorBackground(-65536);
         test.setOnDayClickedListener(new OnDayClickedListener() {
             @Override
             public void onClick(PersianDate persianDate) {
                 date = String.valueOf(persianDate.getYear()) + "/" + String.valueOf(persianDate.getMonth()) + "/" + String.valueOf(persianDate.getDayOfMonth());
+                int a = R.color.material_grey_850;
                 Toast.makeText(Dialog.this, date, Toast.LENGTH_SHORT).show();
+                Toast.makeText(Dialog.this, String.valueOf(a), Toast.LENGTH_SHORT).show();
 
             }
         });
