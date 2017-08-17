@@ -54,9 +54,9 @@ public class Dialog extends AppCompatActivity {
             @Override
             public void onClick(PersianDate persianDate) {
                 date = String.valueOf(persianDate.getYear()) + "/" + String.valueOf(persianDate.getMonth()) + "/" + String.valueOf(persianDate.getDayOfMonth());
-                int a = R.color.material_grey_850;
+
                 Toast.makeText(Dialog.this, date, Toast.LENGTH_SHORT).show();
-                Toast.makeText(Dialog.this, String.valueOf(a), Toast.LENGTH_SHORT).show();
+
 
             }
         });
