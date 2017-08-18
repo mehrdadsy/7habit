@@ -14,20 +14,47 @@
       android:text="@string/show_title_dialog"
         android:textSize="15dp"
         android:layout_gravity="center"/>
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
 
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minLines="1"
+        android:maxLines="4"
         android:id="@+id/show_title"/>
-    <TextView
-        android:layout_width="wrap_content"
+    <EditText
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:minLines="1"
         android:maxLines="4"
         android:id="@+id/show_detial"/>
-    <TextView
-        android:layout_width="wrap_content"
+    <EditText
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:minLines="1"
+        android:maxLines="4"
         android:id="@+id/show_upgrade"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_horizontal"
+        >
+        <Button
+            android:id="@+id/save"
+            android:text="@string/dialog_save_btn"
+            android:layout_width="60dp"
+            android:layout_marginRight="20dp"
+            android:layout_height="40dp" />
+
+
+        <Button
+            android:id="@+id/cancel"
+            android:text="@string/dialog_cancel_btn"
+            android:layout_width="60dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center_vertical"/>
+
+    </LinearLayout>
+
 
 </LinearLayout>

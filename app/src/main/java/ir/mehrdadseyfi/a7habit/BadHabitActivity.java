@@ -45,7 +45,9 @@ public class BadHabitActivity extends AppCompatActivity {
         mylist.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                startActivity(new Intent(BadHabitActivity.this, DialogBadHabitShowActivity.class));
+                Intent intent = new Intent(BadHabitActivity.this, DialogBadHabitShowActivity.class);
+                intent.putExtra("id",models.get(position).getId());
+                startActivity(intent);
 
             }
         });

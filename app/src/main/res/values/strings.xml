@@ -3,6 +3,8 @@
     <string name="hint_dialog_goalName">هدف خود را بنویسید</string>
     <string name="dialog_title">مشخصات هدف خود را بنویسید</string>
     <string name="dialog_save_btn">ذخیره</string>
+    <string name="habit_main">عادات بد</string>
+    <string name="long_main">اهداف</string>
     <string name="dialog_cancel_btn">لغو</string>
     <string name="show_title_dialog">عادت بد من که باید درستش کنم</string>
     <string name="upgrade_dialog_bad_habit_hint">راه اصلاح عادت بد خود را بنویسید</string>

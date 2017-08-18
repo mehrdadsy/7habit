@@ -1,19 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#c88383"
+    android:orientation="vertical"
+    android:gravity="center"
+
     tools:context="ir.mehrdadseyfi.a7habit.MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+  <Button
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="@string/habit_main"
+      android:id="@+id/habit_go"
+      android:background="@drawable/shape_dialog"
+      />
+  <Button
+      android:layout_width="wrap_content"
+      android:layout_marginTop="20dp"
+      android:id="@+id/goal_go"
+      android:layout_height="wrap_content"
+      android:text="@string/long_main"
+      android:background="@drawable/shape_dialog"/>
 
-</android.support.constraint.ConstraintLayout>
+</LinearLayout>
