@@ -4,6 +4,12 @@
     <string name="dialog_title">مشخصات هدف خود را بنویسید</string>
     <string name="dialog_save_btn">ذخیره</string>
     <string name="dialog_cancel_btn">لغو</string>
+    <string name="show_title_dialog">عادت بد من که باید درستش کنم</string>
+    <string name="upgrade_dialog_bad_habit_hint">راه اصلاح عادت بد خود را بنویسید</string>
+
+    <string name="detail_dialog_bad_habit_hint">توضیح عادت بد خود را بنویسید</string>
+    <string name="title_dialog_bad_habit_hint">موضوع عادت بد خود را بنویسید</string>
+    <string name="bad_habit_dialog_title">مشخصات عادات بد خود را بنویسید</string>
     <string-array name="spinnerItems">
         <item>تفریحی/مسافرتی</item>
         <item>ورزشی</item>
