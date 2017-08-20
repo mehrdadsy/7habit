@@ -22,11 +22,12 @@
             android:name="DOMAIN_PACKAGE_NAME"
             android:value="ir.mehrdadseyfi" />
         />
-        <activity android:name=".MainActivity" >  <intent-filter>
-        <action android:name="android.intent.action.MAIN" />
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
-        <category android:name="android.intent.category.LAUNCHER" />
-    </intent-filter>
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
         <activity
             android:name=".GoalActivity"
@@ -37,18 +38,15 @@
         <activity
             android:name=".Dialog"
             android:theme="@style/Theme.MyDialog" />
-        <activity android:name=".BadHabitActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+        <activity android:name=".BadHabitActivity"></activity>
         <activity
             android:name=".DialogBadHabitAddActivity"
             android:theme="@style/Theme.MyDialog" />
-        <activity android:name=".DialogBadHabitShowActivity"
-            android:theme="@style/Theme.MyDialog"></activity>
+        <activity
+            android:name=".DialogBadHabitShowActivity"
+            android:theme="@style/Theme.MyDialog" />
+        <activity android:name=".SquareTasksActivity"
+            android:theme="@style/Theme.AppCompat.NoActionBar"></activity>
     </application>
 
 </manifest>
