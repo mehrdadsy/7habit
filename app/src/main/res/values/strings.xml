@@ -5,6 +5,7 @@
     <string name="dialog_save_btn">ذخیره</string>
     <string name="habit_main">عادات بد</string>
     <string name="long_main">اهداف</string>
+    <string name="add_task">مشخصات کار ضروری/اضطراری خود را وارد کنید</string>
     <string name="dialog_cancel_btn">لغو</string>
     <string name="show_title_dialog">عادت بد من که باید درستش کنم</string>
     <string name="upgrade_dialog_bad_habit_hint">راه اصلاح عادت بد خود را بنویسید</string>

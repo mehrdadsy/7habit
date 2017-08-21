@@ -12,10 +12,10 @@
     android:id="@+id/mylist_habit"></ListView>
     <Button
         android:id="@+id/add_bad_habit"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
-        android:layout_alignParentBottom="true"
-        android:background="@drawable/shape"
-        android:text="+"
-        android:textSize="20sp" />
-</RelativeLayout>
+    android:layout_width="40dp"
+    android:layout_height="40dp"
+    android:layout_alignParentBottom="true"
+    android:background="@drawable/shape"
+    android:text="+"
+    android:textSize="20sp" />
+    </RelativeLayout>
