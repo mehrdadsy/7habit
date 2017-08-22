@@ -4,8 +4,8 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.EditText;
-import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.Spinner;
 import android.widget.Toast;
 
 import com.mohamadamin.persianmaterialdatetimepicker.date.DatePickerDialog;
@@ -20,6 +20,8 @@ public class EmergencyEssntialDialogActivity extends AppCompatActivity implement
     EditText detialEE;
     EditText calenderEE;
     EmergencyEssntialItem EEItem;
+    Spinner cat;
+    String catToDB;
     int hours;
     int min;
     int years;
@@ -31,11 +33,12 @@ public class EmergencyEssntialDialogActivity extends AppCompatActivity implement
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_emergency_essntial_dialog);
+    cat=(Spinner)findViewById(R.id.spinEE);
 
         tilteEE = (EditText) findViewById(R.id.add_title_EE);
         detialEE = (EditText) findViewById(R.id.add_detial_EE);
         ImageView imgBtn=(ImageView) findViewById(R.id.calender);
-        imgBtn.setImageResource(R.drawable.ic_alarm_black_48dp);
+//        imgBtn.setImageResource(R.drawable.ic_alarm_black_48dp);
         imgBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -61,7 +64,7 @@ public class EmergencyEssntialDialogActivity extends AppCompatActivity implement
                 String title = tilteEE.getText().toString();
                 String detial = detialEE.getText().toString();
 
-                EEItem = new EmergencyEssntialItem(title,detial,String.valueOf(years),String.valueOf(mounth),String.valueOf(day),String.valueOf(hours),String.valueOf(min));
+                EEItem = new EmergencyEssntialItem(title,detial,"ee",catToDB,String.valueOf(years),String.valueOf(mounth),String.valueOf(day),String.valueOf(hours),String.valueOf(min));
                 EEItem.save();
                 tilteEE.setText("");
                 detialEE.setText("");
@@ -82,5 +85,24 @@ public class EmergencyEssntialDialogActivity extends AppCompatActivity implement
     public void onTimeSet(RadialPickerLayout view, int hourOfDay, int minute) {
         hours = hourOfDay;
         min = minute;
+    }
+    public void addImageCat()
+    {
+        switch (cat.getSelectedItem().toString())
+        {
+            case "تفریحی/مسافرتی":catToDB="1";
+                break;
+            case "ورزشی":catToDB="1";
+                break;
+            case "آموزشی":catToDB="1";
+                break;
+            case "شغلی":catToDB="1";
+                break;
+            case "مالی":catToDB="1";
+                break;
+            default:catToDB="1";
+                break;
+
+        }
     }
 }

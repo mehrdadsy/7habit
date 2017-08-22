@@ -22,10 +22,10 @@ public class SquareTasksActivity extends AppCompatActivity {
                 ImageView img_eu=(ImageView)findViewById(R.id.icon_eu);
                 ImageView img_ue=(ImageView)findViewById(R.id.icon_ue);
                 ImageView img_uu=(ImageView)findViewById(R.id.icon_uu);
-                img_ee.setImageResource(R.drawable.ic_alarm_black_48dp);
-                img_eu.setImageResource(R.drawable.ic_alarm_black_48dp);
-                img_ue.setImageResource(R.drawable.ic_alarm_black_48dp);
-                img_uu.setImageResource(R.drawable.ic_alarm_black_48dp);
+//                img_ee.setImageResource(R.drawable.ic_alarm_black_48dp);
+//                img_eu.setImageResource(R.drawable.ic_alarm_black_48dp);
+//                img_ue.setImageResource(R.drawable.ic_alarm_black_48dp);
+//                img_uu.setImageResource(R.drawable.ic_alarm_black_48dp);
 
             }
         });

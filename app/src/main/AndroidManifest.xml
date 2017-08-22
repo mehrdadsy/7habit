@@ -22,7 +22,7 @@
             android:name="DOMAIN_PACKAGE_NAME"
             android:value="ir.mehrdadseyfi" />
         />
-        <activity android:name=".MainActivity"></activity>
+        <activity android:name=".MainActivity" />
         <activity
             android:name=".GoalActivity"
             android:theme="@style/Theme.AppCompat.NoActionBar" />
@@ -48,13 +48,13 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
-        <activity android:name=".Emegency.EmergencyEssntialActivity">
-
-        </activity>
+        <activity
+            android:name=".Emegency.EmergencyEssntialActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"></activity>
         <activity
             android:name=".Emegency.EmergencyEssntialDialogActivity"
-            android:theme="@style/Base.Theme.AppCompat.Dialog"></activity>
+            android:theme="@style/Base.Theme.AppCompat.Dialog" />
+        <activity android:name=".Emegency.EmergencyEssntialShowEditActivity"></activity>
     </application>
 
 </manifest>

@@ -20,6 +20,12 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/add_detial_EE"/>
+    <Spinner
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:id="@+id/spinEE"
+        android:entries="@array/spinnerItems"></Spinner>
     <ImageView
         android:layout_height="wrap_content"
         android:layout_width="wrap_content"

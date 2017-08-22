@@ -10,13 +10,16 @@ public class EmergencyEssntialItem extends SugarRecord<EmergencyEssntialItem> {
     String title;
 
     String detial;
+    String catSqure;
+    String cat;
     String calenderYear;
     String calenderMount;
     String calenderday;
     String hours;
     String minutes;
 
-    public EmergencyEssntialItem(String title, String detial, String calenderYear, String calenderMount, String calenderday, String hours, String minutes) {
+    public EmergencyEssntialItem(String title, String detial,String catSqure,    String cat
+            , String calenderYear, String calenderMount, String calenderday, String hours, String minutes) {
         this.title = title;
         this.detial = detial;
         this.calenderYear = calenderYear;
@@ -24,6 +27,24 @@ public class EmergencyEssntialItem extends SugarRecord<EmergencyEssntialItem> {
         this.calenderday = calenderday;
         this.hours = hours;
         this.minutes = minutes;
+        this.catSqure=catSqure;
+        this.cat=cat;
+    }
+
+    public String getCat() {
+        return cat;
+    }
+
+    public void setCat(String cat) {
+        this.cat = cat;
+    }
+
+    public String getCatSqure() {
+        return catSqure;
+    }
+
+    public void setCatSqure(String catSqure) {
+        this.catSqure = catSqure;
     }
 
     public String getTitle() {
