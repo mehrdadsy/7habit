@@ -6,7 +6,8 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:gravity="center"
-    tools:context="ir.mehrdadseyfi.a7habit.Emegency.EmergencyEssntialShowEditActivity">
+    tools:context="ir.mehrdadseyfi.a7habit.Emegency.EmergencyEssntialShowEditActivity"
+    android:weightSum="1">
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -27,10 +28,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/date"/>
-    <ProgressBar
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/graph"/>
+  <com.github.mikephil.charting.charts.PieChart
+      android:layout_width="311dp"
+      android:layout_height="wrap_content"
+      android:id="@+id/graph"
+      android:layout_weight="0.75"></com.github.mikephil.charting.charts.PieChart>
 
 
 </LinearLayout>
