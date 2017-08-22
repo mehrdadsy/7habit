@@ -4,6 +4,8 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.mohamadamin.persianmaterialdatetimepicker.date.DatePickerDialog;
@@ -29,9 +31,12 @@ public class EmergencyEssntialDialogActivity extends AppCompatActivity implement
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_emergency_essntial_dialog);
+
         tilteEE = (EditText) findViewById(R.id.add_title_EE);
         detialEE = (EditText) findViewById(R.id.add_detial_EE);
-        findViewById(R.id.calender).setOnClickListener(new View.OnClickListener() {
+        ImageView imgBtn=(ImageView) findViewById(R.id.calender);
+        imgBtn.setImageResource(R.drawable.ic_alarm_black_48dp);
+        imgBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 PersianCalendar persianCalendar = new PersianCalendar();

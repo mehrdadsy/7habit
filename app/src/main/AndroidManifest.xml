@@ -14,7 +14,7 @@
             android:value="sugar3.db" />
         <meta-data
             android:name="VERSION"
-            android:value="7" />
+            android:value="3" />
         <meta-data
             android:name="QUERY_LOG"
             android:value="true" />
@@ -41,15 +41,19 @@
             android:theme="@style/Theme.MyDialog" />
         <activity
             android:name=".SquareTasksActivity"
-            android:theme="@style/Theme.AppCompat.NoActionBar" />
-        <activity android:name=".Emegency.EmergencyEssntialActivity">
+            android:theme="@style/Theme.AppCompat.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Emegency.EmergencyEssntialDialogActivity"
+
+        <activity android:name=".Emegency.EmergencyEssntialActivity">
+
+        </activity>
+        <activity
+            android:name=".Emegency.EmergencyEssntialDialogActivity"
             android:theme="@style/Base.Theme.AppCompat.Dialog"></activity>
     </application>
 
