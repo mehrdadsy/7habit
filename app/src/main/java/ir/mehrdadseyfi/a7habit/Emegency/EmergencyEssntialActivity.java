@@ -77,6 +77,7 @@ public class EmergencyEssntialActivity extends AppCompatActivity {
         EmergencyEssntialListAdapter adpter = new EmergencyEssntialListAdapter(models, mContext);
         i = models.size();
         BackGroundIf();
+        
 
 
         try {
