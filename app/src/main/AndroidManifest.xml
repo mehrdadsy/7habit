@@ -14,7 +14,7 @@
             android:value="sugar3.db" />
         <meta-data
             android:name="VERSION"
-            android:value="3" />
+            android:value="5" />
         <meta-data
             android:name="QUERY_LOG"
             android:value="true" />
@@ -50,11 +50,11 @@
         </activity>
         <activity
             android:name=".Emegency.EmergencyEssntialActivity"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar"></activity>
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
         <activity
             android:name=".Emegency.EmergencyEssntialDialogActivity"
-            android:theme="@style/Base.Theme.AppCompat.Dialog" />
-        <activity android:name=".Emegency.EmergencyEssntialShowEditActivity"></activity>
+            android:theme="@style/mytheme" />
+        <activity android:name=".Emegency.EmergencyEssntialShowEditActivity" />
     </application>
 
 </manifest>

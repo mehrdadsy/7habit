@@ -18,12 +18,13 @@
 
   </android.support.v7.widget.Toolbar>
     <RelativeLayout
+        android:id="@+id/e_e_activity_rlayout"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:id="@+id/img_empity"/>
+            android:id="@+id/img"/>
         <ListView
             android:layout_width="match_parent"
             android:layout_height="match_parent"

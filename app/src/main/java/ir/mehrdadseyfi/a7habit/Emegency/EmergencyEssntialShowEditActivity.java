@@ -32,7 +32,7 @@ Long id;
 
         PieDataSet set = new PieDataSet(entries, "");
         PieData data = new PieData(set);
-        set.setColors(new int[] { R.color.colorAccent, R.color.colorPrimary, }, EmergencyEssntialShowEditActivity.this);
+        set.setColors(new int[] { R.color.colorPrimary, R.color.colorAccent }, EmergencyEssntialShowEditActivity.this);
             progressBar.getDescription().setEnabled(false);
         progressBar.setCenterText("70");
         Legend l = progressBar.getLegend();

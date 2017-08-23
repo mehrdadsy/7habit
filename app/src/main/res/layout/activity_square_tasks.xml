@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -7,7 +7,9 @@
     android:background="#fefefe"
     android:orientation="horizontal"
     tools:context="ir.mehrdadseyfi.a7habit.SquareTasksActivity">
-
+    <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
     <LinearLayout
         android:layout_width="0dp"
         android:layout_height="match_parent"
@@ -22,14 +24,18 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="4">
+            android:layout_weight="4"
+            >
 
             <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="T"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:id="@+id/sq01"
+                android:text="@string/sq_01"
+android:rotation="270"
+
                 android:layout_marginStart="10dp"
-                android:textColor="@color/colorAccent" />
+                android:textColor="@color/mdtp_transparent_black" />
         </LinearLayout>
 
         <LinearLayout
@@ -43,11 +49,13 @@
             android:layout_weight="4">
 
             <TextView
-                android:layout_width="wrap_content"
+                android:layout_width="60dp"
                 android:layout_marginStart="10dp"
-                android:layout_height="wrap_content"
-                android:text="T"
-                android:textColor="@color/colorAccent" />
+                android:layout_height="60dp"
+                android:id="@+id/sq02"
+                android:text="@string/sq_02"
+                android:rotation="270"
+                android:textColor="@color/mdtp_transparent_black" />
         </LinearLayout>
 
 
@@ -65,8 +73,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:text="T"
-            android:textColor="@color/colorAccent" />
+            android:id="@+id/sq03"
+            android:text="@string/sq_03"
+
+            android:textColor="@color/mdtp_transparent_black" />
 
         <LinearLayout
             android:id="@+id/emrgency_esstial"
@@ -83,7 +93,8 @@
             <ImageView
                 android:id="@+id/icon_ee"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:src="@drawable/sq01"/>
         </LinearLayout>
 
         <LinearLayout
@@ -101,7 +112,8 @@
             <ImageView
                 android:id="@+id/icon_eu"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:src="@drawable/sq03"/>
         </LinearLayout>
     </LinearLayout>
 
@@ -115,8 +127,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:text="T"
-            android:textColor="@color/colorAccent" />
+            android:id="@+id/sq04"
+            android:text="@string/sq_04"
+
+            android:textColor="@color/mdtp_transparent_black" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -132,7 +146,8 @@
             <ImageView
                 android:id="@+id/icon_ue"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:src="@drawable/sq02"/>
         </LinearLayout>
 
         <LinearLayout
@@ -150,8 +165,9 @@
             <ImageView
                 android:id="@+id/icon_uu"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:src="@drawable/sq04"/>
         </LinearLayout>
     </LinearLayout>
-
 </LinearLayout>
+</RelativeLayout>

@@ -1,8 +1,11 @@
 package ir.mehrdadseyfi.a7habit.Emegency;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
 import android.view.View;
+import android.view.Window;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Spinner;
@@ -33,12 +36,14 @@ public class EmergencyEssntialDialogActivity extends AppCompatActivity implement
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_emergency_essntial_dialog);
-    cat=(Spinner)findViewById(R.id.spinEE);
+
+
+        cat = (Spinner) findViewById(R.id.spinEE);
 
         tilteEE = (EditText) findViewById(R.id.add_title_EE);
         detialEE = (EditText) findViewById(R.id.add_detial_EE);
-        ImageView imgBtn=(ImageView) findViewById(R.id.calender);
-//        imgBtn.setImageResource(R.drawable.ic_alarm_black_48dp);
+        ImageView imgBtn = (ImageView) findViewById(R.id.calender);
+        imgBtn.setImageResource(R.drawable.alarmdialog);
         imgBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -63,12 +68,27 @@ public class EmergencyEssntialDialogActivity extends AppCompatActivity implement
             public void onClick(View v) {
                 String title = tilteEE.getText().toString();
                 String detial = detialEE.getText().toString();
+                if (title.matches("") && detial.matches("") ) {
+                    Toast.makeText(EmergencyEssntialDialogActivity.this, "لطفا موارد خواسته شده و تاریخ را وارد کنید", Toast.LENGTH_SHORT).show();
+                } else {
+                    EEItem = new EmergencyEssntialItem(title, detial, "ee", catToDB, String.valueOf(years), String.valueOf(mounth), String.valueOf(day), String.valueOf(hours), String.valueOf(min));
+                    EEItem.save();
+                    tilteEE.setText("");
+                    detialEE.setText("");
+                    Toast.makeText(EmergencyEssntialDialogActivity.this, "کار ذخیره شد", Toast.LENGTH_SHORT).show();
+                    startActivity(new Intent(EmergencyEssntialDialogActivity.this, EmergencyEssntialActivity.class));
 
-                EEItem = new EmergencyEssntialItem(title,detial,"ee",catToDB,String.valueOf(years),String.valueOf(mounth),String.valueOf(day),String.valueOf(hours),String.valueOf(min));
-                EEItem.save();
-                tilteEE.setText("");
-                detialEE.setText("");
-                Toast.makeText(EmergencyEssntialDialogActivity.this, "کار ذخیره شد", Toast.LENGTH_SHORT).show();
+                }
+
+            }
+        });
+        findViewById(R.id.cancel).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Toast.makeText(EmergencyEssntialDialogActivity.this, "ذخیره کار لغو شد", Toast.LENGTH_SHORT).show();
+                startActivity(new Intent(EmergencyEssntialDialogActivity.this, EmergencyEssntialActivity.class));
+
 
             }
         });
@@ -86,21 +106,26 @@ public class EmergencyEssntialDialogActivity extends AppCompatActivity implement
         hours = hourOfDay;
         min = minute;
     }
-    public void addImageCat()
-    {
-        switch (cat.getSelectedItem().toString())
-        {
-            case "تفریحی/مسافرتی":catToDB="1";
+
+    public void addImageCat() {
+        switch (cat.getSelectedItem().toString()) {
+            case "تفریحی/مسافرتی":
+                catToDB = "1";
                 break;
-            case "ورزشی":catToDB="1";
+            case "ورزشی":
+                catToDB = "1";
                 break;
-            case "آموزشی":catToDB="1";
+            case "آموزشی":
+                catToDB = "1";
                 break;
-            case "شغلی":catToDB="1";
+            case "شغلی":
+                catToDB = "1";
                 break;
-            case "مالی":catToDB="1";
+            case "مالی":
+                catToDB = "1";
                 break;
-            default:catToDB="1";
+            default:
+                catToDB = "1";
                 break;
 
         }

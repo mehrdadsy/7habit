@@ -5,6 +5,12 @@
     <string name="dialog_save_btn">ذخیره</string>
     <string name="habit_main">عادات بد</string>
     <string name="long_main">اهداف</string>
+    <string name="edit_eeuu">موضوع کار خود را وارد کنید</string>
+    <string name="edit_eeuu_detial">توضیحات کار خود را وارد کنید</string>
+    <string name="sq_01">ضروری</string>
+    <string name="sq_02">غیرضروری</string>
+    <string name="sq_03">اضطراری</string>
+    <string name="sq_04">غیر اضطراری</string>
     <string name="add_task">مشخصات کار ضروری/اضطراری خود را وارد کنید</string>
     <string name="dialog_cancel_btn">لغو</string>
     <string name="show_title_dialog">عادت بد من که باید درستش کنم</string>
