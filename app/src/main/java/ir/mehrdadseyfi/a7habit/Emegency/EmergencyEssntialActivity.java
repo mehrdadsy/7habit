@@ -77,7 +77,7 @@ public class EmergencyEssntialActivity extends AppCompatActivity {
         EmergencyEssntialListAdapter adpter = new EmergencyEssntialListAdapter(models, mContext);
         i = models.size();
         BackGroundIf();
-        
+
 
 
         try {
@@ -146,7 +146,7 @@ public class EmergencyEssntialActivity extends AppCompatActivity {
         imgBackGround = (ImageView) findViewById(R.id.img);
 
         if (i == 0) {
-            imgBackGround.setImageResource(R.drawable.ic_launcher);
+            imgBackGround.setImageResource(R.drawable.noting);
 
         } else {
             imgBackGround.setImageDrawable(null);
