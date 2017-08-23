@@ -54,7 +54,8 @@
         <activity
             android:name=".Emegency.EmergencyEssntialDialogActivity"
             android:theme="@style/mytheme" />
-        <activity android:name=".Emegency.EmergencyEssntialShowEditActivity" />
+        <activity android:name=".Emegency.EmergencyEssntialShowEditActivity"
+            android:theme="@style/mytheme"/>
     </application>
 
 </manifest>

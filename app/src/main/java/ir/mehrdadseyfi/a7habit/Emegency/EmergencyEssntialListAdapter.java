@@ -5,6 +5,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import java.util.List;
@@ -42,6 +43,9 @@ public class EmergencyEssntialListAdapter extends BaseAdapter {
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
         View rowView = LayoutInflater.from(mContext).inflate(R.layout.emergency_essntial_list_view, parent, false);
+        ImageView img=(ImageView)rowView.findViewById(R.id.cat_img);
+//        int src=Integer.parseInt(models.get(position).getCat());
+        img.setImageResource(R.drawable.ic_launcher);
         TextView txt=(TextView)rowView.findViewById(R.id.tilte);
         txt.setText(models.get(position).getTitle());
         TextView detail=(TextView)rowView.findViewById(R.id.detial);

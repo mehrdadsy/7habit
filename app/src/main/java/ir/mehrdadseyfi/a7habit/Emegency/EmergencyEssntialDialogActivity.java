@@ -1,14 +1,12 @@
 package ir.mehrdadseyfi.a7habit.Emegency;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
 import android.view.View;
-import android.view.Window;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Spinner;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.mohamadamin.persianmaterialdatetimepicker.date.DatePickerDialog;
@@ -22,6 +20,7 @@ public class EmergencyEssntialDialogActivity extends AppCompatActivity implement
     EditText tilteEE;
     EditText detialEE;
     EditText calenderEE;
+    TextView calenderText;
     EmergencyEssntialItem EEItem;
     Spinner cat;
     String catToDB;
@@ -76,7 +75,7 @@ public class EmergencyEssntialDialogActivity extends AppCompatActivity implement
                     tilteEE.setText("");
                     detialEE.setText("");
                     Toast.makeText(EmergencyEssntialDialogActivity.this, "کار ذخیره شد", Toast.LENGTH_SHORT).show();
-                    startActivity(new Intent(EmergencyEssntialDialogActivity.this, EmergencyEssntialActivity.class));
+                    finish();
 
                 }
 
@@ -87,7 +86,7 @@ public class EmergencyEssntialDialogActivity extends AppCompatActivity implement
             public void onClick(View v) {
 
                 Toast.makeText(EmergencyEssntialDialogActivity.this, "ذخیره کار لغو شد", Toast.LENGTH_SHORT).show();
-                startActivity(new Intent(EmergencyEssntialDialogActivity.this, EmergencyEssntialActivity.class));
+                finish();
 
 
             }
@@ -99,6 +98,9 @@ public class EmergencyEssntialDialogActivity extends AppCompatActivity implement
         day = dayOfMonth;
         mounth = (monthOfYear + 1);
         years = year;
+        calenderText=(TextView)findViewById(R.id.calender_text);
+        calenderText.setText(years+"/"+mounth+"/"+day+"\n"+
+        hours+":"+min);
     }
 
     @Override
@@ -110,7 +112,7 @@ public class EmergencyEssntialDialogActivity extends AppCompatActivity implement
     public void addImageCat() {
         switch (cat.getSelectedItem().toString()) {
             case "تفریحی/مسافرتی":
-                catToDB = "1";
+                catToDB = String.valueOf(R.drawable.ic_launcher);
                 break;
             case "ورزشی":
                 catToDB = "1";
