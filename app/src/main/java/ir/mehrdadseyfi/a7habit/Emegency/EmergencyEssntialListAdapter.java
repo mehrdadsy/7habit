@@ -17,7 +17,7 @@ import ir.mehrdadseyfi.a7habit.R;
  */
 
 public class EmergencyEssntialListAdapter extends BaseAdapter {
-   List<EmergencyEssntialItem> models;
+    List<EmergencyEssntialItem> models;
     Context mContext;
 
     public EmergencyEssntialListAdapter(List<EmergencyEssntialItem> models, Context mContext) {
@@ -43,19 +43,23 @@ public class EmergencyEssntialListAdapter extends BaseAdapter {
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
         View rowView = LayoutInflater.from(mContext).inflate(R.layout.emergency_essntial_list_view, parent, false);
-        ImageView img=(ImageView)rowView.findViewById(R.id.cat_img);
+        ImageView img = (ImageView) rowView.findViewById(R.id.cat_img);
 //        int src=Integer.parseInt(models.get(position).getCat());
         img.setImageResource(R.drawable.ic_launcher);
-        TextView txt=(TextView)rowView.findViewById(R.id.tilte);
+        TextView txt = (TextView) rowView.findViewById(R.id.tilte);
         txt.setText(models.get(position).getTitle());
-        TextView detail=(TextView)rowView.findViewById(R.id.detial);
+        TextView detail = (TextView) rowView.findViewById(R.id.detial);
         detail.setText(models.get(position).getDetial());
-        String date=models.get(position).getCalenderYear()+"/"+models.get(position).getCalenderMount()+"/"+models.get(position).getCalenderday();
-       TextView date_persin=(TextView)rowView.findViewById(R.id.caleder);
+        String date = models.get(position).getCalenderYear() + "/" + models.get(position).getCalenderMount() + "/" + models.get(position).getCalenderday();
+        TextView date_persin = (TextView) rowView.findViewById(R.id.caleder);
         date_persin.setText(date);
-        String clock=models.get(position).getHours()+" : "+models.get(position).getMinutes();
-        TextView clock_persin=(TextView)rowView.findViewById(R.id.clock);
+        String clock = models.get(position).getHours() + " : " + models.get(position).getMinutes();
+        TextView clock_persin = (TextView) rowView.findViewById(R.id.clock);
         clock_persin.setText(clock);
+
+
         return rowView;
     }
 }
+
+

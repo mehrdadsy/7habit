@@ -14,6 +14,8 @@ import com.mohamadamin.persianmaterialdatetimepicker.time.RadialPickerLayout;
 import com.mohamadamin.persianmaterialdatetimepicker.time.TimePickerDialog;
 import com.mohamadamin.persianmaterialdatetimepicker.utils.PersianCalendar;
 
+import java.util.Date;
+
 import ir.mehrdadseyfi.a7habit.R;
 
 public class EmergencyEssntialDialogActivity extends AppCompatActivity implements DatePickerDialog.OnDateSetListener, TimePickerDialog.OnTimeSetListener {
@@ -24,6 +26,7 @@ public class EmergencyEssntialDialogActivity extends AppCompatActivity implement
     EmergencyEssntialItem EEItem;
     Spinner cat;
     String catToDB;
+    Date date2;
     int hours;
     int min;
     int years;
@@ -41,6 +44,7 @@ public class EmergencyEssntialDialogActivity extends AppCompatActivity implement
 
         tilteEE = (EditText) findViewById(R.id.add_title_EE);
         detialEE = (EditText) findViewById(R.id.add_detial_EE);
+
         ImageView imgBtn = (ImageView) findViewById(R.id.calender);
         imgBtn.setImageResource(R.drawable.alarmdialog);
         imgBtn.setOnClickListener(new View.OnClickListener() {
@@ -67,7 +71,7 @@ public class EmergencyEssntialDialogActivity extends AppCompatActivity implement
             public void onClick(View v) {
                 String title = tilteEE.getText().toString();
                 String detial = detialEE.getText().toString();
-                if (title.matches("") && detial.matches("") ) {
+                if (title.matches("") && detial.matches("")) {
                     Toast.makeText(EmergencyEssntialDialogActivity.this, "لطفا موارد خواسته شده و تاریخ را وارد کنید", Toast.LENGTH_SHORT).show();
                 } else {
                     EEItem = new EmergencyEssntialItem(title, detial, "ee", catToDB, String.valueOf(years), String.valueOf(mounth), String.valueOf(day), String.valueOf(hours), String.valueOf(min));
@@ -75,6 +79,7 @@ public class EmergencyEssntialDialogActivity extends AppCompatActivity implement
                     tilteEE.setText("");
                     detialEE.setText("");
                     Toast.makeText(EmergencyEssntialDialogActivity.this, "کار ذخیره شد", Toast.LENGTH_SHORT).show();
+//                    alarmManager();
                     finish();
 
                 }
@@ -98,9 +103,9 @@ public class EmergencyEssntialDialogActivity extends AppCompatActivity implement
         day = dayOfMonth;
         mounth = (monthOfYear + 1);
         years = year;
-        calenderText=(TextView)findViewById(R.id.calender_text);
-        calenderText.setText(years+"/"+mounth+"/"+day+"\n"+
-        hours+":"+min);
+        calenderText = (TextView) findViewById(R.id.calender_text);
+        calenderText.setText(years + "/" + mounth + "/" + day + "\n" +
+                hours + ":" + min);
     }
 
     @Override
@@ -132,4 +137,25 @@ public class EmergencyEssntialDialogActivity extends AppCompatActivity implement
 
         }
     }
+// public  void alarmManager()
+// {
+//
+//     AlarmManager am = (AlarmManager) getSystemService(ALARM_SERVICE);
+//
+//     int mounth_A= JalaliCalendar.jalaliToGregorian(new JalaliCalendar.YearMonthDate(years,mounth,day)).getMonth();
+//     int year_A= JalaliCalendar.jalaliToGregorian(new JalaliCalendar.YearMonthDate(years,mounth,day)).getYear();
+//     int day_A=JalaliCalendar.jalaliToGregorian(new JalaliCalendar.YearMonthDate(years,mounth,day)).getDate();
+//     Calendar cal = Calendar.getInstance();
+//     Calendar cal1 = Calendar.getInstance();
+//     cal1.set(year_A, mounth_A-1, day_A, hours, min, 30);
+//
+//     cal.setTimeInMillis(System.currentTimeMillis());
+//     long diff = (cal1.getTimeInMillis() - cal.getTimeInMillis())/60000;
+//     Toast.makeText(this,String.valueOf(diff), Toast.LENGTH_LONG).show();
+//
+//     Intent i = new Intent(EmergencyEssntialDialogActivity.this, MyReceiver.class);
+//     PendingIntent pi = PendingIntent.getBroadcast(EmergencyEssntialDialogActivity.this, 0, i, 0);
+//     am.set(AlarmManager.RTC_WAKEUP, cal1.getTimeInMillis(), pi);
+// }
+
 }

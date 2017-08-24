@@ -15,6 +15,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/del"/>
+      <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/sound"/>
 
   </android.support.v7.widget.Toolbar>
     <RelativeLayout

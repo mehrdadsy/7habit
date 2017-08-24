@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="ir.mehrdadseyfi.a7habit">
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="com.android.alarm.permission.SET_ALARM" />
 
     <application
         android:name="com.orm.SugarApp"
@@ -56,6 +58,11 @@
             android:theme="@style/mytheme" />
         <activity android:name=".Emegency.EmergencyEssntialShowEditActivity"
             android:theme="@style/mytheme"/>
+        <receiver android:name=".MyReceiver"
+            android:process=".alarm"/>
+        <service android:name=".AlarmSoundService"
+            android:process=".alarm"/>
+        <service android:name=".AlarmNotificationService" />
     </application>
 
 </manifest>

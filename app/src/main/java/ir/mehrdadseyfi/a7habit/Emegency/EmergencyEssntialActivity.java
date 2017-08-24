@@ -1,5 +1,7 @@
 package ir.mehrdadseyfi.a7habit.Emegency;
 
+import android.app.AlarmManager;
+import android.app.PendingIntent;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -10,11 +12,15 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ImageView;
 import android.widget.ListView;
-import android.widget.RelativeLayout;
 import android.widget.Toast;
 
+import java.util.Calendar;
+import java.util.Date;
 import java.util.List;
 
+import ir.mehrdadseyfi.a7habit.AlarmSoundService;
+import ir.mehrdadseyfi.a7habit.JalaliCalendar;
+import ir.mehrdadseyfi.a7habit.MyReceiver;
 import ir.mehrdadseyfi.a7habit.R;
 
 public class EmergencyEssntialActivity extends AppCompatActivity {
@@ -24,6 +30,7 @@ public class EmergencyEssntialActivity extends AppCompatActivity {
     Context mContext = this;
     int postionAlert;
     int i = 0;
+    Date date2;
     ImageView imgBackGround;
 
 
@@ -31,7 +38,10 @@ public class EmergencyEssntialActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_emergency_essntial);
+
+
         LV = (ListView) findViewById(R.id.mylist_ee);
+
         AddItemEE();
 
 
@@ -53,6 +63,14 @@ public class EmergencyEssntialActivity extends AppCompatActivity {
                 startActivity(new Intent(EmergencyEssntialActivity.this, EmergencyEssntialDialogActivity.class));
             }
         });
+        ImageView img_toolbar_sound = (ImageView) findViewById(R.id.sound);
+        img_toolbar_sound.setImageResource(R.drawable.ic_volume_off_black_48dp);
+        img_toolbar_sound.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                stopService(new Intent(EmergencyEssntialActivity.this, AlarmSoundService.class));
+            }
+        });
         LV.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
             @Override
             public boolean onItemLongClick(AdapterView<?> parent, View view, int position, long id) {
@@ -68,6 +86,7 @@ public class EmergencyEssntialActivity extends AppCompatActivity {
                 intent.putExtra("id", models.get(position).getId());
                 startActivity(intent);
 
+
             }
         });
     }
@@ -77,7 +96,7 @@ public class EmergencyEssntialActivity extends AppCompatActivity {
         EmergencyEssntialListAdapter adpter = new EmergencyEssntialListAdapter(models, mContext);
         i = models.size();
         BackGroundIf();
-
+        alarmManager();
 
 
         try {
@@ -141,7 +160,7 @@ public class EmergencyEssntialActivity extends AppCompatActivity {
 
 
     }
-
+//image backgroun ba if
     public void BackGroundIf() {
         imgBackGround = (ImageView) findViewById(R.id.img);
 
@@ -149,7 +168,40 @@ public class EmergencyEssntialActivity extends AppCompatActivity {
             imgBackGround.setImageResource(R.drawable.noting);
 
         } else {
+
             imgBackGround.setImageDrawable(null);
         }
     }
+//lalrm with models
+    public void alarmManager() {
+
+        AlarmManager am = (AlarmManager) getSystemService(ALARM_SERVICE);
+
+        for (int j = 0; j < i; j++) {
+            if (Integer.parseInt(models.get(j).getCalenderYear()) > 0) {
+                int years = Integer.parseInt(models.get(j).getCalenderYear());
+                int mounth = Integer.parseInt(models.get(j).getCalenderMount());
+                int day = Integer.parseInt(models.get(j).getCalenderday());
+                int hours = Integer.parseInt(models.get(j).getHours());
+                int min = Integer.parseInt(models.get(j).getMinutes());
+                int mounth_A = JalaliCalendar.jalaliToGregorian(new JalaliCalendar.YearMonthDate(years, mounth, day)).getMonth();
+                int year_A = JalaliCalendar.jalaliToGregorian(new JalaliCalendar.YearMonthDate(years, mounth, day)).getYear();
+                int day_A = JalaliCalendar.jalaliToGregorian(new JalaliCalendar.YearMonthDate(years, mounth, day)).getDate();
+
+                Calendar cal = Calendar.getInstance();
+                Calendar cal1 = Calendar.getInstance();
+                cal1.set(year_A, mounth_A - 1, day_A, hours, min, 30);
+
+                cal.setTimeInMillis(System.currentTimeMillis());
+                long diff = (cal1.getTimeInMillis() - cal.getTimeInMillis());
+
+                if (diff > 0) {
+                    Intent intent = new Intent(EmergencyEssntialActivity.this, MyReceiver.class);
+                    PendingIntent pi = PendingIntent.getBroadcast(EmergencyEssntialActivity.this, j, intent, 0);
+                    am.set(AlarmManager.RTC_WAKEUP, cal1.getTimeInMillis(), pi);
+                }
+            }
+        }
+    }
+
 }
