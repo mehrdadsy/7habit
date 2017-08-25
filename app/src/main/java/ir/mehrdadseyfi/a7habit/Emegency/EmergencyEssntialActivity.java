@@ -20,7 +20,6 @@ import java.util.List;
 
 import ir.mehrdadseyfi.a7habit.AlarmSoundService;
 import ir.mehrdadseyfi.a7habit.JalaliCalendar;
-import ir.mehrdadseyfi.a7habit.MyReceiver;
 import ir.mehrdadseyfi.a7habit.R;
 
 public class EmergencyEssntialActivity extends AppCompatActivity {

@@ -12,6 +12,9 @@
     <string name="sq_03">اضطراری</string>
     <string name="sq_04">غیر اضطراری</string>
     <string name="add_task">مشخصات کار ضروری/اضطراری خود را وارد کنید</string>
+    <string name="add_NEEtask">مشخصات کار ضروری/غیراضطراری خود را وارد کنید</string>
+    <string name="add_NENEtask">مشخصات کار غیر ضروری/غیر اضطراری خود را وارد کنید</string>
+    <string name="add_ENEtask">مشخصات کار غیر ضروری/ اضطراری خود را وارد کنید</string>
     <string name="dialog_cancel_btn">لغو</string>
     <string name="show_title_dialog">عادت بد من که باید درستش کنم</string>
     <string name="upgrade_dialog_bad_habit_hint">راه اصلاح عادت بد خود را بنویسید</string>
