@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="300dp"
+    android:layout_height="400dp"
+    android:orientation="vertical"
+    tools:context="ir.mehrdadseyfi.a7habit.Esstinal.Noemergency.NoEmergencyEssntialShowEditActivity">
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#77c5fe">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/add_ENEtask"/></android.support.v7.widget.Toolbar>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_height="fill_parent">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/add_title_EE"
+            android:hint="@string/edit_eeuu"/>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/add_detial_EE"
+            android:hint="@string/edit_eeuu_detial"/>
+        <Spinner
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:id="@+id/spinEE"
+            android:pointerIcon="arrow"
+            android:popupBackground="#77c5fe"
+            android:entries="@array/spinnerItems"></Spinner>
+        <ImageView
+            android:layout_height="50dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="15dp"
+            android:layout_width="50dp"
+            android:id="@+id/calender"/>
+        <TextView
+            android:layout_height="40dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="15dp"
+            android:layout_width="100dp"
+            android:background="#77c5fe"
+            android:id="@+id/calender_text_edit"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="bottom"
+            android:gravity="center_horizontal"
+            >
+            <Button
+                android:id="@+id/save"
+                android:text="@string/dialog_save_btn"
+                android:layout_width="80dp"
+                android:background="@drawable/d3_ene"
+                android:layout_marginRight="20dp"
+                android:layout_height="60dp" />
+
+
+            <Button
+                android:id="@+id/cancel"
+                android:text="@string/dialog_cancel_btn"
+                android:layout_width="80dp"
+                android:background="@drawable/d3_ene"
+                android:layout_height="60dp"
+                android:layout_gravity="center_vertical"/>
+
+
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

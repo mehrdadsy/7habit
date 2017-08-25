@@ -27,7 +27,7 @@ public class AlarmSoundService extends Service {
         //Start media player
         mediaPlayer = MediaPlayer.create(this,R.raw.alarm_sound);
         mediaPlayer.start();
-        mediaPlayer.setLooping(true);//set looping true to run it infinitely
+        mediaPlayer.setLooping(false);//set looping true to run it infinitely
     }
 
     @Override
