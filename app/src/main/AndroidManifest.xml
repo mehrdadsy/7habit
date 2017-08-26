@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="ir.mehrdadseyfi.a7habit">
+
     <uses-permission android:name="android.permission.WAKE_LOCK" />
     <uses-permission android:name="com.android.alarm.permission.SET_ALARM" />
 
@@ -38,39 +39,31 @@
         <activity
             android:name=".DialogBadHabitAddActivity"
             android:theme="@style/Theme.MyDialog" />
-
         <activity
             android:name=".DialogBadHabitShowActivity"
             android:theme="@style/Theme.MyDialog" />
-              <activity
+        <activity
             android:name=".Esstinal.Noemergency.NEmergencyEssntialDialogActivity"
             android:theme="@style/mytheme" />
         <activity
             android:name=".Esstinal.Noemergency.NoEmergencyEssntialShowEditActivity"
-            android:theme="@style/mytheme"/>
-
-               <activity
+            android:theme="@style/mytheme" />
+        <activity
             android:name=".NOEmergencyNoEsstial.NOEmergencyNoEsstialDialogActivity"
             android:theme="@style/mytheme" />
         <activity
             android:name=".NOEmergencyNoEsstial.NOEmergencyNoEsstialShowEditActivity"
-            android:theme="@style/mytheme"/>
-
-           <activity
+            android:theme="@style/mytheme" />
+        <activity
             android:name=".NOEsstianlEmergency.EmergencyNOEssntialShowEditActivity"
             android:theme="@style/mytheme" />
         <activity
             android:name=".NOEsstianlEmergency.NOEsstianlEmergencyDialogActivity"
-            android:theme="@style/mytheme"/>
-
+            android:theme="@style/mytheme" />
         <activity
             android:name=".SquareTasksActivity"
             android:theme="@style/Theme.AppCompat.NoActionBar">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+           >
         </activity>
         <activity
             android:name=".Emegency.EmergencyEssntialActivity"
@@ -84,29 +77,50 @@
         <activity
             android:name=".NOEsstianlEmergency.NOEsstianlEmergencyActivity"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
-
         <activity
             android:name=".Emegency.EmergencyEssntialDialogActivity"
             android:theme="@style/mytheme" />
-        <activity android:name=".Emegency.EmergencyEssntialShowEditActivity"
-            android:theme="@style/mytheme"/>
-        <receiver android:name=".Emegency.MyReceiver" android:process=".alarm"/>
+        <activity
+            android:name=".Emegency.EmergencyEssntialShowEditActivity"
+            android:theme="@style/mytheme" />
 
-      <receiver android:name=".Emegency.NeeMyReceiver" android:process=".alarm"/>
+        <receiver
+            android:name=".Emegency.MyReceiver"
+            android:process=".alarm" />
+        <receiver
+            android:name=".Emegency.NeeMyReceiver"
+            android:process=".alarm" />
+        <receiver
+            android:name=".NOEmergencyNoEsstial.NOEmergencyNoEsstialMyReceiver"
+            android:process=".alarm" />
+        <receiver
+            android:name=".NOEmergencyNoEsstial.NOEsstianlEmergencyMyReceiver"
+            android:process=".alarm" />
 
-      <receiver android:name=".NOEmergencyNoEsstial.NOEmergencyNoEsstialMyReceiver" android:process=".alarm"/>
+        <service
+            android:name=".Emegency.AlarmNotificationService"
+            android:process=".alarm" />
+        <service
+            android:name=".Esstinal.Noemergency.AlarmNotificationServiceENE"
+            android:process=".alarm" />
+        <service
+            android:name=".NOEmergencyNoEsstial.AlarmNotificationServiceNOEmergencyNoEsstial"
+            android:process=".alarm" />
+        <service
+            android:name=".NOEsstianlEmergency.AlarmNotificationServiceNOEsstianlEmergency"
+            android:process=".alarm" />
+        <service
+            android:name=".AlarmSoundService"
+            android:process=".alarm" />
 
-      <receiver android:name=".NOEmergencyNoEsstial.NOEsstianlEmergencyMyReceiver" android:process=".alarm"/>
+        <activity android:name=".Vista.VistaActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
-        <service android:name=".Emegency.AlarmNotificationService"
-            android:process=".alarm"/>
-        <service android:name=".Esstinal.Noemergency.AlarmNotificationServiceENE"
-            android:process=".alarm"/>
-        <service android:name=".NOEmergencyNoEsstial.AlarmNotificationServiceNOEmergencyNoEsstial"
-            android:process=".alarm"/>
-        <service android:name=".NOEsstianlEmergency.AlarmNotificationServiceNOEsstianlEmergency"
-            android:process=".alarm"/>
-        <service android:name=".AlarmSoundService" android:process=".alarm"/>
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
     </application>
 
 </manifest>
