@@ -35,7 +35,7 @@
         android:id="@+id/simpleTabLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:tabBackground="@drawable/shape_ue"
+        app:tabBackground="@drawable/d3_ee"
         app:tabIndicatorColor="#ff8e66"
         app:tabMinWidth="50dp"
         app:tabGravity="fill"
