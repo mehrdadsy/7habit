@@ -21,6 +21,10 @@
             android:layout_height="wrap_content"
 
             android:id="@+id/detial"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/goal_role"/>
     </LinearLayout>
     <LinearLayout
         android:layout_width="wrap_content"
@@ -33,4 +37,5 @@
             android:layout_gravity="center"
             />
     </LinearLayout>
+
 </LinearLayout>

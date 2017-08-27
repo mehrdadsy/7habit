@@ -13,12 +13,13 @@
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/ic_note_add_black_48dp"/>
+            android:src="@drawable/ic_note_add_black_48dp"
+            android:id="@+id/add"/>
         <ImageView
             android:layout_width="wrap_content"
             android:layout_marginLeft="10dp"
             android:layout_height="wrap_content"
-            android:src="@drawable/ic_launcher" />
+            android:src="@drawable/help" />
 
     </android.support.v7.widget.Toolbar>
 
@@ -35,9 +36,8 @@
         android:id="@+id/simpleTabLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:tabBackground="@drawable/d3_ee"
+        app:tabBackground="@drawable/tab_shape"
         app:tabIndicatorColor="#ff8e66"
-        app:tabMinWidth="50dp"
         app:tabGravity="fill"
         app:tabSelectedTextColor="#ff8e66"
         app:tabTextColor="#000" />

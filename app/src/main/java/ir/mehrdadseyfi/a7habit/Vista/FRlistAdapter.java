@@ -42,9 +42,9 @@ public class FRlistAdapter extends BaseAdapter {
 
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
-        View rowView = LayoutInflater.from(mContext).inflate(R.layout.fd_list_layout, parent, false);
-        TextView dearmTitle=(TextView)rowView.findViewById(R.id.tilte);
-        dearmTitle.setText(models.get(position).getName());
+        View rowView = LayoutInflater.from(mContext).inflate(R.layout.fr_list_layout, parent, false);
+        TextView roleTitle=(TextView)rowView.findViewById(R.id.tilte);
+         roleTitle.setText(models.get(position).getName());
         ImageView dream_img=(ImageView)rowView.findViewById(R.id.dream_img);
         dream_img.setImageResource(R.drawable.ic_launcher);
         return rowView;

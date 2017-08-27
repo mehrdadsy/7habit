@@ -1,12 +1,16 @@
 package ir.mehrdadseyfi.a7habit.Vista;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
+import android.view.View;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.TextView;
 
 import ir.mehrdadseyfi.a7habit.R;
 
@@ -18,25 +22,33 @@ public class VistaActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_vista);
+        ImageView add=(ImageView)findViewById(R.id.add);
+        add.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(VistaActivity.this, AddDialogActivity.class));
+            }
+        });
         mainLayout = (LinearLayout) findViewById(R.id.simpleFrameLayout);
         tabLayout = (TabLayout) findViewById(R.id.simpleTabLayout);
+        tabLayout.setTabGravity(0);
 // Create a new Tab named "First"
         TabLayout.Tab firstTab = tabLayout.newTab();
-        firstTab.setText("First"); // set the Text for the first Tab
-        firstTab.setIcon(R.drawable.ic_launcher);
+        firstTab.setText("رویا"); // set the Text for the first Tab
+        firstTab.setIcon(R.drawable.dream);
 
         // set an icon for the
 // first tab
         tabLayout.addTab(firstTab); // add  the tab at in the TabLayout
 // Create a new Tab named "Second"
         TabLayout.Tab secondTab = tabLayout.newTab();
-        secondTab.setText("Second"); // set the Text for the second Tab
-        secondTab.setIcon(R.drawable.ic_launcher); // set an icon for the second tab
+        secondTab.setText("نقش"); // set the Text for the second Tab
+        secondTab.setIcon(R.drawable.role); // set an icon for the second tab
         tabLayout.addTab(secondTab); // add  the tab  in the TabLayout
 // Create a new Tab named "Third"
         TabLayout.Tab thirdTab = tabLayout.newTab();
-        thirdTab.setText("Third"); // set the Text for the first Tab
-        thirdTab.setIcon(R.drawable.ic_launcher); // set an icon for the first tab
+        thirdTab.setText("هدف"); // set the Text for the first Tab
+        thirdTab.setIcon(R.drawable.goal); // set an icon for the first tab
         tabLayout.addTab(thirdTab); // add  the tab at in the TabLayout
         tabLayout.setOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
             @Override
@@ -55,13 +67,12 @@ public class VistaActivity extends AppCompatActivity {
                 switch (tab.getPosition()) {
                     case 0:
                         fragment = new FeragmentDream();
-
                         break;
                     case 1:
-                        fragment = new FeragmentGoal();
+                        fragment = new FeragmentRole() ;
                         break;
                     case 2:
-                        fragment = new FeragmentRole();
+                        fragment = new FeragmentGoal();
                         break;
                 }
                 FragmentManager fm = getSupportFragmentManager();

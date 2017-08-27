@@ -43,11 +43,11 @@ public class FDlistAdapter extends BaseAdapter {
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
         View rowView = LayoutInflater.from(mContext).inflate(R.layout.fd_list_layout, parent, false);
-        TextView dearmTitle=(TextView)rowView.findViewById(R.id.tilte);
+        TextView dearmTitle=(TextView)rowView.findViewById(R.id.tilte_d);
         dearmTitle.setText(models.get(position).getName());
-        TextView dreamDetail=(TextView)rowView.findViewById(R.id.detial);
+        TextView dreamDetail=(TextView)rowView.findViewById(R.id.detial_d);
         dreamDetail.setText(models.get(position).getDetial());
-        ImageView dream_img=(ImageView)rowView.findViewById(R.id.dream_img);
+        ImageView dream_img=(ImageView)rowView.findViewById(R.id.dream_img_d);
         dream_img.setImageResource(R.drawable.ic_launcher);
         return rowView;
     }

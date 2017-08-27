@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="300dp"
+    android:layout_height="400dp"
+    android:orientation="vertical"
+    tools:context="ir.mehrdadseyfi.a7habit.Vista.AddDialogActivity">
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#ffdc76">
+
+    <TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="@string/add_task"/>
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_note_add_black_48dp"/>
+    </android.support.v7.widget.Toolbar>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_height="fill_parent">
+        <RadioGroup
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:id="@+id/chose_add"
+            >
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/goal_sel"
+                android:text="@string/goal"/>
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/dream_sel"
+                android:text="@string/dream"/>
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/role_sel"
+                android:text="@string/role"/>
+        </RadioGroup>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/add_vista"
+            android:hint="@string/add_vista"/>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/add_detial_vista"
+            android:hint="@string/add_detial_vista"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="25dp"
+            android:textAlignment="center"
+            android:layout_marginTop="20dp"
+            android:textSize="15sp"
+            android:id="@+id/vista_spin"
+            android:background="@drawable/d3_ee"
+            android:text="@string/vista_spiner"/>
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:background="#ffdc76"
+           android:layout_marginTop="20dp"
+           android:gravity="fill_vertical">
+
+           <Spinner
+               android:layout_width="match_parent"
+               android:layout_height="match_parent"
+               android:scrollbarSize="50dp"
+               android:id="@+id/spinEE"
+               android:pointerIcon="arrow"
+               android:popupBackground="#ffdc76"></Spinner>
+       </LinearLayout>
+
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="bottom"
+            android:layout_marginTop="20dp"
+            android:gravity="center_horizontal"
+            >
+            <Button
+                android:id="@+id/save"
+                android:text="@string/dialog_save_btn"
+                android:layout_width="80dp"
+                android:background="@drawable/d3_ee"
+                android:layout_marginRight="20dp"
+                android:layout_height="60dp" />
+
+
+            <Button
+                android:id="@+id/cancel"
+                android:text="@string/dialog_cancel_btn"
+                android:layout_width="80dp"
+                android:background="@drawable/d3_ee"
+                android:layout_height="60dp"
+                android:layout_gravity="center_vertical"/>
+
+
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

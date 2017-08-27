@@ -42,11 +42,13 @@ public class FGlistAdapter extends BaseAdapter {
 
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
-        View rowView = LayoutInflater.from(mContext).inflate(R.layout.fd_list_layout, parent, false);
+        View rowView = LayoutInflater.from(mContext).inflate(R.layout.fg_list_layout, parent, false);
         TextView dearmTitle=(TextView)rowView.findViewById(R.id.tilte);
         dearmTitle.setText(models.get(position).getName());
         TextView dreamDetail=(TextView)rowView.findViewById(R.id.detial);
+        TextView roleGoal=(TextView)rowView.findViewById(R.id.goal_role);
         dreamDetail.setText(models.get(position).getDetial());
+        roleGoal.setText("مربوط به نقش:"+" "+models.get(position).getRole());
         ImageView dream_img=(ImageView)rowView.findViewById(R.id.dream_img);
         dream_img.setImageResource(R.drawable.ic_launcher);
         return rowView;

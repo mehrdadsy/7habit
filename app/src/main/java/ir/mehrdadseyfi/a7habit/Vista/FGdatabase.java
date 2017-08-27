@@ -9,15 +9,33 @@ import com.orm.SugarRecord;
 public class FGdatabase extends SugarRecord<FGdatabase> {
     String name;
     String detial;
+    String role;
     String iconGoal;
 
     public FGdatabase() {
     }
 
-    public FGdatabase(String name, String detial, String iconGoal) {
+    public FGdatabase(String name, String detial,String role, String iconGoal) {
 
         this.name = name;
         this.detial = detial;
+        this.iconGoal = iconGoal;
+        this.role=role;
+    }
+
+    public String getRole() {
+        return role;
+    }
+
+    public void setRole(String role) {
+        this.role = role;
+    }
+
+    public String getIconGoal() {
+        return iconGoal;
+    }
+
+    public void setIconGoal(String iconGoal) {
         this.iconGoal = iconGoal;
     }
 
@@ -37,11 +55,5 @@ public class FGdatabase extends SugarRecord<FGdatabase> {
         this.detial = detial;
     }
 
-    public String geticonGoal() {
-        return iconGoal;
-    }
 
-    public void seticonGoal(String iconGoal) {
-        this.iconGoal = iconGoal;
-    }
 }

@@ -14,13 +14,13 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/tilte"
+            android:id="@+id/tilte_d"
             />
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
 
-            android:id="@+id/detial"/>
+            android:id="@+id/detial_d"/>
     </LinearLayout>
     <LinearLayout
         android:layout_width="wrap_content"
@@ -29,7 +29,7 @@
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/dream_img"
+            android:id="@+id/dream_img_d"
             android:layout_gravity="center"
             />
     </LinearLayout>

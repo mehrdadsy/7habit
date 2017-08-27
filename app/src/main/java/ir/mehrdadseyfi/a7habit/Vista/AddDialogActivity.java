@@ -3,8 +3,10 @@ package ir.mehrdadseyfi.a7habit.Vista;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.RadioGroup;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -14,149 +16,154 @@ import com.mohamadamin.persianmaterialdatetimepicker.time.RadialPickerLayout;
 import com.mohamadamin.persianmaterialdatetimepicker.time.TimePickerDialog;
 import com.mohamadamin.persianmaterialdatetimepicker.utils.PersianCalendar;
 
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
 import ir.mehrdadseyfi.a7habit.Emegency.EmergencyEssntialItem;
 import ir.mehrdadseyfi.a7habit.R;
 
-public class AddDialogActivity extends AppCompatActivity implements DatePickerDialog.OnDateSetListener, TimePickerDialog.OnTimeSetListener {
-    EditText tilteEE;
-    EditText detialEE;
-    EditText calenderEE;
-    TextView calenderText;
-    EmergencyEssntialItem EEItem;
-    Spinner cat;
-    String catToDB;
-    Date date2;
-    int hours;
-    int min;
-    int years;
-    int mounth;
-    int day;
+public class AddDialogActivity extends AppCompatActivity {
+
+    EditText addVist;
+    EditText addDtail;
+    RadioGroup chose;
+    Spinner spinner;
+    int i=0;
+    List<String> list;
+    TextView spin;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_emergency_essntial_dialog);
+        setContentView(R.layout.add_dialog_vista);
 
+        list = new ArrayList<String>();
+        final ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item,list);
+        addSpineritem();
+        spin=(TextView)findViewById(R.id.vista_spin);
+        spinner = (Spinner) findViewById(R.id.spinEE);
+        addVist = (EditText) findViewById(R.id.add_vista);
+        addDtail = (EditText) findViewById(R.id.add_detial_vista);
+        chose = (RadioGroup) findViewById(R.id.chose_add);
+        chose.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
 
-        cat = (Spinner) findViewById(R.id.spinEE);
-
-        tilteEE = (EditText) findViewById(R.id.add_title_EE);
-        detialEE = (EditText) findViewById(R.id.add_detial_EE);
-
-        ImageView imgBtn = (ImageView) findViewById(R.id.calender);
-        imgBtn.setImageResource(R.drawable.alarmdialog);
-        imgBtn.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
-                PersianCalendar persianCalendar = new PersianCalendar();
-                DatePickerDialog datePickerDialog = DatePickerDialog.newInstance(
-                        AddDialogActivity.this,
-                        persianCalendar.getPersianYear(),
-                        persianCalendar.getPersianMonth(),
-                        persianCalendar.getPersianDay()
-                );
-                datePickerDialog.show(getFragmentManager(), "Datepickerdialog");
-                PersianCalendar persianCalendar1 = new PersianCalendar();
-                TimePickerDialog timer = TimePickerDialog.newInstance(
-                        AddDialogActivity.this,
-                        12, 59, true
-                );
-                timer.show(getFragmentManager(), "Datepickerdialog");
+
+            public void onCheckedChanged(RadioGroup group, int checkedId) {
+
+                // find which radio button is selected
+
+                if (checkedId == R.id.goal_sel) {
+                    i = 1;
+                    spinner.setVisibility(View.VISIBLE);
+                    addDtail.setVisibility(View.VISIBLE);
+                    addDtail.setHint(R.string.vista_hint_goal_d);
+                    addVist.setHint(R.string.vista_hint_goal);
+                    spin.setVisibility(View.VISIBLE);
+
+            spinner.setAdapter(adapter);
+
+
+                } else if (checkedId == R.id.role_sel) {
+                    i = 2;
+                   addDtail.setVisibility(View.GONE);
+                    spinner.setVisibility(View.GONE);
+                    addVist.setHint(R.string.vista_hint_role_d);
+                    spin.setVisibility(View.GONE);
+
+
+                } else {
+                    i = 3;
+                    spinner.setVisibility(View.GONE);
+                    addDtail.setVisibility(View.VISIBLE);
+                    spin.setVisibility(View.GONE);
+                    addDtail.setHint(R.string.vista_hint_dream_d);
+                    addVist.setHint(R.string.vista_hint_dream);
+
+
+                }
+
             }
+
         });
         findViewById(R.id.save).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String title = tilteEE.getText().toString();
-                String detial = detialEE.getText().toString();
-                if (title.matches("") && detial.matches("")) {
-                    Toast.makeText(AddDialogActivity.this, "لطفا موارد خواسته شده و تاریخ را وارد کنید", Toast.LENGTH_SHORT).show();
-                } else {
-                    EEItem = new EmergencyEssntialItem(title, detial, "ee", catToDB, String.valueOf(years), String.valueOf(mounth), String.valueOf(day), String.valueOf(hours), String.valueOf(min));
-                    EEItem.save();
-                    tilteEE.setText("");
-                    detialEE.setText("");
-                    Toast.makeText(AddDialogActivity.this, "کار ذخیره شد", Toast.LENGTH_SHORT).show();
-//                    alarmManager();
-                    finish();
+                switch (i) {
+                    case 3:
+                        if (addVist.getText().toString().matches(""))
+                        {
+                            Toast.makeText(AddDialogActivity.this, "لطفا همه فیلد ها را پر کنید", Toast.LENGTH_SHORT).show();
+                        }
+                        else {
+                            addDream();
+                            finish();
+                        }
+
+                        break;
+                        case 2: if (addVist.getText().toString().matches(""))
+                        {Toast.makeText(AddDialogActivity.this, "لطفا همه فیلد ها را پر کنید", Toast.LENGTH_SHORT).show();}
+                        else {
+
+                            addRole();
+                            finish();
+                        }
+                        break;
+                    case 1:if (addVist.getText().toString().matches(""))
+                    {                        Toast.makeText(AddDialogActivity.this, "لطفا همه فیلد ها را پر کنید", Toast.LENGTH_SHORT).show();
+                    }
+                    else {
+                        Toast.makeText(AddDialogActivity.this, "لطفا همه فیلد ها را پر کنید", Toast.LENGTH_SHORT).show();
+                        addgoal();
+                        finish();
+                    }
+                        break;
+        default:
+            Toast.makeText(AddDialogActivity.this, "لطفا هدف یا رویا یا نقشی را انتخاب کنید", Toast.LENGTH_SHORT).show();
+
 
                 }
 
             }
         });
-        findViewById(R.id.cancel).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-                Toast.makeText(AddDialogActivity.this, "ذخیره کار لغو شد", Toast.LENGTH_SHORT).show();
-                finish();
 
 
-            }
-        });
     }
 
-    @Override
-    public void onDateSet(DatePickerDialog view, int year, int monthOfYear, int dayOfMonth) {
-        day = dayOfMonth;
-        mounth = (monthOfYear + 1);
-        years = year;
-        calenderText = (TextView) findViewById(R.id.calender_text);
-        calenderText.setText(years + "/" + mounth + "/" + day + "\n" +
-                hours + ":" + min);
+    public void addgoal() {
+        String d = addVist.getText().toString();
+        String dd = addDtail.getText().toString();
+        String ddd=spinner.getSelectedItem().toString();
+        FGdatabase goal = new FGdatabase(d, dd, ddd,"");
+        goal.save();
+
     }
 
-    @Override
-    public void onTimeSet(RadialPickerLayout view, int hourOfDay, int minute) {
-        hours = hourOfDay;
-        min = minute;
+    public void addDream() {
+        String d = addVist.getText().toString();
+        String dd = addDtail.getText().toString();
+        FDdatabase dream = new FDdatabase(d, dd, "e");
+        dream.save();
+
+
+
     }
 
-    public void addImageCat() {
-        switch (cat.getSelectedItem().toString()) {
-            case "تفریحی/مسافرتی":
-                catToDB = String.valueOf(R.drawable.ic_launcher);
-                break;
-            case "ورزشی":
-                catToDB = "1";
-                break;
-            case "آموزشی":
-                catToDB = "1";
-                break;
-            case "شغلی":
-                catToDB = "1";
-                break;
-            case "مالی":
-                catToDB = "1";
-                break;
-            default:
-                catToDB = "1";
-                break;
+    public void addRole() {
+        String d = addVist.getText().toString();
+        FRdatabase role = new FRdatabase(d, "e");
+        role.save();
 
+    }
+    public void addSpineritem() {
+        List<FRdatabase>models=FRdatabase.listAll(FRdatabase.class);
+        for (int i=0;i<models.size();i++)
+        {
+            list.add(models.get(i).getName());
         }
     }
-// public  void alarmManager()
-// {
-//
-//     AlarmManager am = (AlarmManager) getSystemService(ALARM_SERVICE);
-//
-//     int mounth_A= JalaliCalendar.jalaliToGregorian(new JalaliCalendar.YearMonthDate(years,mounth,day)).getMonth();
-//     int year_A= JalaliCalendar.jalaliToGregorian(new JalaliCalendar.YearMonthDate(years,mounth,day)).getYear();
-//     int day_A=JalaliCalendar.jalaliToGregorian(new JalaliCalendar.YearMonthDate(years,mounth,day)).getDate();
-//     Calendar cal = Calendar.getInstance();
-//     Calendar cal1 = Calendar.getInstance();
-//     cal1.set(year_A, mounth_A-1, day_A, hours, min, 30);
-//
-//     cal.setTimeInMillis(System.currentTimeMillis());
-//     long diff = (cal1.getTimeInMillis() - cal.getTimeInMillis())/60000;
-//     Toast.makeText(this,String.valueOf(diff), Toast.LENGTH_LONG).show();
-//
-//     Intent i = new Intent(EmergencyEssntialDialogActivity.this, MyReceiver.class);
-//     PendingIntent pi = PendingIntent.getBroadcast(EmergencyEssntialDialogActivity.this, 0, i, 0);
-//     am.set(AlarmManager.RTC_WAKEUP, cal1.getTimeInMillis(), pi);
-// }
+
 
 }

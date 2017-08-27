@@ -63,8 +63,11 @@
         <activity
             android:name=".SquareTasksActivity"
             android:theme="@style/Theme.AppCompat.NoActionBar">
-           >
+            >
         </activity>
+        <activity
+            android:name=".Vista.AddDialogActivity"
+            android:theme="@style/mytheme" />
         <activity
             android:name=".Emegency.EmergencyEssntialActivity"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
@@ -113,7 +116,8 @@
             android:name=".AlarmSoundService"
             android:process=".alarm" />
 
-        <activity android:name=".Vista.VistaActivity"
+        <activity
+            android:name=".Vista.VistaActivity"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -121,6 +125,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".Vista.ShowGoalRoleActivity"
+            android:theme="@style/mytheme" ></activity>
     </application>
 
 </manifest>
