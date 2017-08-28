@@ -63,6 +63,7 @@ public class FeragmentRole extends Fragment {
             @Override
             public boolean onItemLongClick(AdapterView<?> parent, View view, int position, long id) {
                 postionAlert = position;
+
                 AlertPopup();
                 return true;
             }
@@ -71,7 +72,8 @@ public class FeragmentRole extends Fragment {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 Intent intent = new Intent(getActivity(), ShowGoalRoleActivity.class);
-                intent.putExtra("role",models.get(position).getName() );
+                intent.putExtra("role",models.get(position).getName());
+                intent.putExtra("id",models.get(position).getId());
                 startActivity(intent);
             }
         });
@@ -87,7 +89,7 @@ public class FeragmentRole extends Fragment {
         alertDialog.setTitle("هشدار");
 
 //maten dialog
-        alertDialog.setMessage("آیا از حذف کار خود مطمئن هستید؟");
+        alertDialog.setMessage("آیا از حذف کار خود مطمئن هستید؟"+"\n"+"دقت کنید که هدف های مربوط به این نقش نیز پاک می شود");
 
 //dokme ---mitoni ino hey copy koni va  BUTTON_NEUTRAL ino avaz koni dokme jadid biari va ye cari behesh nesbat bedi
         alertDialog.setButton(AlertDialog.BUTTON_POSITIVE, "OK",
@@ -98,6 +100,14 @@ public class FeragmentRole extends Fragment {
 
                         FRdatabase books = FRdatabase.findById(FRdatabase.class, models.get(postionAlert).getId());
                         books.delete();
+                        String name=models.get(postionAlert).getName();
+                        List<FGdatabase> notes = FGdatabase.find(FGdatabase.class, "role = ?" , name);
+
+                        for (int i = 0; i < notes.size(); i++) {
+                            notes.get(i).getId();
+                            FGdatabase books1 = FGdatabase.findById(FGdatabase.class, notes.get(i).getId());
+                            books1.delete();
+                        }
                         Toast.makeText(getActivity(), "حذف کار انجام شد", Toast.LENGTH_SHORT).show();
                         creatList();
 

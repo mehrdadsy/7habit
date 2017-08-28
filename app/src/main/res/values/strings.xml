@@ -4,6 +4,7 @@
     <string name="dialog_title">مشخصات هدف خود را بنویسید</string>
     <string name="dialog_save_btn">ذخیره</string>
     <string name="habit_main">عادات بد</string>
+    <string name="edit_dream">رویا خود را ویرایش کنید</string>
     <string name="goal">هدف</string>
     <string name="vista_spiner">نقش مربوط به هدف را از زیر انتخاب کنید</string>
     <string name="vista_hint_goal">موضوع هدف خود را بنویسید</string>
@@ -27,6 +28,7 @@
     <string name="add_NENEtask">مشخصات کار غیر ضروری/غیر اضطراری خود را وارد کنید</string>
     <string name="add_ENEtask">مشخصات کار غیر ضروری/ اضطراری خود را وارد کنید</string>
     <string name="dialog_cancel_btn">لغو</string>
+    <string name="edit_role">ویرایش</string>
     <string name="show_title_dialog">عادت بد من که باید درستش کنم</string>
     <string name="upgrade_dialog_bad_habit_hint">راه اصلاح عادت بد خود را بنویسید</string>
 

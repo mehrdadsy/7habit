@@ -50,7 +50,7 @@ public class FGlistAdapter extends BaseAdapter {
         dreamDetail.setText(models.get(position).getDetial());
         roleGoal.setText("مربوط به نقش:"+" "+models.get(position).getRole());
         ImageView dream_img=(ImageView)rowView.findViewById(R.id.dream_img);
-        dream_img.setImageResource(R.drawable.ic_launcher);
+        dream_img.setImageResource(R.drawable.goal);
         return rowView;
     }
 }

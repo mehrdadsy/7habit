@@ -125,7 +125,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Vista.ShowGoalRoleActivity"
+        <activity
+            android:name=".Vista.ShowGoalRoleActivity"
+            android:theme="@style/mytheme" />
+        <activity android:name=".Vista.EdirDreamActivity"
             android:theme="@style/mytheme" ></activity>
     </application>
 

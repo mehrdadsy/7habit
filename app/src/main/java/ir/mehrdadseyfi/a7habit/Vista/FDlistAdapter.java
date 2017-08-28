@@ -48,7 +48,7 @@ public class FDlistAdapter extends BaseAdapter {
         TextView dreamDetail=(TextView)rowView.findViewById(R.id.detial_d);
         dreamDetail.setText(models.get(position).getDetial());
         ImageView dream_img=(ImageView)rowView.findViewById(R.id.dream_img_d);
-        dream_img.setImageResource(R.drawable.ic_launcher);
+        dream_img.setImageResource(R.drawable.dream);
         return rowView;
     }
 }

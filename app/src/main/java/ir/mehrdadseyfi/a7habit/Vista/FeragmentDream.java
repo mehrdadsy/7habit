@@ -70,6 +70,15 @@ public class FeragmentDream extends Fragment {
                 return true;
             }
         });
+        mylist.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Intent intent = new Intent(getActivity(), EdirDreamActivity.class);
+                intent.putExtra("id", models.get(position).getId());
+                startActivity(intent);
+
+            }
+        });
 
 
 

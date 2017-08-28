@@ -6,6 +6,7 @@
     android:layout_height="400dp"
     android:orientation="vertical"
     tools:context="ir.mehrdadseyfi.a7habit.Vista.AddDialogActivity">
+    
     <android.support.v7.widget.Toolbar
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
