@@ -93,7 +93,7 @@ public class FeragmentDream extends Fragment {
         alertDialog.setTitle("هشدار");
 
 //maten dialog
-        alertDialog.setMessage("آیا از حذف کار خود مطمئن هستید؟");
+        alertDialog.setMessage("آیا از حذف رویا خود مطمئن هستید؟");
 
 //dokme ---mitoni ino hey copy koni va  BUTTON_NEUTRAL ino avaz koni dokme jadid biari va ye cari behesh nesbat bedi
         alertDialog.setButton(AlertDialog.BUTTON_POSITIVE, "OK",
@@ -104,7 +104,7 @@ public class FeragmentDream extends Fragment {
 
                         FDdatabase books = FDdatabase.findById(FDdatabase.class, models.get(postionAlert).getId());
                         books.delete();
-                        Toast.makeText(getActivity(), "حذف کار انجام شد", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(getActivity(), "حذف رویا انجام شد", Toast.LENGTH_SHORT).show();
                         creatList();
 
 

@@ -9,6 +9,8 @@ import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -19,12 +21,26 @@ public class VistaActivity extends AppCompatActivity {
     LinearLayout mainLayout;
     TabLayout tabLayout;
     Toolbar tool;
+    ImageView add;
+    ImageView help;
+    Animation animation;
+    Animation animationHelp;
+    Fragment fragment;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_vista);
-        ImageView add=(ImageView)findViewById(R.id.add);
+
+        fragment = new FeragmentDream();
+        add = (ImageView) findViewById(R.id.add);
+        help = (ImageView) findViewById(R.id.help);
+        animation = AnimationUtils.loadAnimation(VistaActivity.this, R.anim.rotate_clockwise);
+        animationHelp = AnimationUtils.loadAnimation(VistaActivity.this, R.anim.blink);
+        add.startAnimation(animation);
+        help.startAnimation(animationHelp);
+        fmShow();
         add.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -32,7 +48,7 @@ public class VistaActivity extends AppCompatActivity {
             }
         });
 
-        tool=(Toolbar)findViewById(R.id.tool);
+        tool = (Toolbar) findViewById(R.id.tool);
         mainLayout = (LinearLayout) findViewById(R.id.simpleFrameLayout);
         tabLayout = (TabLayout) findViewById(R.id.simpleTabLayout);
         tabLayout.setTabGravity(0);
@@ -54,7 +70,9 @@ public class VistaActivity extends AppCompatActivity {
         thirdTab.setText("هدف"); // set the Text for the first Tab
         thirdTab.setIcon(R.drawable.goal); // set an icon for the first tab
         tabLayout.addTab(thirdTab); // add  the tab at in the TabLayout
+
         tabLayout.setOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
+
             @Override
             public void onTabUnselected(TabLayout.Tab tab) {
 
@@ -64,15 +82,17 @@ public class VistaActivity extends AppCompatActivity {
             public void onTabReselected(TabLayout.Tab tab) {
 
             }
+
             @Override
             public void onTabSelected(TabLayout.Tab tab) {
 // get the current selected tab's position and replace the fragment accordingly
-                Fragment fragment = null;
+                 fragment = new FeragmentDream();
                 switch (tab.getPosition()) {
                     case 0:
                         tabLayout.setBackgroundColor(getResources().getColor(R.color.dream));
                         tabLayout.setSelectedTabIndicatorColor(getResources().getColor(R.color.role));
-
+                        add.startAnimation(animation);
+                        help.startAnimation(animationHelp);
                         tool.setBackgroundColor(getResources().getColor(R.color.dream));
                         fragment = new FeragmentDream();
                         break;
@@ -80,12 +100,16 @@ public class VistaActivity extends AppCompatActivity {
                         tabLayout.setBackgroundColor(getResources().getColor(R.color.role));
                         tool.setBackgroundColor(getResources().getColor(R.color.role));
                         tabLayout.setSelectedTabIndicatorColor(getResources().getColor(R.color.goal));
-                        fragment = new FeragmentRole() ;
+                        add.startAnimation(animation);
+                        help.startAnimation(animationHelp);
+                        fragment = new FeragmentRole();
                         break;
                     case 2:
                         tabLayout.setBackgroundColor(getResources().getColor(R.color.goal));
                         tabLayout.setSelectedTabIndicatorColor(getResources().getColor(R.color.dream));
                         tool.setBackgroundColor(getResources().getColor(R.color.goal));
+                        add.startAnimation(animation);
+                        help.startAnimation(animationHelp);
                         fragment = new FeragmentGoal();
                         break;
                 }
@@ -98,6 +122,14 @@ public class VistaActivity extends AppCompatActivity {
 
 
         });
+    }
+    public void fmShow() {
+        fragment = new FeragmentDream();
+        FragmentManager fm = getSupportFragmentManager();
+        FragmentTransaction ft = fm.beginTransaction();
+        ft.replace(R.id.simpleFrameLayout, fragment);
+        ft.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN);
+        ft.commit();
     }
 }
 

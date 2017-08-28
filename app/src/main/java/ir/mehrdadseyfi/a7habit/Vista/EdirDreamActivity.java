@@ -36,5 +36,11 @@ public class EdirDreamActivity extends AppCompatActivity {
                 finish();
             }
         });
+        findViewById(R.id.cancel).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
     }
 }

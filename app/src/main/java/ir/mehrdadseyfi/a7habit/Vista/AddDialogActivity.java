@@ -2,6 +2,7 @@ package ir.mehrdadseyfi.a7habit.Vista;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
@@ -29,9 +30,11 @@ public class AddDialogActivity extends AppCompatActivity {
     EditText addDtail;
     RadioGroup chose;
     Spinner spinner;
-    int i=0;
+    int i = 0;
     List<String> list;
     TextView spin;
+    List<FRdatabase> models;
+    Toolbar tool;
 
 
     @Override
@@ -39,11 +42,13 @@ public class AddDialogActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.add_dialog_vista);
 
+
         list = new ArrayList<String>();
-        final ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item,list);
+        final ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, list);
         addSpineritem();
-        spin=(TextView)findViewById(R.id.vista_spin);
+        spin = (TextView) findViewById(R.id.vista_spin);
         spinner = (Spinner) findViewById(R.id.spinEE);
+        spinner.setAdapter(adapter);
         addVist = (EditText) findViewById(R.id.add_vista);
         addDtail = (EditText) findViewById(R.id.add_detial_vista);
         chose = (RadioGroup) findViewById(R.id.chose_add);
@@ -63,12 +68,12 @@ public class AddDialogActivity extends AppCompatActivity {
                     addVist.setHint(R.string.vista_hint_goal);
                     spin.setVisibility(View.VISIBLE);
 
-            spinner.setAdapter(adapter);
+
 
 
                 } else if (checkedId == R.id.role_sel) {
                     i = 2;
-                   addDtail.setVisibility(View.GONE);
+                    addDtail.setVisibility(View.GONE);
                     spinner.setVisibility(View.GONE);
                     addVist.setHint(R.string.vista_hint_role_d);
                     spin.setVisibility(View.GONE);
@@ -93,39 +98,49 @@ public class AddDialogActivity extends AppCompatActivity {
             public void onClick(View v) {
                 switch (i) {
                     case 3:
-                        if (addVist.getText().toString().matches(""))
-                        {
+                        if (addVist.getText().toString().matches("")) {
                             Toast.makeText(AddDialogActivity.this, "لطفا همه فیلد ها را پر کنید", Toast.LENGTH_SHORT).show();
-                        }
-                        else {
+                        } else {
                             addDream();
                             finish();
                         }
 
                         break;
-                        case 2: if (addVist.getText().toString().matches(""))
-                        {Toast.makeText(AddDialogActivity.this, "لطفا همه فیلد ها را پر کنید", Toast.LENGTH_SHORT).show();}
-                        else {
+                    case 2:
+                        if (addVist.getText().toString().matches("")) {
+                            Toast.makeText(AddDialogActivity.this, "لطفا همه فیلد ها را پر کنید", Toast.LENGTH_SHORT).show();
+                        } else {
 
                             addRole();
                             finish();
                         }
                         break;
-                    case 1:if (addVist.getText().toString().matches(""))
-                    {                        Toast.makeText(AddDialogActivity.this, "لطفا همه فیلد ها را پر کنید", Toast.LENGTH_SHORT).show();
-                    }
-                    else {
-                        Toast.makeText(AddDialogActivity.this, "لطفا همه فیلد ها را پر کنید", Toast.LENGTH_SHORT).show();
-                        addgoal();
-                        finish();
-                    }
+                    case 1:
+                        if (addVist.getText().toString().matches("")) {
+                            Toast.makeText(AddDialogActivity.this, "لطفا همه فیلد ها را پر کنید", Toast.LENGTH_SHORT).show();
+                        } else {
+                            if (models.size() == 0) {
+                                Toast.makeText(AddDialogActivity.this, "لطفا یک نقش وارد کنید", Toast.LENGTH_SHORT).show();
+
+                            } else {
+                                addgoal();
+                                finish();
+
+                            }
+                        }
                         break;
-        default:
-            Toast.makeText(AddDialogActivity.this, "لطفا هدف یا رویا یا نقشی را انتخاب کنید", Toast.LENGTH_SHORT).show();
+                    default:
+                        Toast.makeText(AddDialogActivity.this, "لطفا هدف یا رویا یا نقشی را انتخاب کنید", Toast.LENGTH_LONG).show();
 
 
                 }
 
+            }
+        });
+        findViewById(R.id.cancel).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
             }
         });
 
@@ -135,8 +150,9 @@ public class AddDialogActivity extends AppCompatActivity {
     public void addgoal() {
         String d = addVist.getText().toString();
         String dd = addDtail.getText().toString();
-        String ddd=spinner.getSelectedItem().toString();
-        FGdatabase goal = new FGdatabase(d, dd, ddd,"");
+        String ddd = spinner.getSelectedItem().toString();
+
+        FGdatabase goal = new FGdatabase(d, dd, ddd, "");
         goal.save();
 
     }
@@ -148,7 +164,6 @@ public class AddDialogActivity extends AppCompatActivity {
         dream.save();
 
 
-
     }
 
     public void addRole() {
@@ -157,12 +172,13 @@ public class AddDialogActivity extends AppCompatActivity {
         role.save();
 
     }
+
     public void addSpineritem() {
-        List<FRdatabase>models=FRdatabase.listAll(FRdatabase.class);
-        for (int i=0;i<models.size();i++)
-        {
+        models = FRdatabase.listAll(FRdatabase.class);
+        for (int i = 0; i < models.size(); i++) {
             list.add(models.get(i).getName());
         }
+
     }
 
 

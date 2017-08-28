@@ -89,7 +89,8 @@ public class FeragmentRole extends Fragment {
         alertDialog.setTitle("هشدار");
 
 //maten dialog
-        alertDialog.setMessage("آیا از حذف کار خود مطمئن هستید؟"+"\n"+"دقت کنید که هدف های مربوط به این نقش نیز پاک می شود");
+        alertDialog.setMessage("آیا از حذف نقش خود مطمئن هستید؟"+"\n"+"دقت کنید که هدف های مربوط به این نقش نیز حذف می شون" +
+                "د");
 
 //dokme ---mitoni ino hey copy koni va  BUTTON_NEUTRAL ino avaz koni dokme jadid biari va ye cari behesh nesbat bedi
         alertDialog.setButton(AlertDialog.BUTTON_POSITIVE, "OK",

@@ -16,11 +16,12 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/tilte_d"
+            android:textSize="20sp"
             />
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-
+android:textSize="10sp"
             android:id="@+id/detial_d"/>
     </LinearLayout>
     <LinearLayout
