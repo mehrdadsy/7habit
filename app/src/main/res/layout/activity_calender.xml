@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="ir.mehrdadseyfi.a7habit.Calender.CalenderActivity">
+    <android.support.v7.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:id="@+id/tool"
+        android:background="#ffdc76">
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_note_add_black_48dp"
+        android:id="@+id/add_job"/>
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:id="@+id/help"
+        android:layout_height="wrap_content"
+        android:src="@drawable/help" />
+    </android.support.v7.widget.Toolbar>
+   <LinearLayout
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:orientation="vertical"
+       android:gravity="center">
+       <TextView
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:id="@+id/month"
+           android:textSize="20sp"/>
+       <TextView
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:id="@+id/year"
+           android:textSize="20sp"/>
+   </LinearLayout>
+
+    <ir.mirrajabi.persiancalendar.PersianCalendarView
+        android:layout_width="match_parent"
+        android:id="@+id/persian_calendar"
+        android:layout_height="wrap_content"
+        app:pcv_colorBackground="#fffcfc"
+        app:pcv_colorDayName="#bab6b6"
+        app:pcv_colorHoliday="#ffd506"
+        app:pcv_colorHolidaySelected="#1c1d1d"
+        app:pcv_colorNormalDaySelected="#101010"
+        app:pcv_colorNormalDay="#1d1d1d"
+        app:pcv_eventUnderlineColor="#02f0f0"
+        app:pcv_fontSize="30dp" />
+   <TextView
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content" />
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"></ListView>
+
+</LinearLayout>
