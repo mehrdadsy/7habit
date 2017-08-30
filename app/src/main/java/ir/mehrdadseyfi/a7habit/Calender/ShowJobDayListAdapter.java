@@ -50,9 +50,9 @@ public class ShowJobDayListAdapter extends BaseAdapter {
         title.setText(models.get(position).getName());
         detail.setText(models.get(position).getDetail());
         goal.setText(models.get(position).getGoal());
-        String startDate=models.get(position).getCalenderYear()+"/"+models.get(position).getCalenderMount()+"/"+models.get(position).getCalenderday()+"   "+models.get(position).getShours()+":"+models.get(position).getSminutes();
+        String startDate=models.get(position).getyear()+"/"+models.get(position).getmount()+"/"+models.get(position).getday()+"   "+models.get(position).getshours()+":"+models.get(position).getsminutes();
         startdate.setText(startDate);
-        String endDate=models.get(position).getEhours()+":"+models.get(position).getEminutes();
+        String endDate=models.get(position).getehours()+":"+models.get(position).geteminutes();
         enddate.setText(endDate);
 
         return rowView;

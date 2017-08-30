@@ -69,11 +69,11 @@ public class AddJobActivity extends AppCompatActivity implements TimePickerDialo
 
                     } else {
                         addjob();
-
+                        finish();
                     }
                 }
 
-                finish();
+
             }
         });
 
@@ -138,7 +138,10 @@ public class AddJobActivity extends AppCompatActivity implements TimePickerDialo
 
 
         JobDB jobAdd = new JobDB(name, dtial, goal, String.valueOf(years), String.valueOf(mounth), String.valueOf(day), String.valueOf(hours), String.valueOf(min), String.valueOf(eHours), String.valueOf(eMin), goal);
+
         jobAdd.save();
+
+        Toast.makeText(this,jobAdd.getSqlName(), Toast.LENGTH_SHORT).show();
     }
 
     public void addSpinGoal() {

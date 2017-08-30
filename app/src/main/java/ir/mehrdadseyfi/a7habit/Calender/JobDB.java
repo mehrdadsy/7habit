@@ -2,6 +2,9 @@ package ir.mehrdadseyfi.a7habit.Calender;
 
 import com.orm.SugarRecord;
 
+import java.lang.reflect.Field;
+import java.util.List;
+
 /**
  * Created by admin on 8/29/2017.
  */
@@ -10,13 +13,13 @@ public class JobDB extends SugarRecord<JobDB> {
     String name;
     String detail;
     String goal;
-    String calenderYear;
-    String calenderMount;
-    String calenderday;
-    String Shours;
-    String Sminutes;
-    String Ehours;
-    String Eminutes;
+    String year;
+    String mount;
+    String day;
+    String shours;
+    String sminutes;
+    String ehours;
+    String eminutes;
     String repeat;
 
 
@@ -39,60 +42,60 @@ public class JobDB extends SugarRecord<JobDB> {
         this.detail = detail;
     }
 
-    public String getCalenderYear() {
-        return calenderYear;
+    public String getyear() {
+        return year;
     }
 
-    public void setCalenderYear(String calenderYear) {
-        this.calenderYear = calenderYear;
+    public void setyear(String year) {
+        this.year = year;
     }
 
-    public String getCalenderMount() {
-        return calenderMount;
+    public String getmount() {
+        return mount;
     }
 
-    public void setCalenderMount(String calenderMount) {
-        this.calenderMount = calenderMount;
+    public void setmount(String mount) {
+        this.mount = mount;
     }
 
-    public String getCalenderday() {
-        return calenderday;
+    public String getday() {
+        return day;
     }
 
-    public void setCalenderday(String calenderday) {
-        this.calenderday = calenderday;
+    public void setday(String day) {
+        this.day = day;
     }
 
-    public String getShours() {
-        return Shours;
+    public String getshours() {
+        return shours;
     }
 
-    public void setShours(String shours) {
-        Shours = shours;
+    public void setshours(String shours) {
+        shours = shours;
     }
 
-    public String getSminutes() {
-        return Sminutes;
+    public String getsminutes() {
+        return sminutes;
     }
 
-    public void setSminutes(String sminutes) {
-        Sminutes = sminutes;
+    public void setsminutes(String sminutes) {
+        sminutes = sminutes;
     }
 
-    public String getEhours() {
-        return Ehours;
+    public String getehours() {
+        return ehours;
     }
 
-    public void setEhours(String ehours) {
-        Ehours = ehours;
+    public void setehours(String ehours) {
+        ehours = ehours;
     }
 
-    public String getEminutes() {
-        return Eminutes;
+    public String geteminutes() {
+        return eminutes;
     }
 
-    public void setEminutes(String eminutes) {
-        Eminutes = eminutes;
+    public void seteminutes(String eminutes) {
+        eminutes = eminutes;
     }
 
     public String getRepeat() {
@@ -113,17 +116,18 @@ public class JobDB extends SugarRecord<JobDB> {
 
 
 
-    public JobDB(String name, String detail, String goal, String calenderYear, String calenderMount, String calenderday, String shours, String sminutes, String ehours, String eminutes, String repeat ) {
+
+    public JobDB(String name, String detail, String goal, String year, String mount, String day, String shours, String sminutes, String ehours, String eminutes, String repeat ) {
         this.name = name;
         this.detail = detail;
         this.goal = goal;
-        this.calenderYear = calenderYear;
-        this.calenderMount = calenderMount;
-        this.calenderday = calenderday;
-        Shours = shours;
-        Sminutes = sminutes;
-        Ehours = ehours;
-        Eminutes = eminutes;
+        this.year = year;
+        this.mount = mount;
+        this.day = day;
+        this.shours = shours;
+        this.sminutes = sminutes;
+        this.ehours = ehours;
+        this.eminutes = eminutes;
         this.repeat = repeat;
 
     }

@@ -22,14 +22,24 @@ public class CalenderActivity extends AppCompatActivity {
     TextView month;
     TextView year;
     ImageView add_job;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_calender);
-         calendarView  = (PersianCalendarView) findViewById(R.id.persian_calendar);
-         calendarHandler = calendarView.getCalendar();
-         today = calendarHandler.getToday();
-        add_job=(ImageView)findViewById(R.id.add_job);
+        calendarView = (PersianCalendarView) findViewById(R.id.persian_calendar);
+        calendarHandler = calendarView.getCalendar();
+        ImageView help = (ImageView) findViewById(R.id.help);
+        //TESTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
+        help.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(CalenderActivity.this, VistaActivity.class));
+
+            }
+        });
+        today = calendarHandler.getToday();
+        add_job = (ImageView) findViewById(R.id.add_job);
         add_job.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -41,34 +51,38 @@ public class CalenderActivity extends AppCompatActivity {
         showJobDay();
 
     }
-    public void textViewShow(){
-        month=(TextView)findViewById(R.id.month);
-        year=(TextView)findViewById(R.id.year);
-        month.setText(calendarHandler.getMonthName(new PersianDate(1399,today.getMonth(),10) ));
-        year.setText( String.valueOf(today.getYear()));
+
+    public void textViewShow() {
+        month = (TextView) findViewById(R.id.month);
+        year = (TextView) findViewById(R.id.year);
+        month.setText(calendarHandler.getMonthName(new PersianDate(1399, today.getMonth(), 10)));
+        year.setText(String.valueOf(today.getYear()));
 
         calendarView.setOnMonthChangedListener(new OnMonthChangedListener() {
             @Override
             public void onChanged(PersianDate persianDate) {
 
-                month.setText(calendarHandler.getMonthName( persianDate));
+                month.setText(calendarHandler.getMonthName(persianDate));
                 year.setText(String.valueOf(persianDate.getYear()));
             }
         });
 
 
+    }
 
+    public void setAdd_job() {
 
     }
-    public void setAdd_job(){
 
-    }
-    public void showJobDay(){
+    public void showJobDay() {
         calendarView.setOnDayClickedListener(new OnDayClickedListener() {
             @Override
             public void onClick(PersianDate persianDate) {
-
-                startActivity(new Intent(CalenderActivity.this, ShowDayJobActivity.class));
+                Intent intent = new Intent(CalenderActivity.this, ShowDayJobActivity.class);
+                intent.putExtra("year", String.valueOf(persianDate.getYear()));
+                intent.putExtra("month",String.valueOf(persianDate.getMonth()) );
+                intent.putExtra("day",String.valueOf(persianDate.getDayOfMonth()) );
+                startActivity(intent);
 
 
             }

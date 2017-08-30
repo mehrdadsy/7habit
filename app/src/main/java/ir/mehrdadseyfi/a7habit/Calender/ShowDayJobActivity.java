@@ -1,6 +1,7 @@
 package ir.mehrdadseyfi.a7habit.Calender;
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.ListView;
@@ -17,10 +18,16 @@ public class ShowDayJobActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.activity_show_day_job);
-        models = JobDB.listAll(JobDB.class);
-        ListView mylist=(ListView)findViewById(R.id.mylist_sd);
-        ShowJobDayListAdapter adapter=new ShowJobDayListAdapter(models,mContext);
-        mylist.setAdapter(adapter);
+        Intent intent = getIntent();
+        String year = intent.getStringExtra("year");
+        String month = intent.getStringExtra("month");
+        String day = intent.getStringExtra("day");
+models=JobDB.find(JobDB.class,"year= ? and mount= ? and day= ?",year,month,day);
+            ListView mylist = (ListView) findViewById(R.id.mylist_sd);
+            ShowJobDayListAdapter adapter = new ShowJobDayListAdapter(models, mContext);
+            mylist.setAdapter(adapter);
+
+        }
 
     }
-}
+
