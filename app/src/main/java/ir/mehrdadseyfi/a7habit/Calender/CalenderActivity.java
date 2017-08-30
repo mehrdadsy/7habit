@@ -1,13 +1,17 @@
 package ir.mehrdadseyfi.a7habit.Calender;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 import ir.mehrdadseyfi.a7habit.R;
+import ir.mehrdadseyfi.a7habit.Vista.VistaActivity;
 import ir.mirrajabi.persiancalendar.PersianCalendarView;
 import ir.mirrajabi.persiancalendar.core.PersianCalendarHandler;
+import ir.mirrajabi.persiancalendar.core.interfaces.OnDayClickedListener;
 import ir.mirrajabi.persiancalendar.core.interfaces.OnMonthChangedListener;
 import ir.mirrajabi.persiancalendar.core.models.PersianDate;
 
@@ -26,7 +30,15 @@ public class CalenderActivity extends AppCompatActivity {
          calendarHandler = calendarView.getCalendar();
          today = calendarHandler.getToday();
         add_job=(ImageView)findViewById(R.id.add_job);
+        add_job.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(CalenderActivity.this, AddJobActivity.class));
+
+            }
+        });
         textViewShow();
+        showJobDay();
 
     }
     public void textViewShow(){
@@ -50,5 +62,16 @@ public class CalenderActivity extends AppCompatActivity {
     }
     public void setAdd_job(){
 
+    }
+    public void showJobDay(){
+        calendarView.setOnDayClickedListener(new OnDayClickedListener() {
+            @Override
+            public void onClick(PersianDate persianDate) {
+
+                startActivity(new Intent(CalenderActivity.this, ShowDayJobActivity.class));
+
+
+            }
+        });
     }
 }

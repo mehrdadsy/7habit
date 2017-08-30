@@ -15,6 +15,7 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import ir.mehrdadseyfi.a7habit.Calender.AddJobActivity;
 import ir.mehrdadseyfi.a7habit.R;
 
 public class VistaActivity extends AppCompatActivity {
@@ -36,6 +37,14 @@ public class VistaActivity extends AppCompatActivity {
         fragment = new FeragmentDream();
         add = (ImageView) findViewById(R.id.add);
         help = (ImageView) findViewById(R.id.help);
+        //TESTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
+        help.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(VistaActivity.this, AddJobActivity.class));
+
+            }
+        });
         animation = AnimationUtils.loadAnimation(VistaActivity.this, R.anim.rotate_clockwise);
         animationHelp = AnimationUtils.loadAnimation(VistaActivity.this, R.anim.blink);
         add.startAnimation(animation);

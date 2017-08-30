@@ -6,6 +6,10 @@
     <string name="habit_main">عادات بد</string>
     <string name="edit_dream">رویا خود را ویرایش کنید</string>
     <string name="goal">هدف</string>
+    <string name="one">یکبار</string>
+    <string name="dialy">روزانه</string>
+    <string name="weekly">هفته ای </string>
+    <string name="monthly">ماهانه</string>
     <string name="vista_spiner">نقش مربوط به هدف را از زیر انتخاب کنید</string>
     <string name="vista_hint_goal">موضوع هدف خود را بنویسید</string>
     <string name="vista_hint_goal_d">توضیح مختصری از هدف خود بنویسید</string>

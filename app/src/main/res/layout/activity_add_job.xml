@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:orientation="vertical"
+    android:gravity="center"
     android:layout_height="match_parent"
     tools:context="ir.mehrdadseyfi.a7habit.Calender.AddJobActivity">
 <EditText
@@ -14,52 +15,77 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/add_job_detial"/>
-  <LinearLayout
-      android:layout_width="match_parent"
-      android:layout_height="wrap_content"
-      android:gravity="center">
+
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:src="@drawable/ic_launcher"
         android:id="@+id/start_date"
-        android:layout_marginRight="30dp"/>
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/ic_launcher"
-        android:id="@+id/end_hours"/>
-  </LinearLayout>
+        />
+
+    <TimePicker
+        android:id="@+id/end_hours"
+        android:layout_width="323dp"
+        android:layout_height="97dp"
+        android:timePickerMode="spinner"></TimePicker>
     <Spinner
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/spin_goal"></Spinner>
-    <Spinner
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/spin_priority"></Spinner>
+   
     <RadioGroup
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
+        android:id="@+id/chose_repeate"
         android:gravity="center">
         <RadioButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/one"/>
+            android:id="@+id/one"
+            android:text="@string/one"/>
         <RadioButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:text="@string/dialy"
             android:id="@+id/dialy"/>
         <RadioButton
             android:layout_width="wrap_content"
+            android:text="@string/weekly"
             android:layout_height="wrap_content"
             android:id="@+id/weekly"/>
         <RadioButton
             android:layout_width="wrap_content"
+            android:text="@string/monthly"
             android:layout_height="wrap_content"
             android:id="@+id/monthly"/>
     </RadioGroup>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="bottom"
+        android:gravity="center_horizontal"
+        >
+        <Button
+            android:id="@+id/save"
+            android:text="@string/dialog_save_btn"
+            android:layout_width="80dp"
+            android:background="@drawable/d3_nee"
+            android:layout_marginRight="20dp"
+            android:layout_height="60dp" />
+
+
+        <Button
+            android:id="@+id/cancel"
+            android:text="@string/dialog_cancel_btn"
+            android:layout_width="80dp"
+            android:background="@drawable/d3_nee"
+            android:layout_height="60dp"
+            android:layout_gravity="center_vertical"/>
+
+
+    </LinearLayout>
 
 
 

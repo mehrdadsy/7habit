@@ -9,6 +9,7 @@ import com.orm.SugarRecord;
 public class JobDB extends SugarRecord<JobDB> {
     String name;
     String detail;
+    String goal;
     String calenderYear;
     String calenderMount;
     String calenderday;
@@ -17,6 +18,7 @@ public class JobDB extends SugarRecord<JobDB> {
     String Ehours;
     String Eminutes;
     String repeat;
+
 
     public JobDB() {
     }
@@ -101,17 +103,28 @@ public class JobDB extends SugarRecord<JobDB> {
         this.repeat = repeat;
     }
 
-    public JobDB(String name, String detail, String calenderYear, String calenderMount, String calenderday, String shours, String sminutes, String ehours, String eminutes, String repeat) {
+    public String getGoal() {
+        return goal;
+    }
+
+    public void setGoal(String goal) {
+        this.goal = goal;
+    }
+
+
+
+    public JobDB(String name, String detail, String goal, String calenderYear, String calenderMount, String calenderday, String shours, String sminutes, String ehours, String eminutes, String repeat ) {
         this.name = name;
         this.detail = detail;
+        this.goal = goal;
         this.calenderYear = calenderYear;
         this.calenderMount = calenderMount;
         this.calenderday = calenderday;
-        this.repeat=repeat;
-
         Shours = shours;
         Sminutes = sminutes;
         Ehours = ehours;
         Eminutes = eminutes;
+        this.repeat = repeat;
+
     }
 }

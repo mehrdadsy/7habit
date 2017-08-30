@@ -51,7 +51,8 @@
         app:pcv_colorNormalDaySelected="#101010"
         app:pcv_colorNormalDay="#1d1d1d"
         app:pcv_eventUnderlineColor="#02f0f0"
-        app:pcv_fontSize="30dp" />
+        app:pcv_fontSize="30dp"
+        app:pcv_headersFontSize="15dp"/>
    <TextView
        android:layout_width="wrap_content"
        android:layout_height="wrap_content" />
