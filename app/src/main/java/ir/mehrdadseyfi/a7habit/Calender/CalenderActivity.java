@@ -6,6 +6,9 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
+
+import java.util.List;
 
 import ir.mehrdadseyfi.a7habit.R;
 import ir.mehrdadseyfi.a7habit.Vista.VistaActivity;
@@ -78,12 +81,16 @@ public class CalenderActivity extends AppCompatActivity {
         calendarView.setOnDayClickedListener(new OnDayClickedListener() {
             @Override
             public void onClick(PersianDate persianDate) {
-                Intent intent = new Intent(CalenderActivity.this, ShowDayJobActivity.class);
-                intent.putExtra("year", String.valueOf(persianDate.getYear()));
-                intent.putExtra("month",String.valueOf(persianDate.getMonth()) );
-                intent.putExtra("day",String.valueOf(persianDate.getDayOfMonth()) );
-                startActivity(intent);
-
+              List<JobDB> models=JobDB.find(JobDB.class,"year= ? and mount= ? and day= ?", String.valueOf(persianDate.getYear()),String.valueOf(persianDate.getMonth()),String.valueOf(persianDate.getDayOfMonth()));
+               if(models.size()==0){
+                   Toast.makeText(CalenderActivity.this, "کاری برای امروز وجود ندارد", Toast.LENGTH_SHORT).show();
+               }else {
+                   Intent intent = new Intent(CalenderActivity.this, ShowDayJobActivity.class);
+                   intent.putExtra("year", String.valueOf(persianDate.getYear()));
+                   intent.putExtra("month", String.valueOf(persianDate.getMonth()));
+                   intent.putExtra("day", String.valueOf(persianDate.getDayOfMonth()));
+                   startActivity(intent);
+               }
 
             }
         });
