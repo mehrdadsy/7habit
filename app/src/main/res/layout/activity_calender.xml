@@ -43,7 +43,8 @@
     <ir.mirrajabi.persiancalendar.PersianCalendarView
         android:layout_width="match_parent"
         android:id="@+id/persian_calendar"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="4"
         app:pcv_colorBackground="#fffcfc"
         app:pcv_colorDayName="#bab6b6"
         app:pcv_colorHoliday="#ffd506"
@@ -58,6 +59,8 @@
        android:layout_height="wrap_content" />
     <ListView
         android:layout_width="match_parent"
-        android:layout_height="fill_parent"></ListView>
+        android:layout_height="0dp"
+        android:layout_weight="3"
+        android:id="@+id/my_today_list"></ListView>
 
 </LinearLayout>
