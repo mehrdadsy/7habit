@@ -22,7 +22,6 @@ import java.util.List;
 
 import ir.mehrdadseyfi.a7habit.R;
 import ir.mehrdadseyfi.a7habit.Vista.FGdatabase;
-import ir.mehrdadseyfi.a7habit.Vista.FRdatabase;
 
 public class AddJobActivity extends AppCompatActivity implements TimePickerDialog.OnTimeSetListener, DatePickerDialog.OnDateSetListener {
     ImageView startDate;
@@ -41,6 +40,9 @@ public class AddJobActivity extends AppCompatActivity implements TimePickerDialo
     EditText title;
     EditText detail;
     List<FGdatabase> models;
+    RadioGroup chose;
+    int chosing=0;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -48,14 +50,37 @@ public class AddJobActivity extends AppCompatActivity implements TimePickerDialo
         setContentView(R.layout.activity_add_job);
         title = (EditText) findViewById(R.id.add_job_name);
         detail = (EditText) findViewById(R.id.add_job_detial);
-        choserepete();
         //add goal to spin
         spinGoal = (Spinner) findViewById(R.id.spin_goal);
         list = new ArrayList<String>();
         final ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, list);
         addSpinGoal();
         spinGoal.setAdapter(adapter);
+        //radio group selsevt
+        chose = (RadioGroup) findViewById(R.id.chose_repeate);
+        chose.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
 
+            @Override
+
+            public void onCheckedChanged(RadioGroup group, int checkedId) {
+
+                // find which radio button is selected
+
+                if (checkedId == R.id.monthly) {
+                    chosing=1;
+                } else if (checkedId == R.id.weekly) {
+                    chosing=2;
+                } else if (checkedId == R.id.dialy) {
+                    chosing=3;
+
+                } else {
+
+                    chosing=0;
+                }
+
+            }
+
+        });
 
         //click on save buuton
         findViewById(R.id.save).setOnClickListener(new View.OnClickListener() {
@@ -68,8 +93,26 @@ public class AddJobActivity extends AppCompatActivity implements TimePickerDialo
                         Toast.makeText(AddJobActivity.this, "لطفا در بخش اهداف یک هدف وارد کنید ", Toast.LENGTH_SHORT).show();
 
                     } else {
-                        addjob();
-                        finish();
+                        if (years != 0) {
+                            addjob();
+                            // repate chose
+                            switch (chosing){
+                                case 1:setreapteMonthly();
+                                    break;
+                                case 2:setRepateWeekly();
+                                    break;
+                                case 3:setRepateDialy();
+                                    break;
+                                default:
+                                    Toast.makeText(AddJobActivity.this, "این کار تکرار ندارد", Toast.LENGTH_SHORT).show();
+                            }
+
+
+                            finish();
+                        } else {
+                            Toast.makeText(AddJobActivity.this, "لطفا زمان  آغاز کار  را وارد کنید ", Toast.LENGTH_SHORT).show();
+
+                        }
                     }
                 }
 
@@ -141,7 +184,8 @@ public class AddJobActivity extends AppCompatActivity implements TimePickerDialo
 
         jobAdd.save();
 
-        Toast.makeText(this,jobAdd.getSqlName(), Toast.LENGTH_SHORT).show();
+
+        Toast.makeText(this, jobAdd.getSqlName(), Toast.LENGTH_SHORT).show();
     }
 
     public void addSpinGoal() {
@@ -151,39 +195,197 @@ public class AddJobActivity extends AppCompatActivity implements TimePickerDialo
         }
     }
 
-    public void choserepete() {
-        RadioGroup chose = (RadioGroup) findViewById(R.id.chose_repeate);
-        chose.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
 
-            @Override
-
-            public void onCheckedChanged(RadioGroup group, int checkedId) {
-
-                // find which radio button is selected
-
-                if (checkedId == R.id.monthly) {
-
-                    repate = "monthly";
+    public void setRepateDialy() {
 
 
-                } else if (checkedId == R.id.weekly) {
+        int dayr = day;
+        int mounthr = mounth;
+        int yearr = years;
+        int maxdaymounth;
+        for (int i = 0; i < 5; i++) {
+            dayr++;
+            if (mounthr < 7) {
+                maxdaymounth = 32;
+            } else {
+                maxdaymounth = 31;
+            }
+            if (dayr < maxdaymounth) {
 
-                    repate = "weekly";
+                String yearj = String.valueOf(yearr);
+                String mounthj = String.valueOf(mounthr);
 
-                } else if (checkedId == R.id.dialy) {
+                String dayj = String.valueOf(dayr);
+                Toast.makeText(this, yearj + mounthj + dayj, Toast.LENGTH_SHORT).show();
+                String name = title.getText().toString();
+                String dtial = detail.getText().toString();
+                String goal = spinGoal.getSelectedItem().toString();
 
+                JobDB jobAdd = new JobDB(name, dtial, goal, yearj, mounthj, dayj, String.valueOf(hours), String.valueOf(min), String.valueOf(eHours), String.valueOf(eMin), goal);
 
-                    repate = "dialy";
+                jobAdd.save();
+            } else {
+
+                dayr -= maxdaymounth - 1;
+
+                if (mounthr < 12) {
+                    mounthr += 1;
+                    String yearj = String.valueOf(yearr);
+                    String mounthj = String.valueOf(mounthr);
+
+                    String dayj = String.valueOf(dayr);
+                    Toast.makeText(this, yearj + mounthj + dayj, Toast.LENGTH_SHORT).show();
+                    String name = title.getText().toString();
+                    String dtial = detail.getText().toString();
+                    String goal = spinGoal.getSelectedItem().toString();
+
+                    JobDB jobAdd = new JobDB(name, dtial, goal, yearj, mounthj, dayj, String.valueOf(hours), String.valueOf(min), String.valueOf(eHours), String.valueOf(eMin), goal);
+
+                    jobAdd.save();
                 } else {
+                    mounthr -= 11;
+                    yearr += 1;
+                    String yearj = String.valueOf(yearr);
+                    String mounthj = String.valueOf(mounthr);
 
-                    repate = "one";
+                    String dayj = String.valueOf(dayr);
+                    Toast.makeText(this, yearj + mounthj + dayj, Toast.LENGTH_SHORT).show();
+                    String name = title.getText().toString();
+                    String dtial = detail.getText().toString();
+                    String goal = spinGoal.getSelectedItem().toString();
+
+                    JobDB jobAdd = new JobDB(name, dtial, goal, yearj, mounthj, dayj, String.valueOf(hours), String.valueOf(min), String.valueOf(eHours), String.valueOf(eMin), goal);
+
+                    jobAdd.save();
 
                 }
 
             }
 
-        });
+
+        }
+    }
+
+    public void setreapteMonthly() {
+        int dayr;
+        if (day == 31) {
+            dayr = day - 1;
+        } else {
+            dayr = day;
+        }
+        int mounthr = mounth;
+        int yearr = years;
+        for (int i = 0; i < 5; i++) {
+
+            if (mounthr < 12) {
+                mounthr += 1;
+                String yearj = String.valueOf(yearr);
+                String mounthj = String.valueOf(mounthr);
+
+                String dayj = String.valueOf(dayr);
+                Toast.makeText(this, yearj + mounthj + dayj, Toast.LENGTH_SHORT).show();
+                String name = title.getText().toString();
+                String dtial = detail.getText().toString();
+                String goal = spinGoal.getSelectedItem().toString();
+
+                JobDB jobAdd = new JobDB(name, dtial, goal, yearj, mounthj, dayj, String.valueOf(hours), String.valueOf(min), String.valueOf(eHours), String.valueOf(eMin), goal);
+
+                jobAdd.save();
+            } else {
+                mounthr -= 11;
+                yearr += 1;
+                String yearj = String.valueOf(yearr);
+                String mounthj = String.valueOf(mounthr);
+
+                String dayj = String.valueOf(dayr);
+                Toast.makeText(this, yearj + mounthj + dayj, Toast.LENGTH_SHORT).show();
+                String name = title.getText().toString();
+                String dtial = detail.getText().toString();
+                String goal = spinGoal.getSelectedItem().toString();
+
+                JobDB jobAdd = new JobDB(name, dtial, goal, yearj, mounthj, dayj, String.valueOf(hours), String.valueOf(min), String.valueOf(eHours), String.valueOf(eMin), goal);
+
+                jobAdd.save();
+
+            }
+
+        }
+
+
+    }
+
+    public void setRepateWeekly() {
+
+
+        int dayr = day;
+        int mounthr = mounth;
+        int yearr = years;
+        int maxdaymounth;
+        for (int i = 0; i < 5; i++) {
+            dayr += 7;
+            if (mounthr < 7) {
+                maxdaymounth = 32;
+            } else {
+                maxdaymounth = 31;
+            }
+            if (dayr < maxdaymounth) {
+
+                String yearj = String.valueOf(yearr);
+                String mounthj = String.valueOf(mounthr);
+
+                String dayj = String.valueOf(dayr);
+                Toast.makeText(this, yearj + mounthj + dayj, Toast.LENGTH_SHORT).show();
+                String name = title.getText().toString();
+                String dtial = detail.getText().toString();
+                String goal = spinGoal.getSelectedItem().toString();
+
+                JobDB jobAdd = new JobDB(name, dtial, goal, yearj, mounthj, dayj, String.valueOf(hours), String.valueOf(min), String.valueOf(eHours), String.valueOf(eMin), goal);
+
+                jobAdd.save();
+            } else {
+
+                dayr -= maxdaymounth - 1;
+
+                if (mounthr < 12) {
+                    mounthr += 1;
+                    String yearj = String.valueOf(yearr);
+                    String mounthj = String.valueOf(mounthr);
+
+                    String dayj = String.valueOf(dayr);
+                    Toast.makeText(this, yearj + mounthj + dayj, Toast.LENGTH_SHORT).show();
+                    String name = title.getText().toString();
+                    String dtial = detail.getText().toString();
+                    String goal = spinGoal.getSelectedItem().toString();
+
+                    JobDB jobAdd = new JobDB(name, dtial, goal, yearj, mounthj, dayj, String.valueOf(hours), String.valueOf(min), String.valueOf(eHours), String.valueOf(eMin), goal);
+
+                    jobAdd.save();
+                } else {
+                    mounthr -= 11;
+                    yearr += 1;
+                    String yearj = String.valueOf(yearr);
+                    String mounthj = String.valueOf(mounthr);
+
+                    String dayj = String.valueOf(dayr);
+                    Toast.makeText(this, yearj + mounthj + dayj, Toast.LENGTH_SHORT).show();
+                    String name = title.getText().toString();
+                    String dtial = detail.getText().toString();
+                    String goal = spinGoal.getSelectedItem().toString();
+
+                    JobDB jobAdd = new JobDB(name, dtial, goal, yearj, mounthj, dayj, String.valueOf(hours), String.valueOf(min), String.valueOf(eHours), String.valueOf(eMin), goal);
+
+                    jobAdd.save();
+
+                }
+
+            }
+
+
+        }
     }
 
 
 }
+
+
+

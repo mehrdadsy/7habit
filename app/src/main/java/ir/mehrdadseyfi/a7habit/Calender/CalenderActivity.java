@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -33,6 +34,8 @@ public class CalenderActivity extends AppCompatActivity {
         calendarView = (PersianCalendarView) findViewById(R.id.persian_calendar);
         calendarHandler = calendarView.getCalendar();
         ImageView help = (ImageView) findViewById(R.id.help);
+
+        setTodayList();
         //TESTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
         help.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -94,5 +97,25 @@ public class CalenderActivity extends AppCompatActivity {
 
             }
         });
+    }
+    public void setTodayList(){
+        PersianDate today1 = calendarHandler.getToday();
+        List<JobDB> models1=JobDB.find(JobDB.class,"year= ? and mount= ? and day= ?", String.valueOf(today1.getYear()),String.valueOf(today1.getMonth()),String.valueOf(today1.getDayOfMonth()));
+        ShowJobDayListAdapter adapter=new ShowJobDayListAdapter(models1,this);
+        ListView mylist=(ListView)findViewById(R.id.my_today_list);
+        mylist.setAdapter(adapter);
+    }
+
+    @Override
+    protected void onStart() {
+        setTodayList();
+        super.onStart();
+    }
+
+    @Override
+    protected void onResume() {
+        setTodayList();
+
+        super.onResume();
     }
 }
