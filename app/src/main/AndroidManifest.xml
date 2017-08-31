@@ -147,7 +147,8 @@
         <activity
             android:name=".Calender.ShowDayJobActivity"
             android:theme="@style/mytheme" />
-        <activity android:name=".Vista.EditGoalActivity" />
+        <activity android:name=".Vista.EditGoalActivity"
+            android:theme="@style/mytheme"    />
         <activity android:name=".Calender.EditJobActivity"></activity>
     </application>
 
