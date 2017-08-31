@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="250dp"
+    android:layout_height="250dp"
+    android:orientation="vertical"
+    tools:context="ir.mehrdadseyfi.a7habit.Vista.EditGoalActivity">
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/title_eg"/>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/detial_eg"/>
+    <Spinner
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/soin_role_eg"></Spinner>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="bottom"
+        android:gravity="center_horizontal"
+        >
+        <Button
+            android:id="@+id/save"
+            android:text="@string/dialog_save_btn"
+            android:layout_width="80dp"
+            android:background="@drawable/d3_ee"
+            android:layout_marginRight="20dp"
+            android:layout_height="60dp" />
+
+
+        <Button
+            android:id="@+id/cancel"
+            android:text="@string/dialog_cancel_btn"
+            android:layout_width="80dp"
+            android:background="@drawable/d3_ee"
+            android:layout_height="60dp"
+            android:layout_gravity="center_vertical"/>
+
+    </LinearLayout>
+
+</LinearLayout>

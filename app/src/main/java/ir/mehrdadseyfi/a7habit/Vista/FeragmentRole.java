@@ -19,6 +19,7 @@ import android.widget.Toast;
 
 import java.util.List;
 
+import ir.mehrdadseyfi.a7habit.Calender.JobDB;
 import ir.mehrdadseyfi.a7habit.R;
 
 public class FeragmentRole extends Fragment {
@@ -90,7 +91,7 @@ public class FeragmentRole extends Fragment {
 
 //maten dialog
         alertDialog.setMessage("آیا از حذف نقش خود مطمئن هستید؟"+"\n"+"دقت کنید که هدف های مربوط به این نقش نیز حذف می شون" +
-                "د");
+                "د"+"\n"+"دقت کنید که بعد از حذف هدف ها کار های مربوط به هدف هم حذف خواهد شد");
 
 //dokme ---mitoni ino hey copy koni va  BUTTON_NEUTRAL ino avaz koni dokme jadid biari va ye cari behesh nesbat bedi
         alertDialog.setButton(AlertDialog.BUTTON_POSITIVE, "OK",
@@ -103,12 +104,18 @@ public class FeragmentRole extends Fragment {
                         books.delete();
                         String name=models.get(postionAlert).getName();
                         List<FGdatabase> notes = FGdatabase.find(FGdatabase.class, "role = ?" , name);
-
+                    //del goal
                         for (int i = 0; i < notes.size(); i++) {
                             notes.get(i).getId();
                             FGdatabase books1 = FGdatabase.findById(FGdatabase.class, notes.get(i).getId());
+                            //del job
+                            String del = "DELETE FROM job_DB WHERE  goal = '" + books1.getName() + "'";
+                            JobDB.executeQuery(del);
                             books1.delete();
                         }
+
+
+
                         Toast.makeText(getActivity(), "حذف کار انجام شد", Toast.LENGTH_SHORT).show();
                         creatList();
 

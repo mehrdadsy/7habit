@@ -121,7 +121,7 @@
 
         <activity
             android:name=".Vista.VistaActivity"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar"></activity>
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
         <activity
             android:name=".Vista.ShowGoalRoleActivity"
             android:theme="@style/mytheme" />
@@ -143,9 +143,12 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Calender.AddJobActivity"></activity>
-        <activity android:name=".Calender.ShowDayJobActivity"
-           android:theme="@style/mytheme" ></activity>
+        <activity android:name=".Calender.AddJobActivity" />
+        <activity
+            android:name=".Calender.ShowDayJobActivity"
+            android:theme="@style/mytheme" />
+        <activity android:name=".Vista.EditGoalActivity" />
+        <activity android:name=".Calender.EditJobActivity"></activity>
     </application>
 
 </manifest>

@@ -5,6 +5,7 @@ package ir.mehrdadseyfi.a7habit.Vista;
  */
 
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.app.AlertDialog;
@@ -14,11 +15,11 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ImageView;
 import android.widget.ListView;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import java.util.List;
 
+import ir.mehrdadseyfi.a7habit.Calender.JobDB;
 import ir.mehrdadseyfi.a7habit.R;
 
 /**
@@ -70,6 +71,14 @@ import ir.mehrdadseyfi.a7habit.R;
                 return true;
             }
         });
+        mylist.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Intent intent = new Intent(getActivity(),EditGoalActivity.class);
+                intent.putExtra("id", models.get(position).getId());
+                startActivity(intent);
+            }
+        });
 
         return view;
 
@@ -82,7 +91,7 @@ import ir.mehrdadseyfi.a7habit.R;
         alertDialog.setTitle("هشدار");
 
 //maten dialog
-        alertDialog.setMessage("آیا از حذف هدف خود مطمئن هستید؟");
+        alertDialog.setMessage("آیا از حذف هدف خود مطمئن هستید؟"+"\n"+"دقت کنید که بعد از حذف هدف ها کار های مربوط به هدف هم حذف خواهد شد");
 
 //dokme ---mitoni ino hey copy koni va  BUTTON_NEUTRAL ino avaz koni dokme jadid biari va ye cari behesh nesbat bedi
         alertDialog.setButton(AlertDialog.BUTTON_POSITIVE, "OK",
@@ -92,6 +101,8 @@ import ir.mehrdadseyfi.a7habit.R;
                     public void onClick(DialogInterface dialog, int which) {
 
                         FGdatabase books = FGdatabase.findById(FGdatabase.class, models.get(postionAlert).getId());
+                        String del = "DELETE FROM job_DB WHERE  goal = '" + books.getName() + "'";
+                        JobDB.executeQuery(del);
                         books.delete();
                         Toast.makeText(getActivity(), "حذف هدف انجام شد", Toast.LENGTH_SHORT).show();
                         creatList();

@@ -6,22 +6,14 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
-import android.widget.ImageView;
 import android.widget.RadioGroup;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.mohamadamin.persianmaterialdatetimepicker.date.DatePickerDialog;
-import com.mohamadamin.persianmaterialdatetimepicker.time.RadialPickerLayout;
-import com.mohamadamin.persianmaterialdatetimepicker.time.TimePickerDialog;
-import com.mohamadamin.persianmaterialdatetimepicker.utils.PersianCalendar;
-
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 
-import ir.mehrdadseyfi.a7habit.Emegency.EmergencyEssntialItem;
 import ir.mehrdadseyfi.a7habit.R;
 
 public class AddDialogActivity extends AppCompatActivity {
