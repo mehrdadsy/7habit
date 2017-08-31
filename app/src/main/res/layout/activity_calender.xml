@@ -57,10 +57,20 @@
    <TextView
        android:layout_width="wrap_content"
        android:layout_height="wrap_content" />
-    <ListView
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="3"
-        android:id="@+id/my_today_list"></ListView>
+   <RelativeLayout
+       android:layout_width="match_parent"
+       android:layout_height="0dp"
+       android:layout_weight="3">
+       <ImageView
+           android:layout_width="match_parent"
+           android:layout_height="match_parent"
+           android:id="@+id/img"/>
+       <ListView
+           android:layout_width="match_parent"
+           android:layout_height="match_parent"
+           android:layout_weight="3"
+           android:id="@+id/my_today_list"></ListView>
+   </RelativeLayout>
+
 
 </LinearLayout>

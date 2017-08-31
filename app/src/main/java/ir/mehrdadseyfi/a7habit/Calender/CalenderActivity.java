@@ -1,9 +1,12 @@
 package ir.mehrdadseyfi.a7habit.Calender;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
@@ -26,6 +29,10 @@ public class CalenderActivity extends AppCompatActivity {
     TextView month;
     TextView year;
     ImageView add_job;
+    ListView mylist;
+    int postionAlert;
+    List<JobDB> models1;
+    int i=0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -55,6 +62,16 @@ public class CalenderActivity extends AppCompatActivity {
         });
         textViewShow();
         showJobDay();
+        //delete itemmmmmmmmmmmmm
+        mylist.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
+            @Override
+            public boolean onItemLongClick(AdapterView<?> parent, View view, int position, long id) {
+                postionAlert = position;
+                AlertPopup();
+
+                return true;
+            }
+        });
 
     }
 
@@ -100,10 +117,13 @@ public class CalenderActivity extends AppCompatActivity {
     }
     public void setTodayList(){
         PersianDate today1 = calendarHandler.getToday();
-        List<JobDB> models1=JobDB.find(JobDB.class,"year= ? and mount= ? and day= ?", String.valueOf(today1.getYear()),String.valueOf(today1.getMonth()),String.valueOf(today1.getDayOfMonth()));
+         models1=JobDB.find(JobDB.class,"year= ? and mount= ? and day= ?", String.valueOf(today1.getYear()),String.valueOf(today1.getMonth()),String.valueOf(today1.getDayOfMonth()));
         ShowJobDayListAdapter adapter=new ShowJobDayListAdapter(models1,this);
-        ListView mylist=(ListView)findViewById(R.id.my_today_list);
+         mylist=(ListView)findViewById(R.id.my_today_list);
         mylist.setAdapter(adapter);
+        i = models1.size();
+        BackGroundIf();
+
     }
 
     @Override
@@ -117,5 +137,56 @@ public class CalenderActivity extends AppCompatActivity {
         setTodayList();
 
         super.onResume();
+    }
+    public void AlertPopup() {
+        AlertDialog alertDialog = new AlertDialog.Builder(this).create();
+
+//tiltle
+        alertDialog.setTitle("هشدار");
+
+//maten dialog
+        alertDialog.setMessage("آیا از حذف کار خود مطمئن هستید؟");
+
+//dokme ---mitoni ino hey copy koni va  BUTTON_NEUTRAL ino avaz koni dokme jadid biari va ye cari behesh nesbat bedi
+        alertDialog.setButton(AlertDialog.BUTTON_POSITIVE, "OK",
+
+                new DialogInterface.OnClickListener() {
+
+                    public void onClick(DialogInterface dialog, int which) {
+                        String del = "DELETE FROM job_DB WHERE name =" + " '" + models1.get(postionAlert).getName() + "' and  goal = '" + models1.get(postionAlert).getGoal() + "'";
+                        JobDB.executeQuery(del);
+                        Toast.makeText(CalenderActivity.this, "حذف کار انجام شد", Toast.LENGTH_SHORT).show();
+                        setTodayList();
+
+                    }
+
+                });
+        alertDialog.setButton(AlertDialog.BUTTON_NEGATIVE, "No",
+                new DialogInterface.OnClickListener() {
+
+                    public void onClick(DialogInterface dialog, int which) {
+
+                        dialog.dismiss();
+
+                    }
+
+                });
+
+
+        alertDialog.show();
+
+
+    }
+    //image backgroun ba if
+    public void BackGroundIf() {
+        ImageView imgBackGround = (ImageView) findViewById(R.id.img);
+
+        if (i == 0) {
+            imgBackGround.setImageResource(R.drawable.noting);
+
+        } else {
+
+            imgBackGround.setImageDrawable(null);
+        }
     }
 }
