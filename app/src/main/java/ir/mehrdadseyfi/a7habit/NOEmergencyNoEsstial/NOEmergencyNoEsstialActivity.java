@@ -63,13 +63,7 @@ public class NOEmergencyNoEsstialActivity extends AppCompatActivity {
             }
         });
         ImageView img_toolbar_sound = (ImageView) findViewById(R.id.sound);
-        img_toolbar_sound.setImageResource(R.drawable.ic_volume_off_black_48dp);
-        img_toolbar_sound.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                stopService(new Intent(NOEmergencyNoEsstialActivity.this, AlarmSoundService.class));
-            }
-        });
+
         LV.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
             @Override
             public boolean onItemLongClick(AdapterView<?> parent, View view, int position, long id) {

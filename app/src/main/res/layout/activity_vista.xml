@@ -38,7 +38,7 @@
         android:id="@+id/simpleTabLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:tabIndicatorColor="#07f132"
+        app:tabIndicatorColor="#ff8e66"
         app:tabGravity="fill"
         app:tabSelectedTextColor="#f7f7f7"
         app:tabTextColor="#000" />

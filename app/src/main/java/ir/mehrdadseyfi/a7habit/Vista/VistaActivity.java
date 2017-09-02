@@ -41,7 +41,7 @@ public class VistaActivity extends AppCompatActivity {
         help.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(VistaActivity.this, AddJobActivity.class));
+
 
             }
         });

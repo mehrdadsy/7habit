@@ -19,6 +19,7 @@ import java.util.Date;
 import java.util.List;
 
 import ir.mehrdadseyfi.a7habit.AlarmSoundService;
+import ir.mehrdadseyfi.a7habit.Emegency.*;
 import ir.mehrdadseyfi.a7habit.Emegency.NeeMyReceiver;
 import ir.mehrdadseyfi.a7habit.JalaliCalendar;
 import ir.mehrdadseyfi.a7habit.R;
@@ -64,13 +65,7 @@ public class NoEmergencyEssntialActivity extends AppCompatActivity {
             }
         });
         ImageView img_toolbar_sound = (ImageView) findViewById(R.id.sound);
-        img_toolbar_sound.setImageResource(R.drawable.ic_volume_off_black_48dp);
-        img_toolbar_sound.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                stopService(new Intent(NoEmergencyEssntialActivity.this, AlarmSoundService.class));
-            }
-        });
+
         LV.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
             @Override
             public boolean onItemLongClick(AdapterView<?> parent, View view, int position, long id) {

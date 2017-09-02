@@ -9,6 +9,7 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.RadioGroup;
 import android.widget.Spinner;
+import android.widget.TextView;
 import android.widget.TimePicker;
 import android.widget.Toast;
 
@@ -42,6 +43,7 @@ public class AddJobActivity extends AppCompatActivity implements TimePickerDialo
     List<FGdatabase> models;
     RadioGroup chose;
     int chosing=0;
+    TextView txtStartDate;
 
 
     @Override
@@ -50,6 +52,7 @@ public class AddJobActivity extends AppCompatActivity implements TimePickerDialo
         setContentView(R.layout.activity_add_job);
         title = (EditText) findViewById(R.id.add_job_name);
         detail = (EditText) findViewById(R.id.add_job_detial);
+        txtStartDate=(TextView)findViewById(R.id.start_date_txt);
         //add goal to spin
         spinGoal = (Spinner) findViewById(R.id.spin_goal);
         list = new ArrayList<String>();
@@ -152,8 +155,10 @@ public class AddJobActivity extends AppCompatActivity implements TimePickerDialo
                         12, 59, true
                 );
                 timer.show(getFragmentManager(), "Datepickerdialog");
+
             }
         });
+
 
 
     }
@@ -163,6 +168,7 @@ public class AddJobActivity extends AppCompatActivity implements TimePickerDialo
         hours = hourOfDay;
         min = minute;
 
+
     }
 
     @Override
@@ -170,6 +176,7 @@ public class AddJobActivity extends AppCompatActivity implements TimePickerDialo
         day = dayOfMonth;
         mounth = (monthOfYear + 1);
         years = year;
+        txtStartDate.setText(String.valueOf("زمان اغاز"+"\n"+years+"/"+mounth+"/"+day+"\n"+hours+":"+min ));
 
     }
 

@@ -11,7 +11,7 @@
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="51dp"
-        android:background="#77c5fe">
+        android:background="#ecf0f4">
 
     <TextView
     android:layout_width="wrap_content"
@@ -67,12 +67,12 @@
             android:layout_marginTop="20dp"
             android:textSize="15sp"
             android:id="@+id/vista_spin"
-            android:background="@drawable/d3_ene"
+            android:background="#e9dbdb"
             android:text="@string/vista_spiner"/>
        <LinearLayout
            android:layout_width="match_parent"
            android:layout_height="wrap_content"
-           android:background="#77c5fe"
+           android:background="#e0e8ef"
            android:layout_marginTop="20dp"
            android:gravity="fill_vertical">
 
@@ -100,7 +100,7 @@
                 android:id="@+id/save"
                 android:text="@string/dialog_save_btn"
                 android:layout_width="80dp"
-                android:background="@drawable/d3_ene"
+                android:background="@drawable/d3_add_vista"
                 android:layout_marginRight="20dp"
                 android:layout_height="60dp" />
 
@@ -109,7 +109,7 @@
                 android:id="@+id/cancel"
                 android:text="@string/dialog_cancel_btn"
                 android:layout_width="80dp"
-                android:background="@drawable/d3_ene"
+                android:background="@drawable/d3_add_vista"
                 android:layout_height="60dp"
                 android:layout_gravity="center_vertical"/>
 

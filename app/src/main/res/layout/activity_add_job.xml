@@ -7,6 +7,20 @@
     android:gravity="center"
     android:layout_height="match_parent"
     tools:context="ir.mehrdadseyfi.a7habit.Calender.AddJobActivity">
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="51dp"
+        android:background="#ecf0f4">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/add_grd"/>
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/attodate"/>
+    </android.support.v7.widget.Toolbar>
 <EditText
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
@@ -19,20 +33,39 @@
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/ic_launcher"
+        android:src="@drawable/start_time"
         android:id="@+id/start_date"
         />
-
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/start_date_txt"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/end_date"/>
     <TimePicker
         android:id="@+id/end_hours"
         android:layout_width="323dp"
         android:layout_height="97dp"
         android:timePickerMode="spinner"></TimePicker>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/goal"
+        android:background="#e1cfd7"
+        android:textSize="20dp"/>
     <Spinner
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/spin_goal"></Spinner>
-
+        android:id="@+id/spin_goal"
+        ></Spinner>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/reapet"
+        android:background="#e1cfd7"
+        android:textSize="20dp"/>
     <RadioGroup
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -71,7 +104,7 @@
             android:id="@+id/save"
             android:text="@string/dialog_save_btn"
             android:layout_width="80dp"
-            android:background="@drawable/d3_nee"
+            android:background="@drawable/d3_add_vista"
             android:layout_marginRight="20dp"
             android:layout_height="60dp" />
 
@@ -80,7 +113,7 @@
             android:id="@+id/cancel"
             android:text="@string/dialog_cancel_btn"
             android:layout_width="80dp"
-            android:background="@drawable/d3_nee"
+            android:background="@drawable/d3_add_vista"
             android:layout_height="60dp"
             android:layout_gravity="center_vertical"/>
 

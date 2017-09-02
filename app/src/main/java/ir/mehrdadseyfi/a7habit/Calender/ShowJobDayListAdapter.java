@@ -49,7 +49,7 @@ public class ShowJobDayListAdapter extends BaseAdapter {
         TextView enddate = (TextView) rowView.findViewById(R.id.end_date);
         title.setText(models.get(position).getName());
         detail.setText(models.get(position).getDetail());
-        goal.setText(models.get(position).getGoal());
+        goal.setText("مربوط به هدف:"+" "+models.get(position).getGoal());
         String startDate=models.get(position).getyear()+"/"+models.get(position).getmount()+"/"+models.get(position).getday()+"   "+models.get(position).getshours()+":"+models.get(position).getsminutes();
         startdate.setText(startDate);
         String endDate=models.get(position).getehours()+":"+models.get(position).geteminutes();
