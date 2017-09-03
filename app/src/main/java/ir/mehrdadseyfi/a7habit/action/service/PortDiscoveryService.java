@@ -13,7 +13,7 @@ import java.net.ServerSocket;
 public final class PortDiscoveryService {
     private static final int DEFAULT_START_PORT = 8765;
     private static final int MAXIMUM_PORT = 12000;
-    private static Integer discoveredOpenPort;
+    private static int discoveredOpenPort;
 
     private static void discoverOpenPort() {
         discoveredOpenPort = discoverOpenPort(DEFAULT_START_PORT);

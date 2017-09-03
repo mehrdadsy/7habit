@@ -30,7 +30,7 @@ public class SplashScreen extends Activity {
         config.locale = locale;
         getBaseContext().getResources().updateConfiguration(config,
                 getBaseContext().getResources().getDisplayMetrics());
-        setContentView(R.layout.main);
+        setContentView(R.layout.splash);
         PortDiscoveryService.discoverOpenPortInBackground();
 
         new Handler().postDelayed(new Runnable() {

@@ -52,7 +52,7 @@ public class AddJobActivity extends AppCompatActivity implements TimePickerDialo
         setContentView(R.layout.activity_add_job);
         title = (EditText) findViewById(R.id.add_job_name);
         detail = (EditText) findViewById(R.id.add_job_detial);
-        txtStartDate=(TextView)findViewById(R.id.start_date_txt);
+        txtStartDate=(TextView)findViewById(R.id.start_datee);
         //add goal to spin
         spinGoal = (Spinner) findViewById(R.id.spin_goal);
         list = new ArrayList<String>();

@@ -36,6 +36,7 @@ public class MainStart21DayActivity extends AppCompatActivity {
                 String currentDateTimeString = DateFormat.getDateTimeInstance().format(new Date());
                 PreferenceManager.getDefaultSharedPreferences(mContext).edit().putString("t0", currentDateTimeString).commit();
                 PreferenceManager.getDefaultSharedPreferences(mContext).edit().putBoolean("startsate", true).commit();
+                PreferenceManager.getDefaultSharedPreferences(mContext).edit().putInt("curlevel", 1).commit();
                 finish();
 
 
