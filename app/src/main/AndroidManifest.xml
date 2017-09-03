@@ -133,7 +133,23 @@
             android:name=".action.ScormPlayerActivity"
             android:configChanges="keyboardHidden|orientation|screenSize|keyboard"
             android:label="@string/app_name" />
-        <activity android:name=".action.SplashScreen" >
+        <activity android:name=".action.SplashScreen"></activity>
+        <activity
+            android:name=".Calender.CalenderActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name=".Calender.AddJobActivity"
+            android:theme="@style/mytheme" />
+        <activity
+            android:name=".Calender.ShowDayJobActivity"
+            android:theme="@style/mytheme" />
+        <activity
+            android:name=".Vista.EditGoalActivity"
+            android:theme="@style/mytheme" />
+        <activity android:name=".Calender.EditJobActivity" />
+        <activity
+            android:name=".TwentyOneDays.TwentyOneDaysActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -141,19 +157,9 @@
             </intent-filter>
 
         </activity>
-        <activity
-            android:name=".Calender.CalenderActivity"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+        <activity android:name=".TwentyOneDays.MainStart21DayActivity">
 
         </activity>
-        <activity android:name=".Calender.AddJobActivity"
-            android:theme="@style/mytheme"/>
-        <activity
-            android:name=".Calender.ShowDayJobActivity"
-            android:theme="@style/mytheme" />
-        <activity android:name=".Vista.EditGoalActivity"
-            android:theme="@style/mytheme"    />
-        <activity android:name=".Calender.EditJobActivity"></activity>
     </application>
 
 </manifest>
