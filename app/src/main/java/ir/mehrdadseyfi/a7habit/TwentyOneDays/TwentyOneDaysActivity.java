@@ -1,5 +1,7 @@
 package ir.mehrdadseyfi.a7habit.TwentyOneDays;
 
+import android.app.AlarmManager;
+import android.app.PendingIntent;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -13,6 +15,12 @@ import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 import android.widget.Toast;
 
+import java.util.Calendar;
+import java.util.Date;
+
+import ir.mehrdadseyfi.a7habit.JalaliCalendar;
+import ir.mehrdadseyfi.a7habit.NOEmergencyNoEsstial.NOEsstianlEmergencyMyReceiver;
+import ir.mehrdadseyfi.a7habit.NOEsstianlEmergency.NOEsstianlEmergencyActivity;
 import ir.mehrdadseyfi.a7habit.R;
 
 public class TwentyOneDaysActivity extends AppCompatActivity {
@@ -20,19 +28,62 @@ public class TwentyOneDaysActivity extends AppCompatActivity {
     int curlevel;
     ImageView level1;
     ImageView level2;
+    ImageView level3;
+    ImageView level4;
+    ImageView level5;
+    ImageView level6;
+    ImageView level7;
+    ImageView level8;
+    ImageView level9;
+    ImageView level10;
+    ImageView level11;
+    ImageView level12;
+    ImageView level13;
+    ImageView level14;
+    ImageView level15;
+    ImageView level16;
+    ImageView level17;
+    ImageView level18;
+    ImageView level19;
+    ImageView level20;
+    ImageView level21;
+    long d;
+
+    long dayMil = 6 * 1000;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_twenty_one_days);
-         level1=(ImageView)findViewById(R.id.level1);
-         level2=(ImageView)findViewById(R.id.level2);
-        curlevel=PreferenceManager.getDefaultSharedPreferences(this).getInt("curlevel",0);
-        //point
-        ImageView point=(ImageView)findViewById(R.id.point);
+        level1 = (ImageView) findViewById(R.id.level1);
+        level2 = (ImageView) findViewById(R.id.level2);
+        level3 = (ImageView) findViewById(R.id.level3);
+        level4 = (ImageView) findViewById(R.id.level4);
+        level5 = (ImageView) findViewById(R.id.level5);
+        level6 = (ImageView) findViewById(R.id.level6);
+        level7 = (ImageView) findViewById(R.id.level7);
+        level8 = (ImageView) findViewById(R.id.level8);
+        level9 = (ImageView) findViewById(R.id.level9);
+        level10 = (ImageView) findViewById(R.id.level10);
+        level11 = (ImageView) findViewById(R.id.level11);
+        level12 = (ImageView) findViewById(R.id.level12);
+        level13 = (ImageView) findViewById(R.id.level13);
+        level14 = (ImageView) findViewById(R.id.level14);
+        level15 = (ImageView) findViewById(R.id.level15);
+        level16 = (ImageView) findViewById(R.id.level16);
+        level17 = (ImageView) findViewById(R.id.level17);
+        level18 = (ImageView) findViewById(R.id.level18);
+        level19 = (ImageView) findViewById(R.id.level19);
+        level20 = (ImageView) findViewById(R.id.level20);
+        level21 = (ImageView) findViewById(R.id.level21);
+
+
+        curlevel = PreferenceManager.getDefaultSharedPreferences(this).getInt("curlevel", 0);
+        //anim
         Animation animationHelp = AnimationUtils.loadAnimation(TwentyOneDaysActivity.this, R.anim.shake);
-        point.startAnimation(animationHelp);
-       //add 21 days
-        ImageView add_21=(ImageView)findViewById(R.id.add_21);
+
+        //add 21 days
+        ImageView add_21 = (ImageView) findViewById(R.id.add_21);
         add_21.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -40,20 +91,19 @@ public class TwentyOneDaysActivity extends AppCompatActivity {
             }
         });
         //reset
-        ImageView reset=(ImageView)findViewById(R.id.restart);
+        ImageView reset = (ImageView) findViewById(R.id.restart);
         reset.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-               curlevel++;
+                alertPopup();
             }
         });
-       palylevel();
-
-
+        palylevel();
 
 
     }
-    public void AlertPopup() {
+
+    public void alertPopup() {
         AlertDialog alertDialog = new AlertDialog.Builder(this).create();
 
 //tiltle
@@ -69,8 +119,27 @@ public class TwentyOneDaysActivity extends AppCompatActivity {
 
                     public void onClick(DialogInterface dialog, int which) {
                         PreferenceManager.getDefaultSharedPreferences(mContext).edit().putBoolean("startsate", false).commit();
-
-
+                        curlevel = PreferenceManager.getDefaultSharedPreferences(mContext).getInt("curlevel", 0);
+                        level1.setImageResource(R.drawable.emp);
+                        level2.setImageResource(R.drawable.emp);
+                        level3.setImageResource(R.drawable.emp);
+                        level4.setImageResource(R.drawable.emp);
+                        level5.setImageResource(R.drawable.emp);
+                        level6.setImageResource(R.drawable.emp);
+                        level7.setImageResource(R.drawable.emp);
+                        level8.setImageResource(R.drawable.emp);
+                        level9.setImageResource(R.drawable.emp);
+                        level10.setImageResource(R.drawable.emp);
+                        level11.setImageResource(R.drawable.emp);
+                        level12.setImageResource(R.drawable.emp);
+                        level13.setImageResource(R.drawable.emp);
+                        level14.setImageResource(R.drawable.emp);
+                        level15.setImageResource(R.drawable.emp);
+                        level16.setImageResource(R.drawable.emp);
+                        level17.setImageResource(R.drawable.emp);
+                        level18.setImageResource(R.drawable.emp);
+                        level19.setImageResource(R.drawable.emp);
+                        level20.setImageResource(R.drawable.emp);
 
 
                     }
@@ -92,17 +161,49 @@ public class TwentyOneDaysActivity extends AppCompatActivity {
 
 
     }
-    public void palylevel(){
-        switch (curlevel){
+    public void noTimePopup() {
+        AlertDialog alertDialog = new AlertDialog.Builder(this).create();
+
+//tiltle
+        alertDialog.setTitle("");
+
+//maten dialog
+        alertDialog.setMessage("دقت داشته باشید که هر مرحله حداقل باید یک روز از مرحله قبلی فاصله زمانی داشته باشد..."+"\n"
+        +"در پایان این زمان شما می توانید مرحله بعدی را آغاز کنید");
+
+//dokme ---mitoni ino hey copy koni va  BUTTON_NEUTRAL ino avaz koni dokme jadid biari va ye cari behesh nesbat bedi
+        alertDialog.setButton(AlertDialog.BUTTON_POSITIVE, "OK",
+
+                new DialogInterface.OnClickListener() {
+
+                    public void onClick(DialogInterface dialog, int which) {
+
+                        dialog.dismiss();
+
+
+                    }
+
+                });
+
+
+
+        alertDialog.show();
+
+
+    }
+
+
+    public void palylevel() {
+        switch (curlevel) {
             case 1:
 
-                 level1=(ImageView)findViewById(R.id.level1);
-                level1.setImageResource(R.drawable.sq01);
+                level1 = (ImageView) findViewById(R.id.level1);
+                level1.setImageResource(R.drawable.point);
                 level1.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                      if (curlevel==1)
-                        startActivity(new Intent(TwentyOneDaysActivity.this, ShowTipActivity.class));
+                        if (curlevel == 1)
+                            startActivity(new Intent(TwentyOneDaysActivity.this, ShowTipActivity.class));
                     }
                 });
 
@@ -110,21 +211,26 @@ public class TwentyOneDaysActivity extends AppCompatActivity {
             case 2:
 
 
-                level1.setImageResource(R.drawable.sq04);
-               level2.setImageResource(R.drawable.sq02);
+                level1.setImageResource(R.drawable.prize);
+                level2.setImageResource(R.drawable.point);
+
                 level2.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        startActivity(new Intent(TwentyOneDaysActivity.this, ShowTipActivity.class));
+                        if (curlevel == 2) {
+                            if (Calendar.getInstance().getTime().getTime() - PreferenceManager.getDefaultSharedPreferences(mContext).getLong("t0", 0) > dayMil) {
+                                startActivity(new Intent(TwentyOneDaysActivity.this, ShowTipActivity.class));
+                            } else {
+                                noTimePopup();                            }
+                        }
                     }
                 });
 
 
                 break;
-            case 0: Toast.makeText(mContext, "fuck0", Toast.LENGTH_SHORT).show();
-                break;
+
             default:
-                Toast.makeText(mContext, "fuck", Toast.LENGTH_SHORT).show();
+                Toast.makeText(mContext, "f", Toast.LENGTH_SHORT).show();
 
 
         }
@@ -132,7 +238,7 @@ public class TwentyOneDaysActivity extends AppCompatActivity {
 
     @Override
     protected void onResume() {
-        curlevel=PreferenceManager.getDefaultSharedPreferences(this).getInt("curlevel",0);
+        curlevel = PreferenceManager.getDefaultSharedPreferences(this).getInt("curlevel", 0);
 
         palylevel();
         super.onResume();
@@ -140,9 +246,12 @@ public class TwentyOneDaysActivity extends AppCompatActivity {
 
     @Override
     protected void onStart() {
-        curlevel=PreferenceManager.getDefaultSharedPreferences(this).getInt("curlevel",0);
+        curlevel = PreferenceManager.getDefaultSharedPreferences(this).getInt("curlevel", 0);
 
         palylevel();
         super.onStart();
     }
-}
+
+        }
+
+

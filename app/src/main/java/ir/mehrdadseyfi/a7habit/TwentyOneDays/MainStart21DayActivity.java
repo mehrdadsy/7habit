@@ -1,6 +1,9 @@
 package ir.mehrdadseyfi.a7habit.TwentyOneDays;
 
+import android.app.AlarmManager;
+import android.app.PendingIntent;
 import android.content.Context;
+import android.content.Intent;
 import android.preference.PreferenceManager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -12,6 +15,7 @@ import android.widget.Toast;
 import java.text.DateFormat;
 import java.util.Date;
 
+import ir.mehrdadseyfi.a7habit.NOEmergencyNoEsstial.NOEsstianlEmergencyMyReceiver;
 import ir.mehrdadseyfi.a7habit.R;
 
 public class MainStart21DayActivity extends AppCompatActivity {
@@ -33,8 +37,6 @@ public class MainStart21DayActivity extends AppCompatActivity {
         btnStart.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String currentDateTimeString = DateFormat.getDateTimeInstance().format(new Date());
-                PreferenceManager.getDefaultSharedPreferences(mContext).edit().putString("t0", currentDateTimeString).commit();
                 PreferenceManager.getDefaultSharedPreferences(mContext).edit().putBoolean("startsate", true).commit();
                 PreferenceManager.getDefaultSharedPreferences(mContext).edit().putInt("curlevel", 1).commit();
                 finish();
@@ -44,4 +46,5 @@ public class MainStart21DayActivity extends AppCompatActivity {
         });
 
     }
+
 }
