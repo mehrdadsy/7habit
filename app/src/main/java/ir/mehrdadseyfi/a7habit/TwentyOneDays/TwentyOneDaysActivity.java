@@ -48,6 +48,7 @@ public class TwentyOneDaysActivity extends AppCompatActivity {
     ImageView level20;
     ImageView level21;
     long d;
+    Intent intent;
 
     long dayMil = 6 * 1000;
 
@@ -161,6 +162,7 @@ public class TwentyOneDaysActivity extends AppCompatActivity {
 
 
     }
+
     public void noTimePopup() {
         AlertDialog alertDialog = new AlertDialog.Builder(this).create();
 
@@ -168,8 +170,8 @@ public class TwentyOneDaysActivity extends AppCompatActivity {
         alertDialog.setTitle("");
 
 //maten dialog
-        alertDialog.setMessage("دقت داشته باشید که هر مرحله حداقل باید یک روز از مرحله قبلی فاصله زمانی داشته باشد..."+"\n"
-        +"در پایان این زمان شما می توانید مرحله بعدی را آغاز کنید");
+        alertDialog.setMessage("دقت داشته باشید که هر مرحله حداقل باید یک روز از مرحله قبلی فاصله زمانی داشته باشد..." + "\n"
+                + "در پایان این زمان شما می توانید مرحله بعدی را آغاز کنید");
 
 //dokme ---mitoni ino hey copy koni va  BUTTON_NEUTRAL ino avaz koni dokme jadid biari va ye cari behesh nesbat bedi
         alertDialog.setButton(AlertDialog.BUTTON_POSITIVE, "OK",
@@ -186,7 +188,6 @@ public class TwentyOneDaysActivity extends AppCompatActivity {
                 });
 
 
-
         alertDialog.show();
 
 
@@ -199,11 +200,15 @@ public class TwentyOneDaysActivity extends AppCompatActivity {
 
                 level1 = (ImageView) findViewById(R.id.level1);
                 level1.setImageResource(R.drawable.point);
+
                 level1.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
                         if (curlevel == 1)
-                            startActivity(new Intent(TwentyOneDaysActivity.this, ShowTipActivity.class));
+                            intent = new Intent(TwentyOneDaysActivity.this, ShowTipActivity.class);
+                        intent.putExtra("title", "123654");
+                        intent.putExtra("body", "123654");
+                        startActivity(intent);
                     }
                 });
 
@@ -219,9 +224,468 @@ public class TwentyOneDaysActivity extends AppCompatActivity {
                     public void onClick(View v) {
                         if (curlevel == 2) {
                             if (Calendar.getInstance().getTime().getTime() - PreferenceManager.getDefaultSharedPreferences(mContext).getLong("t0", 0) > dayMil) {
-                                startActivity(new Intent(TwentyOneDaysActivity.this, ShowTipActivity.class));
+                                intent = new Intent(TwentyOneDaysActivity.this, ShowTipActivity.class);
+                                intent.putExtra("title", "123654");
+                                intent.putExtra("body", "123654");
+                                startActivity(intent);
                             } else {
-                                noTimePopup();                            }
+                                noTimePopup();
+                            }
+                        }
+                    }
+                });
+
+
+                break;
+    case 3:
+
+
+                level2.setImageResource(R.drawable.prize);
+                level3.setImageResource(R.drawable.point);
+
+                level3.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        if (curlevel == 3) {
+                            if (Calendar.getInstance().getTime().getTime() - PreferenceManager.getDefaultSharedPreferences(mContext).getLong("t0", 0) > dayMil) {
+                                intent = new Intent(TwentyOneDaysActivity.this, ShowTipActivity.class);
+                                intent.putExtra("title", "123654");
+                                intent.putExtra("body", "123654");
+                                startActivity(intent);
+                            } else {
+                                noTimePopup();
+                            }
+                        }
+                    }
+                });
+
+
+                break;
+    case 4:
+
+
+                level3.setImageResource(R.drawable.prize);
+                level4.setImageResource(R.drawable.point);
+
+                level4.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        if (curlevel == 4) {
+                            if (Calendar.getInstance().getTime().getTime() - PreferenceManager.getDefaultSharedPreferences(mContext).getLong("t0", 0) > dayMil) {
+                                intent = new Intent(TwentyOneDaysActivity.this, ShowTipActivity.class);
+                                intent.putExtra("title", "123654");
+                                intent.putExtra("body", "123654");
+                                startActivity(intent);
+                            } else {
+                                noTimePopup();
+                            }
+                        }
+                    }
+                });
+
+
+                break;
+    case 5:
+
+
+                level4.setImageResource(R.drawable.prize);
+                level5.setImageResource(R.drawable.point);
+
+                level5.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        if (curlevel == 5) {
+                            if (Calendar.getInstance().getTime().getTime() - PreferenceManager.getDefaultSharedPreferences(mContext).getLong("t0", 0) > dayMil) {
+                                intent = new Intent(TwentyOneDaysActivity.this, ShowTipActivity.class);
+                                intent.putExtra("title", "123654");
+                                intent.putExtra("body", "123654");
+                                startActivity(intent);
+                            } else {
+                                noTimePopup();
+                            }
+                        }
+                    }
+                });
+
+
+                break;
+    case 6:
+
+
+                level5.setImageResource(R.drawable.prize);
+                level6.setImageResource(R.drawable.point);
+
+                level6.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        if (curlevel == 6) {
+                            if (Calendar.getInstance().getTime().getTime() - PreferenceManager.getDefaultSharedPreferences(mContext).getLong("t0", 0) > dayMil) {
+                                intent = new Intent(TwentyOneDaysActivity.this, ShowTipActivity.class);
+                                intent.putExtra("title", "123654");
+                                intent.putExtra("body", "123654");
+                                startActivity(intent);
+                            } else {
+                                noTimePopup();
+                            }
+                        }
+                    }
+                });
+
+
+                break;
+    case 7:
+
+
+                level6.setImageResource(R.drawable.prize);
+                level7.setImageResource(R.drawable.point);
+
+                level7.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        if (curlevel == 7) {
+                            if (Calendar.getInstance().getTime().getTime() - PreferenceManager.getDefaultSharedPreferences(mContext).getLong("t0", 0) > dayMil) {
+                                intent = new Intent(TwentyOneDaysActivity.this, ShowTipActivity.class);
+                                intent.putExtra("title", "123654");
+                                intent.putExtra("body", "123654");
+                                startActivity(intent);
+                            } else {
+                                noTimePopup();
+                            }
+                        }
+                    }
+                });
+
+
+                break;
+    case 8:
+
+
+                level7.setImageResource(R.drawable.prize);
+                level8.setImageResource(R.drawable.point);
+
+                level8.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        if (curlevel == 8) {
+                            if (Calendar.getInstance().getTime().getTime() - PreferenceManager.getDefaultSharedPreferences(mContext).getLong("t0", 0) > dayMil) {
+                                intent = new Intent(TwentyOneDaysActivity.this, ShowTipActivity.class);
+                                intent.putExtra("title", "123654");
+                                intent.putExtra("body", "123654");
+                                startActivity(intent);
+                            } else {
+                                noTimePopup();
+                            }
+                        }
+                    }
+                });
+
+
+                break;
+    case 9:
+
+
+                level8.setImageResource(R.drawable.prize);
+                level9.setImageResource(R.drawable.point);
+
+                level9.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        if (curlevel == 9) {
+                            if (Calendar.getInstance().getTime().getTime() - PreferenceManager.getDefaultSharedPreferences(mContext).getLong("t0", 0) > dayMil) {
+                                intent = new Intent(TwentyOneDaysActivity.this, ShowTipActivity.class);
+                                intent.putExtra("title", "123654");
+                                intent.putExtra("body", "123654");
+                                startActivity(intent);
+                            } else {
+                                noTimePopup();
+                            }
+                        }
+                    }
+                });
+
+
+                break;
+    case 10:
+
+
+                level9.setImageResource(R.drawable.prize);
+                level10.setImageResource(R.drawable.point);
+
+                level10.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        if (curlevel ==10) {
+                            if (Calendar.getInstance().getTime().getTime() - PreferenceManager.getDefaultSharedPreferences(mContext).getLong("t0", 0) > dayMil) {
+                                intent = new Intent(TwentyOneDaysActivity.this, ShowTipActivity.class);
+                                intent.putExtra("title", "123654");
+                                intent.putExtra("body", "123654");
+                                startActivity(intent);
+                            } else {
+                                noTimePopup();
+                            }
+                        }
+                    }
+                });
+
+
+                break;
+    case 11:
+
+
+                level10.setImageResource(R.drawable.prize);
+                level11.setImageResource(R.drawable.point);
+
+                level11.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        if (curlevel == 11) {
+                            if (Calendar.getInstance().getTime().getTime() - PreferenceManager.getDefaultSharedPreferences(mContext).getLong("t0", 0) > dayMil) {
+                                intent = new Intent(TwentyOneDaysActivity.this, ShowTipActivity.class);
+                                intent.putExtra("title", "123654");
+                                intent.putExtra("body", "123654");
+                                startActivity(intent);
+                            } else {
+                                noTimePopup();
+                            }
+                        }
+                    }
+                });
+
+
+                break;
+    case 12:
+
+
+                level11.setImageResource(R.drawable.prize);
+                level12.setImageResource(R.drawable.point);
+
+                level12.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        if (curlevel == 12) {
+                            if (Calendar.getInstance().getTime().getTime() - PreferenceManager.getDefaultSharedPreferences(mContext).getLong("t0", 0) > dayMil) {
+                                intent = new Intent(TwentyOneDaysActivity.this, ShowTipActivity.class);
+                                intent.putExtra("title", "123654");
+                                intent.putExtra("body", "123654");
+                                startActivity(intent);
+                            } else {
+                                noTimePopup();
+                            }
+                        }
+                    }
+                });
+
+
+                break;
+    case 13:
+
+
+                level12.setImageResource(R.drawable.prize);
+                level13.setImageResource(R.drawable.point);
+
+                level13.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        if (curlevel == 13) {
+                            if (Calendar.getInstance().getTime().getTime() - PreferenceManager.getDefaultSharedPreferences(mContext).getLong("t0", 0) > dayMil) {
+                                intent = new Intent(TwentyOneDaysActivity.this, ShowTipActivity.class);
+                                intent.putExtra("title", "123654");
+                                intent.putExtra("body", "123654");
+                                startActivity(intent);
+                            } else {
+                                noTimePopup();
+                            }
+                        }
+                    }
+                });
+
+
+                break;
+    case 14:
+
+
+                level13.setImageResource(R.drawable.prize);
+                level14.setImageResource(R.drawable.point);
+
+                level14.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        if (curlevel == 14) {
+                            if (Calendar.getInstance().getTime().getTime() - PreferenceManager.getDefaultSharedPreferences(mContext).getLong("t0", 0) > dayMil) {
+                                intent = new Intent(TwentyOneDaysActivity.this, ShowTipActivity.class);
+                                intent.putExtra("title", "123654");
+                                intent.putExtra("body", "123654");
+                                startActivity(intent);
+                            } else {
+                                noTimePopup();
+                            }
+                        }
+                    }
+                });
+
+
+                break;
+    case 15:
+
+
+                level14.setImageResource(R.drawable.prize);
+                level15.setImageResource(R.drawable.point);
+
+                level15.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        if (curlevel == 15) {
+                            if (Calendar.getInstance().getTime().getTime() - PreferenceManager.getDefaultSharedPreferences(mContext).getLong("t0", 0) > dayMil) {
+                                intent = new Intent(TwentyOneDaysActivity.this, ShowTipActivity.class);
+                                intent.putExtra("title", "123654");
+                                intent.putExtra("body", "123654");
+                                startActivity(intent);
+                            } else {
+                                noTimePopup();
+                            }
+                        }
+                    }
+                });
+
+
+                break;
+    case 16:
+
+
+                level15.setImageResource(R.drawable.prize);
+                level16.setImageResource(R.drawable.point);
+
+                level16.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        if (curlevel == 16) {
+                            if (Calendar.getInstance().getTime().getTime() - PreferenceManager.getDefaultSharedPreferences(mContext).getLong("t0", 0) > dayMil) {
+                                intent = new Intent(TwentyOneDaysActivity.this, ShowTipActivity.class);
+                                intent.putExtra("title", "123654");
+                                intent.putExtra("body", "123654");
+                                startActivity(intent);
+                            } else {
+                                noTimePopup();
+                            }
+                        }
+                    }
+                });
+
+
+                break;
+    case 17:
+
+
+                level16.setImageResource(R.drawable.prize);
+                level17.setImageResource(R.drawable.point);
+
+                level17.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        if (curlevel == 17) {
+                            if (Calendar.getInstance().getTime().getTime() - PreferenceManager.getDefaultSharedPreferences(mContext).getLong("t0", 0) > dayMil) {
+                                intent = new Intent(TwentyOneDaysActivity.this, ShowTipActivity.class);
+                                intent.putExtra("title", "123654");
+                                intent.putExtra("body", "123654");
+                                startActivity(intent);
+                            } else {
+                                noTimePopup();
+                            }
+                        }
+                    }
+                });
+
+
+                break;
+    case 18:
+
+
+                level17.setImageResource(R.drawable.prize);
+                level18.setImageResource(R.drawable.point);
+
+                level18.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        if (curlevel == 18) {
+                            if (Calendar.getInstance().getTime().getTime() - PreferenceManager.getDefaultSharedPreferences(mContext).getLong("t0", 0) > dayMil) {
+                                intent = new Intent(TwentyOneDaysActivity.this, ShowTipActivity.class);
+                                intent.putExtra("title", "123654");
+                                intent.putExtra("body", "123654");
+                                startActivity(intent);
+                            } else {
+                                noTimePopup();
+                            }
+                        }
+                    }
+                });
+
+
+                break;
+    case 19:
+
+
+                level18.setImageResource(R.drawable.prize);
+                level19.setImageResource(R.drawable.point);
+
+                level19.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        if (curlevel == 19) {
+                            if (Calendar.getInstance().getTime().getTime() - PreferenceManager.getDefaultSharedPreferences(mContext).getLong("t0", 0) > dayMil) {
+                                intent = new Intent(TwentyOneDaysActivity.this, ShowTipActivity.class);
+                                intent.putExtra("title", "123654");
+                                intent.putExtra("body", "123654");
+                                startActivity(intent);
+                            } else {
+                                noTimePopup();
+                            }
+                        }
+                    }
+                });
+
+
+                break;
+    case 20:
+
+
+                level19.setImageResource(R.drawable.prize);
+                level20.setImageResource(R.drawable.point);
+
+                level20.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        if (curlevel == 20) {
+                            if (Calendar.getInstance().getTime().getTime() - PreferenceManager.getDefaultSharedPreferences(mContext).getLong("t0", 0) > dayMil) {
+                                intent = new Intent(TwentyOneDaysActivity.this, ShowTipActivity.class);
+                                intent.putExtra("title", "123654");
+                                intent.putExtra("body", "123654");
+                                startActivity(intent);
+                            } else {
+                                noTimePopup();
+                            }
+                        }
+                    }
+                });
+
+
+                break;
+            case 21:
+
+
+                level20.setImageResource(R.drawable.prize);
+
+                level21.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        if (curlevel == 21) {
+                            if (Calendar.getInstance().getTime().getTime() - PreferenceManager.getDefaultSharedPreferences(mContext).getLong("t0", 0) > dayMil) {
+                                intent = new Intent(TwentyOneDaysActivity.this, ShowTipActivity.class);
+                                intent.putExtra("title", "123654");
+                                intent.putExtra("body", "123654");
+                                startActivity(intent);
+                            } else {
+                                noTimePopup();
+                            }
                         }
                     }
                 });
@@ -252,6 +716,6 @@ public class TwentyOneDaysActivity extends AppCompatActivity {
         super.onStart();
     }
 
-        }
+}
 
 

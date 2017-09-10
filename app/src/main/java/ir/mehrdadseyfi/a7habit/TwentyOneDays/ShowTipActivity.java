@@ -21,6 +21,7 @@ Context mContext=this;
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_show_tip);
+        Intent intent = getIntent();
         findViewById(R.id.sum).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

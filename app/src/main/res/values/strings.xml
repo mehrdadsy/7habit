@@ -6,6 +6,8 @@
     <string name="habit_main">عادات بد</string>
     <string name="edit_dream">رویا خود را ویرایش کنید</string>
     <string name="goal">هدف</string>
+    <string name="done">انجام دادم</string>
+    <string name="not_done">هنوز انجام ندادم</string>
     <string name="reapet">دفعات تکرار</string>
     <string name="end_date">ساعت پایان</string>
     <string name="one">یکبار</string>
