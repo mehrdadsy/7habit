@@ -149,15 +149,17 @@
         <activity android:name=".Calender.EditJobActivity" />
         <activity
             android:name=".TwentyOneDays.TwentyOneDaysActivity"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"></activity>
+        <activity android:name=".TwentyOneDays.MainStart21DayActivity" />
+        <activity android:name=".TwentyOneDays.ShowTipActivity" />
+        <activity android:name=".Intro.IntroActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".TwentyOneDays.MainStart21DayActivity"></activity>
-        <activity android:name=".TwentyOneDays.ShowTipActivity"></activity>
+        <activity android:name=".SplashActivity"></activity>
     </application>
 
 </manifest>
