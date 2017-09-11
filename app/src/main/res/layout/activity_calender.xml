@@ -53,19 +53,26 @@
         app:pcv_colorNormalDay="#1d1d1d"
         app:pcv_eventUnderlineColor="#02f0f0"
         app:pcv_fontSize="30dp"
-        app:pcv_headersFontSize="15dp"/>
+        app:pcv_headersFontSize="15dp"
+        app:pcv_todayBackground="@color/bg_screen1" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/today"
+        android:textSize="30sp"
+        android:layout_gravity="center"/>
    <TextView
        android:layout_width="wrap_content"
-       android:layout_height="wrap_content" />
+       android:layout_height="wrap_content"
+       android:text="@string/today"
+       android:textSize="30sp"
+       android:layout_gravity="center"/>
    <RelativeLayout
        android:layout_width="match_parent"
        android:layout_height="0dp"
        android:layout_weight="3"
-       android:background="#ffffff">
-       <ImageView
-           android:layout_width="match_parent"
-           android:layout_height="match_parent"
-           android:id="@+id/img"/>
+       android:background="#ffdc76">
+
        <ListView
            android:layout_width="match_parent"
            android:layout_height="match_parent"

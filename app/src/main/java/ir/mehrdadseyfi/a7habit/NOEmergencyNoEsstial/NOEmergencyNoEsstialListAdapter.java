@@ -45,7 +45,7 @@ public class NOEmergencyNoEsstialListAdapter extends BaseAdapter {
         View rowView = LayoutInflater.from(mContext).inflate(R.layout.nemergency_nessntial_list_view, parent, false);
         ImageView img = (ImageView) rowView.findViewById(R.id.cat_img);
 //        int src=Integer.parseInt(models.get(position).getCat());
-        img.setImageResource(R.drawable.ic_launcher);
+        img.setImageResource(R.drawable.nene);
         TextView txt = (TextView) rowView.findViewById(R.id.tilte);
         txt.setText(models.get(position).getTitle());
         TextView detail = (TextView) rowView.findViewById(R.id.detial);

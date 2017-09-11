@@ -123,7 +123,13 @@ public class AddJobActivity extends AppCompatActivity implements TimePickerDialo
             }
         });
 
-
+//cancel
+        findViewById(R.id.cancel).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
         //
         endTime = (TimePicker) findViewById(R.id.end_hours);
         endTime.setIs24HourView(true);
@@ -176,7 +182,13 @@ public class AddJobActivity extends AppCompatActivity implements TimePickerDialo
         day = dayOfMonth;
         mounth = (monthOfYear + 1);
         years = year;
-        txtStartDate.setText(String.valueOf("زمان اغاز"+"\n"+years+"/"+mounth+"/"+day+"\n"+hours+":"+min ));
+        String minu;
+        if (min==0){
+             minu=String.valueOf(min)+"0";
+        }else {
+            minu=String.valueOf(min);
+        }
+        txtStartDate.setText(String.valueOf("زمان اغاز"+"\n"+years+"/"+mounth+"/"+day+"\n"+hours+":"+minu ));
 
     }
 

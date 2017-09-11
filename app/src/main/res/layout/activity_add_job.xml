@@ -24,11 +24,13 @@
 <EditText
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:id="@+id/add_job_name"/>
+    android:id="@+id/add_job_name"
+    android:hint="@string/add_job_title"/>
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/add_job_detial"/>
+        android:id="@+id/add_job_detial"
+        android:hint="@string/add_job_detial"/>
 
     <ImageView
         android:layout_width="wrap_content"
@@ -99,6 +101,7 @@
         android:orientation="horizontal"
         android:layout_gravity="bottom"
         android:gravity="center_horizontal"
+        android:layout_marginBottom="20dp"
         >
         <Button
             android:id="@+id/save"

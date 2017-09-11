@@ -239,6 +239,7 @@ public class TwentyOneDaysActivity extends AppCompatActivity {
                 break;
     case 3:
 
+        level1.setImageResource(R.drawable.prize);
 
                 level2.setImageResource(R.drawable.prize);
                 level3.setImageResource(R.drawable.point);
@@ -263,7 +264,9 @@ public class TwentyOneDaysActivity extends AppCompatActivity {
                 break;
     case 4:
 
+        level1.setImageResource(R.drawable.prize);
 
+        level2.setImageResource(R.drawable.prize);
                 level3.setImageResource(R.drawable.prize);
                 level4.setImageResource(R.drawable.point);
 
@@ -287,7 +290,10 @@ public class TwentyOneDaysActivity extends AppCompatActivity {
                 break;
     case 5:
 
+        level1.setImageResource(R.drawable.prize);
 
+        level2.setImageResource(R.drawable.prize);
+        level3.setImageResource(R.drawable.prize);
                 level4.setImageResource(R.drawable.prize);
                 level5.setImageResource(R.drawable.point);
 
@@ -311,7 +317,11 @@ public class TwentyOneDaysActivity extends AppCompatActivity {
                 break;
     case 6:
 
+        level1.setImageResource(R.drawable.prize);
 
+        level2.setImageResource(R.drawable.prize);
+        level3.setImageResource(R.drawable.prize);
+        level4.setImageResource(R.drawable.prize);
                 level5.setImageResource(R.drawable.prize);
                 level6.setImageResource(R.drawable.point);
 
@@ -335,7 +345,12 @@ public class TwentyOneDaysActivity extends AppCompatActivity {
                 break;
     case 7:
 
+        level1.setImageResource(R.drawable.prize);
 
+        level2.setImageResource(R.drawable.prize);
+        level3.setImageResource(R.drawable.prize);
+        level4.setImageResource(R.drawable.prize);
+        level5.setImageResource(R.drawable.prize);
                 level6.setImageResource(R.drawable.prize);
                 level7.setImageResource(R.drawable.point);
 
@@ -359,7 +374,13 @@ public class TwentyOneDaysActivity extends AppCompatActivity {
                 break;
     case 8:
 
+        level1.setImageResource(R.drawable.prize);
 
+        level2.setImageResource(R.drawable.prize);
+        level3.setImageResource(R.drawable.prize);
+        level4.setImageResource(R.drawable.prize);
+        level5.setImageResource(R.drawable.prize);
+        level6.setImageResource(R.drawable.prize);
                 level7.setImageResource(R.drawable.prize);
                 level8.setImageResource(R.drawable.point);
 
@@ -383,7 +404,14 @@ public class TwentyOneDaysActivity extends AppCompatActivity {
                 break;
     case 9:
 
+        level1.setImageResource(R.drawable.prize);
 
+        level2.setImageResource(R.drawable.prize);
+        level3.setImageResource(R.drawable.prize);
+        level4.setImageResource(R.drawable.prize);
+        level5.setImageResource(R.drawable.prize);
+        level6.setImageResource(R.drawable.prize);
+        level7.setImageResource(R.drawable.prize);
                 level8.setImageResource(R.drawable.prize);
                 level9.setImageResource(R.drawable.point);
 
@@ -407,7 +435,15 @@ public class TwentyOneDaysActivity extends AppCompatActivity {
                 break;
     case 10:
 
+        level1.setImageResource(R.drawable.prize);
 
+        level2.setImageResource(R.drawable.prize);
+        level3.setImageResource(R.drawable.prize);
+        level4.setImageResource(R.drawable.prize);
+        level5.setImageResource(R.drawable.prize);
+        level6.setImageResource(R.drawable.prize);
+        level7.setImageResource(R.drawable.prize);
+        level8.setImageResource(R.drawable.prize);
                 level9.setImageResource(R.drawable.prize);
                 level10.setImageResource(R.drawable.point);
 
@@ -431,7 +467,16 @@ public class TwentyOneDaysActivity extends AppCompatActivity {
                 break;
     case 11:
 
+        level1.setImageResource(R.drawable.prize);
 
+        level2.setImageResource(R.drawable.prize);
+        level3.setImageResource(R.drawable.prize);
+        level4.setImageResource(R.drawable.prize);
+        level5.setImageResource(R.drawable.prize);
+        level6.setImageResource(R.drawable.prize);
+        level7.setImageResource(R.drawable.prize);
+        level8.setImageResource(R.drawable.prize);
+        level9.setImageResource(R.drawable.prize);
                 level10.setImageResource(R.drawable.prize);
                 level11.setImageResource(R.drawable.point);
 
@@ -455,7 +500,17 @@ public class TwentyOneDaysActivity extends AppCompatActivity {
                 break;
     case 12:
 
+        level1.setImageResource(R.drawable.prize);
 
+        level2.setImageResource(R.drawable.prize);
+        level3.setImageResource(R.drawable.prize);
+        level4.setImageResource(R.drawable.prize);
+        level5.setImageResource(R.drawable.prize);
+        level6.setImageResource(R.drawable.prize);
+        level7.setImageResource(R.drawable.prize);
+        level8.setImageResource(R.drawable.prize);
+        level9.setImageResource(R.drawable.prize);
+        level10.setImageResource(R.drawable.prize);
                 level11.setImageResource(R.drawable.prize);
                 level12.setImageResource(R.drawable.point);
 
@@ -479,7 +534,18 @@ public class TwentyOneDaysActivity extends AppCompatActivity {
                 break;
     case 13:
 
+        level1.setImageResource(R.drawable.prize);
 
+        level2.setImageResource(R.drawable.prize);
+        level3.setImageResource(R.drawable.prize);
+        level4.setImageResource(R.drawable.prize);
+        level5.setImageResource(R.drawable.prize);
+        level6.setImageResource(R.drawable.prize);
+        level7.setImageResource(R.drawable.prize);
+        level8.setImageResource(R.drawable.prize);
+        level9.setImageResource(R.drawable.prize);
+        level10.setImageResource(R.drawable.prize);
+        level11.setImageResource(R.drawable.prize);
                 level12.setImageResource(R.drawable.prize);
                 level13.setImageResource(R.drawable.point);
 
@@ -502,7 +568,19 @@ public class TwentyOneDaysActivity extends AppCompatActivity {
 
                 break;
     case 14:
+        level1.setImageResource(R.drawable.prize);
 
+        level2.setImageResource(R.drawable.prize);
+        level3.setImageResource(R.drawable.prize);
+        level4.setImageResource(R.drawable.prize);
+        level5.setImageResource(R.drawable.prize);
+        level6.setImageResource(R.drawable.prize);
+        level7.setImageResource(R.drawable.prize);
+        level8.setImageResource(R.drawable.prize);
+        level9.setImageResource(R.drawable.prize);
+        level10.setImageResource(R.drawable.prize);
+        level11.setImageResource(R.drawable.prize);
+        level12.setImageResource(R.drawable.prize);
 
                 level13.setImageResource(R.drawable.prize);
                 level14.setImageResource(R.drawable.point);
@@ -526,7 +604,21 @@ public class TwentyOneDaysActivity extends AppCompatActivity {
 
                 break;
     case 15:
+        level1.setImageResource(R.drawable.prize);
 
+        level2.setImageResource(R.drawable.prize);
+        level3.setImageResource(R.drawable.prize);
+        level4.setImageResource(R.drawable.prize);
+        level5.setImageResource(R.drawable.prize);
+        level6.setImageResource(R.drawable.prize);
+        level7.setImageResource(R.drawable.prize);
+        level8.setImageResource(R.drawable.prize);
+        level9.setImageResource(R.drawable.prize);
+        level10.setImageResource(R.drawable.prize);
+        level11.setImageResource(R.drawable.prize);
+        level12.setImageResource(R.drawable.prize);
+
+        level13.setImageResource(R.drawable.prize);
 
                 level14.setImageResource(R.drawable.prize);
                 level15.setImageResource(R.drawable.point);
@@ -551,7 +643,23 @@ public class TwentyOneDaysActivity extends AppCompatActivity {
                 break;
     case 16:
 
+        level1.setImageResource(R.drawable.prize);
 
+        level2.setImageResource(R.drawable.prize);
+        level3.setImageResource(R.drawable.prize);
+        level4.setImageResource(R.drawable.prize);
+        level5.setImageResource(R.drawable.prize);
+        level6.setImageResource(R.drawable.prize);
+        level7.setImageResource(R.drawable.prize);
+        level8.setImageResource(R.drawable.prize);
+        level9.setImageResource(R.drawable.prize);
+        level10.setImageResource(R.drawable.prize);
+        level11.setImageResource(R.drawable.prize);
+        level12.setImageResource(R.drawable.prize);
+
+        level13.setImageResource(R.drawable.prize);
+
+        level14.setImageResource(R.drawable.prize);
                 level15.setImageResource(R.drawable.prize);
                 level16.setImageResource(R.drawable.point);
 
@@ -575,7 +683,24 @@ public class TwentyOneDaysActivity extends AppCompatActivity {
                 break;
     case 17:
 
+        level1.setImageResource(R.drawable.prize);
 
+        level2.setImageResource(R.drawable.prize);
+        level3.setImageResource(R.drawable.prize);
+        level4.setImageResource(R.drawable.prize);
+        level5.setImageResource(R.drawable.prize);
+        level6.setImageResource(R.drawable.prize);
+        level7.setImageResource(R.drawable.prize);
+        level8.setImageResource(R.drawable.prize);
+        level9.setImageResource(R.drawable.prize);
+        level10.setImageResource(R.drawable.prize);
+        level11.setImageResource(R.drawable.prize);
+        level12.setImageResource(R.drawable.prize);
+
+        level13.setImageResource(R.drawable.prize);
+
+        level14.setImageResource(R.drawable.prize);
+        level15.setImageResource(R.drawable.prize);
                 level16.setImageResource(R.drawable.prize);
                 level17.setImageResource(R.drawable.point);
 
@@ -599,7 +724,25 @@ public class TwentyOneDaysActivity extends AppCompatActivity {
                 break;
     case 18:
 
+        level1.setImageResource(R.drawable.prize);
 
+        level2.setImageResource(R.drawable.prize);
+        level3.setImageResource(R.drawable.prize);
+        level4.setImageResource(R.drawable.prize);
+        level5.setImageResource(R.drawable.prize);
+        level6.setImageResource(R.drawable.prize);
+        level7.setImageResource(R.drawable.prize);
+        level8.setImageResource(R.drawable.prize);
+        level9.setImageResource(R.drawable.prize);
+        level10.setImageResource(R.drawable.prize);
+        level11.setImageResource(R.drawable.prize);
+        level12.setImageResource(R.drawable.prize);
+
+        level13.setImageResource(R.drawable.prize);
+
+        level14.setImageResource(R.drawable.prize);
+        level15.setImageResource(R.drawable.prize);
+        level16.setImageResource(R.drawable.prize);
                 level17.setImageResource(R.drawable.prize);
                 level18.setImageResource(R.drawable.point);
 
@@ -623,7 +766,26 @@ public class TwentyOneDaysActivity extends AppCompatActivity {
                 break;
     case 19:
 
+        level1.setImageResource(R.drawable.prize);
 
+        level2.setImageResource(R.drawable.prize);
+        level3.setImageResource(R.drawable.prize);
+        level4.setImageResource(R.drawable.prize);
+        level5.setImageResource(R.drawable.prize);
+        level6.setImageResource(R.drawable.prize);
+        level7.setImageResource(R.drawable.prize);
+        level8.setImageResource(R.drawable.prize);
+        level9.setImageResource(R.drawable.prize);
+        level10.setImageResource(R.drawable.prize);
+        level11.setImageResource(R.drawable.prize);
+        level12.setImageResource(R.drawable.prize);
+
+        level13.setImageResource(R.drawable.prize);
+
+        level14.setImageResource(R.drawable.prize);
+        level15.setImageResource(R.drawable.prize);
+        level16.setImageResource(R.drawable.prize);
+        level17.setImageResource(R.drawable.prize);
                 level18.setImageResource(R.drawable.prize);
                 level19.setImageResource(R.drawable.point);
 
@@ -646,7 +808,27 @@ public class TwentyOneDaysActivity extends AppCompatActivity {
 
                 break;
     case 20:
+        level1.setImageResource(R.drawable.prize);
 
+        level2.setImageResource(R.drawable.prize);
+        level3.setImageResource(R.drawable.prize);
+        level4.setImageResource(R.drawable.prize);
+        level5.setImageResource(R.drawable.prize);
+        level6.setImageResource(R.drawable.prize);
+        level7.setImageResource(R.drawable.prize);
+        level8.setImageResource(R.drawable.prize);
+        level9.setImageResource(R.drawable.prize);
+        level10.setImageResource(R.drawable.prize);
+        level11.setImageResource(R.drawable.prize);
+        level12.setImageResource(R.drawable.prize);
+
+        level13.setImageResource(R.drawable.prize);
+
+        level14.setImageResource(R.drawable.prize);
+        level15.setImageResource(R.drawable.prize);
+        level16.setImageResource(R.drawable.prize);
+        level17.setImageResource(R.drawable.prize);
+        level18.setImageResource(R.drawable.prize);
 
                 level19.setImageResource(R.drawable.prize);
                 level20.setImageResource(R.drawable.point);
@@ -670,7 +852,29 @@ public class TwentyOneDaysActivity extends AppCompatActivity {
 
                 break;
             case 21:
+                level1.setImageResource(R.drawable.prize);
 
+                level2.setImageResource(R.drawable.prize);
+                level3.setImageResource(R.drawable.prize);
+                level4.setImageResource(R.drawable.prize);
+                level5.setImageResource(R.drawable.prize);
+                level6.setImageResource(R.drawable.prize);
+                level7.setImageResource(R.drawable.prize);
+                level8.setImageResource(R.drawable.prize);
+                level9.setImageResource(R.drawable.prize);
+                level10.setImageResource(R.drawable.prize);
+                level11.setImageResource(R.drawable.prize);
+                level12.setImageResource(R.drawable.prize);
+
+                level13.setImageResource(R.drawable.prize);
+
+                level14.setImageResource(R.drawable.prize);
+                level15.setImageResource(R.drawable.prize);
+                level16.setImageResource(R.drawable.prize);
+                level17.setImageResource(R.drawable.prize);
+                level18.setImageResource(R.drawable.prize);
+
+                level19.setImageResource(R.drawable.prize);
 
                 level20.setImageResource(R.drawable.prize);
 

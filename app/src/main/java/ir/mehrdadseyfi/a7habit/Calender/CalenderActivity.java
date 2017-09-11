@@ -43,6 +43,7 @@ public class CalenderActivity extends AppCompatActivity {
         ImageView help = (ImageView) findViewById(R.id.help);
 
         setTodayList();
+        setToday();
         //TESTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
         help.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -103,7 +104,7 @@ public class CalenderActivity extends AppCompatActivity {
             public void onClick(PersianDate persianDate) {
               List<JobDB> models=JobDB.find(JobDB.class,"year= ? and mount= ? and day= ?", String.valueOf(persianDate.getYear()),String.valueOf(persianDate.getMonth()),String.valueOf(persianDate.getDayOfMonth()));
                if(models.size()==0){
-                   Toast.makeText(CalenderActivity.this, "کاری برای امروز وجود ندارد", Toast.LENGTH_SHORT).show();
+                   Toast.makeText(CalenderActivity.this, "کاری برای این روز وجود ندارد", Toast.LENGTH_SHORT).show();
                }else {
                    Intent intent = new Intent(CalenderActivity.this, ShowDayJobActivity.class);
                    intent.putExtra("year", String.valueOf(persianDate.getYear()));
@@ -122,7 +123,7 @@ public class CalenderActivity extends AppCompatActivity {
          mylist=(ListView)findViewById(R.id.my_today_list);
         mylist.setAdapter(adapter);
         i = models1.size();
-        BackGroundIf();
+//        BackGroundIf();
 
     }
 
@@ -142,13 +143,14 @@ public class CalenderActivity extends AppCompatActivity {
         AlertDialog alertDialog = new AlertDialog.Builder(this).create();
 
 //tiltle
-        alertDialog.setTitle("هشدار");
+        alertDialog.setTitle("توجه");
+        alertDialog.setIconAttribute(R.drawable.del);
 
 //maten dialog
         alertDialog.setMessage("آیا از حذف کار خود مطمئن هستید؟");
 
 //dokme ---mitoni ino hey copy koni va  BUTTON_NEUTRAL ino avaz koni dokme jadid biari va ye cari behesh nesbat bedi
-        alertDialog.setButton(AlertDialog.BUTTON_POSITIVE, "OK",
+        alertDialog.setButton(AlertDialog.BUTTON_POSITIVE, "بله",
 
                 new DialogInterface.OnClickListener() {
 
@@ -161,7 +163,7 @@ public class CalenderActivity extends AppCompatActivity {
                     }
 
                 });
-        alertDialog.setButton(AlertDialog.BUTTON_NEGATIVE, "No",
+        alertDialog.setButton(AlertDialog.BUTTON_NEGATIVE, "خیر",
                 new DialogInterface.OnClickListener() {
 
                     public void onClick(DialogInterface dialog, int which) {
@@ -177,16 +179,24 @@ public class CalenderActivity extends AppCompatActivity {
 
 
     }
-    //image backgroun ba if
-    public void BackGroundIf() {
-        ImageView imgBackGround = (ImageView) findViewById(R.id.img);
+    public void setToday(){
+        PersianDate today1 = calendarHandler.getToday();
+       TextView today=(TextView)findViewById(R.id.today);
+       today.setText(  String.valueOf(today1.getDayOfMonth())+" "+
+        String.valueOf(calendarHandler.getMonthName(today1))+" "+String.valueOf(today1.getYear())
+       );
 
-        if (i == 0) {
-            imgBackGround.setImageResource(R.drawable.noting);
-
-        } else {
-
-            imgBackGround.setImageDrawable(null);
-        }
     }
+    //image backgroun ba if
+//    public void BackGroundIf() {
+//        ImageView imgBackGround = (ImageView) findViewById(R.id.img);
+//
+//        if (i == 0) {
+//            imgBackGround.setImageResource(R.drawable.noting);
+//
+//        } else {
+//
+//            imgBackGround.setImageDrawable(null);
+//        }
+//    }
 }

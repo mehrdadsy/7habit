@@ -52,14 +52,6 @@ public class EmergencyEssntialShowEditActivity extends AppCompatActivity impleme
                 EEItem.getHours()+":"+EEItem.getMinutes();
         calenderText.setText(calnder);
 
-        Typeface afsaneh = Typeface.createFromAsset(getAssets(), "PKOODAKB.ttf");
-
-
-
-        tilteEE.setTypeface(afsaneh);
-        detialEE.setTypeface(afsaneh);
-
-
 
         ImageView imgBtn = (ImageView) findViewById(R.id.calender);
         imgBtn.setImageResource(R.drawable.alarmdialog);
