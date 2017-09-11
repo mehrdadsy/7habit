@@ -3,7 +3,85 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".action.ScormPlayerActivity">
+    <android.support.v7.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@drawable/d3_ee">
 
+        <ImageView
+            android:id="@+id/add_21"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/calendar" />
 
+        <ImageView
+            android:id="@+id/restart"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:src="@drawable/restart" />
+
+    </android.support.v7.widget.Toolbar>
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="0dp"
+    android:layout_weight="4"
+    android:layout_marginTop="20dp"
+    android:layout_marginBottom="20dp"
+    android:layout_marginEnd="20dp"
+    android:orientation="vertical"
+    android:layout_marginStart="20dp">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/today"
+        android:layout_gravity="center"
+        android:textSize="20sp"/>
+    <ir.mirrajabi.persiancalendar.PersianCalendarView
+        android:layout_width="match_parent"
+        android:id="@+id/persian_calendar"
+        android:layout_height="0dp"
+        android:layout_weight="4"
+        app:pcv_colorBackground="#fffcfc"
+        app:pcv_colorDayName="#bab6b6"
+        app:pcv_colorHoliday="#ffd506"
+        app:pcv_colorHolidaySelected="#1c1d1d"
+        app:pcv_colorNormalDaySelected="#101010"
+        app:pcv_colorNormalDay="#1d1d1d"
+        app:pcv_eventUnderlineColor="#02f0f0"
+        app:pcv_fontSize="30dp"
+        app:pcv_headersFontSize="15dp"
+        app:pcv_todayBackground="@color/bg_screen1" />
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:id="@+id/mylist"></ListView>
+</LinearLayout>
+    <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="0dp"
+    android:layout_weight="1"
+    android:layout_marginTop="20dp"
+    android:layout_marginBottom="20dp"
+    android:layout_marginEnd="20dp"
+    android:layout_marginStart="20dp"></LinearLayout>
+    <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="0dp"
+    android:layout_weight="1"
+    android:layout_marginTop="20dp"
+    android:layout_marginBottom="20dp"
+    android:layout_marginEnd="20dp"
+    android:layout_marginStart="20dp"></LinearLayout>
+    <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="0dp"
+    android:layout_weight="1"
+    android:layout_marginTop="20dp"
+    android:layout_marginBottom="20dp"
+    android:layout_marginEnd="20dp"
+    android:layout_marginStart="20dp"></LinearLayout>
 </LinearLayout>

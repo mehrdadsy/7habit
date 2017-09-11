@@ -68,11 +68,7 @@
             android:name=".SquareTasksActivity"
             android:theme="@style/Theme.AppCompat.NoActionBar">
             >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity
             android:name=".Vista.AddDialogActivity"
@@ -138,7 +134,13 @@
         <activity
             android:name=".action.ScormPlayerActivity"
             android:configChanges="keyboardHidden|orientation|screenSize|keyboard"
-            android:label="@string/app_name" />
+            android:label="@string/app_name" >
+        <intent-filter>
+            <action android:name="android.intent.action.MAIN" />
+
+            <category android:name="android.intent.category.LAUNCHER" />
+        </intent-filter>
+    </activity>
         <activity android:name=".action.SplashScreen" />
         <activity
             android:name=".Calender.CalenderActivity"
