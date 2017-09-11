@@ -27,25 +27,37 @@
 
 
     </android.support.v7.widget.Toolbar>
-
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+   >
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/splash"/>
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="fill_parent"
+      android:orientation="vertical"
+      app:layout_collapseParallaxMultiplier="1.0">
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="2"
-        android:background="#ffffff"
+
         android:orientation="horizontal">
 
         <LinearLayout
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="2"
-            android:background="#ffffff"></LinearLayout>
+           ></LinearLayout>
 
         <LinearLayout
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="2"
-            android:background="#ffffff">
+             >
 
             <ImageView
                 android:id="@+id/level17"
@@ -59,7 +71,7 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="2"
-            android:background="#ffffff">
+             >
 
             <ImageView
                 android:id="@+id/level18"
@@ -73,7 +85,7 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="2"
-            android:background="#ffffff">
+             >
 
             <ImageView
                 android:id="@+id/level19"
@@ -87,7 +99,7 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="2"
-            android:background="#ffffff">
+             >
 
             <ImageView
                 android:id="@+id/level20"
@@ -100,7 +112,7 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="2"
-            android:background="#ffffff">
+             >
 
             <ImageView
                 android:id="@+id/level21"
@@ -115,20 +127,20 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="2"
-        android:background="#ffffff"
+         
         android:orientation="horizontal">
 
         <LinearLayout
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="2"
-            android:background="#ffffff"></LinearLayout>
+             ></LinearLayout>
 
         <LinearLayout
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="2"
-            android:background="#ffffff">
+             >
 
             <ImageView
                 android:id="@+id/level16"
@@ -142,45 +154,45 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="2"
-            android:background="#ffffff"></LinearLayout>
+             ></LinearLayout>
 
         <LinearLayout
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="2"
-            android:background="#ffffff"></LinearLayout>
+             ></LinearLayout>
 
         <LinearLayout
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="2"
-            android:background="#ffffff"></LinearLayout>
+             ></LinearLayout>
 
         <LinearLayout
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="2"
-            android:background="#ffffff"></LinearLayout>
+             ></LinearLayout>
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="2"
-        android:background="#ffffff"
+         
         android:orientation="horizontal">
 
         <LinearLayout
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="2"
-            android:background="#ffffff"></LinearLayout>
+             ></LinearLayout>
 
         <LinearLayout
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="2"
-            android:background="#ffffff">
+             >
 
             <ImageView
                 android:id="@+id/level15"
@@ -194,7 +206,7 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="2"
-            android:background="#ffffff">
+             >
 
             <ImageView
                 android:id="@+id/level14"
@@ -208,7 +220,7 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="2"
-            android:background="#ffffff">
+             >
 
             <ImageView
                 android:id="@+id/level13"
@@ -222,7 +234,7 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="2"
-            android:background="#ffffff">
+             >
 
             <ImageView
                 android:id="@+id/level12"
@@ -236,7 +248,7 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="2"
-            android:background="#ffffff">
+             >
 
             <ImageView
                 android:id="@+id/level11"
@@ -251,20 +263,20 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="2"
-        android:background="#ffffff"
+         
         android:orientation="horizontal">
 
         <LinearLayout
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="2"
-            android:background="#ffffff"></LinearLayout>
+             ></LinearLayout>
 
         <LinearLayout
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="2"
-            android:background="#ffffff">
+             >
 
             <ImageView
                 android:layout_width="match_parent"
@@ -275,7 +287,7 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="2"
-            android:background="#ffffff">
+             >
 
             <ImageView
                 android:layout_width="match_parent"
@@ -286,7 +298,7 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="2"
-            android:background="#ffffff">
+             >
 
             <ImageView
                 android:layout_width="match_parent"
@@ -297,7 +309,7 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="2"
-            android:background="#ffffff">
+             >
 
             <ImageView
                 android:layout_width="match_parent"
@@ -308,7 +320,7 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="2"
-            android:background="#ffffff">
+             >
 
             <ImageView
                 android:id="@+id/level10"
@@ -323,20 +335,20 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="2"
-        android:background="#ffffff"
+         
         android:orientation="horizontal">
 
         <LinearLayout
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="2"
-            android:background="#ffffff"></LinearLayout>
+             ></LinearLayout>
 
         <LinearLayout
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="2"
-            android:background="#ffffff">
+             >
 
             <ImageView
                 android:id="@+id/level5"
@@ -349,7 +361,7 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="2"
-            android:background="#ffffff">
+             >
 
             <ImageView
                 android:id="@+id/level6"
@@ -362,7 +374,7 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="2"
-            android:background="#ffffff">
+             >
 
             <ImageView
                 android:id="@+id/level7"
@@ -375,7 +387,7 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="2"
-            android:background="#ffffff">
+             >
 
             <ImageView
                 android:id="@+id/level8"
@@ -389,7 +401,7 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="2"
-            android:background="#ffffff">
+             >
 
             <ImageView
                 android:id="@+id/level9"
@@ -404,20 +416,20 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="2"
-        android:background="#ffffff"
+         
         android:orientation="horizontal">
 
         <LinearLayout
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="2"
-            android:background="#ffffff"></LinearLayout>
+             ></LinearLayout>
 
         <LinearLayout
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="2"
-            android:background="#ffffff">
+             >
 
             <ImageView
                 android:id="@+id/level4"
@@ -430,7 +442,7 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="2"
-            android:background="#ffffff">
+             >
 
         </LinearLayout>
 
@@ -438,7 +450,7 @@
             android:layout_width="0dp"
             android:layout_height="140dp"
             android:layout_weight="2"
-            android:background="#ffffff">
+             >
 
         </LinearLayout>
 
@@ -446,7 +458,7 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="2"
-            android:background="#ffffff">
+             >
 
         </LinearLayout>
 
@@ -454,7 +466,7 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="2"
-            android:background="#ffffff">
+             >
 
         </LinearLayout>
     </LinearLayout>
@@ -463,20 +475,20 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="2"
-        android:background="#ffffff"
+         
         android:orientation="horizontal">
 
         <LinearLayout
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="2"
-            android:background="#ffffff"></LinearLayout>
+             ></LinearLayout>
 
         <LinearLayout
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="2"
-            android:background="#ffffff">
+             >
 
             <ImageView
                 android:id="@+id/level3"
@@ -489,7 +501,7 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="2"
-            android:background="#ffffff">
+             >
 
         </LinearLayout>
 
@@ -497,7 +509,7 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="2"
-            android:background="#ffffff">
+             >
 
             <ImageView
                 android:layout_width="match_parent"
@@ -509,7 +521,7 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="2"
-            android:background="#ffffff">
+             >
 
             <ImageView
                 android:layout_width="match_parent"
@@ -520,7 +532,7 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="2"
-            android:background="#ffffff">
+             >
 
             <ImageView
                 android:layout_width="match_parent"
@@ -532,20 +544,20 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="2"
-        android:background="#ffffff"
+         
         android:orientation="horizontal">
 
         <LinearLayout
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="2"
-            android:background="#ffffff"></LinearLayout>
+             ></LinearLayout>
 
         <LinearLayout
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="2"
-            android:background="#ffffff">
+             >
 
             <ImageView
                 android:id="@+id/level2"
@@ -558,7 +570,7 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="2"
-            android:background="#ffffff">
+             >
 
         </LinearLayout>
 
@@ -566,7 +578,7 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="2"
-            android:background="#ffffff">
+             >
 
         </LinearLayout>
 
@@ -574,7 +586,7 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="2"
-            android:background="#ffffff">
+             >
 
             <ImageView
                 android:layout_width="match_parent"
@@ -585,7 +597,7 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="2"
-            android:background="#ffffff">
+             >
 
             <ImageView
                 android:layout_width="match_parent"
@@ -597,14 +609,14 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="2"
-        android:background="#ffffff"
+         
         android:orientation="horizontal">
 
         <LinearLayout
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="2"
-            android:background="#ffffff">
+             >
 
             <ImageView
                 android:layout_width="match_parent"
@@ -616,7 +628,7 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="2"
-            android:background="#ffffff"
+             
             android:orientation="vertical">
 
             <ImageView
@@ -631,7 +643,7 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="2"
-            android:background="#ffffff">
+             >
 
         </LinearLayout>
 
@@ -639,7 +651,7 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="2"
-            android:background="#ffffff">
+             >
 
         </LinearLayout>
 
@@ -647,13 +659,15 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="2"
-            android:background="#ffffff"></LinearLayout>
+             ></LinearLayout>
 
         <LinearLayout
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="2"
-            android:background="#ffffff"></LinearLayout>
+             ></LinearLayout>
     </LinearLayout>
-
+  </LinearLayout>
+  
+</RelativeLayout>
 </LinearLayout>
