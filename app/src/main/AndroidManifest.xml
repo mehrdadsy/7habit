@@ -133,8 +133,8 @@
         <activity android:name=".ActivsionActivity" />
         <activity
             android:name=".action.ScormPlayerActivity"
-            android:configChanges="keyboardHidden|orientation|screenSize|keyboard"
-            android:label="@string/app_name" >
+            android:label="@string/app_name"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
         <intent-filter>
             <action android:name="android.intent.action.MAIN" />
 
