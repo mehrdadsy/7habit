@@ -2,16 +2,17 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
+    android:layout_width="wrap_content"
     android:orientation="vertical"
     android:gravity="center"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     tools:context="ir.mehrdadseyfi.a7habit.Calender.AddJobActivity">
     <android.support.v7.widget.Toolbar
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="51dp"
-        android:background="#ecf0f4">
+        android:background="@color/primary"
+        >
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -50,12 +51,13 @@
         android:id="@+id/end_hours"
         android:layout_width="323dp"
         android:layout_height="97dp"
+
         android:timePickerMode="spinner"></TimePicker>
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/goal"
-        android:background="#e1cfd7"
+        android:background="@color/primary"
         android:textSize="20dp"/>
     <Spinner
         android:layout_width="match_parent"
@@ -66,7 +68,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/reapet"
-        android:background="#e1cfd7"
+        android:background="@color/primary"
         android:textSize="20dp"/>
     <RadioGroup
         android:layout_width="match_parent"
@@ -101,13 +103,12 @@
         android:orientation="horizontal"
         android:layout_gravity="bottom"
         android:gravity="center_horizontal"
-        android:layout_marginBottom="20dp"
         >
         <Button
             android:id="@+id/save"
             android:text="@string/dialog_save_btn"
             android:layout_width="80dp"
-            android:background="@drawable/d3_add_vista"
+            android:background="@drawable/d3_ee"
             android:layout_marginRight="20dp"
             android:layout_height="60dp" />
 
@@ -116,7 +117,7 @@
             android:id="@+id/cancel"
             android:text="@string/dialog_cancel_btn"
             android:layout_width="80dp"
-            android:background="@drawable/d3_add_vista"
+            android:background="@drawable/d3_ee"
             android:layout_height="60dp"
             android:layout_gravity="center_vertical"/>
 

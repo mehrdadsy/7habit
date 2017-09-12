@@ -188,7 +188,7 @@ public class AddJobActivity extends AppCompatActivity implements TimePickerDialo
         }else {
             minu=String.valueOf(min);
         }
-        txtStartDate.setText(String.valueOf("زمان اغاز"+"\n"+years+"/"+mounth+"/"+day+"\n"+hours+":"+minu ));
+        txtStartDate.setText(String.valueOf("زمان اغاز"+" "+years+"/"+mounth+"/"+day+"  "+hours+":"+minu ));
 
     }
 
@@ -204,7 +204,6 @@ public class AddJobActivity extends AppCompatActivity implements TimePickerDialo
         jobAdd.save();
 
 
-        Toast.makeText(this, jobAdd.getSqlName(), Toast.LENGTH_SHORT).show();
     }
 
     public void addSpinGoal() {
@@ -222,7 +221,7 @@ public class AddJobActivity extends AppCompatActivity implements TimePickerDialo
         int mounthr = mounth;
         int yearr = years;
         int maxdaymounth;
-        for (int i = 0; i < 5; i++) {
+        for (int i = 0; i < 200; i++) {
             dayr++;
             if (mounthr < 7) {
                 maxdaymounth = 32;
@@ -235,7 +234,6 @@ public class AddJobActivity extends AppCompatActivity implements TimePickerDialo
                 String mounthj = String.valueOf(mounthr);
 
                 String dayj = String.valueOf(dayr);
-                Toast.makeText(this, yearj + mounthj + dayj, Toast.LENGTH_SHORT).show();
                 String name = title.getText().toString();
                 String dtial = detail.getText().toString();
                 String goal = spinGoal.getSelectedItem().toString();
@@ -253,7 +251,6 @@ public class AddJobActivity extends AppCompatActivity implements TimePickerDialo
                     String mounthj = String.valueOf(mounthr);
 
                     String dayj = String.valueOf(dayr);
-                    Toast.makeText(this, yearj + mounthj + dayj, Toast.LENGTH_SHORT).show();
                     String name = title.getText().toString();
                     String dtial = detail.getText().toString();
                     String goal = spinGoal.getSelectedItem().toString();
@@ -268,7 +265,6 @@ public class AddJobActivity extends AppCompatActivity implements TimePickerDialo
                     String mounthj = String.valueOf(mounthr);
 
                     String dayj = String.valueOf(dayr);
-                    Toast.makeText(this, yearj + mounthj + dayj, Toast.LENGTH_SHORT).show();
                     String name = title.getText().toString();
                     String dtial = detail.getText().toString();
                     String goal = spinGoal.getSelectedItem().toString();
@@ -294,7 +290,7 @@ public class AddJobActivity extends AppCompatActivity implements TimePickerDialo
         }
         int mounthr = mounth;
         int yearr = years;
-        for (int i = 0; i < 5; i++) {
+        for (int i = 0; i < 12; i++) {
 
             if (mounthr < 12) {
                 mounthr += 1;
@@ -302,7 +298,6 @@ public class AddJobActivity extends AppCompatActivity implements TimePickerDialo
                 String mounthj = String.valueOf(mounthr);
 
                 String dayj = String.valueOf(dayr);
-                Toast.makeText(this, yearj + mounthj + dayj, Toast.LENGTH_SHORT).show();
                 String name = title.getText().toString();
                 String dtial = detail.getText().toString();
                 String goal = spinGoal.getSelectedItem().toString();
@@ -317,7 +312,6 @@ public class AddJobActivity extends AppCompatActivity implements TimePickerDialo
                 String mounthj = String.valueOf(mounthr);
 
                 String dayj = String.valueOf(dayr);
-                Toast.makeText(this, yearj + mounthj + dayj, Toast.LENGTH_SHORT).show();
                 String name = title.getText().toString();
                 String dtial = detail.getText().toString();
                 String goal = spinGoal.getSelectedItem().toString();
@@ -340,7 +334,7 @@ public class AddJobActivity extends AppCompatActivity implements TimePickerDialo
         int mounthr = mounth;
         int yearr = years;
         int maxdaymounth;
-        for (int i = 0; i < 5; i++) {
+        for (int i = 0; i < 50; i++) {
             dayr += 7;
             if (mounthr < 7) {
                 maxdaymounth = 32;
@@ -353,7 +347,6 @@ public class AddJobActivity extends AppCompatActivity implements TimePickerDialo
                 String mounthj = String.valueOf(mounthr);
 
                 String dayj = String.valueOf(dayr);
-                Toast.makeText(this, yearj + mounthj + dayj, Toast.LENGTH_SHORT).show();
                 String name = title.getText().toString();
                 String dtial = detail.getText().toString();
                 String goal = spinGoal.getSelectedItem().toString();
@@ -371,7 +364,6 @@ public class AddJobActivity extends AppCompatActivity implements TimePickerDialo
                     String mounthj = String.valueOf(mounthr);
 
                     String dayj = String.valueOf(dayr);
-                    Toast.makeText(this, yearj + mounthj + dayj, Toast.LENGTH_SHORT).show();
                     String name = title.getText().toString();
                     String dtial = detail.getText().toString();
                     String goal = spinGoal.getSelectedItem().toString();
@@ -386,7 +378,6 @@ public class AddJobActivity extends AppCompatActivity implements TimePickerDialo
                     String mounthj = String.valueOf(mounthr);
 
                     String dayj = String.valueOf(dayr);
-                    Toast.makeText(this, yearj + mounthj + dayj, Toast.LENGTH_SHORT).show();
                     String name = title.getText().toString();
                     String dtial = detail.getText().toString();
                     String goal = spinGoal.getSelectedItem().toString();
