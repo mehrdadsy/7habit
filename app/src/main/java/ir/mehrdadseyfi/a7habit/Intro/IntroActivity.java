@@ -19,9 +19,8 @@ import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import ir.mehrdadseyfi.a7habit.MainActivity;
 import ir.mehrdadseyfi.a7habit.R;
-import ir.mehrdadseyfi.a7habit.SplashActivity;
+import ir.mehrdadseyfi.a7habit.action.SplashScreen;
 
 public class IntroActivity extends AppCompatActivity {
 
@@ -125,7 +124,7 @@ public class IntroActivity extends AppCompatActivity {
 
     private void launchHomeScreen() {
         prefManager.setFirstTimeLaunch(false);
-        startActivity(new Intent(IntroActivity.this, SplashActivity.class));
+        startActivity(new Intent(IntroActivity.this, SplashScreen.class));
         finish();
     }
 

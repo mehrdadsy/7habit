@@ -8,7 +8,9 @@ import android.os.Handler;
 
 import java.util.Locale;
 
+import ir.mehrdadseyfi.a7habit.Calender.CalenderActivity;
 import ir.mehrdadseyfi.a7habit.R;
+import ir.mehrdadseyfi.a7habit.TwentyOneDays.TwentyOneDaysActivity;
 import ir.mehrdadseyfi.a7habit.action.service.PortDiscoveryService;
 
 /**
@@ -38,7 +40,7 @@ public class SplashScreen extends Activity {
             public void run() {
                 AndroidWebServer.setContext(getApplicationContext());
                 AndroidWebServer.start();
-                Intent i = new Intent(SplashScreen.this, ScormPlayerActivity.class);
+                Intent i = new Intent(SplashScreen.this, TwentyOneDaysActivity.class);
                 startActivity(i);
                 finish();
             }

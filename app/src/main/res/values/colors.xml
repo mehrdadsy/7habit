@@ -5,9 +5,22 @@
     <color name="colorAccent">#f7f1f7</color>
     <color name="longGoalACtivity">#9575CD</color>
     <color name="DialogACtivity">#ffffff</color>
-    <color name="dream">#ffdc76</color>
-    <color name="goal">#77c5fe</color>
-    <color name="role">#ff8e66</color>
+    <color name="dream">#f57f17</color>
+    <color name="goal">#0d47a1</color>
+    <color name="role">#880e4f</color>
+    <color name="primary">#FFC107</color>
+    <color name="primary_dark">#FFA000</color>
+    <color name="primary_light">#FFECB3</color>
+    <color name="accent">#FFC107</color>
+    <color name="primary_text">#212121</color>
+    <color name="secondary_text">#757575</color>
+    <color name="icons">#212121</color>
+    <color name="divider">#BDBDBD</color>
+
+    <color name="darkBlue1">#0091ea</color>
+    <color name="darkBlue2">#00b0ff</color>
+    <color name="lightBlue1">#e1f5fe</color>
+    <color name="lightBlue2">#80d8ff</color>
 
     <!-- Screens background color-->
     <color name="bg_screen1">#ffdc76</color>

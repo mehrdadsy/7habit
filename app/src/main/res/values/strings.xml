@@ -6,6 +6,9 @@
     <string name="habit_main">عادات بد</string>
     <string name="edit_dream">رویا خود را ویرایش کنید</string>
     <string name="goal">هدف</string>
+    <string name="cal">تقویم</string>
+    <string name="days_21">21 روز تا عامل شدن</string>
+    <string name="olaviyat">نخست امور نخست را انجام دهیم</string>
     <string name="add_job_title">نام کار خود را بنویسید</string>
     <string name="add_job_detial">شرح کار خود را بنویسید</string>
     <string name="done">انجام دادم</string>
