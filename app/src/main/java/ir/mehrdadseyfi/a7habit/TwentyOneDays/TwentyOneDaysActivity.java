@@ -111,7 +111,7 @@ public class TwentyOneDaysActivity extends AppCompatActivity {
         alertDialog.setTitle("هشدار");
 
 //maten dialog
-        alertDialog.setMessage("آیا از حذف  خود مطمئن هستید؟");
+        alertDialog.setMessage("آیا می خواهید از مرحله اول آغاز کنید؟");
 
 //dokme ---mitoni ino hey copy koni va  BUTTON_NEUTRAL ino avaz koni dokme jadid biari va ye cari behesh nesbat bedi
         alertDialog.setButton(AlertDialog.BUTTON_POSITIVE, "OK",

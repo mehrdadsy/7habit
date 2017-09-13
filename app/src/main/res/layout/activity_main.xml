@@ -6,7 +6,6 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="#ffffff"
-    android:gravity="center"
     android:id="@+id/my_drawer_layout"
     tools:context="ir.mehrdadseyfi.a7habit.action.ScormPlayerActivity">
 <RelativeLayout
@@ -18,7 +17,7 @@
     android:orientation="vertical">
   <android.support.v7.widget.Toolbar
       android:layout_width="match_parent"
-      android:layout_height="40dp"
+      android:layout_height="35dp"
       android:id="@+id/tool"
       android:background="@color/accent">
     <RelativeLayout
@@ -28,30 +27,48 @@
         android:layout_width="match_parent"
         android:layout_alignParentStart="true"
         android:layout_height="match_parent"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:src="@drawable/tele"
-        android:id="@+id/tele"/>
+        android:id="@+id/tele"
+       />
 
     <ImageView
         android:layout_width="wrap_content"
         android:id="@+id/insta"
         android:layout_height="wrap_content"
-        android:src="@drawable/telegram" />
-    <ImageView
+        android:src="@drawable/telegram"
+       />
+
+
+     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:src="@drawable/cal"
-        android:id="@+id/cal"/>
+        android:id="@+id/cal"
+         />
     </LinearLayout>
-      <ImageView
-          android:id="@+id/drawers"
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content"
-          android:src="@drawable/back"
-          android:layout_alignParentRight="true"/>
+     <LinearLayout
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_alignParentRight="true"
+         android:gravity="center_vertical">
+       <ImageView
+           android:layout_width="40dp"
+           android:layout_height="40dp"
+           android:src="@drawable/logo"
+           />
+       <ImageView
+           android:id="@+id/drawers"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:src="@drawable/back"
+           />
+     </LinearLayout>
+
 
     </RelativeLayout>
   </android.support.v7.widget.Toolbar>
@@ -168,7 +185,7 @@
 android:layout_width="wrap_content"
 
 android:layout_height="match_parent"
-    android:background="@drawable/d3_ee_white"
+android:background="@drawable/d3_ee_white"
 android:layout_gravity="right">
 <LinearLayout
     android:layout_width="match_parent"
@@ -178,7 +195,8 @@ android:layout_gravity="right">
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
       android:src="@drawable/logo"
-      android:background="@drawable/d3_ee_white"/>
+      android:layout_gravity="top"
+     />
    <Button
       android:layout_width="match_parent"
       android:layout_height="wrap_content"

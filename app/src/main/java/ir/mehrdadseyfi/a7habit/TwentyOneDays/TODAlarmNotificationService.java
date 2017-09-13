@@ -43,7 +43,7 @@ public class TODAlarmNotificationService extends IntentService {
 
         Notification notif = new NotificationCompat.Builder(this)
 
-                .setContentTitle("زمان انجام یه کار غیر ضروری و غیراضطراری رسیده")
+                .setContentTitle("حالا می تونی به مرحله بعدی بری")
 
                 .setContentText("")
 
