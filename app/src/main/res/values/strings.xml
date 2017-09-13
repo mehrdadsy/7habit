@@ -6,6 +6,11 @@
     <string name="habit_main">عادات بد</string>
     <string name="edit_dream">رویا خود را ویرایش کنید</string>
     <string name="goal">هدف</string>
+    <string name="call">تماس با ما</string>
+    <string name="about_us">درباره ی ما</string>
+    <string name="about_app">درباره ی برنامه</string>
+    <string name="web">وب سایت</string>
+    <string name="elco21">سامانه اموزشی</string>
     <string name="cal">تقویم</string>
     <string name="days_21">21 روز تا عامل شدن</string>
     <string name="olaviyat">نخست امور نخست را انجام دهیم</string>

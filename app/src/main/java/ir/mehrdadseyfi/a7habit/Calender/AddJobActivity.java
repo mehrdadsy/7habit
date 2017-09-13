@@ -53,6 +53,8 @@ public class AddJobActivity extends AppCompatActivity implements TimePickerDialo
         title = (EditText) findViewById(R.id.add_job_name);
         detail = (EditText) findViewById(R.id.add_job_detial);
         txtStartDate=(TextView)findViewById(R.id.start_datee);
+        endTime = (TimePicker) findViewById(R.id.end_hours);
+        endTime.setIs24HourView(true);
         //add goal to spin
         spinGoal = (Spinner) findViewById(R.id.spin_goal);
         list = new ArrayList<String>();
@@ -131,17 +133,7 @@ public class AddJobActivity extends AppCompatActivity implements TimePickerDialo
             }
         });
         //
-        endTime = (TimePicker) findViewById(R.id.end_hours);
-        endTime.setIs24HourView(true);
-        //give hours
-        if (Build.VERSION.SDK_INT < 23) {
-            eHours = endTime.getCurrentHour();
-            eMin = endTime.getCurrentMinute();
 
-        } else {
-            eHours = endTime.getHour();
-            eMin = endTime.getMinute();
-        }
 
         startDate = (ImageView) findViewById(R.id.start_date);
         startDate.setOnClickListener(new View.OnClickListener() {
@@ -183,8 +175,8 @@ public class AddJobActivity extends AppCompatActivity implements TimePickerDialo
         mounth = (monthOfYear + 1);
         years = year;
         String minu;
-        if (min==0){
-             minu=String.valueOf(min)+"0";
+        if (min<10){
+             minu="0"+String.valueOf(min);
         }else {
             minu=String.valueOf(min);
         }
@@ -197,9 +189,30 @@ public class AddJobActivity extends AppCompatActivity implements TimePickerDialo
         String name = title.getText().toString();
         String dtial = detail.getText().toString();
         String goal = spinGoal.getSelectedItem().toString();
+        String minu;
+        if (min<10){
+            minu="0"+String.valueOf(min);
+        }else {
+            minu=String.valueOf(min);
+        }
 
+        //give hours
+        if (Build.VERSION.SDK_INT < 23) {
+            eHours = endTime.getCurrentHour();
+            eMin = endTime.getCurrentMinute();
 
-        JobDB jobAdd = new JobDB(name, dtial, goal, String.valueOf(years), String.valueOf(mounth), String.valueOf(day), String.valueOf(hours), String.valueOf(min), String.valueOf(eHours), String.valueOf(eMin), goal);
+        } else {
+            eHours = endTime.getHour();
+            eMin = endTime.getMinute();
+        }
+//    String miner;
+//        if (eMin<10){
+//            miner="0"+String.valueOf(eMin);
+//        }else {
+//            miner=String.valueOf(eMin);
+//        }
+
+        JobDB jobAdd = new JobDB(name, dtial, goal, String.valueOf(years), String.valueOf(mounth), String.valueOf(day), String.valueOf(hours), String.valueOf(minu), String.valueOf(eHours), String.valueOf(eMin), goal);
 
         jobAdd.save();
 

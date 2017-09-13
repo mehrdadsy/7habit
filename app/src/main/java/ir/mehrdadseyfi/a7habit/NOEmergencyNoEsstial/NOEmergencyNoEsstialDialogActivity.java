@@ -74,7 +74,13 @@ public class NOEmergencyNoEsstialDialogActivity extends AppCompatActivity implem
                 if (title.matches("") && detial.matches("")) {
                     Toast.makeText(NOEmergencyNoEsstialDialogActivity.this, "لطفا موارد خواسته شده و تاریخ را وارد کنید", Toast.LENGTH_SHORT).show();
                 } else {
-                    EEItem = new NOEmergencyNoEsstialItem(title, detial, "ee", catToDB, String.valueOf(years), String.valueOf(mounth), String.valueOf(day), String.valueOf(hours), String.valueOf(min));
+                    String minu;
+                    if (min<10){
+                        minu="0"+String.valueOf(min);
+                    }else {
+                        minu=String.valueOf(min);
+                    }
+                    EEItem = new NOEmergencyNoEsstialItem(title, detial, "ee", catToDB, String.valueOf(years), String.valueOf(mounth), String.valueOf(day), String.valueOf(hours), String.valueOf(minu));
                     EEItem.save();
                     tilteEE.setText("");
                     detialEE.setText("");

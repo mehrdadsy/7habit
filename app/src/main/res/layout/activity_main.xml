@@ -37,7 +37,6 @@
 
     <ImageView
         android:layout_width="wrap_content"
-        android:layout_marginLeft="10dp"
         android:id="@+id/insta"
         android:layout_height="wrap_content"
         android:src="@drawable/telegram" />
@@ -166,24 +165,60 @@
 </LinearLayout>
 </RelativeLayout>
 <RelativeLayout
-android:layout_width="250dp"
+android:layout_width="wrap_content"
+
 android:layout_height="match_parent"
-android:layout_gravity="right"
-android:background="@color/primary_light">
+    android:background="@drawable/d3_ee_white"
+android:layout_gravity="right">
 <LinearLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
   <ImageView
-      android:layout_width="match_parent"
-      android:layout_height="250dp"
-      android:src="@drawable/icon"/>
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:src="@drawable/logo"
+      android:background="@drawable/d3_ee_white"/>
    <Button
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
-      android:id="@+id/o1"
-      android:text="@string/today"
-       android:background="@drawable/d3_ee_drawer"  />
+      android:id="@+id/about_app"
+       android:background="@drawable/d3_ee_white"
+       android:drawableRight="@drawable/about_app"
+      android:text="@string/about_app"
+      />
+  <Button
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:id="@+id/web"
+      android:background="@drawable/d3_ee_white"
+      android:drawableRight="@drawable/web"
+      android:text="@string/web"
+        />
+  <Button
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:id="@+id/elco21"
+      android:background="@drawable/d3_ee_white"
+      android:drawableRight="@drawable/elco21"
+      android:text="@string/elco21"
+       />
+  <Button
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:id="@+id/call"
+      android:background="@drawable/d3_ee_white"
+      android:drawableRight="@drawable/call"
+      android:text="@string/call"
+        />
+  <Button
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:id="@+id/about_us"
+      android:background="@drawable/d3_ee_white"
+      android:drawableRight="@drawable/about_us"
+      android:text="@string/about_us"
+       />
 
 
 

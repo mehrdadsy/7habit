@@ -48,7 +48,7 @@ public class CalenderActivity extends AppCompatActivity {
         help.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(CalenderActivity.this, VistaActivity.class));
+                startActivity(new Intent(CalenderActivity.this, HelpActivity.class));
 
             }
         });

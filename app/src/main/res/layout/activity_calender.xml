@@ -8,13 +8,13 @@
     tools:context="ir.mehrdadseyfi.a7habit.Calender.CalenderActivity">
     <android.support.v7.widget.Toolbar
         android:layout_width="match_parent"
-        android:layout_height="60dp"
+        android:layout_height="40dp"
         android:id="@+id/tool"
         android:background="@color/accent">
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/ic_note_add_black_48dp"
+        android:src="@drawable/cal_add"
         android:id="@+id/add_job"/>
     <ImageView
         android:layout_width="wrap_content"
