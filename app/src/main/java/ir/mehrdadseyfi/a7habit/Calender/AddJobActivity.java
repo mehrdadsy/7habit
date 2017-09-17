@@ -1,8 +1,11 @@
 package ir.mehrdadseyfi.a7habit.Calender;
 
+import android.app.Activity;
+import android.content.Context;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.Gravity;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
@@ -23,6 +26,8 @@ import java.util.List;
 
 import ir.mehrdadseyfi.a7habit.R;
 import ir.mehrdadseyfi.a7habit.Vista.FGdatabase;
+import me.toptas.fancyshowcase.DismissListener;
+import me.toptas.fancyshowcase.FancyShowCaseView;
 
 public class AddJobActivity extends AppCompatActivity implements TimePickerDialog.OnTimeSetListener, DatePickerDialog.OnDateSetListener {
     ImageView startDate;
@@ -36,6 +41,7 @@ public class AddJobActivity extends AppCompatActivity implements TimePickerDialo
     int day;
     int eHours;
     int eMin;
+    Context mContext=this;
     String repate;
     Spinner spinGoal;
     EditText title;
@@ -85,6 +91,65 @@ public class AddJobActivity extends AppCompatActivity implements TimePickerDialo
 
             }
 
+        });
+        ImageView help=(ImageView)findViewById(R.id.help);
+        help.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                new FancyShowCaseView.Builder((Activity) mContext)
+                        .focusOn(startDate)
+                        .backgroundColor(R.color.primary_light)
+                        .title("با استفاده از این دکمه می توانید ساعت و روز آغاز کار خود را بنویسید")
+                        .dismissListener(new DismissListener() {
+                            @Override
+                            public void onDismiss(String id) {
+                                // FancyShowCaseView is dismissed by user
+                                new FancyShowCaseView.Builder((Activity) mContext)
+                                        .focusOn(spinGoal)
+                                        .title("در این قسمت می توانید هدف مربوط به کار خود را بنویسید دقت کنید که تمامی کار ها باید هدف داشته باشند")
+                                        .backgroundColor(R.color.primary_light)
+                                        .titleStyle(R.style.s, Gravity.TOP | Gravity.CENTER)
+                                        .dismissListener(new DismissListener() {
+                                            @Override
+                                            public void onDismiss(String id) {
+                                                // FancyShowCaseView is dismissed by user
+                                                new FancyShowCaseView.Builder((Activity) mContext)
+                                                        .focusOn(chose)
+                                                        .title("در این قسمت می توانید دفعات تکرار هر کار را بنویسید")
+                                                        .backgroundColor(R.color.primary_light)
+                                                        .titleStyle(R.style.s, Gravity.TOP | Gravity.CENTER)
+                                                        .dismissListener(new DismissListener() {
+                                                            @Override
+                                                            public void onDismiss(String id) {
+                                                                // FancyShowCaseView is dismissed by user
+                                                            }
+
+                                                            @Override
+                                                            public void onSkipped(String id) {
+                                                                // Skipped because it was setup to shown only once and shown before
+                                                            }
+                                                        })
+                                                        .build()
+                                                        .show();
+                                            }
+
+                                            @Override
+                                            public void onSkipped(String id) {
+                                                // Skipped because it was setup to shown only once and shown before
+                                            }
+                                        })
+                                        .build()
+                                        .show();
+                            }
+
+                            @Override
+                            public void onSkipped(String id) {
+                                // Skipped because it was setup to shown only once and shown before
+                            }
+                        })
+                        .build()
+                        .show();
+            }
         });
 
         //click on save buuton

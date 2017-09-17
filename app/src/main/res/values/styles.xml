@@ -14,5 +14,9 @@
     <style name="mytheme" parent="Theme.AppCompat.Light.Dialog">
         <item name="windowNoTitle">true</item>
     </style>
+    <style name="s" parent="mdtp_day_of_week_label_condensed">
+        <item name="android:textColor">@color/white_style</item>
+    </style>
+
 
 </resources>

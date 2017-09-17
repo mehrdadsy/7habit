@@ -1,19 +1,30 @@
 package ir.mehrdadseyfi.a7habit.Calender;
 
+import android.app.Activity;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
+import android.util.TypedValue;
+import android.view.Gravity;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+
+
 import java.util.List;
 
+import ir.mehrdadseyfi.a7habit.MainActivity;
 import ir.mehrdadseyfi.a7habit.R;
 import ir.mehrdadseyfi.a7habit.Vista.VistaActivity;
 import ir.mirrajabi.persiancalendar.PersianCalendarView;
@@ -21,6 +32,8 @@ import ir.mirrajabi.persiancalendar.core.PersianCalendarHandler;
 import ir.mirrajabi.persiancalendar.core.interfaces.OnDayClickedListener;
 import ir.mirrajabi.persiancalendar.core.interfaces.OnMonthChangedListener;
 import ir.mirrajabi.persiancalendar.core.models.PersianDate;
+import me.toptas.fancyshowcase.DismissListener;
+import me.toptas.fancyshowcase.FancyShowCaseView;
 
 public class CalenderActivity extends AppCompatActivity {
     PersianDate today;
@@ -28,32 +41,72 @@ public class CalenderActivity extends AppCompatActivity {
     PersianCalendarView calendarView;
     TextView month;
     TextView year;
-    ImageView add_job;
+    Toolbar tool;
     ListView mylist;
+    ImageView add_job;
     int postionAlert;
     List<JobDB> models1;
     int i=0;
-
+    Context mContext=this;
+    int j=0;
+    LinearLayout layoutHelp;
+    FancyShowCaseView mFancyShowCaseView;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_calender);
+
         calendarView = (PersianCalendarView) findViewById(R.id.persian_calendar);
         calendarHandler = calendarView.getCalendar();
-        ImageView help = (ImageView) findViewById(R.id.help);
-
-        setTodayList();
-        setToday();
-        //TESTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
+/////help add
+ImageView help=(ImageView)findViewById(R.id.help);
         help.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(CalenderActivity.this, HelpActivity.class));
+                new FancyShowCaseView.Builder((Activity) mContext)
+                        .focusOn(add_job)
+                        .backgroundColor(R.color.primary_light)
+                        .title("با استفاده از این دکمه می توانید به برنامه ریزی خود کار اضافه کنید.")
+                        .dismissListener(new DismissListener() {
+                            @Override
+                            public void onDismiss(String id) {
+                                // FancyShowCaseView is dismissed by user
+                                new FancyShowCaseView.Builder((Activity) mContext)
+                                        .focusOn(calendarView)
+                                        .title("دراین تقویم با کلیک بروی هر روز می توانید برنامه ان روز را مشاهده کنید")
+                                        .backgroundColor(R.color.primary_light)
+                                        .titleStyle(R.style.s, Gravity.BOTTOM | Gravity.CENTER)
+                                        .dismissListener(new DismissListener() {
+                                            @Override
+                                            public void onDismiss(String id) {
+                                                // FancyShowCaseView is dismissed by user
+                                            }
 
+                                            @Override
+                                            public void onSkipped(String id) {
+                                                // Skipped because it was setup to shown only once and shown before
+                                            }
+                                        })
+                                        .build()
+                                        .show();
+                            }
+
+                            @Override
+                            public void onSkipped(String id) {
+                                // Skipped because it was setup to shown only once and shown before
+                            }
+                        })
+                        .build()
+                        .show();
             }
         });
+
+        setTodayList();
+        setToday();
+
         today = calendarHandler.getToday();
-        add_job = (ImageView) findViewById(R.id.add_job);
+        add_job=(ImageView) findViewById(R.id.add_job);
+
         add_job.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -61,6 +114,8 @@ public class CalenderActivity extends AppCompatActivity {
 
             }
         });
+
+
         textViewShow();
         showJobDay();
         //delete itemmmmmmmmmmmmm
@@ -187,7 +242,7 @@ public class CalenderActivity extends AppCompatActivity {
        );
 
     }
-    //image backgroun ba if
+//    image backgroun ba if
 //    public void BackGroundIf() {
 //        ImageView imgBackGround = (ImageView) findViewById(R.id.img);
 //
@@ -199,4 +254,21 @@ public class CalenderActivity extends AppCompatActivity {
 //            imgBackGround.setImageDrawable(null);
 //        }
 //    }
+//    public void help(){
+//        if (helpcount==1)
+//        {
+//            layoutHelp.setVisibility(View.GONE);
+//        }else {
+//            help_gone.setOnClickListener(new View.OnClickListener() {
+//                @Override
+//                public void onClick(View v) {
+//
+//
+//                    PreferenceManager.getDefaultSharedPreferences(mContext).edit().putInt("count", 1).commit();
+//                    layoutHelp.setVisibility(View.GONE);
+//                }
+//            });
+//        }
+//    }
+
 }
