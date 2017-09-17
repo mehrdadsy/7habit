@@ -38,13 +38,6 @@ public class VistaActivity extends AppCompatActivity {
         add = (ImageView) findViewById(R.id.add);
         help = (ImageView) findViewById(R.id.help);
         //TESTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
-        help.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-
-            }
-        });
         animation = AnimationUtils.loadAnimation(VistaActivity.this, R.anim.rotate_clockwise);
         animationHelp = AnimationUtils.loadAnimation(VistaActivity.this, R.anim.blink);
         add.startAnimation(animation);

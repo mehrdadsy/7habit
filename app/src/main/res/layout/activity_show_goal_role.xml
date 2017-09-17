@@ -13,7 +13,7 @@
         android:layout_width="match_parent"
         android:layout_height="30dp"
         android:textSize="20sp"
-        android:background="#ff8e66"/>
+        android:background="@color/primary"/>
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -22,7 +22,7 @@
         android:id="@+id/edit_role"
         android:text="@string/edit_role"
         android:layout_width="80dp"
-        android:background="@drawable/d3_nee"
+        android:background="@drawable/d3_ee"
         android:layout_height="60dp"
         android:layout_gravity="center"/>
 

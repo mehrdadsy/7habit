@@ -1,11 +1,17 @@
 package ir.mehrdadseyfi.a7habit.Vista;
 
+import android.app.Activity;
+import android.content.Context;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.view.Gravity;
 import android.view.View;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.RadioGroup;
 import android.widget.Spinner;
 import android.widget.TextView;
@@ -15,6 +21,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 import ir.mehrdadseyfi.a7habit.R;
+import me.toptas.fancyshowcase.DismissListener;
+import me.toptas.fancyshowcase.FancyShowCaseView;
 
 public class AddDialogActivity extends AppCompatActivity {
 
@@ -27,16 +35,16 @@ public class AddDialogActivity extends AppCompatActivity {
     TextView spin;
     List<FRdatabase> models;
     Toolbar tool;
-
+    Context mContext = this;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.add_dialog_vista);
 
-
+        addHelp();
         list = new ArrayList<String>();
-        final ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, list);
+        final ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, R.layout.spiner_custom, list);
         addSpineritem();
         spin = (TextView) findViewById(R.id.vista_spin);
         spinner = (Spinner) findViewById(R.id.spinEE);
@@ -59,8 +67,6 @@ public class AddDialogActivity extends AppCompatActivity {
                     addDtail.setHint(R.string.vista_hint_goal_d);
                     addVist.setHint(R.string.vista_hint_goal);
                     spin.setVisibility(View.VISIBLE);
-
-
 
 
                 } else if (checkedId == R.id.role_sel) {
@@ -173,5 +179,32 @@ public class AddDialogActivity extends AppCompatActivity {
 
     }
 
+    public void addHelp() {
+        ImageView help = (ImageView) findViewById(R.id.help);
+        help.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                new FancyShowCaseView.Builder((Activity) mContext)
+                        .focusOn(chose)
+                        .title("در این قسمت از بین نقش و هدف و رویا انتخاب کنید  دقت کنید که هیچ هدفی بدون نقش نمی تواند باشد")
+                        .backgroundColor(R.color.primary_light)
+                        .titleStyle(R.style.s, Gravity.BOTTOM | Gravity.CENTER)
+                        .dismissListener(new DismissListener() {
+                            @Override
+                            public void onDismiss(String id) {
+                                // FancyShowCaseView is dismissed by user
+                            }
 
-}
+                            @Override
+                            public void onSkipped(String id) {
+                                // Skipped because it was setup to shown only once and shown before
+                            }
+                        })
+                        .build()
+                        .show();
+            }
+        });
+
+
+    }
+    }

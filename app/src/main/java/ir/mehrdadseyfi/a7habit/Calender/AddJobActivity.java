@@ -64,7 +64,7 @@ public class AddJobActivity extends AppCompatActivity implements TimePickerDialo
         //add goal to spin
         spinGoal = (Spinner) findViewById(R.id.spin_goal);
         list = new ArrayList<String>();
-        final ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, list);
+        final ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, R.layout.spiner_custom, list);
         addSpinGoal();
         spinGoal.setAdapter(adapter);
         //radio group selsevt

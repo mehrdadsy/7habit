@@ -2,7 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="300dp"
+    android:layout_width="330dp"
     android:layout_height="400dp"
     android:orientation="vertical"
     tools:context="ir.mehrdadseyfi.a7habit.Vista.AddDialogActivity">
@@ -11,16 +11,18 @@
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="51dp"
-        android:background="#ecf0f4">
+        android:background="@color/primary">
 
     <TextView
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:text="@string/add_grd"/>
         <ImageView
+            android:layout_marginLeft="10dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/ic_note_add_black_48dp"/>
+            android:id="@+id/help"
+            android:src="@drawable/help"/>
     </android.support.v7.widget.Toolbar>
     <LinearLayout
         android:layout_width="match_parent"
@@ -67,7 +69,7 @@
             android:layout_marginTop="20dp"
             android:textSize="15sp"
             android:id="@+id/vista_spin"
-            android:background="#e9dbdb"
+            android:background="@color/primary"
             android:text="@string/vista_spiner"/>
        <LinearLayout
            android:layout_width="match_parent"
@@ -100,7 +102,7 @@
                 android:id="@+id/save"
                 android:text="@string/dialog_save_btn"
                 android:layout_width="80dp"
-                android:background="@drawable/d3_add_vista"
+                android:background="@drawable/d3_ee"
                 android:layout_marginRight="20dp"
                 android:layout_height="60dp" />
 
@@ -109,7 +111,7 @@
                 android:id="@+id/cancel"
                 android:text="@string/dialog_cancel_btn"
                 android:layout_width="80dp"
-                android:background="@drawable/d3_add_vista"
+                android:background="@drawable/d3_ee"
                 android:layout_height="60dp"
                 android:layout_gravity="center_vertical"/>
 
