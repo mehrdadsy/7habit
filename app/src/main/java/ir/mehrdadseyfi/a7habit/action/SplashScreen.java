@@ -28,13 +28,15 @@ public class SplashScreen extends Activity {
     // Splash screen timer
     private static final int SPLASH_TIME_OUT = 6000;
     ImageView anima;
-    TextView co_21;
+    ImageView logo;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.splash);
          anima=(ImageView)findViewById(R.id.anim);
-        co_21=(TextView)findViewById(R.id.co_21);
+        logo=(ImageView)findViewById(R.id.logo);
+
         //set anim
         final Animation animation= AnimationUtils.loadAnimation(getApplicationContext(),R.anim.fade);
         final Animation animation1= AnimationUtils.loadAnimation(getApplicationContext(),R.anim.zoom_in);
@@ -43,7 +45,9 @@ public class SplashScreen extends Activity {
             @Override
             public void run() {
                 anima.startAnimation(animation1);
-                co_21.setText("موسسه آموزشی مربیان 21");
+                logo.setImageResource(R.drawable.logo);
+                logo.startAnimation(animation);
+
             }
         }, 2000);
         anima.startAnimation(animation);
