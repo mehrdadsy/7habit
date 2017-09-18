@@ -29,68 +29,65 @@
         <meta-data
             android:name="DOMAIN_PACKAGE_NAME"
             android:value="ir.mehrdadseyfi" />
-        />
-        <activity android:name=".MainActivity" />
-        <activity
-            android:name=".GoalActivity"
-            android:theme="@style/Theme.AppCompat.NoActionBar" />
-        <activity android:name=".ChecklistActivity" />
-        <activity android:name=".LongGoalActivity" />
-        <activity android:name=".ShotGoalActivity" />
-        <activity
-            android:name=".Dialog"
-            android:theme="@style/Theme.MyDialog" />
-        <activity android:name=".BadHabitActivity" />
-        <activity
-            android:name=".DialogBadHabitAddActivity"
-            android:theme="@style/Theme.MyDialog" />
-        <activity
-            android:name=".DialogBadHabitShowActivity"
-            android:theme="@style/Theme.MyDialog" />
+
         <activity
             android:name=".Esstinal.Noemergency.NEmergencyEssntialDialogActivity"
-            android:theme="@style/mytheme" />
+            android:theme="@style/mytheme"
+            android:screenOrientation="userPortrait"/>
         <activity
             android:name=".Esstinal.Noemergency.NoEmergencyEssntialShowEditActivity"
-            android:theme="@style/mytheme" />
+            android:theme="@style/mytheme"
+            android:screenOrientation="userPortrait"/>
         <activity
             android:name=".NOEmergencyNoEsstial.NOEmergencyNoEsstialDialogActivity"
-            android:theme="@style/mytheme" />
+            android:theme="@style/mytheme"
+            android:screenOrientation="userPortrait"/>
         <activity
             android:name=".NOEmergencyNoEsstial.NOEmergencyNoEsstialShowEditActivity"
-            android:theme="@style/mytheme" />
+            android:theme="@style/mytheme"
+            android:screenOrientation="userPortrait"/>
         <activity
             android:name=".NOEsstianlEmergency.EmergencyNOEssntialShowEditActivity"
-            android:theme="@style/mytheme" />
+            android:theme="@style/mytheme"
+            android:screenOrientation="userPortrait"/>
         <activity
             android:name=".NOEsstianlEmergency.NOEsstianlEmergencyDialogActivity"
-            android:theme="@style/mytheme" />
+            android:theme="@style/mytheme"
+            android:screenOrientation="userPortrait"/>
         <activity
             android:name=".SquareTasksActivity"
-            android:theme="@style/Theme.AppCompat.NoActionBar">
-            >
+            android:theme="@style/Theme.AppCompat.NoActionBar"
+            android:screenOrientation="userPortrait">
+
         </activity>
         <activity
             android:name=".Vista.AddDialogActivity"
-            android:theme="@style/mytheme" />
+            android:theme="@style/mytheme"
+            android:screenOrientation="userPortrait"/>
         <activity
             android:name=".Emegency.EmergencyEssntialActivity"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+            android:screenOrientation="userPortrait"/>
         <activity
             android:name=".Esstinal.Noemergency.NoEmergencyEssntialActivity"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+            android:screenOrientation="userPortrait"/>
         <activity
             android:name=".NOEmergencyNoEsstial.NOEmergencyNoEsstialActivity"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+            android:screenOrientation="userPortrait"/>
         <activity
             android:name=".NOEsstianlEmergency.NOEsstianlEmergencyActivity"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+            android:screenOrientation="userPortrait"/>
         <activity
             android:name=".Emegency.EmergencyEssntialDialogActivity"
-            android:theme="@style/mytheme" />
+            android:theme="@style/mytheme"
+            android:screenOrientation="userPortrait"/>
         <activity
             android:name=".Emegency.EmergencyEssntialShowEditActivity"
-            android:theme="@style/mytheme" />
+            android:theme="@style/mytheme"
+            android:screenOrientation="userPortrait"/>
 
         <receiver
             android:name=".Emegency.MyReceiver"
@@ -123,22 +120,28 @@
 
         <activity
             android:name=".Vista.VistaActivity"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+            android:screenOrientation="userPortrait"/>
         <activity
             android:name=".Vista.ShowGoalRoleActivity"
-            android:theme="@style/mytheme" />
+            android:theme="@style/mytheme"
+            android:screenOrientation="userPortrait"/>
         <activity
             android:name=".Vista.EdirDreamActivity"
-            android:theme="@style/mytheme" />
-        <activity android:name=".ActivsionActivity" />
+            android:theme="@style/mytheme"
+            android:screenOrientation="userPortrait"/>
+        <activity android:name=".ActivsionActivity"
+            android:screenOrientation="userPortrait"/>
         <activity
             android:name=".action.ScormPlayerActivity"
             android:label="@string/app_name"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+            android:screenOrientation="userPortrait"/>
 
         <activity
             android:name=".action.SplashScreen"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar" >
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+            android:screenOrientation="userPortrait">
         <intent-filter>
             <action android:name="android.intent.action.MAIN" />
 
@@ -147,25 +150,34 @@
     </activity>
         <activity
             android:name=".Calender.CalenderActivity"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+            android:screenOrientation="userPortrait"/>
         <activity
             android:name=".Calender.AddJobActivity"
-            android:theme="@style/mytheme" />
+            android:theme="@style/mytheme"
+            android:screenOrientation="userPortrait"/>
         <activity
             android:name=".Calender.ShowDayJobActivity"
-            android:theme="@style/mytheme" />
+            android:theme="@style/mytheme"
+            android:screenOrientation="userPortrait"/>
         <activity
             android:name=".Vista.EditGoalActivity"
-            android:theme="@style/mytheme" />
-        <activity android:name=".Calender.EditJobActivity" />
+            android:theme="@style/mytheme"
+            android:screenOrientation="userPortrait"/>
+        <activity android:name=".Calender.EditJobActivity"
+            android:screenOrientation="userPortrait"/>
         <activity
             android:name=".TwentyOneDays.TwentyOneDaysActivity"
-            android:theme="@style/Theme.Design.Light.NoActionBar" />
-        <activity android:name=".TwentyOneDays.MainStart21DayActivity" />
-        <activity android:name=".TwentyOneDays.ShowTipActivity" />
+            android:theme="@style/Theme.Design.Light.NoActionBar"
+            android:screenOrientation="userPortrait"/>
+        <activity android:name=".TwentyOneDays.MainStart21DayActivity"
+            android:screenOrientation="userPortrait"/>
+        <activity android:name=".TwentyOneDays.ShowTipActivity"
+            android:screenOrientation="userPortrait"/>
         <activity
             android:name=".Intro.IntroActivity"
-            android:theme="@style/Theme.Design.Light.NoActionBar"></activity>
+            android:theme="@style/Theme.Design.Light.NoActionBar"
+            android:screenOrientation="userPortrait"></activity>
     </application>
 
 </manifest>

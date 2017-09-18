@@ -187,6 +187,7 @@
         android:layout_marginRight="20dp"
         android:textAlignment="center"
        android:id="@+id/today_jomle"
+        android:textSize="20sp"
         android:background="@drawable/d3_ee_white"/>
 
   </LinearLayout>
