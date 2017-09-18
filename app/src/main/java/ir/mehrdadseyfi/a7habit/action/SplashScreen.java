@@ -26,7 +26,7 @@ import ir.mehrdadseyfi.a7habit.action.service.PortDiscoveryService;
 
 public class SplashScreen extends Activity {
     // Splash screen timer
-    private static final int SPLASH_TIME_OUT = 6000;
+    private static final int SPLASH_TIME_OUT = 4000;
     ImageView anima;
     ImageView logo;
 
