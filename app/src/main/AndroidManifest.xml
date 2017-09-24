@@ -195,7 +195,10 @@
         <activity
             android:name=".TwentyOneDays.PracticeTheDays.DialogDays3Add"
             android:theme="@style/mytheme" />
-        <activity android:name=".TwentyOneDays.PracticeTheDays.Days5"></activity>
+        <activity android:name=".TwentyOneDays.PracticeTheDays.Days5" />
+        <activity android:name=".TwentyOneDays.PracticeTheDays.Days6" />
+        <activity android:name=".TwentyOneDays.PracticeTheDays.Days7" />
+        <activity android:name=".TwentyOneDays.PracticeTheDays.Days8"></activity>
     </application>
 
 </manifest>

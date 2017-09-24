@@ -6,6 +6,27 @@
     <string name="habit_main">عادات بد</string>
     <string name="edit_dream">رویا خود را ویرایش کنید</string>
     <string name="goal">هدف</string>
+    <string name="way_to_dream">مسیر رسیدن به موفقیت.....</string>
+    <string name="day8_tr">سعی کن با تخیل خود مسیر رسیدن به رویایی که روز قبل نوشتی مشخص کنید مانند یک نقشه راه،مانند اینکه از شهری به شهر دیگر می خواهید بروید</string>
+    <string name="slide26_1">رهبری و مدیریت: دو آفرینش</string>
+    <string name="slide26_2">حاصل نخستین آفرینش خودتان باشید</string>
+
+    <string name="day7_tr">حال یک انتها لذت بخش،یک رویای سوزان را برای خودت انتخاب کن که به زندگی تو مفهوم بدهد</string>
+    <string name="dream_sozan">رویا لذت بخش....</string>
+    <string name="slide24">همه چیز دوباره آفریده می شود</string>
+    <string name="slide24_1">((ذهناً از پایان آغاز کنید)) مبتنی بر این اصل است که همه چیز دوباره آفریده می شود.همه چیز دوباره آفرینشی ذهنی یا نخستین، و آفرینشی جسمانی یا دوم دارد.
+</string>
+    <string name="matn_khaksepari">متن سخرانی هنگام خاکسپاری.....</string>
+    <string name="day6_tr">متن مراسم خاکسپاری خود در 120 سال آینده را بنویسید.در آن زمان مردم در مورد شما چه می گویند؟</string>
+
+    <string name="slide22_1">عادت 2:  </string>
+    <string name="slide22_2">ذهناً از پایان آغاز کنید</string>
+    <string name="slide22_3">آنچه در پس و پیش روی ماست در قیاس با آنچه درون ماست ناچیز است.
+                                                                    ((الیور وندل هولمز))
+</string>
+    <string name="list_halghe">لیست تعهدات ....</string>
+    <string name="days5_tr">لیستی از تعهدات خود ایجاد کنید بر اساس حلقه نفوذ که می خواهید در سه ماه آینده بروی آنها تمرکز کنید</string>
+    <string name="slide20">متعهد شدن و حفظ تعهد</string>
     <string name="in">داخل حلقه نفوذ</string>
     <string name="out">خارج حلقه نفوذ</string>
     <string name="negrani_tl">راه حل عاملانه برای این نگرانی را بنویسید</string>
