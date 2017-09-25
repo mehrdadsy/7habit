@@ -198,7 +198,12 @@
         <activity android:name=".TwentyOneDays.PracticeTheDays.Days5" />
         <activity android:name=".TwentyOneDays.PracticeTheDays.Days6" />
         <activity android:name=".TwentyOneDays.PracticeTheDays.Days7" />
-        <activity android:name=".TwentyOneDays.PracticeTheDays.Days8"></activity>
+        <activity android:name=".TwentyOneDays.PracticeTheDays.Days8" />
+        <activity android:name=".TwentyOneDays.PracticeTheDays.Days9" />
+        <activity android:name=".TwentyOneDays.PracticeTheDays.Days10" />
+        <activity android:name=".TwentyOneDays.PracticeTheDays.Days11" />
+        <activity android:name=".TwentyOneDays.PracticeTheDays.Days12" />
+        <activity android:name=".TwentyOneDays.PracticeTheDays.Days13"></activity>
     </application>
 
 </manifest>
