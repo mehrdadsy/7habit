@@ -20,6 +20,7 @@ public class days1 extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(days1.this, Day1_tr.class);
                 startActivity(intent);
+                finish();
             }
         });
     }

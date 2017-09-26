@@ -6,6 +6,34 @@
     <string name="habit_main">عادات بد</string>
     <string name="edit_dream">رویا خود را ویرایش کنید</string>
     <string name="goal">هدف</string>
+    <string name="finish">پایان این مرحله</string>
+    <string name="about_me">من ....</string>
+    <string name="go_tr">رفتن به تمرین های این روز</string>
+    <string name="days17_tr">لیستی از تفویض اختیار ناظراند خود در تمامی نقش هایتان فراهم کنید و نحوه تفویض اختیار را مشخص کنید</string>
+    <string name="ekhtiyar">من تفویض اختیار می کنم....</string>
+
+    <string name="slide67">تفویض اختیار نظارت کننده</string>
+    <string name="slide66_1">از سوی دیگر مدیر می تواند با صرف همین مدت و با تفویض اختیار مؤثر تولید خود را ده، پنجاه و یا صد برابر کند
+</string>
+    <string name="slide66_2">مدیریت اساساً به مفهوم پیش بردن نقطۀ اتکا به سوی تولید بیشتر است و تفویض اختیار در این راستا کلید مدیریت مؤثر محسوب می شود.
+</string>
+    <string name="slide65">تفویض اختیار:افزایش تولید و قابلیت تولید</string>
+    <string name="slide64">مدیریت نفس</string>
+    <string name="days16_tr">جدو زمان بندی هفتگی خود را پر کنید</string>
+    <string name="goCal">رفتن به برنامه ریزی هفتگی</string>
+    <string name="slide53">سازماندهی مربع 2 مستلزم رعایت شش معیار زیر است:</string>
+    <string name="slide54">1.ارتباط:</string>
+    <string name="slide55">2.توازن:</string>
+    <string name="slide56">3.کانون مربع 2:</string>
+    <string name="slide57">4.بٌعد مردم:</string>
+    <string name="slide58">5.انعطاف پذیری:</string>
+    <string name="slide59">6.قابلیت حمل:</string>
+    <string name="slide60">شناسایی نقشها</string>
+    <string name="slide61">انتخاب اهداف</string>
+    <string name="slide62">برنامه زمانبندی</string>
+    <string name="days15_tr">مربع شماره یک و دو خو را الویت بندی کنید  بر اساس مسیر رسیدن به رویای خود و کانون اصولتان</string>
+    <string name="slide51">برای گفتن (( آری )) به اولویتهای ضروری مربع 2 ناگزیرید که به فعالیتهای دیگری که گاه ضروری می نماید، (( نه )) بگویید.
+</string>
     <string name="goToSquare">رفتن به صفحه مربع ها</string>
     <string name="days14_tr">چهار مربع خود را پر کنید</string>
     <string name="one_square">مربع 1: فعالیت  های مربوط به بحرانها و مسائل مشکلات حاد طرح های مهلت دار

@@ -22,6 +22,7 @@ import ir.mehrdadseyfi.a7habit.JalaliCalendar;
 import ir.mehrdadseyfi.a7habit.NOEmergencyNoEsstial.NOEsstianlEmergencyMyReceiver;
 import ir.mehrdadseyfi.a7habit.NOEsstianlEmergency.NOEsstianlEmergencyActivity;
 import ir.mehrdadseyfi.a7habit.R;
+import ir.mehrdadseyfi.a7habit.TwentyOneDays.PracticeTheDays.*;
 
 public class TwentyOneDaysActivity extends AppCompatActivity {
     Context mContext = this;
@@ -205,10 +206,10 @@ public class TwentyOneDaysActivity extends AppCompatActivity {
                     @Override
                     public void onClick(View v) {
                         if (curlevel == 1)
-                            intent = new Intent(TwentyOneDaysActivity.this, ShowTipActivity.class);
-                        intent.putExtra("title", "123654");
-                        intent.putExtra("body", "123654");
-                        startActivity(intent);
+                           
+                         
+                       
+                     startActivity(new Intent(TwentyOneDaysActivity.this, days1.class));
                     }
                 });
 
@@ -224,10 +225,10 @@ public class TwentyOneDaysActivity extends AppCompatActivity {
                     public void onClick(View v) {
                         if (curlevel == 2) {
                             if (Calendar.getInstance().getTime().getTime() - PreferenceManager.getDefaultSharedPreferences(mContext).getLong("t0", 0) > dayMil) {
-                                intent = new Intent(TwentyOneDaysActivity.this, ShowTipActivity.class);
-                                intent.putExtra("title", "123654");
-                                intent.putExtra("body", "123654");
-                                startActivity(intent);
+                               
+                                 
+                               
+                             startActivity(new Intent(TwentyOneDaysActivity.this, Days2.class));
                             } else {
                                 noTimePopup();
                             }
@@ -249,10 +250,10 @@ public class TwentyOneDaysActivity extends AppCompatActivity {
                     public void onClick(View v) {
                         if (curlevel == 3) {
                             if (Calendar.getInstance().getTime().getTime() - PreferenceManager.getDefaultSharedPreferences(mContext).getLong("t0", 0) > dayMil) {
-                                intent = new Intent(TwentyOneDaysActivity.this, ShowTipActivity.class);
-                                intent.putExtra("title", "123654");
-                                intent.putExtra("body", "123654");
-                                startActivity(intent);
+                               
+                                 
+                               
+                             startActivity(new Intent(TwentyOneDaysActivity.this, Days3_4.class));
                             } else {
                                 noTimePopup();
                             }
@@ -275,10 +276,10 @@ public class TwentyOneDaysActivity extends AppCompatActivity {
                     public void onClick(View v) {
                         if (curlevel == 4) {
                             if (Calendar.getInstance().getTime().getTime() - PreferenceManager.getDefaultSharedPreferences(mContext).getLong("t0", 0) > dayMil) {
-                                intent = new Intent(TwentyOneDaysActivity.this, ShowTipActivity.class);
-                                intent.putExtra("title", "123654");
-                                intent.putExtra("body", "123654");
-                                startActivity(intent);
+                               
+                                 
+                               
+                             startActivity(new Intent(TwentyOneDaysActivity.this, Days3_4.class));
                             } else {
                                 noTimePopup();
                             }
@@ -302,10 +303,10 @@ public class TwentyOneDaysActivity extends AppCompatActivity {
                     public void onClick(View v) {
                         if (curlevel == 5) {
                             if (Calendar.getInstance().getTime().getTime() - PreferenceManager.getDefaultSharedPreferences(mContext).getLong("t0", 0) > dayMil) {
-                                intent = new Intent(TwentyOneDaysActivity.this, ShowTipActivity.class);
-                                intent.putExtra("title", "123654");
-                                intent.putExtra("body", "123654");
-                                startActivity(intent);
+                               
+                                 
+                               
+                             startActivity(new Intent(TwentyOneDaysActivity.this, Days5.class));
                             } else {
                                 noTimePopup();
                             }
@@ -330,10 +331,10 @@ public class TwentyOneDaysActivity extends AppCompatActivity {
                     public void onClick(View v) {
                         if (curlevel == 6) {
                             if (Calendar.getInstance().getTime().getTime() - PreferenceManager.getDefaultSharedPreferences(mContext).getLong("t0", 0) > dayMil) {
-                                intent = new Intent(TwentyOneDaysActivity.this, ShowTipActivity.class);
-                                intent.putExtra("title", "123654");
-                                intent.putExtra("body", "123654");
-                                startActivity(intent);
+                               
+                                 
+                               
+                             startActivity(new Intent(TwentyOneDaysActivity.this, Days6.class));
                             } else {
                                 noTimePopup();
                             }
@@ -359,10 +360,10 @@ public class TwentyOneDaysActivity extends AppCompatActivity {
                     public void onClick(View v) {
                         if (curlevel == 7) {
                             if (Calendar.getInstance().getTime().getTime() - PreferenceManager.getDefaultSharedPreferences(mContext).getLong("t0", 0) > dayMil) {
-                                intent = new Intent(TwentyOneDaysActivity.this, ShowTipActivity.class);
-                                intent.putExtra("title", "123654");
-                                intent.putExtra("body", "123654");
-                                startActivity(intent);
+                               
+                                 
+                               
+                             startActivity(new Intent(TwentyOneDaysActivity.this, Days7.class));
                             } else {
                                 noTimePopup();
                             }
@@ -389,10 +390,10 @@ public class TwentyOneDaysActivity extends AppCompatActivity {
                     public void onClick(View v) {
                         if (curlevel == 8) {
                             if (Calendar.getInstance().getTime().getTime() - PreferenceManager.getDefaultSharedPreferences(mContext).getLong("t0", 0) > dayMil) {
-                                intent = new Intent(TwentyOneDaysActivity.this, ShowTipActivity.class);
-                                intent.putExtra("title", "123654");
-                                intent.putExtra("body", "123654");
-                                startActivity(intent);
+                               
+                                 
+                               
+                             startActivity(new Intent(TwentyOneDaysActivity.this, Days8.class));
                             } else {
                                 noTimePopup();
                             }
@@ -420,10 +421,10 @@ public class TwentyOneDaysActivity extends AppCompatActivity {
                     public void onClick(View v) {
                         if (curlevel == 9) {
                             if (Calendar.getInstance().getTime().getTime() - PreferenceManager.getDefaultSharedPreferences(mContext).getLong("t0", 0) > dayMil) {
-                                intent = new Intent(TwentyOneDaysActivity.this, ShowTipActivity.class);
-                                intent.putExtra("title", "123654");
-                                intent.putExtra("body", "123654");
-                                startActivity(intent);
+                               
+                                 
+                               
+                             startActivity(new Intent(TwentyOneDaysActivity.this, Days9.class));
                             } else {
                                 noTimePopup();
                             }
@@ -452,10 +453,10 @@ public class TwentyOneDaysActivity extends AppCompatActivity {
                     public void onClick(View v) {
                         if (curlevel ==10) {
                             if (Calendar.getInstance().getTime().getTime() - PreferenceManager.getDefaultSharedPreferences(mContext).getLong("t0", 0) > dayMil) {
-                                intent = new Intent(TwentyOneDaysActivity.this, ShowTipActivity.class);
-                                intent.putExtra("title", "123654");
-                                intent.putExtra("body", "123654");
-                                startActivity(intent);
+                               
+                                 
+                               
+                             startActivity(new Intent(TwentyOneDaysActivity.this, Days10.class));
                             } else {
                                 noTimePopup();
                             }
@@ -485,10 +486,10 @@ public class TwentyOneDaysActivity extends AppCompatActivity {
                     public void onClick(View v) {
                         if (curlevel == 11) {
                             if (Calendar.getInstance().getTime().getTime() - PreferenceManager.getDefaultSharedPreferences(mContext).getLong("t0", 0) > dayMil) {
-                                intent = new Intent(TwentyOneDaysActivity.this, ShowTipActivity.class);
-                                intent.putExtra("title", "123654");
-                                intent.putExtra("body", "123654");
-                                startActivity(intent);
+                               
+                                 
+                               
+                             startActivity(new Intent(TwentyOneDaysActivity.this, Days11.class));
                             } else {
                                 noTimePopup();
                             }
@@ -519,10 +520,10 @@ public class TwentyOneDaysActivity extends AppCompatActivity {
                     public void onClick(View v) {
                         if (curlevel == 12) {
                             if (Calendar.getInstance().getTime().getTime() - PreferenceManager.getDefaultSharedPreferences(mContext).getLong("t0", 0) > dayMil) {
-                                intent = new Intent(TwentyOneDaysActivity.this, ShowTipActivity.class);
-                                intent.putExtra("title", "123654");
-                                intent.putExtra("body", "123654");
-                                startActivity(intent);
+                               
+                                 
+                               
+                             startActivity(new Intent(TwentyOneDaysActivity.this, Days12.class));
                             } else {
                                 noTimePopup();
                             }
@@ -554,10 +555,10 @@ public class TwentyOneDaysActivity extends AppCompatActivity {
                     public void onClick(View v) {
                         if (curlevel == 13) {
                             if (Calendar.getInstance().getTime().getTime() - PreferenceManager.getDefaultSharedPreferences(mContext).getLong("t0", 0) > dayMil) {
-                                intent = new Intent(TwentyOneDaysActivity.this, ShowTipActivity.class);
-                                intent.putExtra("title", "123654");
-                                intent.putExtra("body", "123654");
-                                startActivity(intent);
+                               
+                                 
+                               
+                             startActivity(new Intent(TwentyOneDaysActivity.this, Days13.class));
                             } else {
                                 noTimePopup();
                             }
@@ -590,10 +591,10 @@ public class TwentyOneDaysActivity extends AppCompatActivity {
                     public void onClick(View v) {
                         if (curlevel == 14) {
                             if (Calendar.getInstance().getTime().getTime() - PreferenceManager.getDefaultSharedPreferences(mContext).getLong("t0", 0) > dayMil) {
-                                intent = new Intent(TwentyOneDaysActivity.this, ShowTipActivity.class);
-                                intent.putExtra("title", "123654");
-                                intent.putExtra("body", "123654");
-                                startActivity(intent);
+                               
+                                 
+                               
+                             startActivity(new Intent(TwentyOneDaysActivity.this, Days14.class));
                             } else {
                                 noTimePopup();
                             }
@@ -628,10 +629,10 @@ public class TwentyOneDaysActivity extends AppCompatActivity {
                     public void onClick(View v) {
                         if (curlevel == 15) {
                             if (Calendar.getInstance().getTime().getTime() - PreferenceManager.getDefaultSharedPreferences(mContext).getLong("t0", 0) > dayMil) {
-                                intent = new Intent(TwentyOneDaysActivity.this, ShowTipActivity.class);
-                                intent.putExtra("title", "123654");
-                                intent.putExtra("body", "123654");
-                                startActivity(intent);
+                               
+                                 
+                               
+                             startActivity(new Intent(TwentyOneDaysActivity.this, Days15.class));
                             } else {
                                 noTimePopup();
                             }
@@ -668,10 +669,10 @@ public class TwentyOneDaysActivity extends AppCompatActivity {
                     public void onClick(View v) {
                         if (curlevel == 16) {
                             if (Calendar.getInstance().getTime().getTime() - PreferenceManager.getDefaultSharedPreferences(mContext).getLong("t0", 0) > dayMil) {
-                                intent = new Intent(TwentyOneDaysActivity.this, ShowTipActivity.class);
-                                intent.putExtra("title", "123654");
-                                intent.putExtra("body", "123654");
-                                startActivity(intent);
+                               
+                                 
+                               
+                             startActivity(new Intent(TwentyOneDaysActivity.this, Days16.class));
                             } else {
                                 noTimePopup();
                             }
@@ -709,10 +710,10 @@ public class TwentyOneDaysActivity extends AppCompatActivity {
                     public void onClick(View v) {
                         if (curlevel == 17) {
                             if (Calendar.getInstance().getTime().getTime() - PreferenceManager.getDefaultSharedPreferences(mContext).getLong("t0", 0) > dayMil) {
-                                intent = new Intent(TwentyOneDaysActivity.this, ShowTipActivity.class);
-                                intent.putExtra("title", "123654");
-                                intent.putExtra("body", "123654");
-                                startActivity(intent);
+                               
+                                 
+                               
+                             startActivity(new Intent(TwentyOneDaysActivity.this, Days17.class));
                             } else {
                                 noTimePopup();
                             }
@@ -751,10 +752,10 @@ public class TwentyOneDaysActivity extends AppCompatActivity {
                     public void onClick(View v) {
                         if (curlevel == 18) {
                             if (Calendar.getInstance().getTime().getTime() - PreferenceManager.getDefaultSharedPreferences(mContext).getLong("t0", 0) > dayMil) {
-                                intent = new Intent(TwentyOneDaysActivity.this, ShowTipActivity.class);
-                                intent.putExtra("title", "123654");
-                                intent.putExtra("body", "123654");
-                                startActivity(intent);
+                               
+                                 
+                               
+                             startActivity(new Intent(TwentyOneDaysActivity.this, Days2.class));
                             } else {
                                 noTimePopup();
                             }
@@ -794,10 +795,10 @@ public class TwentyOneDaysActivity extends AppCompatActivity {
                     public void onClick(View v) {
                         if (curlevel == 19) {
                             if (Calendar.getInstance().getTime().getTime() - PreferenceManager.getDefaultSharedPreferences(mContext).getLong("t0", 0) > dayMil) {
-                                intent = new Intent(TwentyOneDaysActivity.this, ShowTipActivity.class);
-                                intent.putExtra("title", "123654");
-                                intent.putExtra("body", "123654");
-                                startActivity(intent);
+                               
+                                 
+                               
+                             startActivity(new Intent(TwentyOneDaysActivity.this, Days2.class));
                             } else {
                                 noTimePopup();
                             }
@@ -838,10 +839,10 @@ public class TwentyOneDaysActivity extends AppCompatActivity {
                     public void onClick(View v) {
                         if (curlevel == 20) {
                             if (Calendar.getInstance().getTime().getTime() - PreferenceManager.getDefaultSharedPreferences(mContext).getLong("t0", 0) > dayMil) {
-                                intent = new Intent(TwentyOneDaysActivity.this, ShowTipActivity.class);
-                                intent.putExtra("title", "123654");
-                                intent.putExtra("body", "123654");
-                                startActivity(intent);
+                               
+                                 
+                               
+                             startActivity(new Intent(TwentyOneDaysActivity.this, Days2.class));
                             } else {
                                 noTimePopup();
                             }
@@ -883,10 +884,10 @@ public class TwentyOneDaysActivity extends AppCompatActivity {
                     public void onClick(View v) {
                         if (curlevel == 21) {
                             if (Calendar.getInstance().getTime().getTime() - PreferenceManager.getDefaultSharedPreferences(mContext).getLong("t0", 0) > dayMil) {
-                                intent = new Intent(TwentyOneDaysActivity.this, ShowTipActivity.class);
-                                intent.putExtra("title", "123654");
-                                intent.putExtra("body", "123654");
-                                startActivity(intent);
+                               
+                                 
+                               
+                             startActivity(new Intent(TwentyOneDaysActivity.this, Days2.class));
                             } else {
                                 noTimePopup();
                             }

@@ -5,17 +5,29 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="#ffffff"
     tools:context="ir.mehrdadseyfi.a7habit.TwentyOneDays.PracticeTheDays.Day1_tr">
  <LinearLayout
      android:layout_width="match_parent"
      android:layout_height="match_parent"
-     android:orientation="vertical">
-   <TextView
-       android:layout_width="wrap_content"
-       android:layout_height="wrap_content"
-       android:textSize="20dp"
-       android:text="@string/habit"/>
-   <LinearLayout
+     android:orientation="vertical"
+     android:background="#ffffff">
+     <LinearLayout
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:background="@drawable/d3_ee_white"
+       android:layout_margin="10dp"
+         android:orientation="vertical"
+         android:gravity="right">
+         <TextView
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:textSize="20dp"
+             android:layout_margin="10dp"
+             android:text="@string/habit"/>
+
+     </LinearLayout>
+  <LinearLayout
        android:layout_width="match_parent"
        android:layout_height="wrap_content"
        android:background="@drawable/d3_ee_white"
@@ -26,26 +38,39 @@
        <EditText
            android:layout_width="match_parent"
            android:layout_height="wrap_content"
+           android:hint="@string/goodhabit"
+           android:id="@+id/habitg1"
+           android:backgroundTint="@color/accent"/>
+       <EditText
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:hint="@string/source"
+           android:id="@+id/habitgp1"
+           android:backgroundTint="@color/accent"
+          />
+       <EditText
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:id="@+id/habitg2"
+           android:backgroundTint="@color/accent"
            android:hint="@string/goodhabit"/>
        <EditText
            android:layout_width="match_parent"
            android:layout_height="wrap_content"
+           android:id="@+id/habitgp2"
+           android:backgroundTint="@color/accent"
            android:hint="@string/source"/>
        <EditText
            android:layout_width="match_parent"
+           android:backgroundTint="@color/accent"
            android:layout_height="wrap_content"
+           android:id="@+id/habitg3"
            android:hint="@string/goodhabit"/>
        <EditText
            android:layout_width="match_parent"
            android:layout_height="wrap_content"
-           android:hint="@string/source"/>
-       <EditText
-           android:layout_width="match_parent"
-           android:layout_height="wrap_content"
-           android:hint="@string/goodhabit"/>
-       <EditText
-           android:layout_width="match_parent"
-           android:layout_height="wrap_content"
+           android:backgroundTint="@color/accent"
+           android:id="@+id/habitgp3"
            android:hint="@string/source"/>
    </LinearLayout>
     <LinearLayout
@@ -60,42 +85,54 @@
        <EditText
            android:layout_width="match_parent"
            android:layout_height="wrap_content"
+           android:backgroundTint="@color/accent"
+           android:id="@+id/habitb1"
            android:hint="@string/badhabit"/>
        <EditText
            android:layout_width="match_parent"
            android:layout_height="wrap_content"
+           android:backgroundTint="@color/accent"
+           android:id="@+id/habitbp1"
            android:hint="@string/source"/>
        <EditText
            android:layout_width="match_parent"
            android:layout_height="wrap_content"
+           android:id="@+id/habitb2"
+           android:backgroundTint="@color/accent"
            android:hint="@string/badhabit"/>
         <EditText
            android:layout_width="match_parent"
            android:layout_height="wrap_content"
+            android:id="@+id/habitbp2"
+            android:backgroundTint="@color/accent"
            android:hint="@string/source"/>
        <EditText
            android:layout_width="match_parent"
            android:layout_height="wrap_content"
+           android:id="@+id/habitb3"
+           android:backgroundTint="@color/accent"
            android:hint="@string/goodhabit"/>
        <EditText
            android:layout_width="match_parent"
            android:layout_height="wrap_content"
+           android:id="@+id/habitbp3"
+           android:backgroundTint="@color/accent"
            android:hint="@string/source"/>
    </LinearLayout>
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:src="@drawable/drawer"
-        android:layout_marginTop="10dp"/>
+
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="100dp"
-        android:layout_marginLeft="10dp"
+
         android:orientation="vertical"
-        android:layout_marginRight="10dp"
+       android:layout_margin="10dp"
         android:background="@drawable/d3_ee_white">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:src="@drawable/lecture"
+            android:layout_marginTop="10dp"/>
      <TextView
          android:layout_width="wrap_content"
          android:layout_height="wrap_content"
@@ -104,7 +141,9 @@
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="....."
+            android:hint="@string/about_me"
+            android:id="@+id/about_me"
+            android:backgroundTint="@android:color/holo_red_light"
            />
 
     </LinearLayout>
@@ -113,7 +152,8 @@
          android:layout_height="wrap_content"
          android:background="@drawable/d3_ee"
          android:layout_gravity="center"
-         android:id="@+id/go_tr"/>
+         android:id="@+id/finish"
+         android:text="@string/finish"/>
  </LinearLayout>
 
 </ScrollView>
