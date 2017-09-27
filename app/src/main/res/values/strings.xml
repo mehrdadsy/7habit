@@ -111,9 +111,12 @@
     <string name="days5_tr">لیستی از تعهدات خود ایجاد کنید بر اساس حلقه نفوذ که می خواهید در سه ماه آینده بروی آنها تمرکز کنید</string>
     <string name="slide20">متعهد شدن و حفظ تعهد</string>
     <string name="in">داخل حلقه نفوذ</string>
+    <string name="days5">مرحله (روز) پنجم</string>
+    <string name="days6">مرحله (روز) ششم</string>
+    <string name="days7">مرحله (روز) هفتم</string>
     <string name="out">خارج حلقه نفوذ</string>
     <string name="negrani_tl">راه حل عاملانه برای این نگرانی را بنویسید</string>
-    <string name="negrani_dl">شرح نگرانی خود را بنویسید</string>
+    <string name="negrani_dl"> نگرانی خود را بنویسید</string>
     <string name="days3_tr">با استفاده از دکمه بالا تمامی نگرانی های خود را لیست کنید و مشخص کنید کدام یک در داخل حلقه نفوذ شما هستند و کدام یک نه؟</string>
     <string name="slide18">گاه عامل ترین کاری که می توانیم بکنیم شاد بودن، است: فقط لبخندی راستین. خوشبختی انتخابی عامل است.
 </string>

@@ -1,8 +1,11 @@
 package ir.mehrdadseyfi.a7habit.TwentyOneDays.PracticeTheDays;
 
+import android.app.AlarmManager;
+import android.app.PendingIntent;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.preference.PreferenceManager;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -12,8 +15,10 @@ import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.Toast;
 
+import java.util.Calendar;
 import java.util.List;
 
+import ir.mehrdadseyfi.a7habit.NOEmergencyNoEsstial.NOEsstianlEmergencyMyReceiver;
 import ir.mehrdadseyfi.a7habit.R;
 import ir.mehrdadseyfi.a7habit.Vista.AddDialogActivity;
 import ir.mehrdadseyfi.a7habit.Vista.FDdatabase;
@@ -36,6 +41,19 @@ Days3DB days3DB;
         setContentView(R.layout.activity_day3_tr);
 
        ImageView img=(ImageView)findViewById(R.id.add_days3_tr);
+        findViewById(R.id.finish).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                PreferenceManager.getDefaultSharedPreferences(mContext).edit().putInt("curlevel", PreferenceManager.getDefaultSharedPreferences(mContext).getInt("curlevel",0)+1).commit();
+                PreferenceManager.getDefaultSharedPreferences(mContext).edit().putLong("t0", Calendar.getInstance().getTime().getTime()).commit();
+
+                alarmManager(Calendar.getInstance().getTime().getTime()+10000);
+                    finish();
+
+
+
+            }
+        });
 
         creatList();
         mylist.setOnItemClickListener(new AdapterView.OnItemClickListener() {
@@ -133,6 +151,17 @@ Days3DB days3DB;
         alertDialog.show();
 
 
+    }
+    public void alarmManager(long d) {
+
+        AlarmManager am = (AlarmManager) getSystemService(ALARM_SERVICE);
+
+
+        if (d > 0) {
+            Intent intent = new Intent(Day3_tr.this, NOEsstianlEmergencyMyReceiver.class);
+            PendingIntent pi = PendingIntent.getBroadcast(Day3_tr.this, 1, intent, 0);
+            am.set(AlarmManager.RTC_WAKEUP, d, pi);
+        }
     }
     }
 

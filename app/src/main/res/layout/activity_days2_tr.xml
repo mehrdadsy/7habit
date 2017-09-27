@@ -5,76 +5,91 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="#ffffff"
     tools:context="ir.mehrdadseyfi.a7habit.TwentyOneDays.PracticeTheDays.Days2_tr">
-   <LinearLayout
-       android:layout_width="match_parent"
-       android:layout_height="match_parent"
-       android:orientation="vertical">
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:background="#ffffff"
         android:orientation="vertical">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp"
+    android:background="@drawable/d3_ee_white">
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="20dp"
-            android:text="@string/day2_tr"/>
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginLeft="10dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginRight="10dp"
-            android:layout_marginBottom="10dp"
-
-            android:src="@drawable/drawer"/>
+            android:text="@string/day2_tr"
+            android:textSize="20dp" />
+</LinearLayout>
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@drawable/d3_ee_white"
-            android:layout_marginLeft="10dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginRight="10dp"
-            android:orientation="vertical"
-            android:gravity="right">
+            android:layout_height="match_parent"
+            android:orientation="vertical">
 
-            <EditText
-                android:inputType="textMultiLine"
-                android:id="@+id/reaction"
-                android:layout_width="match_parent"
+
+
+            <ImageView
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:hint="@string/weekly_reaction"
-                android:imeOptions="actionDone"
-                />
-        </LinearLayout>
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginLeft="10dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginRight="10dp"
-            android:layout_marginBottom="10dp"
-            android:src="@drawable/drawer"/>
+                android:layout_gravity="center"
+                android:layout_margin="10dp"
+
+                android:src="@drawable/brain" />
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@drawable/d3_ee_white"
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
-                android:orientation="vertical"
-                android:gravity="right">
+                android:layout_marginTop="10dp"
+                android:background="@drawable/d3_ee_white"
+                android:gravity="right"
+                android:orientation="vertical">
 
-            <EditText
-                android:inputType="textMultiLine"
-                android:id="@+id/amel"
+                <EditText
+                    android:id="@+id/reflex"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/weekly_reaction"
+                    android:imeOptions="actionDone"
+                    android:inputType="textMultiLine" />
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="10dp"
+                android:src="@drawable/brainstorm" />
+
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="@string/weekly_reaction_amel"
-                android:imeOptions="actionDone"
-                />
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/d3_ee_white"
+                android:gravity="right"
+                android:orientation="vertical">
+
+                <EditText
+                    android:id="@+id/reflex_amel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/weekly_reaction_amel"
+                    android:imeOptions="actionDone"
+                    android:inputType="textMultiLine" />
+            </LinearLayout>
         </LinearLayout>
-</LinearLayout>
-</LinearLayout>
+        <Button
+            android:id="@+id/finish"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/finish"
+            android:layout_margin="20dp"
+            android:background="@drawable/d3_ee" />
+    </LinearLayout>
 </ScrollView>

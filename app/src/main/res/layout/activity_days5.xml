@@ -15,25 +15,32 @@
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="0.2"
-            android:text="@string/days1"
+            android:text="@string/days5"
             android:textAlignment="center"/>
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="150dp"
+            android:layout_height="wrap_content"
             android:orientation="vertical"
             android:layout_marginRight="10dp"
             android:layout_marginLeft="10dp"
             android:layout_marginBottom="10dp"
             android:background="@drawable/d3_ee_white">
-
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:src="@drawable/stick_man"/>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/slide19"/>
+                android:id="@+id/slide19"
+                android:textSize="25sp"
+                android:textColor="@color/accent"
+                android:layout_gravity="center"/>
         </LinearLayout>
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="200dp"
+            android:layout_height="wrap_content"
             android:orientation="vertical"
             android:layout_marginRight="10dp"
             android:layout_marginLeft="10dp"
@@ -44,14 +51,21 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/slide20"
-                android:layout_gravity="center"/>
+                android:textSize="25sp"
+                android:textColor="@color/accent"
+                android:layout_gravity="center"
+                />
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/slide20"
+                android:textSize="25sp"
+                android:textColor="@color/accent"
+                android:layout_gravity="center"
              />
 
         </LinearLayout>
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -60,24 +74,12 @@
             android:layout_marginLeft="10dp"
             android:layout_marginBottom="10dp"
             android:background="@drawable/d3_ee_white">
-
-            <TextView
+            <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/slide21"
-                android:textSize="15sp"
-                android:layout_gravity="center"/>
-
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:layout_marginRight="10dp"
-            android:layout_marginLeft="10dp"
-            android:layout_marginBottom="10dp"
-            android:background="@drawable/d3_ee_white">
-
+                android:layout_gravity="center"
+                android:layout_margin="10dp"
+                android:src="@drawable/life_preserver"/>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -90,8 +92,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="textMultiLine"
-                android:layout_marginRight="10dp"
-                android:layout_marginLeft="10dp"
+               android:layout_margin="20dp"
+                android:id="@+id/obligation"
+                android:backgroundTint="@color/accent"
                 android:hint="@string/list_halghe"/>
 
         </LinearLayout>
@@ -101,7 +104,8 @@
             android:layout_height="wrap_content"
             android:background="@drawable/d3_ee"
             android:layout_gravity="center"
-            android:id="@+id/go_tr"/>
+            android:text="@string/finish"
+            android:id="@+id/finish"/>
 
 
     </LinearLayout>

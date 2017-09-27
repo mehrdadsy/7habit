@@ -51,9 +51,9 @@ public class Days3Adapter extends BaseAdapter {
         ImageView dream_img = (ImageView) rowView.findViewById(R.id.dream_img_d);
     int i=Integer.parseInt(models.get(position).gethalghe());
         if (i==1) {
-            dream_img.setImageResource(R.drawable.dream);
+            dream_img.setImageResource(R.drawable.achievement);
         }else {
-            dream_img.setImageResource(R.drawable.goal);
+            dream_img.setImageResource(R.drawable.shredder);
 
         }
             return rowView;

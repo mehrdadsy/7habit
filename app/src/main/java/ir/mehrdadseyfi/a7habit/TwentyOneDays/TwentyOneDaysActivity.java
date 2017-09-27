@@ -279,7 +279,7 @@ public class TwentyOneDaysActivity extends AppCompatActivity {
                                
                                  
                                
-                             startActivity(new Intent(TwentyOneDaysActivity.this, Days3_4.class));
+                             startActivity(new Intent(TwentyOneDaysActivity.this, Days4_tr.class));
                             } else {
                                 noTimePopup();
                             }

@@ -191,7 +191,7 @@
         <activity android:name=".TwentyOneDays.PracticeTheDays.Days3_4"
             android:theme="@style/Theme.Design.Light.NoActionBar" />
         <activity android:name=".TwentyOneDays.PracticeTheDays.DialogDays4Add"
-            android:theme="@style/Theme.Design.Light.NoActionBar" />
+            android:theme="@style/mytheme" />
         <activity
             android:name=".TwentyOneDays.PracticeTheDays.Day3_tr"
             android:theme="@style/Theme.Design.Light.NoActionBar" />

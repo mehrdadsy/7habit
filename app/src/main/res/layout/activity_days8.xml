@@ -34,7 +34,12 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:text="@string/slide26_1" />
-
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginBottom="10dp"
+                android:src="@drawable/brainstorming" />
             <TextView
                 android:id="@+id/slide26_1"
                 android:layout_width="wrap_content"
@@ -94,7 +99,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginBottom="10dp"
-                android:src="@drawable/drawer" />
+                android:src="@drawable/desert" />
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -108,16 +113,18 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="11dp"
                 android:layout_marginRight="10dp"
+                android:id="@+id/way"
                 android:hint="@string/way_to_dream"
                 android:inputType="textMultiLine" />
 
         </LinearLayout>
 
         <Button
-            android:id="@+id/go_tr"
+            android:id="@+id/finish"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
+            android:text="@string/finish"
             android:background="@drawable/d3_ee" />
 
 

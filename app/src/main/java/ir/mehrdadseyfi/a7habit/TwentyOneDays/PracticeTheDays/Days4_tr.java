@@ -1,8 +1,11 @@
 package ir.mehrdadseyfi.a7habit.TwentyOneDays.PracticeTheDays;
 
+import android.app.AlarmManager;
+import android.app.PendingIntent;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.preference.PreferenceManager;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -10,10 +13,13 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ImageView;
 import android.widget.ListView;
+import android.widget.TextView;
 import android.widget.Toast;
 
+import java.util.Calendar;
 import java.util.List;
 
+import ir.mehrdadseyfi.a7habit.NOEmergencyNoEsstial.NOEsstianlEmergencyMyReceiver;
 import ir.mehrdadseyfi.a7habit.R;
 
 public class Days4_tr extends AppCompatActivity {
@@ -26,18 +32,49 @@ public class Days4_tr extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_days4_tr);
-         creatList();
+        setContentView(R.layout.activity_day3_tr);
+        TextView txt1=(TextView)findViewById(R.id.help);
+        txt1.setText("با نگه داشتن کلیک بروی هر نگرانی راه کار عاملانه برای ان را بنویسید");
+        ImageView img=(ImageView)findViewById(R.id.add_days3_tr);
+        findViewById(R.id.finish).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                PreferenceManager.getDefaultSharedPreferences(mContext).edit().putInt("curlevel", PreferenceManager.getDefaultSharedPreferences(mContext).getInt("curlevel",0)+1).commit();
+                PreferenceManager.getDefaultSharedPreferences(mContext).edit().putLong("t0", Calendar.getInstance().getTime().getTime()).commit();
+
+                alarmManager(Calendar.getInstance().getTime().getTime()+10000);
+                finish();
+
+
+
+            }
+        });
+
+        creatList();
         mylist.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-        @Override
-        public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-            postionalret=position;
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                postionalret=position;
+                AlertPopup();
+            }
+        });
+        mylist.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
+            @Override
+            public boolean onItemLongClick(AdapterView<?> parent, View view, int position, long id) {
+                Intent intent = new Intent(Days4_tr.this, DialogDays4Add.class);
+                intent.putExtra("id", models.get(position).getId());
+                startActivity(intent);
+                return true;
+            }
+        });
+        img.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(Days4_tr.this, DialogDays3Add.class));
 
-        }
-    });
-
-}
-
+            }
+        });
+    }
     public void creatList(){
 
         models = Days3DB.listAll(Days3DB.class);
@@ -68,6 +105,58 @@ public class Days4_tr extends AppCompatActivity {
     public void onResume() {
         creatList();
         super.onResume();
+    }
+    public void AlertPopup() {
+        AlertDialog alertDialog = new AlertDialog.Builder(mContext).create();
+
+//tiltle
+        alertDialog.setTitle("هشدار");
+
+//maten dialog
+        alertDialog.setMessage("آیا از حذف نگرانی خود مطمئن هستید؟");
+
+//dokme ---mitoni ino hey copy koni va  BUTTON_NEUTRAL ino avaz koni dokme jadid biari va ye cari behesh nesbat bedi
+        alertDialog.setButton(AlertDialog.BUTTON_POSITIVE, "OK",
+
+                new DialogInterface.OnClickListener() {
+
+                    public void onClick(DialogInterface dialog, int which) {
+
+                        Days3DB books = Days3DB.findById(Days3DB.class, models.get(postionalret).getId());
+                        books.delete();
+                        Toast.makeText(mContext, "حذف نگرانی انجام شد", Toast.LENGTH_SHORT).show();
+                        creatList();
+
+
+                    }
+
+                });
+        alertDialog.setButton(AlertDialog.BUTTON_NEGATIVE, "No",
+                new DialogInterface.OnClickListener() {
+
+                    public void onClick(DialogInterface dialog, int which) {
+
+                        dialog.dismiss();
+
+                    }
+
+                });
+
+
+        alertDialog.show();
+
+
+    }
+    public void alarmManager(long d) {
+
+        AlarmManager am = (AlarmManager) getSystemService(ALARM_SERVICE);
+
+
+        if (d > 0) {
+            Intent intent = new Intent(Days4_tr.this, NOEsstianlEmergencyMyReceiver.class);
+            PendingIntent pi = PendingIntent.getBroadcast(Days4_tr.this, 1, intent, 0);
+            am.set(AlarmManager.RTC_WAKEUP, d, pi);
+        }
     }
 
 }
