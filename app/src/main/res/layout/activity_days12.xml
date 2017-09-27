@@ -68,7 +68,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_margin="10dp"
-                android:src="@drawable/drawer" />
+                android:src="@drawable/trophy" />
 
             <TextView
                 android:id="@+id/slide43"
@@ -79,8 +79,6 @@
 
 
         </LinearLayout>
-
-
 
 
         <LinearLayout
@@ -100,23 +98,26 @@
                 android:textSize="15sp" />
 
 
-
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginBottom="10dp"
-                android:src="@drawable/drawer" />
+                android:src="@drawable/increase" />
 
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="11dp"
                 android:layout_marginRight="10dp"
+                android:id="@+id/life"
+                android:layout_margin="10dp"
+                android:backgroundTint="@color/accent"
                 android:hint="@string/nokhost_1"
                 android:inputType="textMultiLine" />
 
         </LinearLayout>
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -129,11 +130,10 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-
+                android:layout_gravity="center"
                 android:layout_margin="10dp"
                 android:text="@string/days12_2_tr"
                 android:textSize="15sp" />
-
 
 
             <ImageView
@@ -141,23 +141,26 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginBottom="10dp"
-                android:src="@drawable/drawer" />
+                android:src="@drawable/businessman" />
 
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="11dp"
-                android:layout_marginRight="10dp"
+
+                android:id="@+id/job"
+                android:backgroundTint="@color/accent"
+            android:layout_margin="10dp"
                 android:hint="@string/nokhost_2"
                 android:inputType="textMultiLine" />
 
         </LinearLayout>
 
         <Button
-            android:id="@+id/go_tr"
+            android:id="@+id/finish"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
+            android:text="@string/finish"
             android:background="@drawable/d3_ee" />
 
 

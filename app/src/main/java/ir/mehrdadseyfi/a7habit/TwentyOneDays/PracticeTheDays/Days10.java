@@ -46,7 +46,7 @@ public class Days10 extends AppCompatActivity {
 
     public void giveData() {
 
-        PreferenceManager.getDefaultSharedPreferences(mContext).edit().putString("dream", String.valueOf(canon.getText())).commit();
+        PreferenceManager.getDefaultSharedPreferences(mContext).edit().putString("canon", String.valueOf(canon.getText())).commit();
 
     }
 

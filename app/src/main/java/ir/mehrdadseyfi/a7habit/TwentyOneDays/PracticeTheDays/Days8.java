@@ -55,7 +55,7 @@ public class Days8 extends AppCompatActivity {
     }
     public void giveData() {
 
-        PreferenceManager.getDefaultSharedPreferences(mContext).edit().putString("dream", String.valueOf(way.getText())).commit();
+        PreferenceManager.getDefaultSharedPreferences(mContext).edit().putString("way", String.valueOf(way.getText())).commit();
 
     }
     public void alarmManager(long d) {

@@ -56,7 +56,7 @@ public class Days9 extends AppCompatActivity {
 
     public void giveData() {
 
-        PreferenceManager.getDefaultSharedPreferences(mContext).edit().putString("dream", String.valueOf(resalat.getText())).commit();
+        PreferenceManager.getDefaultSharedPreferences(mContext).edit().putString("resalat", String.valueOf(resalat.getText())).commit();
 
     }
 

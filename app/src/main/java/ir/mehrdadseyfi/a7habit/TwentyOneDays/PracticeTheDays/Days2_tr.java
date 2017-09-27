@@ -45,8 +45,8 @@ public class Days2_tr extends AppCompatActivity {
     }
     public void giveData() {
 
-        PreferenceManager.getDefaultSharedPreferences(mContext).edit().putString("habitg1", String.valueOf(reflex.getText())).commit();
-        PreferenceManager.getDefaultSharedPreferences(mContext).edit().putString("habitg2", String.valueOf(reflexAmel.getText())).commit();
+        PreferenceManager.getDefaultSharedPreferences(mContext).edit().putString("reflex", String.valueOf(reflex.getText())).commit();
+        PreferenceManager.getDefaultSharedPreferences(mContext).edit().putString("reflexAmel", String.valueOf(reflexAmel.getText())).commit();
 
     }
     public void alarmManager(long d) {

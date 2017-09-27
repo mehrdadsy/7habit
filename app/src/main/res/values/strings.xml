@@ -67,7 +67,7 @@
 </string>
     <string name="osol">اصول من......</string>
     <string name="day11_tr_help">راهنمایی: اصول،قوانینی هستند که مداوم آنها را باید رعایت کنید</string>
-    <string name="days11_tr">اصول خود را میتنی بر کانون خود(که همان رویای شماست) و مسیر رسیدن به آن بنویسید:</string>
+    <string name="days11_tr">اصول خود را مبتنی بر کانون خود(که همان رویای شماست) و مسیر رسیدن به آن بنویسید:</string>
     <string name="slide39">فرانکل می گوید رسالتی را که در زندگی داریم کشف می کنیم، نه ایجاد. انتخاب این کلمات را دوست دارم. معتقدم همه ما راهنمایی درونی یا حسی-شعوری- داریم که ما را از یکتایی و خدمات منحصر به فردمان آگاه می سازد. به گفته فرانکل: ((هرکس در زندگیش حرفه یا رسالتی ویژه دارد... از این رو، نه کسی می تواند جانشین او شود نه زندگیش تکرار گردد. بنابراین، وظیفه هر انسانی همان قدر یکتاست که مجال ویژه به انجام رساندن آن.))
 </string>
     <string name="slide37">کانونی مبتنی بر اصول
@@ -114,6 +114,16 @@
     <string name="days5">مرحله (روز) پنجم</string>
     <string name="days6">مرحله (روز) ششم</string>
     <string name="days7">مرحله (روز) هفتم</string>
+    <string name="days8">مرحله (روز) هشتم</string>
+    <string name="days9">مرحله (روز) نهم</string>
+    <string name="days10">مرحله (روز) دهم</string>
+    <string name="days11">مرحله (روز) یازدهم</string>
+    <string name="days12">مرحله (روز) دوازدهم</string>
+    <string name="days13">مرحله (روز) سیزدهم</string>
+    <string name="days14">مرحله (روز) چهاردهم</string>
+    <string name="days15">مرحله (روز) پانزدهم</string>
+    <string name="days16">مرحله (روز) شانزدهم</string>
+    <string name="days17">مرحله (روز) هفدهم</string>
     <string name="out">خارج حلقه نفوذ</string>
     <string name="negrani_tl">راه حل عاملانه برای این نگرانی را بنویسید</string>
     <string name="negrani_dl"> نگرانی خود را بنویسید</string>

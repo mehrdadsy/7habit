@@ -17,7 +17,7 @@
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="0.2"
-            android:text="@string/days1"
+            android:text="@string/days11"
             android:textAlignment="center" />
 
         <LinearLayout
@@ -34,7 +34,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_margin="10dp"
-                android:src="@drawable/drawer" />
+                android:src="@drawable/bullseye" />
 
             <TextView
                 android:text="@string/slide37"
@@ -62,7 +62,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_margin="10dp"
-                android:src="@drawable/drawer" />
+                android:src="@drawable/idea_1" />
 
             <TextView
                 android:text="@string/slide39"
@@ -88,14 +88,14 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-
+android:layout_gravity="right"
                     android:layout_margin="10dp"
                     android:text="@string/days11_tr"
                     android:textSize="15sp" />
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center"
+                    android:layout_gravity="right"
                     android:layout_margin="10dp"
                     android:text="@string/day11_tr_help"
                     android:textSize="15sp" />
@@ -105,23 +105,25 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:layout_marginBottom="10dp"
-                    android:src="@drawable/drawer" />
+                    android:src="@drawable/law" />
 
                 <EditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="11dp"
-                    android:layout_marginRight="10dp"
+                  android:layout_margin="15dp"
                     android:hint="@string/osol"
+                    android:id="@+id/law"
+                    android:backgroundTint="@color/accent"
                     android:inputType="textMultiLine" />
 
             </LinearLayout>
 
             <Button
-                android:id="@+id/go_tr"
+                android:id="@+id/finish"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
+                android:text="@string/finish"
                 android:background="@drawable/d3_ee" />
 
 
