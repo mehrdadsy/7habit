@@ -18,6 +18,7 @@
             android:layout_height="0dp"
             android:layout_weight="0.2"
             android:text="@string/days2"
+            android:textSize="@dimen/normal_font_size"
             android:textAlignment="center" />
 
         <LinearLayout
@@ -30,13 +31,13 @@
             android:orientation="vertical">
 
             <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="@dimen/image21"
+                android:layout_height="@dimen/image21"
                 android:layout_gravity="center"
                 android:layout_margin="10dp"
                 android:src="@drawable/idea" />
 
-            <TextView
+            <com.uncopt.android.widget.text.justify.JustifiedEditText
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
@@ -53,8 +54,8 @@
             android:orientation="vertical">
 
             <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="@dimen/image21"
+                android:layout_height="@dimen/image21"
                 android:layout_gravity="center"
 
                 android:src="@drawable/winner" />
@@ -64,6 +65,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_margin="10dp"
+                android:textSize="@dimen/normal_font_size"
                 android:text="@string/slide2_12" />
 
             <TextView
@@ -73,7 +75,7 @@
                 android:layout_margin="10dp"
                 android:text="@string/slide2_121"
                 android:textColor="@color/primary_light"
-                android:textSize="25sp" />
+                android:textSize="@dimen/large_font_size" />
 
         </LinearLayout>
 
@@ -86,16 +88,17 @@
             android:background="@drawable/d3_ee_white"
             android:orientation="vertical">
             <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="@dimen/image21"
+                android:layout_height="@dimen/image21"
                 android:layout_gravity="center"
                 android:layout_margin="10dp"
                 android:src="@drawable/amel_dec" />
 
-            <TextView
+            <com.uncopt.android.widget.text.justify.JustifiedTextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="10dp"
+                android:textSize="@dimen/normal_font_size"
                 android:text="@string/slide2_13"
                 android:textAlignment="center" />
 
@@ -111,17 +114,18 @@
             android:background="@drawable/d3_ee_white"
             android:orientation="vertical">
             <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="@dimen/image21"
+                android:layout_height="@dimen/image21"
                 android:layout_gravity="center"
                 android:layout_margin="10dp"
                 android:src="@drawable/answer" />
-            <TextView
+
+            <com.uncopt.android.widget.text.justify.JustifiedTextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center"
                 android:layout_marginBottom="10dp"
-                android:text="@string/slide2_14" />
+                android:text="@string/slide2_14"
+                android:textSize="@dimen/normal_font_size"/>
 
 
         </LinearLayout>

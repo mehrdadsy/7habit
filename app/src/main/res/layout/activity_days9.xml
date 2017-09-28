@@ -17,7 +17,8 @@
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="0.2"
-            android:text="@string/days1"
+            android:text="@string/days9"
+            android:textSize="@dimen/main_font_size"
             android:textAlignment="center" />
 
         <LinearLayout
@@ -33,22 +34,24 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
+                android:textSize="@dimen/large_font_size"
                 android:text="@string/slide28" />
+
             <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="@dimen/image21"
+                android:layout_height="@dimen/image21"
                 android:layout_gravity="center"
                 android:layout_margin="10dp"
                 android:src="@drawable/goal_in" />
 
-            <TextView
+            <com.uncopt.android.widget.text.justify.JustifiedTextView
                 android:id="@+id/slide28_1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_margin="10dp"
                 android:textColor="@color/accent"
-                android:textSize="20dp" />
+                android:textSize="@dimen/normal_font_size" />
 
         </LinearLayout>
 
@@ -64,21 +67,22 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
+                android:textSize="@dimen/normal_font_size"
                 android:text="@string/slide29" />
             <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="@dimen/image21"
+                android:layout_height="@dimen/image21"
                 android:layout_gravity="center"
                 android:layout_margin="10dp"
                 android:src="@drawable/canon" />
-            <TextView
+            <com.uncopt.android.widget.text.justify.JustifiedTextView
                 android:id="@+id/slide29_2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_margin="10dp"
                 android:textColor="@color/accent"
-                android:textSize="20dp" />
+                android:textSize="@dimen/normal_font_size" />
 
         </LinearLayout>
         <LinearLayout
@@ -90,17 +94,18 @@
             android:background="@drawable/d3_ee_white"
             android:orientation="vertical">
             <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="@dimen/image21"
+                android:layout_height="@dimen/image21"
                 android:layout_gravity="center"
                 android:layout_margin="10dp"
                 android:src="@drawable/conveyor" />
 
-            <TextView
+            <com.uncopt.android.widget.text.justify.JustifiedTextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="15dp"
                 android:id="@+id/slide30"
+                android:textSize="@dimen/normal_font_size"
                 android:textColor="@color/accent"
                 android:layout_gravity="right"
                 />
@@ -119,17 +124,17 @@
             android:background="@drawable/d3_ee_white"
             android:orientation="vertical">
 
-            <TextView
+            <com.uncopt.android.widget.text.justify.JustifiedTextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_margin="10dp"
                 android:text="@string/day9_tr"
-                android:textSize="15sp" />
+                android:textSize="@dimen/normal_font_size" />
 
             <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="@dimen/image21"
+                android:layout_height="@dimen/image21"
                 android:layout_gravity="center"
                 android:layout_marginBottom="10dp"
                 android:src="@drawable/flag" />

@@ -22,8 +22,7 @@
          <TextView
              android:layout_width="wrap_content"
              android:layout_height="wrap_content"
-             android:textSize="20dp"
-             android:layout_margin="10dp"
+             android:textSize="@dimen/normal_font_size"             android:layout_margin="10dp"
              android:text="@string/habit"/>
 
      </LinearLayout>
@@ -111,7 +110,7 @@
            android:layout_height="wrap_content"
            android:id="@+id/habitb3"
            android:backgroundTint="@color/accent"
-           android:hint="@string/goodhabit"/>
+           android:hint="@string/badhabit"/>
        <EditText
            android:layout_width="match_parent"
            android:layout_height="wrap_content"
@@ -128,15 +127,15 @@
        android:layout_margin="10dp"
         android:background="@drawable/d3_ee_white">
         <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="@dimen/image21"
+            android:layout_height="@dimen/image21"
             android:layout_gravity="center"
             android:src="@drawable/lecture"
-            android:layout_marginTop="10dp"/>
-     <TextView
+            android:layout_margin="10dp"/>
+     <com.uncopt.android.widget.text.justify.JustifiedTextView
          android:layout_width="wrap_content"
          android:layout_height="wrap_content"
-         android:textSize="20dp"
+         android:textSize="@dimen/normal_font_size"
          android:text="@string/me"/>
         <EditText
             android:layout_width="match_parent"

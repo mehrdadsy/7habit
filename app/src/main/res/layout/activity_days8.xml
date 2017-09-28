@@ -13,11 +13,12 @@
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
-        <TextView
+        <com.uncopt.android.widget.text.justify.JustifiedTextView
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="0.2"
-            android:text="@string/days1"
+            android:textSize="@dimen/main_font_size"
+            android:text="@string/days8"
             android:textAlignment="center" />
 
         <LinearLayout
@@ -29,25 +30,26 @@
             android:background="@drawable/d3_ee_white"
             android:orientation="vertical">
 
-            <TextView
+            <com.uncopt.android.widget.text.justify.JustifiedTextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
+                android:textSize="@dimen/large_font_size"
                 android:text="@string/slide26_1" />
             <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="@dimen/image21"
+                android:layout_height="@dimen/image21"
                 android:layout_gravity="center"
                 android:layout_marginBottom="10dp"
                 android:src="@drawable/brainstorming" />
-            <TextView
+            <com.uncopt.android.widget.text.justify.JustifiedTextView
                 android:id="@+id/slide26_1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_margin="10dp"
                 android:textColor="@color/accent"
-                android:textSize="20dp" />
+                android:textSize="@dimen/normal_font_size" />
 
         </LinearLayout>
 
@@ -63,9 +65,10 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
+                android:textSize="@dimen/normal_font_size"
                 android:text="@string/slide26_2" />
 
-            <TextView
+            <com.uncopt.android.widget.text.justify.JustifiedTextView
                 android:id="@+id/slide26_2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -86,7 +89,7 @@
             android:background="@drawable/d3_ee_white"
             android:orientation="vertical">
 
-            <TextView
+            <com.uncopt.android.widget.text.justify.JustifiedTextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
@@ -95,19 +98,19 @@
                 android:textSize="15sp" />
 
             <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="@dimen/image21"
+                android:layout_height="@dimen/image21"
                 android:layout_gravity="center"
                 android:layout_marginBottom="10dp"
                 android:src="@drawable/desert" />
-            <TextView
+            <com.uncopt.android.widget.text.justify.JustifiedTextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_margin="10dp"
               android:id="@+id/dream_sozan"
                 android:text="diroizi"
-                android:textSize="15sp" />
+                android:textSize="@dimen/normal_font_size"/>
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
