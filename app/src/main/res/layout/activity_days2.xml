@@ -37,7 +37,7 @@
                 android:layout_margin="10dp"
                 android:src="@drawable/idea" />
 
-            <com.uncopt.android.widget.text.justify.JustifiedEditText
+            <com.uncopt.android.widget.text.justify.JustifiedTextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
@@ -60,7 +60,7 @@
 
                 android:src="@drawable/winner" />
 
-            <TextView
+            <com.uncopt.android.widget.text.justify.JustifiedTextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
@@ -139,7 +139,7 @@
             android:background="@drawable/d3_ee_white"
             android:orientation="vertical">
 
-            <TextView
+            <com.uncopt.android.widget.text.justify.JustifiedTextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
@@ -163,7 +163,7 @@
             android:background="@drawable/d3_ee_white"
             android:orientation="vertical">
 
-            <TextView
+            <com.uncopt.android.widget.text.justify.JustifiedTextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"

@@ -17,7 +17,8 @@
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="0.2"
-            android:text="@string/days1"
+            android:text="@string/days17"
+            android:textSize="@dimen/main_font_size"
             android:textAlignment="center" />
 
 
@@ -36,15 +37,21 @@
                 android:layout_gravity="center"
                 android:layout_margin="10dp"
                 android:text="@string/slide64"
+                android:textSize="@dimen/large_font_size"
                 />
-            <TextView
+            <ImageView
+                android:layout_width="@dimen/image21"
+                android:layout_height="@dimen/image21"
+                android:layout_gravity="center"
+                android:src="@drawable/goal_17"/>
+            <com.uncopt.android.widget.text.justify.JustifiedTextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_margin="10dp"
                 android:id="@+id/slide64"
                 android:textColor="@color/accent"
-                android:textSize="20dp" />
+                android:textSize="@dimen/normal_font_size" />
 
 
         </LinearLayout>
@@ -62,24 +69,30 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_margin="10dp"
+                android:textSize="@dimen/large_font_size"
                 android:text="@string/slide65"
                 />
-            <TextView
+            <ImageView
+                android:layout_width="@dimen/image21"
+                android:layout_height="@dimen/image21"
+                android:layout_gravity="center"
+                android:src="@drawable/handshake"/>
+            <com.uncopt.android.widget.text.justify.JustifiedTextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_margin="10dp"
                 android:id="@+id/slide65_1"
                 android:textColor="@color/accent"
-                android:textSize="20dp" />
-            <TextView
+                android:textSize="@dimen/normal_font_size" />
+            <com.uncopt.android.widget.text.justify.JustifiedTextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_margin="10dp"
                 android:id="@+id/slide65_2"
                 android:textColor="@color/accent"
-                android:textSize="20dp" />
+                android:textSize="@dimen/normal_font_size" />
 
 
 
@@ -102,25 +115,24 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:src="@drawable/slide66_1"/>
-            <TextView
+            <com.uncopt.android.widget.text.justify.JustifiedTextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
                 android:text="@string/slide66_1"
                 android:textColor="@color/accent"
-                android:textSize="20dp"
-                />
+                android:textSize="@dimen/normal_font_size"                />
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:src="@drawable/slide66_2"/>
-            <TextView
+            <com.uncopt.android.widget.text.justify.JustifiedTextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
                 android:text="@string/slide66_2"
                 android:textColor="@color/accent"
-                android:textSize="20dp" />
+                android:textSize="@dimen/normal_font_size" />
 
 
         </LinearLayout>
@@ -133,26 +145,28 @@
             android:background="@drawable/d3_ee_white"
             android:orientation="vertical">
 
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:src="@drawable/drawer"/>
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_margin="10dp"
                 android:text="@string/slide67"
+                android:textSize="@dimen/large_font_size"
                 />
-            <TextView
+            <ImageView
+                android:layout_width="@dimen/image21"
+                android:layout_height="@dimen/image21"
+                android:layout_gravity="center"
+                android:src="@drawable/teamwork_1"/>
+            <com.uncopt.android.widget.text.justify.JustifiedTextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_margin="10dp"
                 android:id="@+id/slide67"
                 android:textColor="@color/accent"
-                android:textSize="20dp" />
+                android:textSize="@dimen/normal_font_size" />
 
 
         </LinearLayout>
@@ -167,19 +181,19 @@
             android:orientation="vertical">
 
             <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="@dimen/image21"
+                android:layout_height="@dimen/image21"
                 android:layout_gravity="center"
-                android:src="@drawable/drawer"/>
+                android:src="@drawable/teamwork_2"/>
 
-            <TextView
+            <com.uncopt.android.widget.text.justify.JustifiedTextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_margin="10dp"
                 android:id="@+id/slide68"
                 android:textColor="@color/accent"
-                android:textSize="20dp" />
+                android:textSize="@dimen/normal_font_size" />
 
 
         </LinearLayout>
@@ -201,11 +215,10 @@
                 android:textSize="15sp" />
 
             <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="@dimen/image21"
+                android:layout_height="@dimen/image21"
                 android:layout_gravity="center"
-                android:layout_marginBottom="10dp"
-                android:src="@drawable/drawer" />
+                android:src="@drawable/eunion"/>
 
             <EditText
                 android:layout_width="match_parent"
@@ -220,7 +233,8 @@
 
 
         <Button
-            android:id="@+id/go_tr"
+            android:id="@+id/finish"
+            android:text="@string/finish"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"

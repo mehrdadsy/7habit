@@ -17,7 +17,8 @@
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="0.2"
-            android:text="@string/days1"
+            android:text="@string/days16"
+            android:textSize="@dimen/main_font_size"
             android:textAlignment="center" />
 
         <LinearLayout
@@ -29,13 +30,13 @@
             android:background="@drawable/d3_ee_white"
             android:orientation="vertical">
 
-            <TextView
+            <com.uncopt.android.widget.text.justify.JustifiedTextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_margin="10dp"
                 android:text="@string/slide53"
-                android:textSize="20dp"
+                android:textSize="@dimen/normal_font_size"
                 android:textColor="@color/accent"/>
 
 
@@ -49,14 +50,23 @@
             android:background="@drawable/d3_ee_white"
             android:orientation="vertical">
 
-            <TextView
+            <com.uncopt.android.widget.text.justify.JustifiedTextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_margin="10dp"
                 android:text="@string/slide54"
+                android:textSize="@dimen/large_font_size"
                />
-            <TextView
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="@dimen/image21"
+                android:layout_height="@dimen/image21"
+                android:layout_gravity="center"
+                android:src="@drawable/conversation" />
+
+            <com.uncopt.android.widget.text.justify.JustifiedTextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
@@ -82,15 +92,21 @@
                 android:layout_gravity="center"
                 android:layout_margin="10dp"
                 android:text="@string/slide55"
+                android:textSize="@dimen/large_font_size"
                 />
-            <TextView
+            <ImageView
+                android:layout_width="@dimen/image21"
+                android:layout_height="@dimen/image21"
+                android:layout_gravity="center"
+                android:src="@drawable/trial"/>
+            <com.uncopt.android.widget.text.justify.JustifiedTextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_margin="10dp"
                 android:id="@+id/slide55"
                 android:textColor="@color/accent"
-                android:textSize="20dp" />
+                android:textSize="@dimen/normal_font_size" />
 
 
 
@@ -116,15 +132,16 @@
                 android:layout_gravity="center"
                 android:layout_margin="10dp"
                 android:text="@string/slide56"
+                android:textSize="@dimen/large_font_size"
                 />
-            <TextView
+            <com.uncopt.android.widget.text.justify.JustifiedTextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_margin="10dp"
                 android:id="@+id/slide56"
                 android:textColor="@color/accent"
-                android:textSize="20dp" />
+                android:textSize="@dimen/normal_font_size" />
 
 
         </LinearLayout>
@@ -138,25 +155,26 @@
             android:orientation="vertical">
 
            <ImageView
-               android:layout_width="wrap_content"
-               android:layout_height="wrap_content"
+               android:layout_width="@dimen/image21"
+               android:layout_height="@dimen/image21"
                android:layout_gravity="center"
-               android:src="@drawable/drawer"/>
+               android:src="@drawable/people"/>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_margin="10dp"
                 android:text="@string/slide57"
+                android:textSize="@dimen/large_font_size"
                 />
-            <TextView
+            <com.uncopt.android.widget.text.justify.JustifiedTextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_margin="10dp"
                 android:id="@+id/slide57"
                 android:textColor="@color/accent"
-                android:textSize="20dp" />
+                android:textSize="@dimen/normal_font_size" />
 
 
         </LinearLayout>
@@ -171,25 +189,26 @@
             android:orientation="vertical">
 
        <ImageView
-           android:layout_width="wrap_content"
-           android:layout_height="wrap_content"
+           android:layout_width="@dimen/image21"
+           android:layout_height="@dimen/image21"
            android:layout_gravity="center"
-           android:src="@drawable/drawer"/>
-       <TextView
+           android:src="@drawable/social"/>
+       <com.uncopt.android.widget.text.justify.JustifiedTextView
            android:layout_width="wrap_content"
            android:layout_height="wrap_content"
            android:layout_gravity="center"
            android:layout_margin="10dp"
+           android:textSize="@dimen/large_font_size"
            android:text="@string/slide58"
            />
-       <TextView
+       <com.uncopt.android.widget.text.justify.JustifiedTextView
            android:layout_width="wrap_content"
            android:layout_height="wrap_content"
            android:layout_gravity="center"
            android:layout_margin="10dp"
            android:id="@+id/slide58"
            android:textColor="@color/accent"
-           android:textSize="20dp" />
+           android:textSize="@dimen/normal_font_size" />
 
 
         </LinearLayout>
@@ -209,15 +228,16 @@
            android:layout_gravity="center"
            android:layout_margin="10dp"
            android:text="@string/slide59"
+           android:textSize="@dimen/large_font_size"
            />
-       <TextView
+       <com.uncopt.android.widget.text.justify.JustifiedTextView
            android:layout_width="wrap_content"
            android:layout_height="wrap_content"
            android:layout_gravity="center"
            android:layout_margin="10dp"
            android:id="@+id/slide59"
            android:textColor="@color/accent"
-           android:textSize="20dp" />
+           android:textSize="@dimen/normal_font_size" />
 
 
 
@@ -233,25 +253,26 @@
             android:orientation="vertical">
 
        <ImageView
-           android:layout_width="wrap_content"
-           android:layout_height="wrap_content"
+           android:layout_width="@dimen/image21"
+           android:layout_height="@dimen/image21"
            android:layout_gravity="center"
-           android:src="@drawable/drawer"/>
+           android:src="@drawable/paint"/>
        <TextView
            android:layout_width="wrap_content"
            android:layout_height="wrap_content"
            android:layout_gravity="center"
            android:layout_margin="10dp"
+           android:textSize="@dimen/large_font_size"
            android:text="@string/slide60"
            />
-       <TextView
+       <com.uncopt.android.widget.text.justify.JustifiedTextView
            android:layout_width="wrap_content"
            android:layout_height="wrap_content"
            android:layout_gravity="center"
            android:layout_margin="10dp"
            android:id="@+id/slide60"
            android:textColor="@color/accent"
-           android:textSize="20dp" />
+           android:textSize="@dimen/normal_font_size" />
 
 
 
@@ -269,25 +290,26 @@
             android:orientation="vertical">
 
        <ImageView
-           android:layout_width="wrap_content"
-           android:layout_height="wrap_content"
+           android:layout_width="@dimen/image21"
+           android:layout_height="@dimen/image21"
            android:layout_gravity="center"
-           android:src="@drawable/drawer"/>
+           android:src="@drawable/mountain"/>
        <TextView
            android:layout_width="wrap_content"
            android:layout_height="wrap_content"
            android:layout_gravity="center"
            android:layout_margin="10dp"
+           android:textSize="@dimen/large_font_size"
            android:text="@string/slide61"
            />
-       <TextView
+       <com.uncopt.android.widget.text.justify.JustifiedTextView
            android:layout_width="wrap_content"
            android:layout_height="wrap_content"
            android:layout_gravity="center"
            android:layout_margin="10dp"
            android:id="@+id/slide61"
            android:textColor="@color/accent"
-           android:textSize="20dp" />
+           android:textSize="@dimen/normal_font_size" />
 
 
 
@@ -303,25 +325,26 @@
             android:orientation="vertical">
 
        <ImageView
-           android:layout_width="wrap_content"
-           android:layout_height="wrap_content"
+           android:layout_width="@dimen/image21"
+           android:layout_height="@dimen/image21"
            android:layout_gravity="center"
-           android:src="@drawable/drawer"/>
+           android:src="@drawable/calendar_l"/>
        <TextView
            android:layout_width="wrap_content"
            android:layout_height="wrap_content"
            android:layout_gravity="center"
            android:layout_margin="10dp"
+           android:textSize="@dimen/large_font_size"
            android:text="@string/slide62"
            />
-       <TextView
+       <com.uncopt.android.widget.text.justify.JustifiedTextView
            android:layout_width="wrap_content"
            android:layout_height="wrap_content"
            android:layout_gravity="center"
            android:layout_margin="10dp"
            android:id="@+id/slide62"
            android:textColor="@color/accent"
-           android:textSize="20dp" />
+           android:textSize="@dimen/normal_font_size" />
 
 
 
@@ -335,19 +358,19 @@
             android:orientation="vertical">
 
        <ImageView
-           android:layout_width="wrap_content"
-           android:layout_height="wrap_content"
+           android:layout_width="@dimen/image21"
+           android:layout_height="@dimen/image21"
            android:layout_gravity="center"
-           android:src="@drawable/drawer"/>
+           android:src="@drawable/dislike"/>
 
-       <TextView
+       <com.uncopt.android.widget.text.justify.JustifiedTextView
            android:layout_width="wrap_content"
            android:layout_height="wrap_content"
            android:layout_gravity="center"
            android:layout_margin="10dp"
            android:id="@+id/slide63"
            android:textColor="@color/accent"
-           android:textSize="20dp" />
+           android:textSize="@dimen/normal_font_size" />
 
 
 
@@ -361,7 +384,7 @@
             android:background="@drawable/d3_ee_white"
             android:orientation="vertical">
 
-            <TextView
+            <com.uncopt.android.widget.text.justify.JustifiedTextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
@@ -379,7 +402,8 @@
 
         </LinearLayout>
         <Button
-            android:id="@+id/go_tr"
+            android:id="@+id/finish"
+            android:text="@string/finish"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
