@@ -58,4 +58,5 @@ dependencies {
     compile 'com.github.roojin:persian-calendar-view:1.2.1'
     compile 'com.github.faruktoptas:FancyShowCaseView:0.1.7'
     compile 'com.uncopt:android.justified:1.0'
+    compile 'uk.co.chrisjenx:calligraphy:2.1.0'
 }

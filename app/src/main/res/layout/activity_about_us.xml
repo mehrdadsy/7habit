@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+android:background="@drawable/d3_ee_white"
+    tools:context=".AboutUsActivity">
+    <TextView
+        android:layout_marginTop="5dp"
+        android:id="@+id/about_us_tittle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="درباره ما"
+        android:gravity="center"
+
+        android:textSize="@dimen/large_font_size"
+        />
+    <ImageView
+        android:layout_width="@dimen/image21"
+        android:layout_height="@dimen/image21"
+        android:layout_gravity="center"
+        android:layout_margin="10dp"
+        android:src="@drawable/maps"/>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:background="@drawable/d3_ee_white"
+        android:layout_below="@+id/about_us_tittle">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <com.uncopt.android.widget.text.justify.JustifiedTextView
+                android:id="@+id/about_us_description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/small_font_size"
+                android:layout_margin="25dp"
+
+                android:text="@string/about_us_content"/>
+        </LinearLayout>
+    </ScrollView>
+
+
+</LinearLayout>
