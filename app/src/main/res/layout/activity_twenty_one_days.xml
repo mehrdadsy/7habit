@@ -13,7 +13,13 @@
         android:layout_height="40dp"
         android:background="@color/primary">
 
-        <ImageView
+       <RelativeLayout
+           android:layout_width="match_parent"
+           android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+           <ImageView
             android:id="@+id/add_21"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -24,8 +30,15 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:src="@drawable/restart" />
-
-
+        </LinearLayout>
+           <ImageView
+               android:layout_width="40dp"
+               android:layout_height="40dp"
+               android:src="@drawable/networking"
+               android:layout_alignParentRight="true"
+               android:layout_marginRight="10dp"
+               android:id="@+id/share"/>
+       </RelativeLayout>
     </android.support.v7.widget.Toolbar>
 <RelativeLayout
     android:layout_width="match_parent"
@@ -119,10 +132,10 @@
 
             <ImageView
                 android:id="@+id/level21"
-
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@drawable/professor" />
+                android:layout_width="@dimen/level"
+                android:layout_height="@dimen/level"
+                android:layout_gravity="center"
+                android:src="@drawable/emp" />
         </LinearLayout>
     </LinearLayout>
 

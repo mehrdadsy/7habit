@@ -4,19 +4,32 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:gravity="center"
+
     android:orientation="vertical"
+    android:background="#ffffff"
     tools:context="ir.mehrdadseyfi.a7habit.TwentyOneDays.MainStart21DayActivity">
 <ImageView
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
+    android:layout_gravity="center_horizontal"
     android:src="@drawable/ic_launcher"/>
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/txt"/>
+        android:id="@+id/txt"
+        android:layout_margin="20dp"
+        android:layout_gravity="center_horizontal"/>
+    <com.uncopt.android.widget.text.justify.JustifiedTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/txt1"
+        android:layout_margin="20dp"
+        android:layout_gravity="right"/>
     <Button
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
+        android:text="@string/start_tr"
+        android:layout_gravity="center"
+        android:background="@drawable/d3_ee_white"
     android:id="@+id/start_21day"/>
 </LinearLayout>

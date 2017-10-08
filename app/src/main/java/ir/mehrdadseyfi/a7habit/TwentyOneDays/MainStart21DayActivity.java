@@ -34,6 +34,15 @@ public class MainStart21DayActivity extends AppCompatActivity {
 
         btnStart = (Button) findViewById(R.id.start_21day);
         textView = (TextView) findViewById(R.id.txt);
+        textView.setText("به نام خدا");
+        TextView textView1 = (TextView) findViewById(R.id.txt1);
+        textView1.setText("این مجموعه تمرین بر اساس کتاب پر فروش هفت عادت مردمان موفق تهیه شده است.این تمرین ها در کنار سه قسمت اصلی دیگر برنامه که شامل برنامه ریزی روزانه،مربع الویت بندی کارها،اهداف، به شما در راه موفقیت و پیشرفت کمک خواهد کرد." +
+                "دستور العمل های اجرا این تمرین ها به شرح ذیل است:" +
+                "هر تمرین مدت زمان یک روز از زمان اتمام تمرین قبلی باید فاصله زمانی داشته باشد." +
+                "لطفا به سوال ها موجود در برنامه با دقت پاسخ دهید." +
+                "این تمرین ها به مدت 21 روز به طول خواهد انجامید" +
+                "در صورت داشتن هر گونه سوال با تلگرام و یا ایمیل موسسه در ارتباط باشید" +
+                "برای شروع تمرین ها بروی دکمه زیر کلیک نمایید");
         btnStart.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

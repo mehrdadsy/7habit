@@ -59,7 +59,8 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_alignParentRight="true"
-                        android:gravity="center_vertical">
+                        android:gravity="center_vertical"
+                        android:weightSum="1">
 
                         <ImageView
                             android:id="@+id/help"
@@ -72,7 +73,8 @@
                             android:layout_width="40dp"
                             android:layout_height="40dp"
                             android:layout_margin="10dp"
-                            android:src="@drawable/bullet_list" />
+                            android:src="@drawable/bullet_list"
+                            android:layout_weight="3.57" />
                     </LinearLayout>
 
                 </RelativeLayout>

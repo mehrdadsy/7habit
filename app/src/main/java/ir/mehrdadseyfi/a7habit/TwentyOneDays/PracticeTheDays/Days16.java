@@ -9,15 +9,20 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.Calendar;
+import java.util.List;
 
 import ir.mehrdadseyfi.a7habit.Calender.CalenderActivity;
 import ir.mehrdadseyfi.a7habit.NOEmergencyNoEsstial.NOEsstianlEmergencyMyReceiver;
 import ir.mehrdadseyfi.a7habit.R;
 import ir.mehrdadseyfi.a7habit.SquareTasksActivity;
+import ir.mehrdadseyfi.a7habit.Vista.FGdatabase;
+import ir.mehrdadseyfi.a7habit.Vista.VistaActivity;
 
 public class Days16 extends AppCompatActivity {
+    List<FGdatabase> models;
     Context mContext=this;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -54,7 +59,10 @@ public class Days16 extends AppCompatActivity {
    findViewById(R.id.goCal).setOnClickListener(new View.OnClickListener() {
        @Override
        public void onClick(View v) {
-           startActivity(new Intent(Days16.this, CalenderActivity.class));
+
+
+              startActivity(new Intent(Days16.this, CalenderActivity.class));
+
        }
    });
         findViewById(R.id.finish).setOnClickListener(new View.OnClickListener() {

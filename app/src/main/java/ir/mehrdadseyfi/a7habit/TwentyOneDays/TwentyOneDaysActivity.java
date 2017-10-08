@@ -17,6 +17,7 @@ import android.widget.Toast;
 
 import java.util.Calendar;
 import java.util.Date;
+import java.util.List;
 
 import ir.mehrdadseyfi.a7habit.JalaliCalendar;
 import ir.mehrdadseyfi.a7habit.NOEmergencyNoEsstial.NOEsstianlEmergencyMyReceiver;
@@ -48,6 +49,7 @@ public class TwentyOneDaysActivity extends AppCompatActivity {
     ImageView level19;
     ImageView level20;
     ImageView level21;
+    ImageView share;
     long d;
     Intent intent;
 
@@ -78,6 +80,7 @@ public class TwentyOneDaysActivity extends AppCompatActivity {
         level19 = (ImageView) findViewById(R.id.level19);
         level20 = (ImageView) findViewById(R.id.level20);
         level21 = (ImageView) findViewById(R.id.level21);
+        share = (ImageView) findViewById(R.id.share);
 
 
         curlevel = PreferenceManager.getDefaultSharedPreferences(this).getInt("curlevel", 0);
@@ -101,7 +104,25 @@ public class TwentyOneDaysActivity extends AppCompatActivity {
             }
         });
         palylevel();
+        share.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+//                String PM="null";
+//                Intent sendIntent = new Intent();
+//                sendIntent.setAction(Intent.ACTION_SEND);
+//                sendIntent.putExtra(Intent.EXTRA_TEXT,PM);
+//                sendIntent.setType("text/plain");
+//                sendIntent.setPackage("org.telegram.messenger");
+//                try{
+//                    startActivity(sendIntent);
+//                }
+//                catch (android.content.ActivityNotFoundException ex){
+//                    Toast.makeText(getApplicationContext(),"Install Telegram",Toast.LENGTH_LONG).show();
+//                }
+                startActivity(new Intent(TwentyOneDaysActivity.this, PresentMeActivity.class));
 
+            }
+        });
 
     }
 
@@ -142,6 +163,9 @@ public class TwentyOneDaysActivity extends AppCompatActivity {
                         level18.setImageResource(R.drawable.emp);
                         level19.setImageResource(R.drawable.emp);
                         level20.setImageResource(R.drawable.emp);
+                        level21.setImageResource(R.drawable.emp);
+                        List<Days3DB> books = Days3DB.listAll(Days3DB.class);
+                        Days3DB.deleteAll(Days3DB.class);
 
 
                     }
@@ -755,7 +779,7 @@ public class TwentyOneDaysActivity extends AppCompatActivity {
                                
                                  
                                
-                             startActivity(new Intent(TwentyOneDaysActivity.this, Days2.class));
+                             startActivity(new Intent(TwentyOneDaysActivity.this, Days18.class));
                             } else {
                                 noTimePopup();
                             }
@@ -798,7 +822,7 @@ public class TwentyOneDaysActivity extends AppCompatActivity {
                                
                                  
                                
-                             startActivity(new Intent(TwentyOneDaysActivity.this, Days2.class));
+                             startActivity(new Intent(TwentyOneDaysActivity.this, Days19.class));
                             } else {
                                 noTimePopup();
                             }
@@ -842,7 +866,7 @@ public class TwentyOneDaysActivity extends AppCompatActivity {
                                
                                  
                                
-                             startActivity(new Intent(TwentyOneDaysActivity.this, Days2.class));
+                             startActivity(new Intent(TwentyOneDaysActivity.this, Days20.class));
                             } else {
                                 noTimePopup();
                             }
@@ -878,6 +902,7 @@ public class TwentyOneDaysActivity extends AppCompatActivity {
                 level19.setImageResource(R.drawable.prize);
 
                 level20.setImageResource(R.drawable.prize);
+                level21.setImageResource(R.drawable.point);
 
                 level21.setOnClickListener(new View.OnClickListener() {
                     @Override
@@ -887,7 +912,7 @@ public class TwentyOneDaysActivity extends AppCompatActivity {
                                
                                  
                                
-                             startActivity(new Intent(TwentyOneDaysActivity.this, Days2.class));
+                             startActivity(new Intent(TwentyOneDaysActivity.this, Days21.class));
                             } else {
                                 noTimePopup();
                             }
@@ -897,10 +922,35 @@ public class TwentyOneDaysActivity extends AppCompatActivity {
 
 
                 break;
+            case 22:
+                Toast.makeText(mContext, "END", Toast.LENGTH_SHORT).show();
 
-            default:
-                Toast.makeText(mContext, "f", Toast.LENGTH_SHORT).show();
+                level1.setImageResource(R.drawable.prize);
 
+                level2.setImageResource(R.drawable.prize);
+                level3.setImageResource(R.drawable.prize);
+                level4.setImageResource(R.drawable.prize);
+                level5.setImageResource(R.drawable.prize);
+                level6.setImageResource(R.drawable.prize);
+                level7.setImageResource(R.drawable.prize);
+                level8.setImageResource(R.drawable.prize);
+                level9.setImageResource(R.drawable.prize);
+                level10.setImageResource(R.drawable.prize);
+                level11.setImageResource(R.drawable.prize);
+                level12.setImageResource(R.drawable.prize);
+
+                level13.setImageResource(R.drawable.prize);
+
+                level14.setImageResource(R.drawable.prize);
+                level15.setImageResource(R.drawable.prize);
+                level16.setImageResource(R.drawable.prize);
+                level17.setImageResource(R.drawable.prize);
+                level18.setImageResource(R.drawable.prize);
+
+                level19.setImageResource(R.drawable.prize);
+
+                level20.setImageResource(R.drawable.prize);
+                level21.setImageResource(R.drawable.prize);
 
         }
     }

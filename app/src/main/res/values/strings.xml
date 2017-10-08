@@ -6,8 +6,31 @@
     <string name="habit_main">عادات بد</string>
     <string name="edit_dream">رویا خود را ویرایش کنید</string>
     <string name="goal">هدف</string>
+    <string name="start_tr">شروع</string>
+    <string name="days18">مرحله (روز) هجدهم</string>
+    <string name="days19">مرحله (روز) نوزدهم</string>
+    <string name="days21">مرحله (روز) بیست و یکم</string>
+  <string name="days20">مرحله (روز) بیستم</string>
+    <string name="page99_1">عادت هفتم</string>
+    <string name="page99_2">اره را تیز کنید</string>
+    <string name="one_part">بعد اول: فیزیکی
+    شامل ورزش ،تغذیه،مدیریت استرس</string>
+
+   <string name="two_part">بعد دوم: اجتماعی/عاطفی
+    شامل خدمات،همدلی،هم کوشی</string>
+
+   <string name="three_part">بعد سوم: ذهنی
+    شامل مطالعه،تصویر سازی،برنامه ریزی،نوشتن</string>
+
+   <string name="four_part">بعد چهارم:روحی
+    شامل مطالعه،تعهد،شفاف سازی،ارزشها</string>
+
     <string name="finish">پایان این مرحله</string>
     <string name="about_me">من ....</string>
+    <string name="days18_tr3">در صورتی که یک روز کامل را در مربع اول صرف نکنید،کدام مربع را در اولویت دوم قرار می دهید؟چرا؟</string>
+    <string name="days18_tr1">تک تک کار هایی که هفته گذشته کرده اید را بر اساس فوریت دسته بندی کنید.چه میزان زمان برای هر مربع صرف کرده اید؟</string>
+    <string name="days18_tr2">بیشترین وقت و تلاش خود را به کدام ربع اختصاص داده اید؟</string>
+    <string name="days20_tr">متعهد شوید که هر هفته تمرین تیز کردن اره در هر چهار بعد را انجام دهید.عملکرد خود را هر هفته ارزیابی کنید</string>
     <string name="go_tr">رفتن به تمرین های این روز</string>
     <string name="days17_tr">لیستی از تفویض اختیار ناظراند خود در تمامی نقش هایتان فراهم کنید و نحوه تفویض اختیار را مشخص کنید</string>
     <string name="ekhtiyar">من تفویض اختیار می کنم....</string>

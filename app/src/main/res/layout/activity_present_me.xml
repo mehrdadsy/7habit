@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="ir.mehrdadseyfi.a7habit.TwentyOneDays.PresentMeActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+        <ImageView
+            android:layout_width="@dimen/image21"
+            android:layout_height="@dimen/image21"
+            android:layout_gravity="end"
+            android:layout_margin="15dp"
+            android:src="@drawable/man"
+            android:layout_alignParentRight="true"
+            />
+      <ImageView
+            android:layout_width="@dimen/image21"
+            android:layout_height="@dimen/image21"
+            android:layout_gravity="end"
+            android:layout_margin="15dp"
+            android:src="@drawable/stamp"
+
+            />
+
+
+</RelativeLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_margin="10dp"
+        android:gravity="right"
+        android:background="@drawable/d3_ee">
+        <com.uncopt.android.widget.text.justify.JustifiedTextView
+            android:id="@+id/days1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_margin="10dp"
+        android:gravity="right"
+        android:background="@drawable/d3_ee">
+        <com.uncopt.android.widget.text.justify.JustifiedTextView
+            android:id="@+id/days2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp" />
+    </LinearLayout>
+        <ListView
+            android:id="@+id/days3_4"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            ></ListView>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_margin="10dp"
+        android:gravity="right"
+        android:background="@drawable/d3_ee">
+        <com.uncopt.android.widget.text.justify.JustifiedTextView
+            android:id="@+id/days5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_margin="10dp"
+        android:gravity="right"
+        android:background="@drawable/d3_ee">
+        <com.uncopt.android.widget.text.justify.JustifiedTextView
+            android:id="@+id/days6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_margin="10dp"
+        android:gravity="right"
+        android:background="@drawable/d3_ee">
+        <com.uncopt.android.widget.text.justify.JustifiedTextView
+            android:id="@+id/days7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_margin="10dp"
+        android:gravity="right"
+        android:background="@drawable/d3_ee">
+        <com.uncopt.android.widget.text.justify.JustifiedTextView
+            android:id="@+id/days8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_margin="10dp"
+        android:gravity="right"
+        android:background="@drawable/d3_ee">
+        <com.uncopt.android.widget.text.justify.JustifiedTextView
+            android:id="@+id/days9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_margin="10dp"
+        android:gravity="right"
+        android:background="@drawable/d3_ee">
+        <com.uncopt.android.widget.text.justify.JustifiedTextView
+            android:id="@+id/days10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_margin="10dp"
+        android:gravity="right"
+        android:background="@drawable/d3_ee">
+        <com.uncopt.android.widget.text.justify.JustifiedTextView
+            android:id="@+id/days11"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_margin="10dp"
+        android:gravity="right"
+        android:background="@drawable/d3_ee">
+        <com.uncopt.android.widget.text.justify.JustifiedTextView
+            android:id="@+id/days12"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_margin="10dp"
+        android:gravity="right"
+        android:background="@drawable/d3_ee">
+        <com.uncopt.android.widget.text.justify.JustifiedTextView
+            android:id="@+id/days13"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp" />
+    </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>
