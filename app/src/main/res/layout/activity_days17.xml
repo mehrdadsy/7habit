@@ -224,6 +224,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="11dp"
+                android:id="@+id/days17"
                 android:layout_marginRight="10dp"
                 android:hint="@string/ekhtiyar"
                 android:inputType="textMultiLine" />

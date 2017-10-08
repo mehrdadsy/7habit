@@ -89,6 +89,7 @@ public class PresentMeActivity extends AppCompatActivity {
                 + "\n" + PreferenceManager.getDefaultSharedPreferences(this).getString("job", ""));
         days13.setText(PreferenceManager.getDefaultSharedPreferences(this).getString("leader", "")
                 + "\n" + PreferenceManager.getDefaultSharedPreferences(this).getString("manage", ""));
+        days17.setText(PreferenceManager.getDefaultSharedPreferences(this).getString("manage", ""));
 
     }
 }

@@ -8,6 +8,7 @@ import android.preference.PreferenceManager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.EditText;
 import android.widget.TextView;
 
 import java.util.Calendar;
@@ -17,6 +18,7 @@ import ir.mehrdadseyfi.a7habit.R;
 
 public class Days17 extends AppCompatActivity {
     Context mContext=this;
+    EditText day17;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -29,6 +31,7 @@ public class Days17 extends AppCompatActivity {
                 " به راندمان می اندیشیم واگر به دیگری تفویض اختیار کنیم به تأثیر گذاری و نفوذ فکر می کنیم.\n");
         txt2.setText("تفویض اختیار مؤثر نیرومندترین اهرم در پیشبرد کارها به شمار می آید.\n" +
                 "انتقال مسئولیت به افراد ماهر و آموزش دیده به شما امکان می دهد که نیروی خود را به کارهای مهمتر اختصاص دهید.\n");
+day17=(EditText)findViewById(R.id.days17);
 
         TextView txt3=(TextView)findViewById(R.id.slide67);
         txt3.setText("این نوع تفوض اختیار به جای روشها، نتایج را کانون توجه قرار می دهد." +
@@ -47,7 +50,7 @@ public class Days17 extends AppCompatActivity {
 
                 PreferenceManager.getDefaultSharedPreferences(mContext).edit().putInt("curlevel", PreferenceManager.getDefaultSharedPreferences(mContext).getInt("curlevel", 0) + 1).commit();
                 PreferenceManager.getDefaultSharedPreferences(mContext).edit().putLong("t0", Calendar.getInstance().getTime().getTime()).commit();
-
+                giveData();
                 alarmManager(Calendar.getInstance().getTime().getTime() + 10000);
                 finish();
 
@@ -55,6 +58,11 @@ public class Days17 extends AppCompatActivity {
 
             }
         });
+    }
+    public void giveData() {
+
+        PreferenceManager.getDefaultSharedPreferences(mContext).edit().putString("manage", String.valueOf(day17.getText())).commit();
+
     }
     public void alarmManager(long d) {
 
