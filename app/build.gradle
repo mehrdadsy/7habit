@@ -59,4 +59,6 @@ dependencies {
     compile 'com.github.faruktoptas:FancyShowCaseView:0.1.7'
     compile 'com.uncopt:android.justified:1.0'
     compile 'uk.co.chrisjenx:calligraphy:2.1.0'
+    compile 'com.google.firebase:firebase-messaging:10.0.1'
 }
+apply plugin: 'com.google.gms.google-services'
