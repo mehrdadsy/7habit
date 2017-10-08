@@ -48,11 +48,7 @@
                             android:src="@drawable/telegram" />
 
 
-                        <ImageView
-                            android:id="@+id/cal"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:src="@drawable/cal" />
+
                     </LinearLayout>
 
                     <LinearLayout
@@ -129,36 +125,55 @@
             <LinearLayout
                 android:id="@+id/visat_layout"
                 android:layout_width="match_parent"
-                android:layout_height="0dp"
+                android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
-                android:layout_weight="1.5"
                 android:gravity="center">
-
-                <Button
-                    android:id="@+id/dream_ib"
+                <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginRight="@dimen/normal_font_size"
-                    android:background="@drawable/d3_ee_white_page"
-                    android:drawableTop="@drawable/dream"
-                    android:text="@string/dream" />
+                    android:orientation="vertical"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/d3_ee_white"
+                    >
+                <ImageView
+                    android:id="@+id/cal"
+                    android:src="@drawable/calendar_l"
+                    android:layout_width="@dimen/image21"
+                    android:layout_height="@dimen/image21"
 
-                <Button
-                    android:id="@+id/role_ib"
+
+                     />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/cal"
+                        android:layout_gravity="center"
+                        />
+                </LinearLayout>
+
+
+                <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginRight="20dp"
-                    android:background="@drawable/d3_ee_white_page"
-                    android:drawableTop="@drawable/role"
-                    android:text="@string/role" />
+                    android:orientation="vertical"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/d3_ee_white"
+                    >
+                    <ImageView
+                        android:id="@+id/vista"
+                        android:src="@drawable/goal_17"
+                        android:layout_width="@dimen/image21"
+                        android:layout_height="@dimen/image21"
 
-                <Button
-                    android:id="@+id/goal_ib"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/d3_ee_white_page"
-                    android:drawableTop="@drawable/goal"
-                    android:text="@string/goal" />
+
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/goal"
+                        android:layout_gravity="center"
+                        />
+                </LinearLayout>
 
 
             </LinearLayout>
