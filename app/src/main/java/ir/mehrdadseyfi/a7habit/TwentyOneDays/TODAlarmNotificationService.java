@@ -35,7 +35,7 @@ public class TODAlarmNotificationService extends IntentService {
     private void sendNotification(String msg) {
 
 
-        Intent intent = new Intent(this, EmergencyNOEssntialShowEditActivity.class);
+        Intent intent = new Intent(this, TwentyOneDaysActivity.class);
 
         intent.putExtra("key" , "value") ;
 

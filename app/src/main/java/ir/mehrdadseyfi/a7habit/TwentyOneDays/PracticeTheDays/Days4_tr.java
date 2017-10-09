@@ -21,6 +21,7 @@ import java.util.List;
 
 import ir.mehrdadseyfi.a7habit.NOEmergencyNoEsstial.NOEsstianlEmergencyMyReceiver;
 import ir.mehrdadseyfi.a7habit.R;
+import ir.mehrdadseyfi.a7habit.TwentyOneDays.TODMyReceiver;
 
 public class Days4_tr extends AppCompatActivity {
     Days3DB days3DB;
@@ -153,7 +154,7 @@ public class Days4_tr extends AppCompatActivity {
 
 
         if (d > 0) {
-            Intent intent = new Intent(Days4_tr.this, NOEsstianlEmergencyMyReceiver.class);
+            Intent intent = new Intent(Days4_tr.this, TODMyReceiver.class);
             PendingIntent pi = PendingIntent.getBroadcast(Days4_tr.this, 1, intent, 0);
             am.set(AlarmManager.RTC_WAKEUP, d, pi);
         }

@@ -23,7 +23,7 @@ public class VistaActivity extends AppCompatActivity {
     TabLayout tabLayout;
     Toolbar tool;
     ImageView add;
-    ImageView help;
+
     Animation animation;
     Animation animationHelp;
     Fragment fragment;
@@ -36,12 +36,12 @@ public class VistaActivity extends AppCompatActivity {
 
         fragment = new FeragmentDream();
         add = (ImageView) findViewById(R.id.add);
-        help = (ImageView) findViewById(R.id.help);
+
         //TESTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
         animation = AnimationUtils.loadAnimation(VistaActivity.this, R.anim.rotate_clockwise);
         animationHelp = AnimationUtils.loadAnimation(VistaActivity.this, R.anim.blink);
         add.startAnimation(animation);
-        help.startAnimation(animationHelp);
+
         fmShow();
         add.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -94,7 +94,7 @@ public class VistaActivity extends AppCompatActivity {
                         tabLayout.setBackgroundColor(getResources().getColor(R.color.dream));
                         tabLayout.setSelectedTabIndicatorColor(getResources().getColor(R.color.role));
                         add.startAnimation(animation);
-                        help.startAnimation(animationHelp);
+
                         tool.setBackgroundColor(getResources().getColor(R.color.dream));
                         fragment = new FeragmentDream();
                         break;
@@ -103,7 +103,7 @@ public class VistaActivity extends AppCompatActivity {
                         tool.setBackgroundColor(getResources().getColor(R.color.role));
                         tabLayout.setSelectedTabIndicatorColor(getResources().getColor(R.color.goal));
                         add.startAnimation(animation);
-                        help.startAnimation(animationHelp);
+
                         fragment = new FeragmentRole();
                         break;
                     case 2:
@@ -111,7 +111,7 @@ public class VistaActivity extends AppCompatActivity {
                         tabLayout.setSelectedTabIndicatorColor(getResources().getColor(R.color.dream));
                         tool.setBackgroundColor(getResources().getColor(R.color.goal));
                         add.startAnimation(animation);
-                        help.startAnimation(animationHelp);
+
                         fragment = new FeragmentGoal();
                         break;
                 }

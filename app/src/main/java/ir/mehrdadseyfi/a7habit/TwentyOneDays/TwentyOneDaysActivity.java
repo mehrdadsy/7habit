@@ -6,14 +6,19 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
 import android.preference.PreferenceManager;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.Toast;
+
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 import java.util.Calendar;
 import java.util.Date;
@@ -24,6 +29,9 @@ import ir.mehrdadseyfi.a7habit.NOEmergencyNoEsstial.NOEsstianlEmergencyMyReceive
 import ir.mehrdadseyfi.a7habit.NOEsstianlEmergency.NOEsstianlEmergencyActivity;
 import ir.mehrdadseyfi.a7habit.R;
 import ir.mehrdadseyfi.a7habit.TwentyOneDays.PracticeTheDays.*;
+import ir.mehrdadseyfi.a7habit.action.AndroidWebServer;
+import ir.mehrdadseyfi.a7habit.action.ScormPlayerActivity;
+import ir.mehrdadseyfi.a7habit.action.SplashScreen;
 
 public class TwentyOneDaysActivity extends AppCompatActivity {
     Context mContext = this;
@@ -52,6 +60,7 @@ public class TwentyOneDaysActivity extends AppCompatActivity {
     ImageView share;
     long d;
     Intent intent;
+    Button add_21;
 
     long dayMil = 6 * 1000;
 
@@ -84,11 +93,12 @@ public class TwentyOneDaysActivity extends AppCompatActivity {
 
 
         curlevel = PreferenceManager.getDefaultSharedPreferences(this).getInt("curlevel", 0);
+
         //anim
         Animation animationHelp = AnimationUtils.loadAnimation(TwentyOneDaysActivity.this, R.anim.shake);
 
         //add 21 days
-        ImageView add_21 = (ImageView) findViewById(R.id.add_21);
+         add_21 = (Button) findViewById(R.id.add_21);
         add_21.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -107,18 +117,7 @@ public class TwentyOneDaysActivity extends AppCompatActivity {
         share.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-//                String PM="null";
-//                Intent sendIntent = new Intent();
-//                sendIntent.setAction(Intent.ACTION_SEND);
-//                sendIntent.putExtra(Intent.EXTRA_TEXT,PM);
-//                sendIntent.setType("text/plain");
-//                sendIntent.setPackage("org.telegram.messenger");
-//                try{
-//                    startActivity(sendIntent);
-//                }
-//                catch (android.content.ActivityNotFoundException ex){
-//                    Toast.makeText(getApplicationContext(),"Install Telegram",Toast.LENGTH_LONG).show();
-//                }
+//
                 startActivity(new Intent(TwentyOneDaysActivity.this, PresentMeActivity.class));
 
             }
@@ -166,6 +165,7 @@ public class TwentyOneDaysActivity extends AppCompatActivity {
                         level21.setImageResource(R.drawable.emp);
                         List<Days3DB> books = Days3DB.listAll(Days3DB.class);
                         Days3DB.deleteAll(Days3DB.class);
+                        add_21.setVisibility(View.VISIBLE);
 
 
                     }
@@ -219,10 +219,12 @@ public class TwentyOneDaysActivity extends AppCompatActivity {
     }
 
 
+
     public void palylevel() {
         switch (curlevel) {
-            case 1:
 
+            case 1:
+                add_21.setVisibility(View.GONE);
                 level1 = (ImageView) findViewById(R.id.level1);
                 level1.setImageResource(R.drawable.point);
 
@@ -240,7 +242,7 @@ public class TwentyOneDaysActivity extends AppCompatActivity {
                 break;
             case 2:
 
-
+                add_21.setVisibility(View.GONE);
                 level1.setImageResource(R.drawable.prize);
                 level2.setImageResource(R.drawable.point);
 
@@ -263,7 +265,7 @@ public class TwentyOneDaysActivity extends AppCompatActivity {
 
                 break;
     case 3:
-
+        add_21.setVisibility(View.GONE);
         level1.setImageResource(R.drawable.prize);
 
                 level2.setImageResource(R.drawable.prize);
@@ -288,7 +290,7 @@ public class TwentyOneDaysActivity extends AppCompatActivity {
 
                 break;
     case 4:
-
+        add_21.setVisibility(View.GONE);
         level1.setImageResource(R.drawable.prize);
 
         level2.setImageResource(R.drawable.prize);
@@ -314,7 +316,7 @@ public class TwentyOneDaysActivity extends AppCompatActivity {
 
                 break;
     case 5:
-
+        add_21.setVisibility(View.GONE);
         level1.setImageResource(R.drawable.prize);
 
         level2.setImageResource(R.drawable.prize);
@@ -341,7 +343,7 @@ public class TwentyOneDaysActivity extends AppCompatActivity {
 
                 break;
     case 6:
-
+        add_21.setVisibility(View.GONE);
         level1.setImageResource(R.drawable.prize);
 
         level2.setImageResource(R.drawable.prize);
@@ -369,7 +371,7 @@ public class TwentyOneDaysActivity extends AppCompatActivity {
 
                 break;
     case 7:
-
+        add_21.setVisibility(View.GONE);
         level1.setImageResource(R.drawable.prize);
 
         level2.setImageResource(R.drawable.prize);
@@ -398,7 +400,7 @@ public class TwentyOneDaysActivity extends AppCompatActivity {
 
                 break;
     case 8:
-
+        add_21.setVisibility(View.GONE);
         level1.setImageResource(R.drawable.prize);
 
         level2.setImageResource(R.drawable.prize);
@@ -428,7 +430,7 @@ public class TwentyOneDaysActivity extends AppCompatActivity {
 
                 break;
     case 9:
-
+        add_21.setVisibility(View.GONE);
         level1.setImageResource(R.drawable.prize);
 
         level2.setImageResource(R.drawable.prize);
@@ -459,7 +461,7 @@ public class TwentyOneDaysActivity extends AppCompatActivity {
 
                 break;
     case 10:
-
+        add_21.setVisibility(View.GONE);
         level1.setImageResource(R.drawable.prize);
 
         level2.setImageResource(R.drawable.prize);
@@ -491,7 +493,7 @@ public class TwentyOneDaysActivity extends AppCompatActivity {
 
                 break;
     case 11:
-
+        add_21.setVisibility(View.GONE);
         level1.setImageResource(R.drawable.prize);
 
         level2.setImageResource(R.drawable.prize);
@@ -524,7 +526,7 @@ public class TwentyOneDaysActivity extends AppCompatActivity {
 
                 break;
     case 12:
-
+        add_21.setVisibility(View.GONE);
         level1.setImageResource(R.drawable.prize);
 
         level2.setImageResource(R.drawable.prize);
@@ -558,7 +560,7 @@ public class TwentyOneDaysActivity extends AppCompatActivity {
 
                 break;
     case 13:
-
+        add_21.setVisibility(View.GONE);
         level1.setImageResource(R.drawable.prize);
 
         level2.setImageResource(R.drawable.prize);
@@ -594,7 +596,7 @@ public class TwentyOneDaysActivity extends AppCompatActivity {
                 break;
     case 14:
         level1.setImageResource(R.drawable.prize);
-
+        add_21.setVisibility(View.GONE);
         level2.setImageResource(R.drawable.prize);
         level3.setImageResource(R.drawable.prize);
         level4.setImageResource(R.drawable.prize);
@@ -630,7 +632,7 @@ public class TwentyOneDaysActivity extends AppCompatActivity {
                 break;
     case 15:
         level1.setImageResource(R.drawable.prize);
-
+        add_21.setVisibility(View.GONE);
         level2.setImageResource(R.drawable.prize);
         level3.setImageResource(R.drawable.prize);
         level4.setImageResource(R.drawable.prize);
@@ -667,7 +669,7 @@ public class TwentyOneDaysActivity extends AppCompatActivity {
 
                 break;
     case 16:
-
+        add_21.setVisibility(View.GONE);
         level1.setImageResource(R.drawable.prize);
 
         level2.setImageResource(R.drawable.prize);
@@ -707,7 +709,7 @@ public class TwentyOneDaysActivity extends AppCompatActivity {
 
                 break;
     case 17:
-
+        add_21.setVisibility(View.GONE);
         level1.setImageResource(R.drawable.prize);
 
         level2.setImageResource(R.drawable.prize);
@@ -750,7 +752,7 @@ public class TwentyOneDaysActivity extends AppCompatActivity {
     case 18:
 
         level1.setImageResource(R.drawable.prize);
-
+        add_21.setVisibility(View.GONE);
         level2.setImageResource(R.drawable.prize);
         level3.setImageResource(R.drawable.prize);
         level4.setImageResource(R.drawable.prize);
@@ -790,7 +792,7 @@ public class TwentyOneDaysActivity extends AppCompatActivity {
 
                 break;
     case 19:
-
+        add_21.setVisibility(View.GONE);
         level1.setImageResource(R.drawable.prize);
 
         level2.setImageResource(R.drawable.prize);
@@ -834,7 +836,7 @@ public class TwentyOneDaysActivity extends AppCompatActivity {
                 break;
     case 20:
         level1.setImageResource(R.drawable.prize);
-
+        add_21.setVisibility(View.GONE);
         level2.setImageResource(R.drawable.prize);
         level3.setImageResource(R.drawable.prize);
         level4.setImageResource(R.drawable.prize);
@@ -878,7 +880,7 @@ public class TwentyOneDaysActivity extends AppCompatActivity {
                 break;
             case 21:
                 level1.setImageResource(R.drawable.prize);
-
+                add_21.setVisibility(View.GONE);
                 level2.setImageResource(R.drawable.prize);
                 level3.setImageResource(R.drawable.prize);
                 level4.setImageResource(R.drawable.prize);
@@ -924,7 +926,7 @@ public class TwentyOneDaysActivity extends AppCompatActivity {
                 break;
             case 22:
                 Toast.makeText(mContext, "END", Toast.LENGTH_SHORT).show();
-
+                add_21.setVisibility(View.GONE);
                 level1.setImageResource(R.drawable.prize);
 
                 level2.setImageResource(R.drawable.prize);

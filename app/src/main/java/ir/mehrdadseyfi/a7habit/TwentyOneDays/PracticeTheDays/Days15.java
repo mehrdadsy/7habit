@@ -17,6 +17,7 @@ import ir.mehrdadseyfi.a7habit.Emegency.EmergencyEssntialItem;
 import ir.mehrdadseyfi.a7habit.NOEmergencyNoEsstial.NOEsstianlEmergencyMyReceiver;
 import ir.mehrdadseyfi.a7habit.R;
 import ir.mehrdadseyfi.a7habit.SquareTasksActivity;
+import ir.mehrdadseyfi.a7habit.TwentyOneDays.TODMyReceiver;
 
 public class Days15 extends AppCompatActivity {
     Context mContext=this;
@@ -61,7 +62,7 @@ public class Days15 extends AppCompatActivity {
 
 
         if (d > 0) {
-            Intent intent = new Intent(Days15.this, NOEsstianlEmergencyMyReceiver.class);
+            Intent intent = new Intent(Days15.this, TODMyReceiver.class);
             PendingIntent pi = PendingIntent.getBroadcast(Days15.this, 1, intent, 0);
             am.set(AlarmManager.RTC_WAKEUP, d, pi);
         }

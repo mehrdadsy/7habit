@@ -7,6 +7,8 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Gravity;
 import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.ImageView;
@@ -26,6 +28,7 @@ import java.util.List;
 
 import ir.mehrdadseyfi.a7habit.R;
 import ir.mehrdadseyfi.a7habit.Vista.FGdatabase;
+import ir.mehrdadseyfi.a7habit.Vista.VistaActivity;
 import me.toptas.fancyshowcase.DismissListener;
 import me.toptas.fancyshowcase.FancyShowCaseView;
 
@@ -201,6 +204,10 @@ public class AddJobActivity extends AppCompatActivity implements TimePickerDialo
 
 
         startDate = (ImageView) findViewById(R.id.start_date);
+        Animation animationHelp = AnimationUtils.loadAnimation(AddJobActivity.this, R.anim.blink);
+        TextView goal_marker=(TextView)findViewById(R.id.goal_marker);
+        goal_marker.setAnimation(animationHelp);
+        startDate.setAnimation(animationHelp);
         startDate.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

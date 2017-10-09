@@ -18,6 +18,7 @@ import ir.mehrdadseyfi.a7habit.Calender.CalenderActivity;
 import ir.mehrdadseyfi.a7habit.NOEmergencyNoEsstial.NOEsstianlEmergencyMyReceiver;
 import ir.mehrdadseyfi.a7habit.R;
 import ir.mehrdadseyfi.a7habit.SquareTasksActivity;
+import ir.mehrdadseyfi.a7habit.TwentyOneDays.TODMyReceiver;
 import ir.mehrdadseyfi.a7habit.Vista.FGdatabase;
 import ir.mehrdadseyfi.a7habit.Vista.VistaActivity;
 
@@ -86,7 +87,7 @@ public class Days16 extends AppCompatActivity {
 
 
         if (d > 0) {
-            Intent intent = new Intent(Days16.this, NOEsstianlEmergencyMyReceiver.class);
+            Intent intent = new Intent(Days16.this, TODMyReceiver.class);
             PendingIntent pi = PendingIntent.getBroadcast(Days16.this, 1, intent, 0);
             am.set(AlarmManager.RTC_WAKEUP, d, pi);
         }

@@ -20,6 +20,7 @@ import java.util.List;
 
 import ir.mehrdadseyfi.a7habit.NOEmergencyNoEsstial.NOEsstianlEmergencyMyReceiver;
 import ir.mehrdadseyfi.a7habit.R;
+import ir.mehrdadseyfi.a7habit.TwentyOneDays.TODMyReceiver;
 import ir.mehrdadseyfi.a7habit.Vista.AddDialogActivity;
 import ir.mehrdadseyfi.a7habit.Vista.FDdatabase;
 import ir.mehrdadseyfi.a7habit.Vista.FDlistAdapter;
@@ -158,7 +159,7 @@ Days3DB days3DB;
 
 
         if (d > 0) {
-            Intent intent = new Intent(Day3_tr.this, NOEsstianlEmergencyMyReceiver.class);
+            Intent intent = new Intent(Day3_tr.this, TODMyReceiver.class);
             PendingIntent pi = PendingIntent.getBroadcast(Day3_tr.this, 1, intent, 0);
             am.set(AlarmManager.RTC_WAKEUP, d, pi);
         }

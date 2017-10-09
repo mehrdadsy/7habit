@@ -43,6 +43,7 @@ public class MainStart21DayActivity extends AppCompatActivity {
                 "این تمرین ها به مدت 21 روز به طول خواهد انجامید" +
                 "در صورت داشتن هر گونه سوال با تلگرام و یا ایمیل موسسه در ارتباط باشید" +
                 "برای شروع تمرین ها بروی دکمه زیر کلیک نمایید");
+
         btnStart.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

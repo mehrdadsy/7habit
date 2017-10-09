@@ -18,25 +18,26 @@
            android:layout_height="match_parent">
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-           <ImageView
-            android:id="@+id/add_21"
-            android:layout_width="wrap_content"
+            android:orientation="vertical"
             android:layout_height="wrap_content"
-            android:src="@drawable/calendar" />
+            >
+
 
         <ImageView
             android:id="@+id/restart"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/restart" />
+            android:layout_width="@dimen/large_font_size"
+            android:layout_height="@dimen/large_font_size"
+
+            android:layout_margin="5dp"
+            android:src="@drawable/restart"
+          />
         </LinearLayout>
            <ImageView
-               android:layout_width="40dp"
-               android:layout_height="40dp"
+               android:layout_width="@dimen/large_font_size"
+               android:layout_height="@dimen/large_font_size"
                android:src="@drawable/networking"
                android:layout_alignParentRight="true"
-               android:layout_marginRight="10dp"
+               android:layout_margin="5dp"
                android:id="@+id/share"/>
        </RelativeLayout>
     </android.support.v7.widget.Toolbar>
@@ -617,9 +618,7 @@
             android:layout_weight="2"
              >
 
-            <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent" />
+
         </LinearLayout>
 
         <LinearLayout
@@ -653,12 +652,19 @@
                 android:src="@drawable/student" />
         </LinearLayout>
 
-        <LinearLayout
+        <RelativeLayout
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="2"
              
            >
+            <Button
+                android:id="@+id/add_21"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/start_tr"
+                android:background="@drawable/d3_ee" />
 
             <ImageView
                 android:id="@+id/level1"
@@ -666,7 +672,7 @@
                 android:layout_height="@dimen/level"
                android:layout_gravity="center"
                 android:src="@drawable/emp" />
-        </LinearLayout>
+        </RelativeLayout>
 
         <LinearLayout
             android:layout_width="0dp"

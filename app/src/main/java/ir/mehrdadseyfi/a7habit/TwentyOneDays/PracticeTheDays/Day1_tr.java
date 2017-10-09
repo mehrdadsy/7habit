@@ -11,11 +11,16 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+
 import java.util.Calendar;
 
 import ir.mehrdadseyfi.a7habit.NOEmergencyNoEsstial.NOEsstianlEmergencyMyReceiver;
 import ir.mehrdadseyfi.a7habit.R;
 import ir.mehrdadseyfi.a7habit.TwentyOneDays.ShowTipActivity;
+import ir.mehrdadseyfi.a7habit.TwentyOneDays.TODAlarmNotificationService;
+import ir.mehrdadseyfi.a7habit.TwentyOneDays.TODMyReceiver;
 
 public class Day1_tr extends AppCompatActivity {
     Context mContext = this;
@@ -93,7 +98,7 @@ public class Day1_tr extends AppCompatActivity {
 
 
         if (d > 0) {
-            Intent intent = new Intent(Day1_tr.this, NOEsstianlEmergencyMyReceiver.class);
+            Intent intent = new Intent(Day1_tr.this, TODMyReceiver.class);
             PendingIntent pi = PendingIntent.getBroadcast(Day1_tr.this, 1, intent, 0);
             am.set(AlarmManager.RTC_WAKEUP, d, pi);
         }

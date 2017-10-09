@@ -7,7 +7,6 @@
     <uses-permission android:name="com.android.alarm.permission.SET_ALARM" />
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="ACCESS_NETWORK_STATE" />
-
     <uses-permission android:name="android.permission.CALL_PHONE" />
 
     <application
@@ -90,6 +89,9 @@
             android:name=".Emegency.MyReceiver"
             android:process=".alarm" />
         <receiver
+            android:name=".TwentyOneDays.TODMyReceiver"
+            android:process=".alarm" />
+        <receiver
             android:name=".Emegency.NeeMyReceiver"
             android:process=".alarm" />
         <receiver
@@ -101,6 +103,9 @@
 
         <service
             android:name=".Emegency.AlarmNotificationService"
+            android:process=".alarm" />
+        <service
+            android:name=".TwentyOneDays.TODAlarmNotificationService"
             android:process=".alarm" />
         <service
             android:name=".Esstinal.Noemergency.AlarmNotificationServiceENE"
@@ -183,7 +188,7 @@
         <activity
             android:name=".TwentyOneDays.PracticeTheDays.days1"
             android:screenOrientation="userPortrait"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar"  />
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
         <activity
             android:name=".TwentyOneDays.PracticeTheDays.Day1_tr"
             android:screenOrientation="userPortrait"
@@ -191,11 +196,11 @@
         <activity
             android:name=".TwentyOneDays.PracticeTheDays.Days2"
             android:screenOrientation="userPortrait"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar"  />
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
         <activity
             android:name=".TwentyOneDays.PracticeTheDays.Days2_tr"
             android:screenOrientation="userPortrait"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar"  />
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
         <activity
             android:name=".TwentyOneDays.PracticeTheDays.Days3_4"
             android:screenOrientation="userPortrait"
@@ -206,7 +211,7 @@
         <activity
             android:name=".TwentyOneDays.PracticeTheDays.Day3_tr"
             android:screenOrientation="userPortrait"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar"  />
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
         <activity
             android:name=".TwentyOneDays.PracticeTheDays.Days4_tr"
             android:screenOrientation="userPortrait"
@@ -221,15 +226,15 @@
         <activity
             android:name=".TwentyOneDays.PracticeTheDays.Days6"
             android:screenOrientation="userPortrait"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar"  />
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
         <activity
             android:name=".TwentyOneDays.PracticeTheDays.Days7"
             android:screenOrientation="userPortrait"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar"  />
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
         <activity
             android:name=".TwentyOneDays.PracticeTheDays.Days8"
             android:screenOrientation="userPortrait"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar"  />
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
         <activity
             android:name=".TwentyOneDays.PracticeTheDays.Days9"
             android:screenOrientation="userPortrait"
@@ -237,11 +242,11 @@
         <activity
             android:name=".TwentyOneDays.PracticeTheDays.Days10"
             android:screenOrientation="userPortrait"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar"  />
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
         <activity
             android:name=".TwentyOneDays.PracticeTheDays.Days11"
             android:screenOrientation="userPortrait"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar"  />
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
         <activity
             android:name=".TwentyOneDays.PracticeTheDays.Days12"
             android:screenOrientation="userPortrait"
@@ -249,54 +254,57 @@
         <activity
             android:name=".TwentyOneDays.PracticeTheDays.Days13"
             android:screenOrientation="userPortrait"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar"  />
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
         <activity
             android:name=".TwentyOneDays.PracticeTheDays.Days14"
             android:screenOrientation="userPortrait"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar"  />
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
         <activity
             android:name=".TwentyOneDays.PracticeTheDays.Days15"
             android:screenOrientation="userPortrait"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar"  />
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
         <activity
             android:name=".TwentyOneDays.PracticeTheDays.Days16"
             android:screenOrientation="userPortrait"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar"  />
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
         <activity
             android:name=".TwentyOneDays.PracticeTheDays.Days17"
             android:screenOrientation="userPortrait"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar"  />
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
         <activity
             android:name=".AboutUsActivity"
             android:screenOrientation="userPortrait"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar"  />
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
         <activity
             android:name=".TwentyOneDays.PresentMeActivity"
             android:theme="@style/Theme.Design.Light.NoActionBar" />
-        <activity android:name=".TwentyOneDays.PracticeTheDays.Days18"
+        <activity
+            android:name=".TwentyOneDays.PracticeTheDays.Days18"
             android:screenOrientation="userPortrait"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
-        <activity android:name=".TwentyOneDays.PracticeTheDays.Days19"
+        <activity
+            android:name=".TwentyOneDays.PracticeTheDays.Days19"
             android:screenOrientation="userPortrait"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
-        <activity android:name=".TwentyOneDays.PracticeTheDays.Days21"
+        <activity
+            android:name=".TwentyOneDays.PracticeTheDays.Days21"
             android:screenOrientation="userPortrait"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
-        <activity android:name=".TwentyOneDays.PracticeTheDays.Days20"
+        <activity
+            android:name=".TwentyOneDays.PracticeTheDays.Days20"
             android:screenOrientation="userPortrait"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar" ></activity>
-        <service android:name=".MyFirebaseMessagingService"
-            android:process=".way">
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+
+        <service android:name="com.google.android.gms.measurement.AppMeasurementService"
+            android:enabled="true"
+            android:exported="false"/>
+
+        <receiver android:name="com.google.android.gms.measurement.AppMeasurementReceiver"
+            android:enabled="true">
             <intent-filter>
-                <action android:name="com.google.firebase.MESSAGING_EVENT"/>
+                <action android:name="com.google.android.gms.measurement.UPLOAD" />
             </intent-filter>
-        </service>
-        <service android:name=".FirebaseIDService"
-            android:process=".way">
-            <intent-filter>
-                <action android:name="com.google.firebase.INSTANCE_ID_EVENT"/>
-            </intent-filter>
-        </service>
+        </receiver>
     </application>
 
 </manifest>

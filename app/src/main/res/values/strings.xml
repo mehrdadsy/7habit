@@ -6,23 +6,26 @@
     <string name="habit_main">عادات بد</string>
     <string name="edit_dream">رویا خود را ویرایش کنید</string>
     <string name="goal">هدف</string>
-    <string name="start_tr">شروع</string>
+    <string name="help_point">با کلیک بروی این علامت در صفحه تمرین ها وارد مرحله ای که در آن هستید می شوید</string>
+    <string name="help_prize">این علامت به این معنی است که شما آن مرحله را با موفقیت به پایان رسانیده اید</string>
+    <string name="help_emp">این علامت به این معنی است که این مراحل هنوز باقی مانده است</string>
+    <string name="start_tr">شروع تمرین 21 روز</string>
     <string name="days18">مرحله (روز) هجدهم</string>
     <string name="days19">مرحله (روز) نوزدهم</string>
     <string name="days21">مرحله (روز) بیست و یکم</string>
-  <string name="days20">مرحله (روز) بیستم</string>
+    <string name="days20">مرحله (روز) بیستم</string>
     <string name="page99_1">عادت هفتم</string>
     <string name="page99_2">اره را تیز کنید</string>
     <string name="one_part">بعد اول: فیزیکی
     شامل ورزش ،تغذیه،مدیریت استرس</string>
 
-   <string name="two_part">بعد دوم: اجتماعی/عاطفی
+    <string name="two_part">بعد دوم: اجتماعی/عاطفی
     شامل خدمات،همدلی،هم کوشی</string>
 
-   <string name="three_part">بعد سوم: ذهنی
+    <string name="three_part">بعد سوم: ذهنی
     شامل مطالعه،تصویر سازی،برنامه ریزی،نوشتن</string>
 
-   <string name="four_part">بعد چهارم:روحی
+    <string name="four_part">بعد چهارم:روحی
     شامل مطالعه،تعهد،شفاف سازی،ارزشها</string>
 
     <string name="finish">پایان این مرحله</string>
