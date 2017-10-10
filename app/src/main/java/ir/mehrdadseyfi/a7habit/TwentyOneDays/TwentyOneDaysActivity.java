@@ -62,7 +62,7 @@ public class TwentyOneDaysActivity extends AppCompatActivity {
     Intent intent;
     Button add_21;
 
-    long dayMil = 6 * 1000;
+    long dayMil = 86400000;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

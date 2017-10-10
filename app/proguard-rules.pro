@@ -24,4 +24,5 @@
 # hide the original source file name.
 #-renamesourcefileattribute SourceFile
 
--keep public class ir.mehrdadseyfi.a7habit.* extends SugarRecord{*;}
+-keepnames public class ir.mehrdadseyfi.a7habit.* extends SugarRecord{*;}
+

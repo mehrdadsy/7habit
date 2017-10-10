@@ -58,7 +58,7 @@ public class VistaActivity extends AppCompatActivity {
         TabLayout.Tab firstTab = tabLayout.newTab();
         firstTab.setText("رویا"); // set the Text for the first Tab
         firstTab.setIcon(R.drawable.dream);
-        tabLayout.setBackgroundColor(getResources().getColor(R.color.dream));
+        tabLayout.setBackgroundColor(getResources().getColor(R.color.primary));
         // set an icon for the
 // first tab
         tabLayout.addTab(firstTab); // add  the tab at in the TabLayout
@@ -91,25 +91,25 @@ public class VistaActivity extends AppCompatActivity {
                  fragment = new FeragmentDream();
                 switch (tab.getPosition()) {
                     case 0:
-                        tabLayout.setBackgroundColor(getResources().getColor(R.color.dream));
-                        tabLayout.setSelectedTabIndicatorColor(getResources().getColor(R.color.role));
+                        tabLayout.setBackgroundColor(getResources().getColor(R.color.primary));
+                        tabLayout.setSelectedTabIndicatorColor(getResources().getColor(R.color.primary));
                         add.startAnimation(animation);
 
-                        tool.setBackgroundColor(getResources().getColor(R.color.dream));
+                        tool.setBackgroundColor(getResources().getColor(R.color.primary_dark));
                         fragment = new FeragmentDream();
                         break;
                     case 1:
-                        tabLayout.setBackgroundColor(getResources().getColor(R.color.role));
-                        tool.setBackgroundColor(getResources().getColor(R.color.role));
-                        tabLayout.setSelectedTabIndicatorColor(getResources().getColor(R.color.goal));
+                        tabLayout.setBackgroundColor(getResources().getColor(R.color.primary));
+                        tool.setBackgroundColor(getResources().getColor(R.color.primary_dark));
+                        tabLayout.setSelectedTabIndicatorColor(getResources().getColor(R.color.primary));
                         add.startAnimation(animation);
 
                         fragment = new FeragmentRole();
                         break;
                     case 2:
-                        tabLayout.setBackgroundColor(getResources().getColor(R.color.goal));
-                        tabLayout.setSelectedTabIndicatorColor(getResources().getColor(R.color.dream));
-                        tool.setBackgroundColor(getResources().getColor(R.color.goal));
+                        tabLayout.setBackgroundColor(getResources().getColor(R.color.primary));
+                        tabLayout.setSelectedTabIndicatorColor(getResources().getColor(R.color.primary));
+                        tool.setBackgroundColor(getResources().getColor(R.color.primary_dark));
                         add.startAnimation(animation);
 
                         fragment = new FeragmentGoal();

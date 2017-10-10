@@ -52,7 +52,7 @@ day17=(EditText)findViewById(R.id.days17);
                 PreferenceManager.getDefaultSharedPreferences(mContext).edit().putInt("curlevel", PreferenceManager.getDefaultSharedPreferences(mContext).getInt("curlevel", 0) + 1).commit();
                 PreferenceManager.getDefaultSharedPreferences(mContext).edit().putLong("t0", Calendar.getInstance().getTime().getTime()).commit();
                 giveData();
-                alarmManager(Calendar.getInstance().getTime().getTime() + 10000);
+                alarmManager(Calendar.getInstance().getTime().getTime() + 86400000);
                 finish();
 
 

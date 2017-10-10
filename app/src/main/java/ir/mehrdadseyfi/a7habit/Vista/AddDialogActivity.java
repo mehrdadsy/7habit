@@ -187,7 +187,7 @@ public class AddDialogActivity extends AppCompatActivity {
                 new FancyShowCaseView.Builder((Activity) mContext)
                         .focusOn(chose)
                         .title("در این قسمت از بین نقش و هدف و رویا انتخاب کنید  دقت کنید که هیچ هدفی بدون نقش نمی تواند باشد")
-                        .backgroundColor(R.color.primary_light)
+                        .backgroundColor(R.color.primary_dark)
                         .titleStyle(R.style.s, Gravity.BOTTOM | Gravity.CENTER)
                         .dismissListener(new DismissListener() {
                             @Override
