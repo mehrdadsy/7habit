@@ -29,8 +29,7 @@ import ir.mirrajabi.persiancalendar.core.interfaces.OnMonthChangedListener;
 import ir.mirrajabi.persiancalendar.core.models.PersianDate;
 import me.toptas.fancyshowcase.DismissListener;
 import me.toptas.fancyshowcase.FancyShowCaseView;
-import proguard.annotation.Keep;
-import proguard.annotation.KeepClassMembers;
+
 
 
 public class CalenderActivity extends AppCompatActivity {

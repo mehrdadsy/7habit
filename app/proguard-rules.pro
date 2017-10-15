@@ -25,9 +25,19 @@
 #-renamesourcefileattribute SourceFile
 
 
--keep public class ScormPlayerActivity
--keep public class AddJobActivity
-CalenderActivity
+
+-keepnames public class ir.mehrdadseyfi.a7habit.Calender.** { *; }
+-keepnames public class ir.mehrdadseyfi.a7habit.Emegency.** { *; }
+-keepnames public class ir.mehrdadseyfi.a7habit.Noemergency.** { *; }
+-keepnames public class ir.mehrdadseyfi.a7habit.NOEsstianlEmergency.** { *; }
+-keepnames public class ir.mehrdadseyfi.a7habit.NOEmergencyNoEsstial.** { *; }
+-keepnames public class ir.mehrdadseyfi.a7habit.TwentyOneDays.PracticeTheDays.** { *; }
+-keepnames public class ir.mehrdadseyfi.a7habit.Vista.** { *; }
+
+
+
+
+
 
 
 
