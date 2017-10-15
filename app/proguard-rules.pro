@@ -24,8 +24,12 @@
 # hide the original source file name.
 #-renamesourcefileattribute SourceFile
 
--keep public class ir.mehrdadseyfi.a7habit.action.ScormPlayerActivity
--keepnames public class ir.mehrdadseyfi.a7habit.Calender.CalenderActivity
--keepnames public class ir.mehrdadseyfi.a7habit.Calender.JobDB
+
+-keep public class ScormPlayerActivity
+-keep public class AddJobActivity
+CalenderActivity
+
+
+
 
 

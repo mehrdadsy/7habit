@@ -5,10 +5,14 @@ import com.orm.SugarRecord;
 import java.lang.reflect.Field;
 import java.util.List;
 
+import proguard.annotation.Keep;
+import proguard.annotation.KeepClassMembers;
+
 /**
  * Created by admin on 8/29/2017.
  */
-
+@Keep
+@KeepClassMembers
 public class JobDB extends SugarRecord<JobDB> {
     String name;
     String detail;

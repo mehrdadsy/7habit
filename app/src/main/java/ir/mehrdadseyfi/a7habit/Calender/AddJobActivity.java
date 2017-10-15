@@ -31,6 +31,9 @@ import ir.mehrdadseyfi.a7habit.Vista.FGdatabase;
 import ir.mehrdadseyfi.a7habit.Vista.VistaActivity;
 import me.toptas.fancyshowcase.DismissListener;
 import me.toptas.fancyshowcase.FancyShowCaseView;
+import proguard.annotation.Keep;
+import proguard.annotation.KeepClassMembers;
+
 
 public class AddJobActivity extends AppCompatActivity implements TimePickerDialog.OnTimeSetListener, DatePickerDialog.OnDateSetListener {
     ImageView startDate;
