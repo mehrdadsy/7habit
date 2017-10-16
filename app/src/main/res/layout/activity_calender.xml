@@ -12,7 +12,7 @@
        android:orientation="vertical">
     <android.support.v7.widget.Toolbar
         android:layout_width="match_parent"
-        android:layout_height="40dp"
+        android:layout_height="@dimen/toolbar"
         android:id="@+id/tool"
         android:background="@color/accent">
     <ImageView
@@ -33,18 +33,47 @@ android:layout_marginLeft="15dp"
    <LinearLayout
        android:layout_width="match_parent"
        android:layout_height="wrap_content"
-       android:orientation="vertical"
+       android:orientation="horizontal"
        android:gravity="center">
-       <TextView
-           android:layout_width="wrap_content"
-           android:layout_height="wrap_content"
-           android:id="@+id/month"
-           android:textSize="20sp"/>
-       <TextView
-           android:layout_width="wrap_content"
-           android:layout_height="wrap_content"
-           android:id="@+id/year"
-           android:textSize="20sp"/>
+      <LinearLayout
+          android:layout_width="0dp"
+          android:layout_weight="1"
+          android:layout_height="wrap_content">
+          <ImageView
+              android:layout_width="@dimen/main_font_size"
+              android:layout_height="wrap_content"
+              android:layout_gravity="center"
+              android:src="@drawable/back"/>
+      </LinearLayout>
+       <LinearLayout
+          android:layout_width="0dp"
+          android:layout_weight="1"
+          android:layout_height="wrap_content"
+           android:orientation="vertical"
+           android:gravity="center">
+           <TextView
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:id="@+id/month"
+               android:textSize="20sp"/>
+           <TextView
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:id="@+id/year"
+               android:textSize="20sp"/>
+       </LinearLayout>
+       <LinearLayout
+          android:layout_width="0dp"
+          android:layout_weight="1"
+          android:layout_height="wrap_content"
+           android:gravity="right">
+           <ImageView
+               android:layout_width="@dimen/main_font_size"
+               android:layout_height="wrap_content"
+               android:layout_gravity="right"
+               android:src="@drawable/back_copy"/>
+       </LinearLayout>
+
    </LinearLayout>
 
     <ir.mirrajabi.persiancalendar.PersianCalendarView
@@ -58,7 +87,7 @@ android:layout_marginLeft="15dp"
         app:pcv_colorHolidaySelected="#1c1d1d"
         app:pcv_colorNormalDaySelected="#101010"
         app:pcv_colorNormalDay="#1d1d1d"
-        app:pcv_eventUnderlineColor="#02f0f0"
+        app:pcv_eventUnderlineColor="#ffffff"
         app:pcv_fontSize="30dp"
         app:pcv_headersFontSize="15dp"
         app:pcv_todayBackground="@color/primary" />

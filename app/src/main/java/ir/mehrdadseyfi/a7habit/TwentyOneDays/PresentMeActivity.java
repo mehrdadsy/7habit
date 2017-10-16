@@ -50,10 +50,8 @@ public class PresentMeActivity extends AppCompatActivity {
         days11 = (TextView) findViewById(R.id.days11);
         days12 = (TextView) findViewById(R.id.days12);
         days13 = (TextView) findViewById(R.id.days13);
-//        days14 = (TextView) findViewById(R.id.days14);
-//        days15 = (TextView) findViewById(R.id.days15);
-//        days16 = (TextView) findViewById(R.id.days16);
-//        days17 = (TextView) findViewById(R.id.days17);
+
+        days17 = (TextView) findViewById(R.id.days17);
 
         fillText();
     }
