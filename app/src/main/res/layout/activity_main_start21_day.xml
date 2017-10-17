@@ -37,7 +37,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="20dp"
-        android:background="@drawable/d3_ee_white">
+        android:background="@drawable/d3_ee_white_page">
         <ImageView
             android:layout_width="@dimen/large_font_size"
             android:layout_height="@dimen/large_font_size"
@@ -54,7 +54,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="20dp"
-        android:background="@drawable/d3_ee_white">
+        android:background="@drawable/d3_ee_white_page">
         <ImageView
             android:layout_width="@dimen/large_font_size"
             android:layout_height="@dimen/large_font_size"
@@ -71,7 +71,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="20dp"
-        android:background="@drawable/d3_ee_white">
+        android:background="@drawable/d3_ee_white_page">
         <ImageView
             android:layout_width="@dimen/large_font_size"
             android:layout_height="@dimen/large_font_size"

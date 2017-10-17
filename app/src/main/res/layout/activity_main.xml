@@ -52,7 +52,6 @@
                             android:src="@drawable/telegram" />
 
 
-
                     </LinearLayout>
 
                     <LinearLayout
@@ -76,8 +75,8 @@
                             android:layout_height="@dimen/large_font_size"
 
                             android:layout_margin="5dp"
-                            android:src="@drawable/bullet_list"
-                            android:layout_weight="3.57" />
+                            android:layout_weight="3.57"
+                            android:src="@drawable/bullet_list" />
                     </LinearLayout>
 
                 </RelativeLayout>
@@ -98,8 +97,7 @@
                 <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="fill_parent"
-                    android:background="#ffffff"
-                    >
+                    android:background="#ffffff">
 
                     <ImageView
                         android:id="@+id/ifemp"
@@ -110,9 +108,9 @@
                     <ListView
                         android:id="@+id/mylist_to"
                         android:layout_width="match_parent"
-                        android:layout_margin="10dp"
+                        android:layout_height="fill_parent"
 
-                        android:layout_height="fill_parent"></ListView>
+                        android:layout_margin="10dp"></ListView>
                 </RelativeLayout>
 
                 <ir.mirrajabi.persiancalendar.PersianCalendarView
@@ -137,55 +135,56 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
-                android:gravity="center"
-                android:background="@color/back_text">
+                android:background="@color/back_text"
+                android:gravity="center">
+
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical"
                     android:layout_marginRight="10dp"
                     android:background="@drawable/d3_ee_white_main_cal"
-                    >
-                <ImageView
-                    android:id="@+id/cal"
-                    android:src="@drawable/calendar_l"
-                    android:layout_width="@dimen/image21"
-                    android:layout_height="@dimen/image21"
-android:layout_margin="5dp"
+                    android:orientation="vertical">
 
-                     />
+                    <ImageView
+                        android:id="@+id/cal"
+                        android:layout_width="@dimen/image21"
+                        android:layout_height="@dimen/image21"
+                        android:layout_margin="5dp"
+                        android:src="@drawable/calendar_l"
+
+                        />
+
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/cal"
-                        android:layout_margin="5dp"
                         android:layout_gravity="center"
-                        />
+                        android:layout_margin="5dp"
+                        android:text="@string/cal" />
                 </LinearLayout>
 
 
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical"
                     android:layout_margin="10dp"
                     android:background="@drawable/d3_ee_white_main_goal"
-                    >
+                    android:orientation="vertical">
+
                     <ImageView
                         android:id="@+id/vista"
-                        android:src="@drawable/goal_17"
                         android:layout_width="@dimen/image21"
                         android:layout_height="@dimen/image21"
                         android:layout_margin="5dp"
+                        android:src="@drawable/goal_17"
 
                         />
+
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/goal"
                         android:layout_gravity="center"
                         android:layout_margin="5dp"
-                        />
+                        android:text="@string/goal" />
                 </LinearLayout>
 
 
@@ -196,8 +195,7 @@ android:layout_margin="5dp"
                 android:layout_height="0dp"
                 android:layout_marginTop="10dp"
                 android:layout_weight="1"
-                android:gravity="center"
-                >
+                android:gravity="center">
 
                 <Button
                     android:id="@+id/olaviyat"
@@ -222,9 +220,9 @@ android:layout_margin="5dp"
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
                 android:layout_marginLeft="30dp"
                 android:layout_marginRight="30dp"
-                android:layout_marginBottom="20dp"
                 android:layout_marginTop="10dp"
                 android:layout_weight="0.3"
                 android:background="@color/back_text"
@@ -233,11 +231,11 @@ android:layout_margin="5dp"
                 <TextView
                     android:id="@+id/today_jomle"
                     android:layout_width="wrap_content"
-android:textColor="@color/primary_text"
-
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center_vertical"
-                    android:layout_margin="10dp" />
+
+                    android:layout_gravity="center"
+                    android:layout_margin="10dp"
+                    android:textColor="@color/primary_text" />
             </LinearLayout>
 
         </LinearLayout>
@@ -249,143 +247,154 @@ android:textColor="@color/primary_text"
 
         android:layout_height="match_parent"
         android:layout_gravity="right"
-        android:background="#ffffff"
-        >
-
-<LinearLayout
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical">
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/material" />
+        android:background="#ffffff">
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:orientation="vertical">
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:gravity="right"
-                android:id="@+id/about_app"
-                android:background="@drawable/d3_ee_white_page">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/about_app"
-                    android:layout_marginRight="@dimen/main_font_size"/>
-                <ImageView
-
-                    android:layout_width="wrap_content"
-                    android:layout_height="@dimen/imag_drawer"
-
-                    android:src="@drawable/about_app"
-                    />
-            </LinearLayout>
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:gravity="right"
-                android:id="@+id/web"
-                android:background="@drawable/d3_ee_white_page">
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/web"
-                    android:layout_marginRight="@dimen/main_font_size"/>
             <ImageView
-
                 android:layout_width="wrap_content"
-                android:layout_height="@dimen/imag_drawer"
-                android:src="@drawable/web"
-                />
+                android:layout_height="wrap_content"
+                android:src="@drawable/material" />
 
-            </LinearLayout>
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:gravity="right"
-                android:id="@+id/elco21"
-                android:background="@drawable/d3_ee_white_page">
-                <TextView
-                    android:layout_width="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/about_app"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@string/elco21"
-                    android:layout_marginRight="@dimen/main_font_size"/>
-            <ImageView
+                    android:background="@drawable/d3_ee_white_page"
+                    android:gravity="right"
+                    android:orientation="horizontal">
 
-                android:layout_width="wrap_content"
-                android:layout_height="@dimen/imag_drawer"
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/main_font_size"
+                        android:text="@string/about_app" />
 
-                android:src="@drawable/elco21"
-                />
+                    <ImageView
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/imag_drawer"
+
+                        android:src="@drawable/about_app" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/web"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/d3_ee_white_page"
+                    android:gravity="right"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/main_font_size"
+                        android:text="@string/web" />
+
+                    <ImageView
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/imag_drawer"
+                        android:src="@drawable/web" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/elco21"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/d3_ee_white_page"
+                    android:gravity="right"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/main_font_size"
+                        android:text="@string/elco21" />
+
+                    <ImageView
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/imag_drawer"
+
+                        android:src="@drawable/elco21" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/call"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/d3_ee_white_page"
+                    android:gravity="right"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/main_font_size"
+                        android:text="@string/call" />
+
+                    <ImageView
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/imag_drawer"
+
+                        android:src="@drawable/call" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/about_us"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/d3_ee_white_page"
+                    android:gravity="right"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/main_font_size"
+                        android:text="@string/about_us" />
+
+                    <ImageView
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/imag_drawer"
+                        android:background="@drawable/d3_ee_white_page"
+                        android:src="@drawable/about_us"
+
+                        />
+
+                </LinearLayout>
+
 
             </LinearLayout>
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:gravity="right"
-                android:id="@+id/call"
-                android:background="@drawable/d3_ee_white_page">
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/call"
-                    android:layout_marginRight="@dimen/main_font_size"/>
-            <ImageView
-
-                android:layout_width="wrap_content"
-                android:layout_height="@dimen/imag_drawer"
-
-                android:src="@drawable/call"
-                />
-
-            </LinearLayout>
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:gravity="right"
-                android:id="@+id/about_us"
-                android:background="@drawable/d3_ee_white_page">
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/about_us"
-                    android:layout_marginRight="@dimen/main_font_size"/>
-            <ImageView
-
-                android:layout_width="wrap_content"
-                android:layout_height="@dimen/imag_drawer"
-                android:background="@drawable/d3_ee_white_page"
-               android:src="@drawable/about_us"
-
-                />
-
-            </LinearLayout>
-
 
         </LinearLayout>
 
-</LinearLayout>
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="40dp"
             android:layout_alignParentBottom="true">
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="5dp"
-                android:text="@string/about_app_bottom"/>
+                android:text="@string/about_app_bottom" />
 
         </RelativeLayout>
     </RelativeLayout>

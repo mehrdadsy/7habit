@@ -25,16 +25,16 @@
 
         <ImageView
             android:id="@+id/restart"
-            android:layout_width="@dimen/large_font_size"
-            android:layout_height="@dimen/large_font_size"
+            android:layout_width="@dimen/toll_photo"
+            android:layout_height="@dimen/toll_photo"
 
             android:layout_margin="5dp"
             android:src="@drawable/restart"
           />
         </LinearLayout>
            <ImageView
-               android:layout_width="@dimen/large_font_size"
-               android:layout_height="@dimen/large_font_size"
+               android:layout_width="@dimen/toll_photo"
+               android:layout_height="@dimen/toll_photo"
                android:src="@drawable/networking"
                android:layout_alignParentRight="true"
                android:layout_margin="5dp"
