@@ -62,7 +62,7 @@ public class TwentyOneDaysActivity extends AppCompatActivity {
     Intent intent;
     Button add_21;
 
-    long dayMil = 1000;
+    long dayMil = 86400000;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -925,7 +925,7 @@ public class TwentyOneDaysActivity extends AppCompatActivity {
 
                 break;
             case 22:
-                Toast.makeText(mContext, "END", Toast.LENGTH_SHORT).show();
+                Toast.makeText(mContext, "پایان", Toast.LENGTH_SHORT).show();
                 add_21.setVisibility(View.GONE);
                 level1.setImageResource(R.drawable.prize);
 
