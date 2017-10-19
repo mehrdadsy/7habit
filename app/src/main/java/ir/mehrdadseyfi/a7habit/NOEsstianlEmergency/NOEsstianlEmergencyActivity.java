@@ -6,7 +6,6 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v7.app.ActionBar;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -19,7 +18,6 @@ import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
 
-import ir.mehrdadseyfi.a7habit.AlarmSoundService;
 import ir.mehrdadseyfi.a7habit.JalaliCalendar;
 import ir.mehrdadseyfi.a7habit.NOEmergencyNoEsstial.NOEsstianlEmergencyMyReceiver;
 import ir.mehrdadseyfi.a7habit.R;
@@ -184,7 +182,7 @@ public class NOEsstianlEmergencyActivity extends AppCompatActivity {
 
                 Calendar cal = Calendar.getInstance();
                 Calendar cal1 = Calendar.getInstance();
-                cal1.set(year_A, mounth_A - 1, day_A, hours, min, 30);
+                cal1.set(year_A, mounth_A - 1, day_A+1, hours, min, 30);
 
                 cal.setTimeInMillis(System.currentTimeMillis());
                 long diff = (cal1.getTimeInMillis() - cal.getTimeInMillis());

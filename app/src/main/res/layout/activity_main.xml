@@ -37,16 +37,16 @@
 
                         <ImageView
                             android:id="@+id/tele"
-                            android:layout_width="@dimen/large_font_size"
-                            android:layout_height="@dimen/large_font_size"
+                            android:layout_width="@dimen/toll_photo"
+                            android:layout_height="@dimen/toll_photo"
 
                             android:layout_margin="5dp"
                             android:src="@drawable/tele" />
 
                         <ImageView
                             android:id="@+id/insta"
-                            android:layout_width="@dimen/large_font_size"
-                            android:layout_height="@dimen/large_font_size"
+                            android:layout_width="@dimen/toll_photo"
+                            android:layout_height="@dimen/toll_photo"
 
                             android:layout_margin="5dp"
                             android:src="@drawable/telegram" />
@@ -63,16 +63,16 @@
 
                         <ImageView
                             android:id="@+id/help"
-                            android:layout_width="@dimen/large_font_size"
-                            android:layout_height="@dimen/large_font_size"
+                            android:layout_width="@dimen/toll_photo"
+                            android:layout_height="@dimen/toll_photo"
 
                             android:layout_margin="5dp"
                             android:src="@drawable/help" />
 
                         <ImageView
                             android:id="@+id/drawers"
-                            android:layout_width="@dimen/large_font_size"
-                            android:layout_height="@dimen/large_font_size"
+                            android:layout_width="@dimen/toll_photo"
+                            android:layout_height="@dimen/toll_photo"
 
                             android:layout_margin="5dp"
                             android:layout_weight="3.57"

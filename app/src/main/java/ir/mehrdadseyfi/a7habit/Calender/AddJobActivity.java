@@ -2,6 +2,7 @@ package ir.mehrdadseyfi.a7habit.Calender;
 
 import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -28,6 +29,7 @@ import java.util.List;
 
 import ir.mehrdadseyfi.a7habit.R;
 import ir.mehrdadseyfi.a7habit.Vista.FGdatabase;
+import ir.mehrdadseyfi.a7habit.Vista.VistaActivity;
 import me.toptas.fancyshowcase.DismissListener;
 import me.toptas.fancyshowcase.FancyShowCaseView;
 
@@ -44,6 +46,7 @@ public class AddJobActivity extends AppCompatActivity implements TimePickerDialo
     int mounth;
     int day;
     int eHours;
+    String miner;
     int eMin;
     Context mContext=this;
     String repate;
@@ -208,6 +211,13 @@ public class AddJobActivity extends AppCompatActivity implements TimePickerDialo
         Animation animationHelp = AnimationUtils.loadAnimation(AddJobActivity.this, R.anim.blink);
         TextView goal_marker=(TextView)findViewById(R.id.goal_marker);
         goal_marker.setAnimation(animationHelp);
+        goal_marker.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(AddJobActivity.this, VistaActivity.class));
+
+            }
+        });
         startDate.setAnimation(animationHelp);
         startDate.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -278,14 +288,14 @@ public class AddJobActivity extends AppCompatActivity implements TimePickerDialo
             eHours = endTime.getHour();
             eMin = endTime.getMinute();
         }
-//    String miner;
-//        if (eMin<10){
-//            miner="0"+String.valueOf(eMin);
-//        }else {
-//            miner=String.valueOf(eMin);
-//        }
 
-        JobDB jobAdd = new JobDB(name, dtial, goal, String.valueOf(years), String.valueOf(mounth), String.valueOf(day), String.valueOf(hours), String.valueOf(minu), String.valueOf(eHours), String.valueOf(eMin), goal);
+        if (eMin<10){
+            miner="0"+String.valueOf(eMin);
+        }else {
+            miner=String.valueOf(eMin);
+        }
+
+        JobDB jobAdd = new JobDB(name, dtial, goal, String.valueOf(years), String.valueOf(mounth), String.valueOf(day), String.valueOf(hours), String.valueOf(minu), String.valueOf(eHours), miner, goal);
 
         jobAdd.save();
 

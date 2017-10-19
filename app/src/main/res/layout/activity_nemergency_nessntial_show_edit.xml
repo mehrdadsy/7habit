@@ -10,7 +10,7 @@
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:background="#ff8e66">
+        android:background="#ff66a6">
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -50,7 +50,7 @@
             android:layout_marginTop="15dp"
             android:layout_marginBottom="15dp"
             android:layout_width="100dp"
-            android:background="#ff8e66"
+            android:background="#ff66a6"
             android:id="@+id/calender_text_edit"/>
         <LinearLayout
             android:layout_width="match_parent"
@@ -63,7 +63,7 @@
                 android:id="@+id/save"
                 android:text="@string/dialog_save_btn"
                 android:layout_width="80dp"
-                android:background="@drawable/d3_nee"
+                android:background="@drawable/d3_nene"
                 android:layout_marginRight="20dp"
                 android:layout_height="60dp" />
 
@@ -72,7 +72,7 @@
                 android:id="@+id/cancel"
                 android:text="@string/dialog_cancel_btn"
                 android:layout_width="80dp"
-                android:background="@drawable/d3_nee"
+                android:background="@drawable/d3_nene"
                 android:layout_height="60dp"
                 android:layout_gravity="center_vertical"/>
 

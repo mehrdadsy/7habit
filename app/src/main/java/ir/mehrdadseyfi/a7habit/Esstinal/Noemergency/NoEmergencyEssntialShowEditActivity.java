@@ -1,7 +1,6 @@
 package ir.mehrdadseyfi.a7habit.Esstinal.Noemergency;
 
 import android.content.Intent;
-import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -52,12 +51,7 @@ public class NoEmergencyEssntialShowEditActivity extends AppCompatActivity imple
                 EEItem.getHours()+":"+EEItem.getMinutes();
         calenderText.setText(calnder);
 
-        Typeface afsaneh = Typeface.createFromAsset(getAssets(), "PKOODAKB.ttf");
 
-
-
-        tilteEE.setTypeface(afsaneh);
-        detialEE.setTypeface(afsaneh);
 
 
 

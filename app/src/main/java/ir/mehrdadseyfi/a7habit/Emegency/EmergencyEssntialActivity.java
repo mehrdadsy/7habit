@@ -18,7 +18,6 @@ import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
 
-import ir.mehrdadseyfi.a7habit.AlarmSoundService;
 import ir.mehrdadseyfi.a7habit.JalaliCalendar;
 import ir.mehrdadseyfi.a7habit.R;
 
@@ -175,18 +174,21 @@ public class EmergencyEssntialActivity extends AppCompatActivity {
                 int years = Integer.parseInt(models.get(j).getCalenderYear());
                 int mounth = Integer.parseInt(models.get(j).getCalenderMount());
                 int day = Integer.parseInt(models.get(j).getCalenderday());
-                int hours = Integer.parseInt(models.get(j).getHours());
+
                 int min = Integer.parseInt(models.get(j).getMinutes());
                 int mounth_A = JalaliCalendar.jalaliToGregorian(new JalaliCalendar.YearMonthDate(years, mounth, day)).getMonth();
                 int year_A = JalaliCalendar.jalaliToGregorian(new JalaliCalendar.YearMonthDate(years, mounth, day)).getYear();
                 int day_A = JalaliCalendar.jalaliToGregorian(new JalaliCalendar.YearMonthDate(years, mounth, day)).getDate();
+                int hours;
+                    hours = Integer.parseInt(models.get(j).getHours());
 
                 Calendar cal = Calendar.getInstance();
                 Calendar cal1 = Calendar.getInstance();
-                cal1.set(year_A, mounth_A - 1, day_A, hours, min, 30);
+                cal1.set(year_A, mounth_A - 1, day_A+1, hours, min, 30);
 
                 cal.setTimeInMillis(System.currentTimeMillis());
                 long diff = (cal1.getTimeInMillis() - cal.getTimeInMillis());
+
 
                 if (diff > 0) {
                     Intent intent = new Intent(EmergencyEssntialActivity.this, MyReceiver.class);

@@ -18,7 +18,6 @@ import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
 
-import ir.mehrdadseyfi.a7habit.AlarmSoundService;
 import ir.mehrdadseyfi.a7habit.JalaliCalendar;
 import ir.mehrdadseyfi.a7habit.R;
 
@@ -28,7 +27,7 @@ public class NOEmergencyNoEsstialActivity extends AppCompatActivity {
     List<NOEmergencyNoEsstialItem> models;
     Context mContext = this;
     int postionAlert;
-    int i = 0;
+    int i = 1;
     Date date2;
     ImageView imgBackGround;
 
@@ -183,10 +182,11 @@ public class NOEmergencyNoEsstialActivity extends AppCompatActivity {
 
                 Calendar cal = Calendar.getInstance();
                 Calendar cal1 = Calendar.getInstance();
-                cal1.set(year_A, mounth_A - 1, day_A, hours, min, 30);
+                cal1.set(year_A, mounth_A - 1, day_A+1, hours, min, 00);
 
                 cal.setTimeInMillis(System.currentTimeMillis());
                 long diff = (cal1.getTimeInMillis() - cal.getTimeInMillis());
+
 
                 if (diff > 0) {
                     Intent intent = new Intent(NOEmergencyNoEsstialActivity.this, NOEmergencyNoEsstialMyReceiver.class);

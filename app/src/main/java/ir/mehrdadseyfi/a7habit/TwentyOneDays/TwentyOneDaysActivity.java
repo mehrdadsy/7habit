@@ -1,12 +1,9 @@
 package ir.mehrdadseyfi.a7habit.TwentyOneDays;
 
-import android.app.AlarmManager;
-import android.app.PendingIntent;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
-import android.os.Handler;
 import android.preference.PreferenceManager;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
@@ -17,21 +14,32 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.Toast;
 
-import com.google.firebase.database.DatabaseReference;
-import com.google.firebase.database.FirebaseDatabase;
-
 import java.util.Calendar;
-import java.util.Date;
 import java.util.List;
 
-import ir.mehrdadseyfi.a7habit.JalaliCalendar;
-import ir.mehrdadseyfi.a7habit.NOEmergencyNoEsstial.NOEsstianlEmergencyMyReceiver;
-import ir.mehrdadseyfi.a7habit.NOEsstianlEmergency.NOEsstianlEmergencyActivity;
 import ir.mehrdadseyfi.a7habit.R;
-import ir.mehrdadseyfi.a7habit.TwentyOneDays.PracticeTheDays.*;
-import ir.mehrdadseyfi.a7habit.action.AndroidWebServer;
-import ir.mehrdadseyfi.a7habit.action.ScormPlayerActivity;
-import ir.mehrdadseyfi.a7habit.action.SplashScreen;
+import ir.mehrdadseyfi.a7habit.TwentyOneDays.PracticeTheDays.Days10;
+import ir.mehrdadseyfi.a7habit.TwentyOneDays.PracticeTheDays.Days11;
+import ir.mehrdadseyfi.a7habit.TwentyOneDays.PracticeTheDays.Days12;
+import ir.mehrdadseyfi.a7habit.TwentyOneDays.PracticeTheDays.Days13;
+import ir.mehrdadseyfi.a7habit.TwentyOneDays.PracticeTheDays.Days14;
+import ir.mehrdadseyfi.a7habit.TwentyOneDays.PracticeTheDays.Days15;
+import ir.mehrdadseyfi.a7habit.TwentyOneDays.PracticeTheDays.Days16;
+import ir.mehrdadseyfi.a7habit.TwentyOneDays.PracticeTheDays.Days17;
+import ir.mehrdadseyfi.a7habit.TwentyOneDays.PracticeTheDays.Days18;
+import ir.mehrdadseyfi.a7habit.TwentyOneDays.PracticeTheDays.Days19;
+import ir.mehrdadseyfi.a7habit.TwentyOneDays.PracticeTheDays.Days2;
+import ir.mehrdadseyfi.a7habit.TwentyOneDays.PracticeTheDays.Days20;
+import ir.mehrdadseyfi.a7habit.TwentyOneDays.PracticeTheDays.Days21;
+import ir.mehrdadseyfi.a7habit.TwentyOneDays.PracticeTheDays.Days3DB;
+import ir.mehrdadseyfi.a7habit.TwentyOneDays.PracticeTheDays.Days3_4;
+import ir.mehrdadseyfi.a7habit.TwentyOneDays.PracticeTheDays.Days4_tr;
+import ir.mehrdadseyfi.a7habit.TwentyOneDays.PracticeTheDays.Days5;
+import ir.mehrdadseyfi.a7habit.TwentyOneDays.PracticeTheDays.Days6;
+import ir.mehrdadseyfi.a7habit.TwentyOneDays.PracticeTheDays.Days7;
+import ir.mehrdadseyfi.a7habit.TwentyOneDays.PracticeTheDays.Days8;
+import ir.mehrdadseyfi.a7habit.TwentyOneDays.PracticeTheDays.Days9;
+import ir.mehrdadseyfi.a7habit.TwentyOneDays.PracticeTheDays.days1;
 
 public class TwentyOneDaysActivity extends AppCompatActivity {
     Context mContext = this;
@@ -61,8 +69,8 @@ public class TwentyOneDaysActivity extends AppCompatActivity {
     long d;
     Intent intent;
     Button add_21;
-
-    long dayMil = 86400000;
+//86400000
+    long dayMil = 1000;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

@@ -4,22 +4,16 @@ import android.app.AlarmManager;
 import android.app.PendingIntent;
 import android.content.Context;
 import android.content.Intent;
+import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import com.google.firebase.database.DatabaseReference;
-import com.google.firebase.database.FirebaseDatabase;
-
 import java.util.Calendar;
 
-import ir.mehrdadseyfi.a7habit.NOEmergencyNoEsstial.NOEsstianlEmergencyMyReceiver;
 import ir.mehrdadseyfi.a7habit.R;
-import ir.mehrdadseyfi.a7habit.TwentyOneDays.ShowTipActivity;
-import ir.mehrdadseyfi.a7habit.TwentyOneDays.TODAlarmNotificationService;
 import ir.mehrdadseyfi.a7habit.TwentyOneDays.TODMyReceiver;
 
 public class Day1_tr extends AppCompatActivity {
@@ -64,7 +58,8 @@ public class Day1_tr extends AppCompatActivity {
                     PreferenceManager.getDefaultSharedPreferences(mContext).edit().putInt("curlevel", PreferenceManager.getDefaultSharedPreferences(mContext).getInt("curlevel",0)+1).commit();
                     PreferenceManager.getDefaultSharedPreferences(mContext).edit().putLong("t0", Calendar.getInstance().getTime().getTime()).commit();
                     giveData();
-                    alarmManager(Calendar.getInstance().getTime().getTime()+86400000);
+                    //86400000
+                    alarmManager(Calendar.getInstance().getTime().getTime()+2000);
                     finish();
 
 
