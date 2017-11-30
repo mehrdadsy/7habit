@@ -1,28 +1,18 @@
 package ir.mehrdadseyfi.a7habit.action;
 
-import android.animation.Animator;
-import android.animation.AnimatorListenerAdapter;
-import android.annotation.TargetApi;
 import android.app.Activity;
 import android.content.Intent;
 import android.content.res.Configuration;
-import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
-import android.view.View;
-import android.view.ViewAnimationUtils;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
-import android.widget.TextView;
 
 import java.util.Locale;
 
-import ir.mehrdadseyfi.a7habit.Active;
-import ir.mehrdadseyfi.a7habit.Calender.CalenderActivity;
 import ir.mehrdadseyfi.a7habit.IsActive;
 import ir.mehrdadseyfi.a7habit.R;
-import ir.mehrdadseyfi.a7habit.TwentyOneDays.TwentyOneDaysActivity;
 import ir.mehrdadseyfi.a7habit.action.service.PortDiscoveryService;
 
 
@@ -68,26 +58,14 @@ public class SplashScreen extends Activity {
             public void run() {
                 AndroidWebServer.setContext(getApplicationContext());
                 AndroidWebServer.start();
-              if(Isactive()){
+
                 Intent i = new Intent(SplashScreen.this, ScormPlayerActivity.class);
                 startActivity(i);
-                finish();}else {
-                  Intent i = new Intent(SplashScreen.this, Active.class);
-                  startActivity(i);
-            finish();
-              }
+                finish();
             }
         }, SPLASH_TIME_OUT);
 
     }
-    public boolean Isactive() {
-        IsActive check = IsActive.findById(IsActive.class, 1L);
-        if (check.isActive()) {
-            return true;
-        } else {
-            return false;
-        }
 
-    }
 
 }

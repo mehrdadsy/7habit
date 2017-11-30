@@ -34,6 +34,7 @@
 -keepnames public class ir.mehrdadseyfi.a7habit.NOEmergencyNoEsstial.** { *; }
 -keepnames public class ir.mehrdadseyfi.a7habit.TwentyOneDays.PracticeTheDays.** { *; }
 -keepnames public class ir.mehrdadseyfi.a7habit.Vista.** { *; }
+-keepnames public class ir.mehrdadseyfi.a7habit.IsActive { *; }
 
 
 

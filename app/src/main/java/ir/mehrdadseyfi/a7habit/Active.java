@@ -61,7 +61,9 @@ public class Active extends AppCompatActivity {
                                     IsActive check = IsActive.findById(IsActive.class, 1L);
                                     check.Active = true;
                                     check.save();
-                                    Intent intent = new Intent(mContext, ScormPlayerActivity.class);
+                                    Toast.makeText(mContext, "برنامه شما با موفقیت فعال شد", Toast.LENGTH_LONG).show();
+                                    Intent intent = new Intent(mContext,ScormPlayerActivity.class);// New activity
+                                    intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                                     startActivity(intent);
                                     finish();
                                     break;
@@ -77,7 +79,8 @@ public class Active extends AppCompatActivity {
     public void onBackPressed(){
     }
 
-
-
-
+    @Override
+    protected void onPause() {
+        super.onPause();
+    }
 }

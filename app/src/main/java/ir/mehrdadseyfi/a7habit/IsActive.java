@@ -7,7 +7,7 @@ import com.orm.SugarRecord;
  */
 
 public class IsActive extends SugarRecord<IsActive> {
-    boolean Active;
+  public boolean Active;
 
     public boolean isActive() {
         return Active;
