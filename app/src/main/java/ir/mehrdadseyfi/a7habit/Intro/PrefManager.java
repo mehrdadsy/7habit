@@ -7,6 +7,7 @@ package ir.mehrdadseyfi.a7habit.Intro;
 
 import android.content.Context;
 import android.content.SharedPreferences;
+import android.preference.PreferenceManager;
 
 /**
  * Created by Lincoln on 05/05/16.

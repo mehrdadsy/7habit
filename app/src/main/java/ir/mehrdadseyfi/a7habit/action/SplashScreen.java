@@ -18,7 +18,9 @@ import android.widget.TextView;
 
 import java.util.Locale;
 
+import ir.mehrdadseyfi.a7habit.Active;
 import ir.mehrdadseyfi.a7habit.Calender.CalenderActivity;
+import ir.mehrdadseyfi.a7habit.IsActive;
 import ir.mehrdadseyfi.a7habit.R;
 import ir.mehrdadseyfi.a7habit.TwentyOneDays.TwentyOneDaysActivity;
 import ir.mehrdadseyfi.a7habit.action.service.PortDiscoveryService;
@@ -36,6 +38,8 @@ public class SplashScreen extends Activity {
         setContentView(R.layout.splash);
          anima=(ImageView)findViewById(R.id.anim);
         logo=(ImageView)findViewById(R.id.logo);
+        IsActive book = new IsActive(false);
+        book.save();
 
         //set anim
         final Animation animation= AnimationUtils.loadAnimation(getApplicationContext(),R.anim.fade);
@@ -64,11 +68,25 @@ public class SplashScreen extends Activity {
             public void run() {
                 AndroidWebServer.setContext(getApplicationContext());
                 AndroidWebServer.start();
+              if(Isactive()){
                 Intent i = new Intent(SplashScreen.this, ScormPlayerActivity.class);
                 startActivity(i);
-                finish();
+                finish();}else {
+                  Intent i = new Intent(SplashScreen.this, Active.class);
+                  startActivity(i);
+            finish();
+              }
             }
         }, SPLASH_TIME_OUT);
+
+    }
+    public boolean Isactive() {
+        IsActive check = IsActive.findById(IsActive.class, 1L);
+        if (check.isActive()) {
+            return true;
+        } else {
+            return false;
+        }
 
     }
 
