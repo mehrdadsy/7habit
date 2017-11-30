@@ -75,7 +75,6 @@ public class Active extends AppCompatActivity {
     }
 
     public void onBackPressed(){
-        this.moveTaskToBack(false);
     }
 
 

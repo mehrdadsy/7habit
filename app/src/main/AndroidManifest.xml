@@ -322,7 +322,7 @@
             <!--android:theme="@style/Theme.AppCompat.Light.NoActionBar"></activity>-->
         <activity android:name=".Active"
             android:screenOrientation="userPortrait"
-            android:theme="@style/mytheme">
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
 
         </activity>
     </application>
